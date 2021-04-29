@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../cssFiles/App.css';
 import styled from 'styled-components';
 
-const initialHands = { playerHand: ['1', '2', '3', '4', '5', '6', 'Q'], opponentHand: ['1', '2', '3', '4', '5', '6'] };
+const initialHands = { playerHand: ['1A', '2A', '3A', '4A', '5A', '6A', 'Q'], opponentHand: ['1B', '2B', '3B', '4B', '5B', '6B'] };
 // const initialHands = { playerHand: ['1', '8', '3', '10', '5', '8'], opponentHand: ['1', '2', '3', '4', '5', '6', 'Q'] };
 
 const MainApp = styled.div`
@@ -50,28 +50,44 @@ function App() {
 	const takePlayerTurn = (chooser, choosee) => {
 		const chosenCardIndex = Math.floor(Math.random() * choosee.length);
 		const chosenCard = choosee[chosenCardIndex];
-
+		console.log(chosenCard)
+		// newChooseeHand.splice(chosenCardIndex, 1);
+		
 		if (chosenCard === 'Q') {
-			// switch Queen to other hands
+			console.log("situationA")
 			const newChooseeHand = [...choosee];
-			newChooseeHand.splice(chosenCardIndex, 1);
 			const newChooserHand = [...chooser];
+			// switch Queen to other hands
+			console.log(chosenCardIndex)
+			newChooseeHand.splice(chosenCardIndex, 1);
 			newChooserHand.push('Q');
-
 			setHands({
 				playerHand: playerTurn ? newChooserHand : newChooseeHand,
 				opponentHand: playerTurn ? newChooseeHand : newChooserHand
 			});
+		}  
+		// if(chosenCard !== "Q") {
+		// 	console.log("situationB")
+		// 	// remove same card from both hands	
+		// 	const newChooseeHand = [...choosee];
+		// 	const newChooserHand = [...chooser];
+		// 	// switch Queen to other hands
+		// 	console.log(chosenCardIndex)
+		// 	newChooseeHand.splice(chosenCardIndex, 1);
+		// 	newChooserHand.splice(chosenCardIndex, 1);
+		// 	// newChooserHand.forEach((card, index) => {
+		// 	// 	if(card === chosenCard){
+		// 	// 	newChooserHand.splice(index, 1);
+				
+		// 	// }})	
+		// 	setHands({
+		// 		playerHand: playerTurn ? newChooseeHand : newChooserHand,
+		// 		opponentHand: playerTurn ? newChooserHand : newChooseeHand
+		// 	});
+		// 		// newChooseeHand.splice(chosenCardIndex, 1);
+		// 	};
+		
 
-			return;
-		} else {
-			// remove same card from both hands
-			chooser.forEach((card, idx) => {
-				if (card === chosenCard) {
-					console.log(card);
-				}
-			});
-		}
 	};
 
 	return (
