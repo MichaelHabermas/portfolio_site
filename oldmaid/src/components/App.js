@@ -2,8 +2,14 @@ import React, { useState } from 'react';
 import '../cssFiles/App.css';
 import styled from 'styled-components';
 
-const initialHands = { playerHand: ['1A', '2A', '3A', '4A', '5A', '6A', 'Q'], opponentHand: ['1B', '2B', '3B', '4B', '5B', '6B'] };
-// const initialHands = { playerHand: ['1', '8', '3', '10', '5', '8'], opponentHand: ['1', '2', '3', '4', '5', '6', 'Q'] };
+const initialHands = {
+	playerHand: ['1A', '2A', '3A', '4A', '5A', '6A', 'Q'],
+	opponentHand: ['1B', '2B', '3B', '4B', '5B', '6B']
+};
+// const initialHands = {
+// 	playerHand: ['1', '2', '3', '4', '5', '6', 'Q'],
+// 	opponentHand: ['1', '2', '3', '4', '5', '6']
+// };
 
 const MainApp = styled.div`
 	display: flex;
@@ -45,49 +51,30 @@ const MainApp = styled.div`
 
 function App() {
 	const [hands, setHands] = useState(initialHands);
-	const [playerTurn, setPlayerTurn] = useState(true);
+	let playerTurn = true;
 
 	const takePlayerTurn = (chooser, choosee) => {
 		const chosenCardIndex = Math.floor(Math.random() * choosee.length);
 		const chosenCard = choosee[chosenCardIndex];
-		console.log(chosenCard)
-		// newChooseeHand.splice(chosenCardIndex, 1);
-		
-		if (chosenCard === 'Q') {
-			console.log("situationA")
-			const newChooseeHand = [...choosee];
-			const newChooserHand = [...chooser];
-			// switch Queen to other hands
-			console.log(chosenCardIndex)
-			newChooseeHand.splice(chosenCardIndex, 1);
-			newChooserHand.push('Q');
-			setHands({
-				playerHand: playerTurn ? newChooserHand : newChooseeHand,
-				opponentHand: playerTurn ? newChooseeHand : newChooserHand
-			});
-		}  
-		// if(chosenCard !== "Q") {
-		// 	console.log("situationB")
-		// 	// remove same card from both hands	
-		// 	const newChooseeHand = [...choosee];
-		// 	const newChooserHand = [...chooser];
-		// 	// switch Queen to other hands
-		// 	console.log(chosenCardIndex)
-		// 	newChooseeHand.splice(chosenCardIndex, 1);
-		// 	newChooserHand.splice(chosenCardIndex, 1);
-		// 	// newChooserHand.forEach((card, index) => {
-		// 	// 	if(card === chosenCard){
-		// 	// 	newChooserHand.splice(index, 1);
-				
-		// 	// }})	
-		// 	setHands({
-		// 		playerHand: playerTurn ? newChooseeHand : newChooserHand,
-		// 		opponentHand: playerTurn ? newChooserHand : newChooseeHand
-		// 	});
-		// 		// newChooseeHand.splice(chosenCardIndex, 1);
-		// 	};
-		
+		console.log(chosenCard);
+		console.log(chosenCardIndex);
 
+		let newChooseeHand;
+		let newChooserHand;
+
+		if (chosenCard === 'Q') {
+			console.log('situationA');
+			newChooseeHand = [...choosee.filter(item => item !== 'Q')];
+			newChooserHand = [...chooser, 'Q'];
+		} else {
+			newChooseeHand = [...choosee.filter(item => item[0] !== chosenCard[0])];
+			newChooserHand = [...chooser.filter(item => item[0] !== chosenCard[0])];
+		}
+
+		setHands({
+			playerHand: playerTurn ? newChooserHand : newChooseeHand,
+			opponentHand: playerTurn ? newChooseeHand : newChooserHand
+		});
 	};
 
 	return (
@@ -97,7 +84,7 @@ function App() {
 				<div
 					className="hand opponentHand"
 					onClick={() => {
-						setPlayerTurn(true);
+						playerTurn = true;
 						takePlayerTurn(hands.playerHand, hands.opponentHand);
 					}}
 				>
@@ -113,7 +100,7 @@ function App() {
 				<div
 					className="hand playerHand"
 					onClick={() => {
-						setPlayerTurn(false);
+						playerTurn = false;
 						takePlayerTurn(hands.opponentHand, hands.playerHand);
 					}}
 				>
