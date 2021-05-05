@@ -5,14 +5,36 @@ import { shuffledDeck1 } from './Deck.js';
 import cardBack from '../assets/card_face_selected.png';
 import cardFront from '../assets/card_face_norm.png';
 
-const initialHands = {
-	playerHand: ['1A', '2A', '3A', '4A', '5A', '6A'],
-	opponentHand: ['1B', '2B', '3B', '4B', '5B', '6B', 'Q']
+const createOldMaidDeck = (deck) => deck.filter(card => card !== "Qs" && card !== "Qh" && card !== "Qc")
+
+const splitDeck = (deck) => {
+	const half = Math.ceil(deck.length / 2);
+	const halfOpponentHand = deck.slice(0, half);
+	const halfPlayerHand = deck.slice(half, deck.length)
+
+	
+	// const thePlayerHand = removeDoubles(halfPlayerHand);
+	// const theOpponentHand = removeDoubles(halfOpponentHand);
+	// return {
+		// 	//lets me export as a similar object to the default hands
+	// 	playerHand: thePlayerHand,
+	// 	opponentHand: theOpponentHand
+	// };
 };
-// const initialHands = {
-// 	playerHand: ['1', '2', '3', '4', '5', '6', 'Q'],
-// 	opponentHand: ['1', '2', '3', '4', '5', '6']
-// };
+
+const removeDoubles = hand => {
+	const object = {}
+	hand.forEach((card) => {
+		if(object.card[0]){
+			object.card[0] += 1
+		} else {
+			object.card[0] = 1
+		}
+		console.log(object)
+		return object
+	})}
+const superhand = removeDoubles(halfPlayerHand)
+return superhand
 
 const MainApp = styled.div`
 	.body {
@@ -126,7 +148,7 @@ const MainApp = styled.div`
 `;
 
 function App() {
-	const [hands, setHands] = useState(initialHands);
+	const [hands, setHands] = useState(splitDeck(createOldMaidDeck(shuffledDeck1)));
 	const [gameOver, setGameOver] = useState(false);
 	let playerTurn = true;
 
@@ -134,15 +156,12 @@ function App() {
 		const chosenCardIndex = Math.floor(Math.random() * choosee.length);
 		const chosenCard = choosee[chosenCardIndex];
 
-		// console.log(chosenCard);
-		// console.log(chosenCardIndex);
-
 		let newChooseeHand;
 		let newChooserHand;
 
-		if (chosenCard === 'Q') {
+		if (chosenCard[0] === 'Q') {
 			console.log('situationA');
-			newChooseeHand = [...choosee.filter(item => item !== 'Q')];
+			newChooseeHand = [...choosee.filter(item => item[0] !== 'Q')];
 			newChooserHand = [...chooser, 'Q'];
 		} else {
 			newChooseeHand = [...choosee.filter(item => item[0] !== chosenCard[0])];
@@ -159,11 +178,6 @@ function App() {
 			setGameOver(!gameOver);
 			return;
 		}
-
-		// if (hands.playerHand < 1 || hands.opponentHand < 1) {
-		// 	console.log('GAME OVER');
-		// 	setGameOver(!gameOver);
-		// }
 	};
 
 	return (
@@ -186,7 +200,6 @@ function App() {
 						{hands.opponentHand.map(card => {
 							return (
 								<div key={Math.random()} className="card opponentCard" value={card}>
-									{/* {card} */}
 								</div>
 							);
 						})}
