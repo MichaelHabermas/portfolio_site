@@ -5,62 +5,7 @@ import { shuffledDeck1 } from './Deck.js';
 import cardBack from '../assets/card_face_selected.png';
 import cardFront from '../assets/card_face_norm.png';
 
-const createOldMaidDeck = deck => deck.filter(card => card !== 'Qs' && card !== 'Qh' && card !== 'Qc');
-
-const splitDeck = deck => {
-	// console.log('createOldMaidDeck: ', deck);
-	const half = Math.ceil(deck.length / 2);
-	const halfOpponentHand = deck.slice(0, half);
-	const halfPlayerHand = deck.slice(half, deck.length);
-
-	// console.log('halfOpponentHand: ', halfOpponentHand);
-	// console.log('halfPlayerHand: ', halfPlayerHand);
-
-	const thePlayerHand = removeDoubles(halfPlayerHand);
-	const theOpponentHand = removeDoubles(halfOpponentHand);
-	return {
-		//lets me export as a similar object to the default hands
-		playerHand: thePlayerHand,
-		opponentHand: theOpponentHand
-	};
-};
-
-// const removeDoubles = hand => {
-// 	const object = {};
-// 	hand.forEach(card => {
-// 		console.log(card);
-// 		// if (object.card[0]) {
-// 		if (object.hasOwnProperty(card[0])) {
-// 			object.card[0] += 1;
-// 		} else {
-// 			object.card[0]: 1;
-// 		}
-// 	});
-// 	// console.log(object);
-// 	return object;
-// };
-
-const removeDoubles = hand => {
-	const newHandObject = {};
-	const newHand = [];
-	hand.forEach(card => {
-		if (newHandObject[card[0]]) {
-			newHandObject[card[0]] += 1;
-		} else {
-			newHandObject[card[0]] = 1;
-		}
-	});
-	// console.log('newHandObject: ', newHandObject);
-
-	for (let key in newHandObject) {
-		// console.log('key: ', key);
-		// console.log('newHandObject[key]: ', newHandObject[key]);
-		if (newHandObject[key] % 2 !== 0) newHand.push(key);
-	}
-	// console.log('newHand: ', newHand);
-	return newHand;
-};
-
+// styling
 const MainApp = styled.div`
 	.body {
 		display: flex;
@@ -171,6 +116,49 @@ const MainApp = styled.div`
 		display: none;
 	}
 `;
+
+// ##### deck setup for Old Maid
+// takes out 3 of the Queens from the deck
+const createOldMaidDeck = deck => deck.filter(card => card !== 'Qs' && card !== 'Qh' && card !== 'Qc');
+// filters an array of cards to remove pairs, but leave "odd man out" cards
+const removeDoubles = hand => {
+	const newHandObject = {};
+	const newHand = [];
+	hand.forEach(card => {
+		if (newHandObject[card[0]]) {
+			newHandObject[card[0]] += 1;
+		} else {
+			newHandObject[card[0]] = 1;
+		}
+	});
+	// console.log('newHandObject: ', newHandObject);
+
+	for (let key in newHandObject) {
+		// console.log('key: ', key);
+		// console.log('newHandObject[key]: ', newHandObject[key]);
+		if (newHandObject[key] % 2 !== 0) newHand.push(key);
+	}
+	// console.log('newHand: ', newHand);
+	return newHand;
+};
+// splits the deck in half, removes pairs from each hand, and returns the 2 player's hands as objects
+const splitDeck = deck => {
+	// console.log('createOldMaidDeck: ', deck);
+	const half = Math.ceil(deck.length / 2);
+	const halfOpponentHand = deck.slice(0, half);
+	const halfPlayerHand = deck.slice(half, deck.length);
+
+	// console.log('halfOpponentHand: ', halfOpponentHand);
+	// console.log('halfPlayerHand: ', halfPlayerHand);
+
+	const thePlayerHand = removeDoubles(halfPlayerHand);
+	const theOpponentHand = removeDoubles(halfOpponentHand);
+	return {
+		//lets me export as a similar object to the default hands
+		playerHand: thePlayerHand,
+		opponentHand: theOpponentHand
+	};
+};
 
 function App() {
 	const [hands, setHands] = useState(splitDeck(createOldMaidDeck(shuffledDeck1)));
