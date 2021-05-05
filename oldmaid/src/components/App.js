@@ -142,7 +142,7 @@ function App() {
 
 		if (chosenCard === 'Q') {
 			console.log('situationA');
-			newChooseeHand = [...choosee.filter(item => item !== 'Q')];
+			newChooseeHand = [...choosee.filter(item => item[0] !== 'Q')];
 			newChooserHand = [...chooser, 'Q'];
 		} else {
 			newChooseeHand = [...choosee.filter(item => item[0] !== chosenCard[0])];
