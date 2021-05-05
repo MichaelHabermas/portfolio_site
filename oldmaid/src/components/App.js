@@ -8,9 +8,13 @@ import cardFront from '../assets/card_face_norm.png';
 const createOldMaidDeck = deck => deck.filter(card => card !== 'Qs' && card !== 'Qh' && card !== 'Qc');
 
 const splitDeck = deck => {
+	// console.log('createOldMaidDeck: ', deck);
 	const half = Math.ceil(deck.length / 2);
 	const halfOpponentHand = deck.slice(0, half);
 	const halfPlayerHand = deck.slice(half, deck.length);
+
+	// console.log('halfOpponentHand: ', halfOpponentHand);
+	// console.log('halfPlayerHand: ', halfPlayerHand);
 
 	const thePlayerHand = removeDoubles(halfPlayerHand);
 	const theOpponentHand = removeDoubles(halfOpponentHand);
@@ -46,11 +50,14 @@ const removeDoubles = hand => {
 			newHandObject[card[0]] = 1;
 		}
 	});
+	// console.log('newHandObject: ', newHandObject);
 
 	for (let key in newHandObject) {
-		if (newHandObject.key % 2 !== 0) newHand.push(key);
+		// console.log('key: ', key);
+		// console.log('newHandObject[key]: ', newHandObject[key]);
+		if (newHandObject[key] % 2 !== 0) newHand.push(key);
 	}
-
+	// console.log('newHand: ', newHand);
 	return newHand;
 };
 
@@ -64,9 +71,9 @@ const MainApp = styled.div`
 		height: 100vh;
 		background: linear-gradient(44deg, #e8ebf7, #acbed8, #bf0603);
 		background-size: 600% 600%;
-		-webkit-animation: AnimationName 33s ease infinite;
-		-moz-animation: AnimationName 33s ease infinite;
-		animation: AnimationName 33s ease infinite;
+		-webkit-animation: AnimationName 10s ease infinite;
+		-moz-animation: AnimationName 10s ease infinite;
+		animation: AnimationName 10s ease infinite;
 	}
 
 	@-webkit-keyframes AnimationName {
@@ -170,7 +177,7 @@ function App() {
 	const [gameOver, setGameOver] = useState(false);
 	let playerTurn = true;
 
-	console.log('hands: ', hands);
+	// console.log('hands: ', hands);
 
 	const takePlayerTurn = (chooser, choosee) => {
 		const chosenCardIndex = Math.floor(Math.random() * choosee.length);
