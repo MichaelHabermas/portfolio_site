@@ -68,9 +68,6 @@ const shuffler = deckArray => {
 	return deckArray;
 };
 
-
-
 // ------- Choose which kind of shuffled deck to export
 export const shuffledDeck1 = shuffler(shuffler(shuffler(deckWSuits)));
 // export const shuffledDeck1 = shuffler(shuffler(shuffler(deckWOSuits)));
-//tasks and think about ui ideas
