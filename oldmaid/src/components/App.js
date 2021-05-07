@@ -125,12 +125,20 @@ const OldMaidBody = styled.div`
 
 const OMDeck = OldMaidDeckSetup();
 
+const initialScore = { yourScore: 0, theirScore: 0 };
+
 function App() {
 	const [hands, setHands] = useState(OMDeck);
 	const [gameOver, setGameOver] = useState(false);
-	const [score, setScore] = useState({ yourScore: 0, theirScore: 0 }); // belongs in the Old Maid File
+	const [score, setScore] = useState({ yourScore: 2, theirScore: 1 }); // belongs in the Old Maid File
 
 	let playerTurn = true;
+
+	const resetScore = e => {
+		// e.preventDefault();
+		console.log('reset is firing');
+		setScore({ yourScore: 0, theirScore: 0 });
+	};
 
 	// handles each player taking their turn
 	const takePlayerTurn = (chooser, choosee) => {
@@ -177,7 +185,7 @@ function App() {
 	return (
 		<>
 			<NavBarMain />
-			<ScoringNav gameName="Old Maid" score={score} />
+			<ScoringNav gameName="Old Maid" score={score} setScore={setScore} />
 			<OldMaidBody>
 				<div className="body">
 					<h1>OLD MAID</h1>

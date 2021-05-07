@@ -32,10 +32,12 @@ const Nav = styled.div`
 		display: flex;
 		justify-content: space-around;
 		width: 30%;
+		align-items: center;
 	}
 
 	.nav-links li {
 		list-style: none;
+		line-height: 100%;
 	}
 
 	.nav-links h4 {
@@ -44,6 +46,15 @@ const Nav = styled.div`
 		letter-spacing: 3px;
 		font-weight: bold;
 		font-size: 14px;
+	}
+
+	button {
+		color: rgb(226, 226, 226);
+		background-color: #6f0000;
+		border: 3px solid  rgb(226, 226, 226);
+		border-radius: 100%;
+		font-weight: bold;
+		padding: 0.5rem
 	}
 
 
@@ -86,23 +97,33 @@ const Nav = styled.div`
 `;
 
 const ScoringNav = props => {
-	const { yourScore, theirScore } = props.score;
+	const { score, setScore, gameName } = props;
 
+	const resetScore = e => {
+		setScore({ yourScore: 0, theirScore: 0 });
+	};
 	return (
 		<Nav>
 			<nav>
 				<div className="logo">
-					<h4>{props.gameName}</h4>
+					<h4>{gameName}</h4>
 				</div>
 				<ul className="nav-links">
 					<li>
-						<h4>You: {yourScore}</h4>
+						<h4>You: {score.yourScore}</h4>
 					</li>
 					<li>
-						<h4>Them: {theirScore}</h4>
+						<h4>Them: {score.theirScore}</h4>
 					</li>
 					<li>
 						<h4>Rules</h4>
+					</li>
+					<li>
+						<button onClick={resetScore}>
+							Reset
+							<br />
+							Score
+						</button>
 					</li>
 				</ul>
 			</nav>
