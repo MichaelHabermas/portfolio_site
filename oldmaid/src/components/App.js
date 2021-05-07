@@ -5,7 +5,7 @@ import '../cssFiles/App.css';
 //components
 import NavBarMain from './NavBarMain.js';
 import ScoringNav from './ScoringNav.js';
-import { shuffledDeck1 } from './Deck.js';
+import { OldMaidDeckSetup } from './OldMaidDeckSetup.js';
 //assets
 import cardBack from '../assets/card_face_selected.png';
 import cardFront from '../assets/card_face_norm.png';
@@ -123,50 +123,11 @@ const OldMaidBody = styled.div`
 	}
 `;
 
-// ##### deck setup for Old Maid #####
-// takes out 3 of the Queens from the deck
-const createOldMaidDeck = deck => deck.filter(card => card !== 'Qs' && card !== 'Qh' && card !== 'Qc');
-
-// filters an array of cards to remove pairs, but leave "odd man out" cards
-const removePairs = hand => {
-	const newHandObject = {};
-	const newHand = [];
-
-	hand.forEach(card => {
-		if (newHandObject[card[0]]) {
-			newHandObject[card[0]] += 1;
-		} else {
-			newHandObject[card[0]] = 1;
-		}
-	});
-
-	for (let key in newHandObject) {
-		if (newHandObject[key] % 2 !== 0) newHand.push(key);
-	}
-
-	return newHand;
-};
-
-// splits the deck in half, removes pairs from each hand, and returns the 2 player's hands as objects
-const splitDeck = deck => {
-	const half = Math.ceil(deck.length / 2);
-	const halfOpponentHand = deck.slice(0, half);
-	const halfPlayerHand = deck.slice(half, deck.length);
-
-	const thePlayerHand = removePairs(halfPlayerHand);
-	const theOpponentHand = removePairs(halfOpponentHand);
-
-	// creates and returns the initial set of hands for the start of the game
-	return {
-		playerHand: thePlayerHand,
-		opponentHand: theOpponentHand
-	};
-};
+const OMDeck = OldMaidDeckSetup();
 
 function App() {
-	const [hands, setHands] = useState(splitDeck(createOldMaidDeck(shuffledDeck1)));
+	const [hands, setHands] = useState(OMDeck);
 	const [gameOver, setGameOver] = useState(false);
-
 	const [score, setScore] = useState({ yourScore: 0, theirScore: 0 }); // belongs in the Old Maid File
 
 	let playerTurn = true;
@@ -226,7 +187,7 @@ function App() {
 						<div
 							className="hand opponentHand"
 							onClick={() => {
-								gameOver ? setTimeout(() => window.location.reload(), 3000) : (playerTurn = true); // the problem is HERE, with how I restarted the games
+								gameOver ? window.location.reload() : (playerTurn = true); // the problem is HERE, with how I restarted the games
 								takePlayerTurn(hands.playerHand, hands.opponentHand);
 							}}
 						>
