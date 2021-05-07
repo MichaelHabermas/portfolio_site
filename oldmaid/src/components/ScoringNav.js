@@ -16,7 +16,9 @@ const Nav = styled.div`
 		align-items: center;
 		font-family: 'Poppins', sans-serif;
 		min-height: 8vh;
-		background-color: #875f75;
+		background: #002c6f; /* fallback for old browsers */
+		background: -webkit-linear-gradient(to right, #6f0000, #002c6f); /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(to right, #6f0000, #002c6f);
 	}
 
 	.logo {
@@ -83,14 +85,14 @@ const Nav = styled.div`
 
 `;
 
-const NavOldMaid = props => {
+const ScoringNav = props => {
 	const { yourScore, theirScore } = props.score;
 
 	return (
 		<Nav>
 			<nav>
 				<div className="logo">
-					<h4>Old Maid</h4>
+					<h4>{props.gameName}</h4>
 				</div>
 				<ul className="nav-links">
 					<li>
@@ -108,4 +110,4 @@ const NavOldMaid = props => {
 	);
 };
 
-export default NavOldMaid;
+export default ScoringNav;
