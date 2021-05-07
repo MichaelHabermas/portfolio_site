@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import '../cssFiles/App.css';
 //components
 import NavBarMain from './NavBarMain.js';
-import NavOldMaid from './NavOldMaid.js';
+import ScoringNav from './ScoringNav.js';
 import { shuffledDeck1 } from './Deck.js';
 //assets
 import cardBack from '../assets/card_face_selected.png';
@@ -216,7 +216,7 @@ function App() {
 	return (
 		<>
 			<NavBarMain />
-			<NavOldMaid score={score} />
+			<ScoringNav gameName="Old Maid" score={score} />
 			<OldMaidBody>
 				<div className="body">
 					<h1>OLD MAID</h1>
