@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
-import '../cssFiles/App.css';
 import styled from 'styled-components';
+
+import '../cssFiles/App.css';
+//components
+import NavBarMain from './NavBarMain.js';
+import NavOldMaid from './NavOldMaid.js';
 import { shuffledDeck1 } from './Deck.js';
+//assets
 import cardBack from '../assets/card_face_selected.png';
 import cardFront from '../assets/card_face_norm.png';
 
 // styling
-const MainApp = styled.div`
+const OldMaidBody = styled.div`
 	.body {
 		display: flex;
 		flex-direction: column;
@@ -14,13 +19,14 @@ const MainApp = styled.div`
 		align-items: center;
 		width: 100vw;
 		height: 100vh;
-		background: linear-gradient(44deg, #e8ebf7, #acbed8, #bf0603);
+		// these are for the fading background colors
+		background: linear-gradient(44deg, #0060aa, #ffed10, #e20025, #010101);
 		background-size: 600% 600%;
 		-webkit-animation: AnimationName 10s ease infinite;
 		-moz-animation: AnimationName 10s ease infinite;
 		animation: AnimationName 10s ease infinite;
 	}
-
+	// these are for the fading background colors
 	@-webkit-keyframes AnimationName {
 		0% {
 			background-position: 26% 0%;
@@ -117,13 +123,15 @@ const MainApp = styled.div`
 	}
 `;
 
-// ##### deck setup for Old Maid
+// ##### deck setup for Old Maid #####
 // takes out 3 of the Queens from the deck
 const createOldMaidDeck = deck => deck.filter(card => card !== 'Qs' && card !== 'Qh' && card !== 'Qc');
+
 // filters an array of cards to remove pairs, but leave "odd man out" cards
-const removeDoubles = hand => {
+const removePairs = hand => {
 	const newHandObject = {};
 	const newHand = [];
+
 	hand.forEach(card => {
 		if (newHandObject[card[0]]) {
 			newHandObject[card[0]] += 1;
@@ -131,30 +139,25 @@ const removeDoubles = hand => {
 			newHandObject[card[0]] = 1;
 		}
 	});
-	// console.log('newHandObject: ', newHandObject);
 
 	for (let key in newHandObject) {
-		// console.log('key: ', key);
-		// console.log('newHandObject[key]: ', newHandObject[key]);
 		if (newHandObject[key] % 2 !== 0) newHand.push(key);
 	}
-	// console.log('newHand: ', newHand);
+
 	return newHand;
 };
+
 // splits the deck in half, removes pairs from each hand, and returns the 2 player's hands as objects
 const splitDeck = deck => {
-	// console.log('createOldMaidDeck: ', deck);
 	const half = Math.ceil(deck.length / 2);
 	const halfOpponentHand = deck.slice(0, half);
 	const halfPlayerHand = deck.slice(half, deck.length);
 
-	// console.log('halfOpponentHand: ', halfOpponentHand);
-	// console.log('halfPlayerHand: ', halfPlayerHand);
+	const thePlayerHand = removePairs(halfPlayerHand);
+	const theOpponentHand = removePairs(halfOpponentHand);
 
-	const thePlayerHand = removeDoubles(halfPlayerHand);
-	const theOpponentHand = removeDoubles(halfOpponentHand);
+	// creates and returns the initial set of hands for the start of the game
 	return {
-		//lets me export as a similar object to the default hands
 		playerHand: thePlayerHand,
 		opponentHand: theOpponentHand
 	};
@@ -163,15 +166,15 @@ const splitDeck = deck => {
 function App() {
 	const [hands, setHands] = useState(splitDeck(createOldMaidDeck(shuffledDeck1)));
 	const [gameOver, setGameOver] = useState(false);
+
+	const [score, setScore] = useState({ yourScore: 0, theirScore: 0 }); // belongs in the Old Maid File
+
 	let playerTurn = true;
 
-	// console.log('hands: ', hands);
-
+	// handles each player taking their turn
 	const takePlayerTurn = (chooser, choosee) => {
 		const chosenCardIndex = Math.floor(Math.random() * choosee.length);
 		const chosenCard = choosee[chosenCardIndex];
-
-		console.log('chosenCard: ', chosenCard);
 
 		let newChooseeHand;
 		let newChooserHand;
@@ -191,52 +194,67 @@ function App() {
 		});
 
 		if (newChooserHand < 1 || newChooseeHand < 1) {
-			// console.log('GAME OVER');
 			setGameOver(!gameOver);
 			return;
 		}
 	};
 
+	const handleScoreUpdate = () => {
+		console.log('its connected');
+		if (hands.playerHand.length === 0 && gameOver) {
+			console.log('its connected AAAA');
+			setScore({ ...score, yourScore: score.yourScore + 1 });
+			return 'Player Wins!';
+		}
+		if (hands.opponentHand.length === 0 && gameOver) {
+			console.log('its connected BBBB');
+			setScore({ ...score, theirScore: score.theirScore + 1 });
+			return 'Opponent Wins!';
+		}
+	};
+
 	return (
-		<MainApp>
-			<div className="body">
-				<h1>OLD MAID</h1>
-				<div className={gameOver ? 'game-over' : 'no-see'}>GAME OVER</div>
-				<div className={gameOver ? 'game-over' : 'no-see'}>
-					{hands.playerHand.length === 0 ? 'Player Wins!' : 'Opponent Wins!'}
-				</div>
-				<div className="cards">
-					<div
-						className="hand opponentHand"
-						onClick={() => {
-							gameOver ? window.location.reload() : (playerTurn = true);
-							takePlayerTurn(hands.playerHand, hands.opponentHand);
-						}}
-					>
-						Opponent Hand:
-						{hands.opponentHand.map(card => {
-							return <div key={Math.random()} className="card opponentCard" value={card}></div>;
-						})}
+		<>
+			<NavBarMain />
+			<NavOldMaid score={score} />
+			<OldMaidBody>
+				<div className="body">
+					<h1>OLD MAID</h1>
+					<div className={gameOver ? 'game-over' : 'no-see'}>GAME OVER</div>
+					<div className={gameOver ? 'game-over' : 'no-see'}>{handleScoreUpdate}</div>
+					<div className="cards">
+						<div
+							className="hand opponentHand"
+							onClick={() => {
+								gameOver ? setTimeout(() => window.location.reload(), 3000) : (playerTurn = true); // the problem is HERE, with how I restarted the games
+								takePlayerTurn(hands.playerHand, hands.opponentHand);
+							}}
+						>
+							Opponent Hand:
+							{hands.opponentHand.map(card => {
+								return <div key={Math.random()} className="card opponentCard" value={card}></div>;
+							})}
+						</div>
+						<div
+							className="hand playerHand"
+							onClick={() => {
+								gameOver ? window.location.reload() : (playerTurn = false);
+								takePlayerTurn(hands.opponentHand, hands.playerHand);
+							}}
+						>
+							Player Hand:
+							{hands.playerHand.map(card => {
+								return (
+									<div key={Math.random()} className="card playerCard">
+										{card}
+									</div>
+								);
+							})}
+						</div>
 					</div>
-					<div
-						className="hand playerHand"
-						onClick={() => {
-							gameOver ? window.location.reload() : (playerTurn = false);
-							takePlayerTurn(hands.opponentHand, hands.playerHand);
-						}}
-					>
-						Player Hand:
-						{hands.playerHand.map(card => {
-							return (
-								<div key={Math.random()} className="card playerCard">
-									{card}
-								</div>
-							);
-						})}
-					</div>
 				</div>
-			</div>
-		</MainApp>
+			</OldMaidBody>
+		</>
 	);
 }
 
