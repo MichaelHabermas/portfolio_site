@@ -3,8 +3,8 @@ import styled from 'styled-components';
 
 const Nav = styled.div`
 	*,  /* '*'selects all things, the :: before and :: after grab *something else* */
-*::before,  /* these 3 are a safety to eliminate some presets */
-*::after {
+	*::before,  /* these 3 are a safety to eliminate some presets */
+	*::after {
 		margin: 0;
 		padding: 0;
 		box-sizing: border-box;
@@ -51,12 +51,11 @@ const Nav = styled.div`
 	button {
 		color: rgb(226, 226, 226);
 		background-color: #6f0000;
-		border: 3px solid  rgb(226, 226, 226);
+		border: 3px solid rgb(226, 226, 226);
 		border-radius: 100%;
 		font-weight: bold;
-		padding: 0.5rem
+		padding: 0.5rem;
 	}
-
 
 	/* TABLET ZONE */
 	/* @media screen and (max-width: 1024px) {
@@ -91,9 +90,7 @@ const Nav = styled.div`
 			display: block;
 			cursor: pointer;
 		} */
-	}
-
-
+	/* } */
 `;
 
 const ScoringNav = props => {
@@ -102,6 +99,7 @@ const ScoringNav = props => {
 	const resetScore = e => {
 		setScore({ yourScore: 0, theirScore: 0 });
 	};
+
 	return (
 		<Nav>
 			<nav>
