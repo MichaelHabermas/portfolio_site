@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 
 //components
-import ScoringNav from './ScoringNav.js';
+import ScoringNav from '../Navs/ScoringNav.js';
 import { OldMaidDeckSetup } from './OldMaidDeckSetup.js';
 //assets
 import cardBack from '../assets/card_face_selected.png';
@@ -131,12 +131,6 @@ export default function OldMaidGame() {
 	const [score, setScore] = useState(initialScore); // belongs in the Old Maid File
 
 	let playerTurn = true;
-
-	const resetScore = e => {
-		// e.preventDefault();
-		console.log('reset is firing');
-		setScore(initialScore);
-	};
 
 	// handles each player taking their turn
 	const takePlayerTurn = (chooser, choosee) => {

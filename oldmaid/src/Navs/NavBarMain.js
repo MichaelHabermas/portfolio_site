@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Route, Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Nav = styled.div`
@@ -134,7 +135,9 @@ const NavBarMain = () => {
 		<Nav>
 			<nav>
 				<div className="logo">
-					<h4>T.R.I.</h4>
+					<Link to="/">
+						<h4>T.R.I.</h4>
+					</Link>
 				</div>
 				<ul className={isOpen ? 'nav-links nav-active' : 'nav-links'}>
 					<li
@@ -171,7 +174,7 @@ const NavBarMain = () => {
 								: { animation: '' }
 						}
 					>
-						<a href="#">Projects</a>
+						<a href="/old-maid">Projects</a>
 					</li>
 				</ul>
 				<div className={isOpen ? 'burger toggle' : 'burger'} onClick={() => setIsOpen(!isOpen)}>
