@@ -18,10 +18,10 @@ const initialScore = { yourScore: 0, theirScore: 0 };
 // styling
 const OldMaidBody = styled.div`
 	.body {
-		display: flex;
+		/* display: flex;
 		flex-direction: column;
-		justify-content: center;
-		align-items: center;
+		justify-content: space-around;
+		align-items: space-around; */
 		width: 100vw;
 		height: 84vh;
 		// these are for the fading background colors
@@ -74,7 +74,12 @@ const OldMaidBody = styled.div`
 
 	// gameplay element styling
 	.cards {
-		/* border: 1px solid rebeccapurple; */
+		border: 1px solid rebeccapurple;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: space-around;
 	}
 
 	.hand {
@@ -191,7 +196,6 @@ export default function OldMaidGame() {
 			<ScoringNav gameName="Old Maid" score={score} setScore={setScore} />
 			<OldMaidBody>
 				<div className="body">
-					<h1>OLD MAID</h1>
 					<div className={gameOver ? 'game-over' : 'no-see'}>GAME OVER</div>
 					<div className={gameOver ? 'game-over' : 'no-see'}>{handleScoreUpdate}</div>
 					<div className="cards">
@@ -202,14 +206,11 @@ export default function OldMaidGame() {
 								takePlayerTurn(hands.playerHand, hands.opponentHand);
 							}}
 						>
-							<h3>
-								Opponent:
-								<img
-									width="50px"
-									src={characters[Math.floor(Math.random() * characters.length)]}
-									alt="Eyes Without a FAaaAACE"
-								/>
-							</h3>
+							<img
+								width="50px"
+								src={characters[Math.floor(Math.random() * characters.length)]}
+								alt="Eyes Without a FAaaAACE"
+							/>
 							<div>
 								{hands.opponentHand.map(card => {
 									return <div key={Math.random()} className="card opponentCard" value={card}></div>;
@@ -223,14 +224,6 @@ export default function OldMaidGame() {
 								takePlayerTurn(hands.opponentHand, hands.playerHand);
 							}}
 						>
-							<h3>
-								Player:
-								<img
-									height="50px"
-									src={characters[Math.floor(Math.random() * characters.length)]}
-									alt="Eyes Without a FAaaAACE"
-								/>
-							</h3>
 							<div>
 								{hands.playerHand.map(card => {
 									return (
@@ -240,6 +233,12 @@ export default function OldMaidGame() {
 									);
 								})}
 							</div>
+
+							<img
+								height="50px"
+								src={characters[Math.floor(Math.random() * characters.length)]}
+								alt="Eyes Without a FAaaAACE"
+							/>
 						</div>
 					</div>
 				</div>

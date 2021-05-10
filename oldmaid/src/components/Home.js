@@ -1,10 +1,10 @@
 import React from 'react';
-import { Parallax } from 'react-parallax'; // TimelineMax
+// import { Parallax } from 'react-parallax'; // TimelineMax
 
-import { ScrollMagic } from 'react-scroll-parallax'; // TimelineMax
-import { Controller, Scene } from 'react-scrollmagic';
-import { Tween } from 'react-gsap';
-import { TweenMax } from 'gsap';
+// import { ScrollMagic } from 'react-scroll-parallax'; // TimelineMax
+// import { Controller, Scene } from 'react-scrollmagic';
+// import { Tween } from 'react-gsap';
+// import { TweenMax } from 'gsap';
 
 import styled from 'styled-components';
 
