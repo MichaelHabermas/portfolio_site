@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Nav = styled.div`
@@ -134,11 +134,11 @@ const NavBarMain = () => {
 	return (
 		<Nav>
 			<nav>
-				<div className="logo">
-					<Link to="/">
+				<Link to="/">
+					<div className="logo">
 						<h4>T.R.I.</h4>
-					</Link>
-				</div>
+					</div>
+				</Link>
 				<ul className={isOpen ? 'nav-links nav-active' : 'nav-links'}>
 					<li
 						style={
@@ -147,7 +147,7 @@ const NavBarMain = () => {
 								: { animation: '' }
 						}
 					>
-						<a href="#">Home</a>
+						<Link to="/">Home</Link>
 					</li>
 					<li
 						style={
@@ -156,7 +156,7 @@ const NavBarMain = () => {
 								: { animation: '' }
 						}
 					>
-						<a href="#">About</a>
+						<Link to="/about">About</Link>
 					</li>
 					<li
 						style={
@@ -165,7 +165,7 @@ const NavBarMain = () => {
 								: { animation: '' }
 						}
 					>
-						<a href="#">Work</a>
+						<Link to="/">Work</Link>
 					</li>
 					<li
 						style={
@@ -174,7 +174,7 @@ const NavBarMain = () => {
 								: { animation: '' }
 						}
 					>
-						<a href="/old-maid">Projects</a>
+						<Link to="/old-maid">Projects</Link>
 					</li>
 				</ul>
 				<div className={isOpen ? 'burger toggle' : 'burger'} onClick={() => setIsOpen(!isOpen)}>
