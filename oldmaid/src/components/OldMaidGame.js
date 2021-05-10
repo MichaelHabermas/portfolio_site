@@ -7,6 +7,13 @@ import { OldMaidDeckSetup } from './OldMaidDeckSetup.js';
 //assets
 import cardBack from '../assets/card_face_selected.png';
 import cardFront from '../assets/card_face_norm.png';
+import woman_1 from '../assets/woman_1.png';
+import woman_2 from '../assets/woman_2.png';
+import man_1 from '../assets/man_1.png';
+import man_2 from '../assets/man_2.png';
+
+const characters = [woman_1, woman_2, man_1, man_2];
+const initialScore = { yourScore: 0, theirScore: 0 };
 
 // styling
 const OldMaidBody = styled.div`
@@ -16,7 +23,7 @@ const OldMaidBody = styled.div`
 		justify-content: center;
 		align-items: center;
 		width: 100vw;
-		height: 100vh;
+		height: 84vh;
 		// these are for the fading background colors
 		background: linear-gradient(44deg, #0060aa, #ffed10, #e20025, #010101);
 		background-size: 600% 600%;
@@ -72,9 +79,16 @@ const OldMaidBody = styled.div`
 
 	.hand {
 		display: flex;
+		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 		/* border: 1px solid yellow; */
+	}
+
+	.hand > div {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 
 	.card {
@@ -122,8 +136,6 @@ const OldMaidBody = styled.div`
 `;
 
 const OMDeck = OldMaidDeckSetup();
-
-const initialScore = { yourScore: 0, theirScore: 0 };
 
 export default function OldMaidGame() {
 	const [hands, setHands] = useState(OMDeck);
@@ -190,10 +202,19 @@ export default function OldMaidGame() {
 								takePlayerTurn(hands.playerHand, hands.opponentHand);
 							}}
 						>
-							Opponent Hand:
-							{hands.opponentHand.map(card => {
-								return <div key={Math.random()} className="card opponentCard" value={card}></div>;
-							})}
+							<h3>
+								Opponent:
+								<img
+									width="50px"
+									src={characters[Math.floor(Math.random() * characters.length)]}
+									alt="Eyes Without a FAaaAACE"
+								/>
+							</h3>
+							<div>
+								{hands.opponentHand.map(card => {
+									return <div key={Math.random()} className="card opponentCard" value={card}></div>;
+								})}
+							</div>
 						</div>
 						<div
 							className="hand playerHand"
@@ -202,14 +223,23 @@ export default function OldMaidGame() {
 								takePlayerTurn(hands.opponentHand, hands.playerHand);
 							}}
 						>
-							Player Hand:
-							{hands.playerHand.map(card => {
-								return (
-									<div key={Math.random()} className="card playerCard">
-										{card}
-									</div>
-								);
-							})}
+							<h3>
+								Player:
+								<img
+									height="50px"
+									src={characters[Math.floor(Math.random() * characters.length)]}
+									alt="Eyes Without a FAaaAACE"
+								/>
+							</h3>
+							<div>
+								{hands.playerHand.map(card => {
+									return (
+										<div key={Math.random()} className="card playerCard">
+											{card}
+										</div>
+									);
+								})}
+							</div>
 						</div>
 					</div>
 				</div>
