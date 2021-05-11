@@ -141,13 +141,15 @@ const OldMaidBody = styled.div`
 `;
 
 const OMDeck = OldMaidDeckSetup();
+let playersTurn = true;
 
 export default function OldMaidGame() {
 	const [hands, setHands] = useState(OMDeck);
 	const [gameOver, setGameOver] = useState(false);
 	const [score, setScore] = useState(initialScore); // belongs in the Old Maid File
 
-	let playerTurn = true;
+	// let playerTurn = true;
+	const [playerTurn, setPlayerTurn] = useState(playersTurn);
 
 	// handles each player taking their turn
 	const takePlayerTurn = (chooser, choosee) => {
@@ -170,6 +172,8 @@ export default function OldMaidGame() {
 			playerHand: playerTurn ? newChooserHand : newChooseeHand,
 			opponentHand: playerTurn ? newChooseeHand : newChooserHand
 		});
+
+		setPlayerTurn(!playerTurn);
 
 		if (newChooserHand < 1 || newChooseeHand < 1) {
 			setGameOver(!gameOver);
@@ -196,14 +200,13 @@ export default function OldMaidGame() {
 			<ScoringNav gameName="Old Maid" score={score} setScore={setScore} />
 			<OldMaidBody>
 				<div className="body">
-					<div className={gameOver ? 'game-over' : 'no-see'}>GAME OVER</div>
-					<div className={gameOver ? 'game-over' : 'no-see'}>{handleScoreUpdate}</div>
+					{/* <div className={gameOver ? 'game-over' : 'no-see'}>GAME OVER</div>
+					<div className={gameOver ? 'game-over' : 'no-see'}>{handleScoreUpdate}</div> */}
 					<div className="cards">
 						<div
 							className="hand opponentHand"
 							onClick={() => {
-								gameOver ? window.location.reload() : (playerTurn = true); // the problem is HERE, with how I restarted the games
-								takePlayerTurn(hands.playerHand, hands.opponentHand);
+								playerTurn ? console.log("not my turn") : takePlayerTurn(hands.opponentHand, hands.playerHand); // the problem is HERE, with how I restarted the games
 							}}
 						>
 							<img
@@ -220,8 +223,7 @@ export default function OldMaidGame() {
 						<div
 							className="hand playerHand"
 							onClick={() => {
-								gameOver ? window.location.reload() : (playerTurn = false);
-								takePlayerTurn(hands.opponentHand, hands.playerHand);
+								playerTurn ? takePlayerTurn(hands.playerHand, hands.opponentHand) : console.log("not my turn");
 							}}
 						>
 							<div>
