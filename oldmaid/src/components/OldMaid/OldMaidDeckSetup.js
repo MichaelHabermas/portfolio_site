@@ -35,28 +35,27 @@ function groupTheCards(hand) {
 	return newHandObject;
 }
 
+// filters an array of cards to remove pairs, but leave "odd man out" cards
+const removePairs = handOfCards => {
+	const groupedCards = groupTheCards(handOfCards);
+	return removeThePairs(groupedCards);
+};
+
+// splits the deck in half, removes pairs from each hand, and returns the 2 player's hands as objects
+const createHandsForOldMaid = deck => {
+	const { playersHalf, opponentsHalf } = splitDeckInHalf(deck);
+
+	// creates and returns the initial set of hands for the start of the game
+	return {
+		playerHand: removePairs(playersHalf),
+		opponentHand: removePairs(opponentsHalf)
+	};
+};
+
+// takes out 3 of the Queens from the deck
+const createOldMaidDeck = deck => deck.filter(card => card !== 'Qs' && card !== 'Qh' && card !== 'Qc');
+
 export const OldMaidDeckSetup = () => {
-	// ##### deck setup for Old Maid #####
-	// takes out 3 of the Queens from the deck
-	const createOldMaidDeck = deck => deck.filter(card => card !== 'Qs' && card !== 'Qh' && card !== 'Qc');
-
-	// filters an array of cards to remove pairs, but leave "odd man out" cards
-	const removePairs = handOfCards => {
-		const groupedCards = groupTheCards(handOfCards);
-		return removeThePairs(groupedCards);
-	};
-
-	// splits the deck in half, removes pairs from each hand, and returns the 2 player's hands as objects
-	const createHandsForOldMaid = deck => {
-		const { playersHalf, opponentsHalf } = splitDeckInHalf(deck);
-
-		// creates and returns the initial set of hands for the start of the game
-		return {
-			playerHand: removePairs(playersHalf),
-			opponentHand: removePairs(opponentsHalf)
-		};
-	};
-
 	const oldMaidDeck = shuffler(createOldMaidDeck(deckWSuits));
 	return createHandsForOldMaid(oldMaidDeck);
 };
