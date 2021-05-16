@@ -47,6 +47,7 @@ const Nav = styled.div`
 		font-size: 14px;
 	}
 
+	// burger styling
 	.burger {
 		display: none;
 	}
@@ -57,6 +58,52 @@ const Nav = styled.div`
 		background-color: rgb(226, 226, 226);
 		margin: 5px;
 		transition: all 0.3s ease;
+	}
+
+	// dropdown styling
+	.dropbtn {
+		background-color: transparent;
+		font-family: 'Poppins', sans-serif;
+		border: none;
+
+		color: rgb(226, 226, 226);
+		text-decoration: none;
+		letter-spacing: 3px;
+		font-weight: bold;
+		font-size: 14px;
+	}
+
+	.dropdown {
+		position: relative;
+		display: inline-block;
+	}
+
+	.dropdown-content {
+		display: none;
+		position: absolute;
+		background-color: #f1f1f1;
+		min-width: 160px;
+		box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+		z-index: 1;
+	}
+
+	.dropdown-content a {
+		color: black;
+		padding: 12px 16px;
+		text-decoration: none;
+		display: block;
+	}
+
+	.dropdown-content a:hover {
+		background-color: #ddd;
+	}
+
+	.dropdown:hover .dropdown-content {
+		display: block;
+	}
+
+	.dropdown:hover .dropbtn {
+		background-color: #3e8e41;
 	}
 
 	/* TABLET ZONE */
@@ -174,7 +221,13 @@ const NavBarMain = () => {
 								: { animation: '' }
 						}
 					>
-						<Link to="/old-maid/startscreen">Projects</Link>
+						<div class="dropdown">
+							<button class="dropbtn">Projects</button>
+							<div class="dropdown-content">
+								<Link to="/old-maid/startscreen">Old Maid</Link>
+								<a href="/">Link 1</a>
+							</div>
+						</div>
 					</li>
 				</ul>
 				<div className={isOpen ? 'burger toggle' : 'burger'} onClick={() => setIsOpen(!isOpen)}>
