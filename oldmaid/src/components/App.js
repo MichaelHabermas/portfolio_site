@@ -7,7 +7,7 @@ import '../cssFiles/App.css';
 import Home from './Home.js';
 import About from './About.js';
 import NavBarMain from '../Navs/NavBarMain.js';
-import OldMaidGame from './OldMaidGame.js';
+import OldMaidGame from './OldMaid/OldMaidGame';
 
 function App() {
 	return (

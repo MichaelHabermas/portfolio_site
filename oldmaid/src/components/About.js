@@ -6,8 +6,8 @@ import styled from 'styled-components';
 import bg1 from '../assets/bg1.png';
 import girl1 from '../assets/girl1.png';
 import rock1 from '../assets/rock1.png';
-import switzleft from '../assets/switzleft.png';
-import switzright from '../assets/switzright.png';
+// import switzleft from '../assets/switzleft.png';
+// import switzright from '../assets/switzright.png';
 
 const image1 =
 	'https://images.unsplash.com/photo-1498092651296-641e88c3b057?auto=format&fit=crop&w=1778&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D';

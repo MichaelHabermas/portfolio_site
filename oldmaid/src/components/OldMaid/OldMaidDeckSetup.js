@@ -1,7 +1,4 @@
-// import React, { useState } from 'react';
-// import styled from 'styled-components';
-
-import { shuffledDeck1 } from './Deck.js';
+import { shuffledDeck1 } from '../Deck';
 
 export const OldMaidDeckSetup = () => {
 	// ##### deck setup for Old Maid #####

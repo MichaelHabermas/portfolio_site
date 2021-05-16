@@ -94,24 +94,20 @@ const Nav = styled.div`
 `;
 
 const ScoringNav = props => {
-	const { score, setScore, gameName } = props;
-
-	const resetScore = e => {
-		setScore({ yourScore: 0, theirScore: 0 });
-	};
+	const { gameState, resetScore } = props;
 
 	return (
 		<Nav>
 			<nav>
 				<div className="logo">
-					<h4>{gameName}</h4>
+					<h4>{gameState.gameName}</h4>
 				</div>
 				<ul className="nav-links">
 					<li>
-						<h4>You: {score.yourScore}</h4>
+						<h4>You: {gameState.score.yourScore}</h4>
 					</li>
 					<li>
-						<h4>Them: {score.theirScore}</h4>
+						<h4>Them: {gameState.score.theirScore}</h4>
 					</li>
 					<li>
 						<h4>Rules</h4>
