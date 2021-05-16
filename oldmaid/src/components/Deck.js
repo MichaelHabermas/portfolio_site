@@ -4,8 +4,9 @@ const diamonds = ['2d', '3d', '4d', '5d', '6d', '7d', '8d', '9d', 'Td', 'Jd', 'Q
 const clubs = ['2c', '3c', '4c', '5c', '6c', '7c', '8c', '9c', 'Tc', 'Jc', 'Qc', 'Kc', 'Ac'];
 
 // 2 different card decks. Jokers not included
-const deckWSuits = [...spades, ...hearts, ...diamonds, ...clubs];
-// const deckWOSuits = [
+export const deckWSuits = [...spades, ...hearts, ...diamonds, ...clubs];
+
+// export const deckWOSuits = [
 // 	'2',
 // 	'3',
 // 	'4',
@@ -60,14 +61,16 @@ const deckWSuits = [...spades, ...hearts, ...diamonds, ...clubs];
 // 	'A'
 // ];
 
-const shuffler = deckArray => {
-	deckArray.forEach((card, index) => {
-		let randPos = Math.floor(Math.random() * deckArray.length);
-		[deckArray[index], deckArray[randPos]] = [deckArray[randPos], deckArray[index]];
-	});
-	return deckArray;
-};
+// old stuff, maybe useful
+
+// const shuffler = deckArray => {
+// 	deckArray.forEach((card, index) => {
+// 		let randPos = Math.floor(Math.random() * deckArray.length);
+// 		[deckArray[index], deckArray[randPos]] = [deckArray[randPos], deckArray[index]];
+// 	});
+// 	return deckArray;
+// };
 
 // ------- Choose which kind of shuffled deck to export
-export const shuffledDeck1 = shuffler(shuffler(shuffler(deckWSuits)));
+// export const shuffledDeck1 = shuffler(shuffler(shuffler(deckWSuits)));
 // export const shuffledDeck1 = shuffler(shuffler(shuffler(deckWOSuits)));

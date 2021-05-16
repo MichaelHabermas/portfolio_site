@@ -18,10 +18,12 @@ import cardBack from '../../assets/card_face_selected.png';
 import cardFront from '../../assets/card_face_norm.png';
 import charactersArray from '../../assets/characters/Characters';
 
+const newGameHands = OldMaidDeckSetup();
+
 const initialState = {
 	gameName: 'Old Maid',
 	score: { yourScore: 0, theirScore: 0 },
-	hands: OldMaidDeckSetup(),
+	hands: newGameHands,
 	gameOver: false,
 	playerCharacter: {
 		user: charactersArray[Math.floor(Math.random() * charactersArray.length)],
@@ -181,7 +183,6 @@ export default function OldMaidGame() {
 	};
 
 	const handleGameOver = () => {
-		console.log('handleGameOver is firing');
 		handleScoreUpdate();
 		push('/old-maid/gameoverscreen');
 	};
@@ -209,9 +210,11 @@ export default function OldMaidGame() {
 	};
 
 	const handleNewGame = () => {
+		const newHands = OldMaidDeckSetup();
 		setOldMaidState({
 			...oldMaidState,
-			hands: OldMaidDeckSetup()
+			hands: newHands,
+			playerTurn: true
 		});
 	};
 
@@ -233,10 +236,6 @@ export default function OldMaidGame() {
 			<ScoringNav gameState={oldMaidState} resetScore={resetScore} />
 
 			<OldMaidBody>
-				{/* <Link to="/old-maid/gameoverscreen">
-					<button>gameoverscreen</button>
-				</Link> */}
-
 				<div className="body">
 					<Route path="/old-maid/startscreen">
 						<StartScreen />
