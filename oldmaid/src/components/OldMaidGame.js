@@ -9,11 +9,47 @@ import cardBack from '../assets/card_face_selected.png';
 import cardFront from '../assets/card_face_norm.png';
 import woman_1 from '../assets/woman_1.png';
 import woman_2 from '../assets/woman_2.png';
+import woman_3 from '../assets/woman_1.png';
+import woman_4 from '../assets/woman_2.png';
+import woman_5 from '../assets/woman_1.png';
+import woman_6 from '../assets/woman_2.png';
+import woman_7 from '../assets/woman_1.png';
+import woman_8 from '../assets/woman_2.png';
 import man_1 from '../assets/man_1.png';
 import man_2 from '../assets/man_2.png';
+import man_3 from '../assets/man_1.png';
+import man_4 from '../assets/man_2.png';
+import man_5 from '../assets/man_1.png';
+import man_6 from '../assets/man_2.png';
+import man_7 from '../assets/man_1.png';
+import man_8 from '../assets/man_2.png';
 
-const characters = [woman_1, woman_2, man_1, man_2];
-const initialScore = { yourScore: 0, theirScore: 0 };
+const OMHands = OldMaidDeckSetup();
+const characters = [
+	woman_1,
+	woman_2,
+	woman_3,
+	woman_4,
+	woman_5,
+	woman_6,
+	woman_7,
+	woman_8,
+	man_1,
+	man_2,
+	man_3,
+	man_4,
+	man_5,
+	man_6,
+	man_7,
+	man_8
+];
+// const initialScore = { yourScore: 0, theirScore: 0 };
+
+const initialState = {
+	score: { yourScore: 0, theirScore: 0 },
+	hands: OMHands,
+	gameOver: false
+};
 
 // styling
 const OldMaidBody = styled.div`
@@ -140,13 +176,12 @@ const OldMaidBody = styled.div`
 	}
 `;
 
-const OMDeck = OldMaidDeckSetup();
-
 export default function OldMaidGame() {
-	const [hands, setHands] = useState(OMDeck);
-	const [gameOver, setGameOver] = useState(false);
-	const [score, setScore] = useState(initialScore); // belongs in the Old Maid File
-
+	const [oldMaidState, setOldMaidState] = useState(initialState);
+	// const [hands, setHands] = useState(OMHands);
+	// const [gameOver, setGameOver] = useState(false);
+	// const [score, setScore] = useState(initialScore); // belongs in the Old Maid File
+	console.log(oldMaidState);
 	let playerTurn = true;
 
 	// handles each player taking their turn
@@ -166,53 +201,57 @@ export default function OldMaidGame() {
 			newChooserHand = [...chooser.filter(item => item[0] !== chosenCard[0])];
 		}
 
-		setHands({
-			playerHand: playerTurn ? newChooserHand : newChooseeHand,
-			opponentHand: playerTurn ? newChooseeHand : newChooserHand
+		setOldMaidState({
+			...oldMaidState,
+			hands: {
+				playerHand: playerTurn ? newChooserHand : newChooseeHand,
+				opponentHand: playerTurn ? newChooseeHand : newChooserHand
+			}
 		});
 
-		if (newChooserHand < 1 || newChooseeHand < 1) {
-			setGameOver(!gameOver);
-			return;
-		}
+		// if (newChooserHand < 1 || newChooseeHand < 1) {
+		// 	setGameOver(!gameOver);
+		// 	return;
+		// }
 	};
 
-	const handleScoreUpdate = () => {
-		console.log('its connected');
-		if (hands.playerHand.length === 0 && gameOver) {
-			console.log('its connected AAAA');
-			setScore({ ...score, yourScore: score.yourScore + 1 });
-			return 'Player Wins!';
-		}
-		if (hands.opponentHand.length === 0 && gameOver) {
-			console.log('its connected BBBB');
-			setScore({ ...score, theirScore: score.theirScore + 1 });
-			return 'Opponent Wins!';
-		}
-	};
+	// const handleScoreUpdate = () => {
+	// 	console.log('its connected');
+	// 	if (hands.playerHand.length === 0 && gameOver) {
+	// 		console.log('its connected AAAA');
+	// 		setScore({ ...score, yourScore: score.yourScore + 1 });
+	// 		return 'Player Wins!';
+	// 	}
+	// 	if (hands.opponentHand.length === 0 && gameOver) {
+	// 		console.log('its connected BBBB');
+	// 		setScore({ ...score, theirScore: score.theirScore + 1 });
+	// 		return 'Opponent Wins!';
+	// 	}
+	// };
 
 	return (
 		<>
-			<ScoringNav gameName="Old Maid" score={score} setScore={setScore} />
+			<ScoringNav gameName="Old Maid" oldMaidState={oldMaidState} setOldMaidState={setOldMaidState} />
+			{/* score={score} setScore={setScore} */}
 			<OldMaidBody>
 				<div className="body">
-					<div className={gameOver ? 'game-over' : 'no-see'}>GAME OVER</div>
-					<div className={gameOver ? 'game-over' : 'no-see'}>{handleScoreUpdate}</div>
+					{/* <div className={gameOver ? 'game-over' : 'no-see'}>GAME OVER</div>
+					<div className={gameOver ? 'game-over' : 'no-see'}>{handleScoreUpdate}</div> */}
 					<div className="cards">
 						<div
 							className="hand opponentHand"
 							onClick={() => {
-								gameOver ? window.location.reload() : (playerTurn = true); // the problem is HERE, with how I restarted the games
-								takePlayerTurn(hands.playerHand, hands.opponentHand);
+								oldMaidState.gameOver ? window.location.reload() : (playerTurn = true); // the problem is HERE, with how I restarted the games
+								takePlayerTurn(oldMaidState.hands.playerHand, oldMaidState.hands.opponentHand);
 							}}
 						>
 							<img
 								width="50px"
 								src={characters[Math.floor(Math.random() * characters.length)]}
-								alt="Eyes Without a FAaaAACE"
+								alt="Eyes Without a FA-AACE"
 							/>
 							<div>
-								{hands.opponentHand.map(card => {
+								{oldMaidState.hands.opponentHand.map(card => {
 									return <div key={Math.random()} className="card opponentCard" value={card}></div>;
 								})}
 							</div>
@@ -220,12 +259,12 @@ export default function OldMaidGame() {
 						<div
 							className="hand playerHand"
 							onClick={() => {
-								gameOver ? window.location.reload() : (playerTurn = false);
-								takePlayerTurn(hands.opponentHand, hands.playerHand);
+								oldMaidState.gameOver ? window.location.reload() : (playerTurn = false);
+								takePlayerTurn(oldMaidState.hands.opponentHand, oldMaidState.hands.playerHand);
 							}}
 						>
 							<div>
-								{hands.playerHand.map(card => {
+								{oldMaidState.hands.playerHand.map(card => {
 									return (
 										<div key={Math.random()} className="card playerCard">
 											{card}
@@ -237,7 +276,7 @@ export default function OldMaidGame() {
 							<img
 								height="50px"
 								src={characters[Math.floor(Math.random() * characters.length)]}
-								alt="Eyes Without a FAaaAACE"
+								alt="Eyes Without a FA-AACE"
 							/>
 						</div>
 					</div>
