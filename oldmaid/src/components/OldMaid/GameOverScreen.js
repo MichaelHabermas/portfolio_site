@@ -7,13 +7,20 @@ const GameOverScreen = props => {
 
 	const handleClick = () => {
 		handleNewGame();
-		push('/old-maid/gamescreen');
+		// push('/old-maid/gamescreen');
 	};
 
 	return (
 		<>
 			<h1>Game Over</h1>
-			<button onClick={handleClick}>Play Again?</button>
+			<button
+				onClick={() => {
+					handleClick();
+					push('/old-maid/gamescreen');
+				}}
+			>
+				Play Again?
+			</button>
 		</>
 	);
 };
