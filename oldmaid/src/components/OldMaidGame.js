@@ -48,7 +48,11 @@ const characters = [
 const initialState = {
 	score: { yourScore: 0, theirScore: 0 },
 	hands: OMHands,
-	gameOver: false
+	gameOver: false,
+	playerCharacter: {
+		user: characters[Math.floor(Math.random() * characters.length)],
+		computer: characters[Math.floor(Math.random() * characters.length)]
+	}
 };
 
 // styling
@@ -181,8 +185,8 @@ export default function OldMaidGame() {
 	// const [hands, setHands] = useState(OMHands);
 	// const [gameOver, setGameOver] = useState(false);
 	// const [score, setScore] = useState(initialScore); // belongs in the Old Maid File
-	console.log(oldMaidState);
-	let playerTurn = true;
+	// let playerTurn = true;
+	const [playerTurn, setPlayerTurn] = useState(true);
 
 	// handles each player taking their turn
 	const takePlayerTurn = (chooser, choosee) => {
@@ -208,6 +212,8 @@ export default function OldMaidGame() {
 				opponentHand: playerTurn ? newChooseeHand : newChooserHand
 			}
 		});
+
+		setPlayerTurn(!playerTurn);
 
 		// if (newChooserHand < 1 || newChooseeHand < 1) {
 		// 	setGameOver(!gameOver);
@@ -241,13 +247,14 @@ export default function OldMaidGame() {
 						<div
 							className="hand opponentHand"
 							onClick={() => {
-								oldMaidState.gameOver ? window.location.reload() : (playerTurn = true); // the problem is HERE, with how I restarted the games
-								takePlayerTurn(oldMaidState.hands.playerHand, oldMaidState.hands.opponentHand);
+								playerTurn
+									? console.log('not my turn')
+									: takePlayerTurn(oldMaidState.hands.opponentHand, oldMaidState.hands.playerHand);
 							}}
 						>
 							<img
-								width="50px"
-								src={characters[Math.floor(Math.random() * characters.length)]}
+								height="80px"
+								src={oldMaidState.playerCharacter.computer}
 								alt="Eyes Without a FA-AACE"
 							/>
 							<div>
@@ -259,8 +266,9 @@ export default function OldMaidGame() {
 						<div
 							className="hand playerHand"
 							onClick={() => {
-								oldMaidState.gameOver ? window.location.reload() : (playerTurn = false);
-								takePlayerTurn(oldMaidState.hands.opponentHand, oldMaidState.hands.playerHand);
+								playerTurn
+									? takePlayerTurn(oldMaidState.hands.playerHand, oldMaidState.hands.opponentHand)
+									: console.log('not my turn');
 							}}
 						>
 							<div>
@@ -273,11 +281,7 @@ export default function OldMaidGame() {
 								})}
 							</div>
 
-							<img
-								height="50px"
-								src={characters[Math.floor(Math.random() * characters.length)]}
-								alt="Eyes Without a FA-AACE"
-							/>
+							<img height="80px" src={oldMaidState.playerCharacter.user} alt="Eyes Without a FA-AACE" />
 						</div>
 					</div>
 				</div>
