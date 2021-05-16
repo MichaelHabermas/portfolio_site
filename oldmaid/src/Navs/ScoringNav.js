@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-// import OldMaidGame from '../components/OldMaidGame';
 
 const Nav = styled.div`
 	*,  /* '*'selects all things, the :: before and :: after grab *something else* */

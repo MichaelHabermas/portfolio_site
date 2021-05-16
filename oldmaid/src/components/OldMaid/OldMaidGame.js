@@ -2,28 +2,30 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 
 //components
-import ScoringNav from '../Navs/ScoringNav.js';
+import ScoringNav from '../../Navs/ScoringNav.js';
 import { OldMaidDeckSetup } from './OldMaidDeckSetup.js';
+import Player from '../Player.js';
+import Character from '../Character.js';
 
 //assets
-import cardBack from '../assets/card_face_selected.png';
-import cardFront from '../assets/card_face_norm.png';
-import woman_1 from '../assets/woman_1.png';
-import woman_2 from '../assets/woman_2.png';
-import woman_3 from '../assets/woman_3.png';
-import woman_4 from '../assets/woman_4.png';
-import woman_5 from '../assets/woman_5.png';
-import woman_6 from '../assets/woman_6.png';
-import woman_7 from '../assets/woman_7.png';
-import woman_8 from '../assets/woman_8.png';
-import man_1 from '../assets/man_1.png';
-import man_2 from '../assets/man_2.png';
-import man_3 from '../assets/man_3.png';
-import man_4 from '../assets/man_4.png';
-import man_5 from '../assets/man_5.png';
-import man_6 from '../assets/man_6.png';
-import man_7 from '../assets/man_7.png';
-import man_8 from '../assets/man_8.png';
+import cardBack from '../../assets/card_face_selected.png';
+import cardFront from '../../assets/card_face_norm.png';
+import woman_1 from '../../assets/woman_1.png';
+import woman_2 from '../../assets/woman_2.png';
+import woman_3 from '../../assets/woman_3.png';
+import woman_4 from '../../assets/woman_4.png';
+import woman_5 from '../../assets/woman_5.png';
+import woman_6 from '../../assets/woman_6.png';
+import woman_7 from '../../assets/woman_7.png';
+import woman_8 from '../../assets/woman_8.png';
+import man_1 from '../../assets/man_1.png';
+import man_2 from '../../assets/man_2.png';
+import man_3 from '../../assets/man_3.png';
+import man_4 from '../../assets/man_4.png';
+import man_5 from '../../assets/man_5.png';
+import man_6 from '../../assets/man_6.png';
+import man_7 from '../../assets/man_7.png';
+import man_8 from '../../assets/man_8.png';
 
 const OMHands = OldMaidDeckSetup();
 const characters = [
@@ -44,7 +46,6 @@ const characters = [
 	man_7,
 	man_8
 ];
-// const initialScore = { yourScore: 0, theirScore: 0 };
 
 const initialState = {
 	gameName: 'Old Maid',
@@ -212,13 +213,13 @@ export default function OldMaidGame() {
 			playerTurn: !oldMaidState.playerTurn
 		});
 
-		if (newChooserHand < 1 || newChooseeHand < 1) {
-			setOldMaidState({
-				...oldMaidState,
-				gameOver: !oldMaidState.gameOver
-			});
-			return;
-		}
+		// if (newChooserHand < 1 || newChooseeHand < 1) {
+		// 	setOldMaidState({
+		// 		...oldMaidState,
+		// 		gameOver: !oldMaidState.gameOver
+		// 	});
+		// 	return;
+		// }
 	};
 
 	// const handleScoreUpdate = () => {
@@ -235,6 +236,7 @@ export default function OldMaidGame() {
 	// 	}
 	// };
 
+	// resets scores from the scoring nav
 	const resetScore = e => {
 		setOldMaidState({
 			...oldMaidState,
@@ -243,22 +245,13 @@ export default function OldMaidGame() {
 				theirScore: 0
 			}
 		});
-		console.log('reset working');
 	};
 
 	return (
 		<>
-			<ScoringNav
-				gameName={oldMaidState.gameName}
-				gameState={oldMaidState}
-				setGameState={setOldMaidState}
-				resetScore={resetScore}
-			/>
-			{/* score={score} setScore={setScore} */}
+			<ScoringNav gameState={oldMaidState} resetScore={resetScore} />
 			<OldMaidBody>
 				<div className="body">
-					{/* <div className={gameOver ? 'game-over' : 'no-see'}>GAME OVER</div>
-					<div className={gameOver ? 'game-over' : 'no-see'}>{handleScoreUpdate}</div> */}
 					<div className="cards">
 						<div
 							className="hand opponentHand"
@@ -268,17 +261,10 @@ export default function OldMaidGame() {
 									: takePlayerTurn(oldMaidState.hands.opponentHand, oldMaidState.hands.playerHand);
 							}}
 						>
-							<img
-								height="80px"
-								src={oldMaidState.playerCharacter.computer}
-								alt="Eyes Without a FA-AACE"
-							/>
-							<div>
-								{oldMaidState.hands.opponentHand.map(card => {
-									return <div key={Math.random()} className="card opponentCard" value={card}></div>;
-								})}
-							</div>
+							<Character character={oldMaidState.playerCharacter.computer} />
+							<Player playerHand={oldMaidState.hands.opponentHand} />
 						</div>
+
 						<div
 							className="hand playerHand"
 							onClick={() => {
@@ -287,17 +273,8 @@ export default function OldMaidGame() {
 									: console.log('not my turn');
 							}}
 						>
-							<div>
-								{oldMaidState.hands.playerHand.map(card => {
-									return (
-										<div key={Math.random()} className="card playerCard">
-											{card}
-										</div>
-									);
-								})}
-							</div>
-
-							<img height="80px" src={oldMaidState.playerCharacter.user} alt="Eyes Without a FA-AACE" />
+							<Player playerHand={oldMaidState.hands.playerHand} />
+							<Character character={oldMaidState.playerCharacter.user} />
 						</div>
 					</div>
 				</div>
