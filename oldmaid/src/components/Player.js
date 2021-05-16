@@ -1,16 +1,13 @@
 import React from 'react';
+import Card from './Card';
 
 const Player = props => {
-	const { playerHand } = props;
+	const { playerHand, isUser, classNames } = props;
 	return (
 		<>
 			<div>
 				{playerHand.map(card => {
-					return (
-						<div key={Math.random()} className="card playerCard">
-							{card}
-						</div>
-					);
+					return <Card key={Math.random()} classNames={classNames} isUser={isUser} card={card} />;
 				})}
 			</div>
 		</>

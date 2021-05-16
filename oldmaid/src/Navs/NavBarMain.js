@@ -174,7 +174,7 @@ const NavBarMain = () => {
 								: { animation: '' }
 						}
 					>
-						<Link to="/old-maid">Projects</Link>
+						<Link to="/old-maid/startscreen">Projects</Link>
 					</li>
 				</ul>
 				<div className={isOpen ? 'burger toggle' : 'burger'} onClick={() => setIsOpen(!isOpen)}>

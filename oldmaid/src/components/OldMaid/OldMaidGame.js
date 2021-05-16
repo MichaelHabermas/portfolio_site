@@ -1,8 +1,14 @@
 import React, { useState } from 'react';
+// import { Route, Link, NavLink, useParams, useRouteMatch, useHistory } from 'react-router-dom';
+import { Route, useHistory } from 'react-router-dom';
+
 import styled from 'styled-components';
 
 //components
 import ScoringNav from '../../Navs/ScoringNav.js';
+import StartScreen from './StartScreen';
+// import GameScreen from './GameScreen';
+import GameOverScreen from './GameOverScreen';
 import { OldMaidDeckSetup } from './OldMaidDeckSetup.js';
 import Player from '../Player.js';
 import Character from '../Character.js';
@@ -10,51 +16,16 @@ import Character from '../Character.js';
 //assets
 import cardBack from '../../assets/card_face_selected.png';
 import cardFront from '../../assets/card_face_norm.png';
-import woman_1 from '../../assets/woman_1.png';
-import woman_2 from '../../assets/woman_2.png';
-import woman_3 from '../../assets/woman_3.png';
-import woman_4 from '../../assets/woman_4.png';
-import woman_5 from '../../assets/woman_5.png';
-import woman_6 from '../../assets/woman_6.png';
-import woman_7 from '../../assets/woman_7.png';
-import woman_8 from '../../assets/woman_8.png';
-import man_1 from '../../assets/man_1.png';
-import man_2 from '../../assets/man_2.png';
-import man_3 from '../../assets/man_3.png';
-import man_4 from '../../assets/man_4.png';
-import man_5 from '../../assets/man_5.png';
-import man_6 from '../../assets/man_6.png';
-import man_7 from '../../assets/man_7.png';
-import man_8 from '../../assets/man_8.png';
-
-const OMHands = OldMaidDeckSetup();
-const characters = [
-	woman_1,
-	woman_2,
-	woman_3,
-	woman_4,
-	woman_5,
-	woman_6,
-	woman_7,
-	woman_8,
-	man_1,
-	man_2,
-	man_3,
-	man_4,
-	man_5,
-	man_6,
-	man_7,
-	man_8
-];
+import charactersArray from '../../assets/characters/Characters';
 
 const initialState = {
 	gameName: 'Old Maid',
 	score: { yourScore: 0, theirScore: 0 },
-	hands: OMHands,
+	hands: OldMaidDeckSetup(),
 	gameOver: false,
 	playerCharacter: {
-		user: characters[Math.floor(Math.random() * characters.length)],
-		computer: characters[Math.floor(Math.random() * characters.length)]
+		user: charactersArray[Math.floor(Math.random() * charactersArray.length)],
+		computer: charactersArray[Math.floor(Math.random() * charactersArray.length)]
 	},
 	playerTurn: true
 };
@@ -62,10 +33,6 @@ const initialState = {
 // styling
 const OldMaidBody = styled.div`
 	.body {
-		/* display: flex;
-		flex-direction: column;
-		justify-content: space-around;
-		align-items: space-around; */
 		width: 100vw;
 		height: 84vh;
 		// these are for the fading background colors
@@ -116,7 +83,7 @@ const OldMaidBody = styled.div`
 		margin: 2rem;
 	}
 
-	// gameplay element styling
+	// game play element styling
 	.cards {
 		border: 1px solid rebeccapurple;
 		height: 100%;
@@ -131,7 +98,6 @@ const OldMaidBody = styled.div`
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		/* border: 1px solid yellow; */
 	}
 
 	.hand > div {
@@ -140,8 +106,13 @@ const OldMaidBody = styled.div`
 		align-items: center;
 	}
 
+	.opponentHand,
+	.playerHand {
+		cursor: pointer;
+		padding: 20px;
+	}
+
 	.card {
-		/* border: 1px solid black; */
 		padding: 1rem 0;
 		width: 60px;
 		height: 80px;
@@ -150,13 +121,6 @@ const OldMaidBody = styled.div`
 		color: white;
 		margin: 0.1rem;
 		text-shadow: 1px 1px 0 black;
-		/* border-radius: 10px; */
-	}
-
-	.opponentHand,
-	.playerHand {
-		cursor: pointer;
-		padding: 20px;
 	}
 
 	.opponentCard {
@@ -186,6 +150,7 @@ const OldMaidBody = styled.div`
 
 export default function OldMaidGame() {
 	const [oldMaidState, setOldMaidState] = useState(initialState);
+	const { push } = useHistory();
 
 	// handles each player taking their turn
 	const takePlayerTurn = (chooser, choosee) => {
@@ -210,31 +175,45 @@ export default function OldMaidGame() {
 				playerHand: oldMaidState.playerTurn ? newChooserHand : newChooseeHand,
 				opponentHand: oldMaidState.playerTurn ? newChooseeHand : newChooserHand
 			},
-			playerTurn: !oldMaidState.playerTurn
+			playerTurn: !oldMaidState.playerTurn,
+			gameOver: newChooserHand.length < 1 || newChooseeHand.length < 1 ? true : false
 		});
-
-		// if (newChooserHand < 1 || newChooseeHand < 1) {
-		// 	setOldMaidState({
-		// 		...oldMaidState,
-		// 		gameOver: !oldMaidState.gameOver
-		// 	});
-		// 	return;
-		// }
 	};
 
-	// const handleScoreUpdate = () => {
-	// 	console.log('its connected');
-	// 	if (hands.playerHand.length === 0 && gameOver) {
-	// 		console.log('its connected AAAA');
-	// 		setScore({ ...score, yourScore: score.yourScore + 1 });
-	// 		return 'Player Wins!';
-	// 	}
-	// 	if (hands.opponentHand.length === 0 && gameOver) {
-	// 		console.log('its connected BBBB');
-	// 		setScore({ ...score, theirScore: score.theirScore + 1 });
-	// 		return 'Opponent Wins!';
-	// 	}
-	// };
+	const handleGameOver = () => {
+		console.log('handleGameOver is firing');
+		handleScoreUpdate();
+		push('/old-maid/gameoverscreen');
+	};
+
+	const handleScoreUpdate = () => {
+		if (oldMaidState.hands.playerHand.length === 0) {
+			setOldMaidState({
+				...oldMaidState,
+				score: {
+					yourScore: oldMaidState.score.yourScore + 1,
+					theirScore: oldMaidState.score.theirScore
+				},
+				gameOver: false
+			});
+		} else {
+			setOldMaidState({
+				...oldMaidState,
+				score: {
+					yourScore: oldMaidState.score.yourScore,
+					theirScore: oldMaidState.score.theirScore + 1
+				},
+				gameOver: false
+			});
+		}
+	};
+
+	const handleNewGame = () => {
+		setOldMaidState({
+			...oldMaidState,
+			hands: OldMaidDeckSetup()
+		});
+	};
 
 	// resets scores from the scoring nav
 	const resetScore = e => {
@@ -247,36 +226,65 @@ export default function OldMaidGame() {
 		});
 	};
 
+	if (oldMaidState.gameOver) handleGameOver();
+
 	return (
 		<>
 			<ScoringNav gameState={oldMaidState} resetScore={resetScore} />
-			<OldMaidBody>
-				<div className="body">
-					<div className="cards">
-						<div
-							className="hand opponentHand"
-							onClick={() => {
-								oldMaidState.playerTurn
-									? console.log('not my turn')
-									: takePlayerTurn(oldMaidState.hands.opponentHand, oldMaidState.hands.playerHand);
-							}}
-						>
-							<Character character={oldMaidState.playerCharacter.computer} />
-							<Player playerHand={oldMaidState.hands.opponentHand} />
-						</div>
 
-						<div
-							className="hand playerHand"
-							onClick={() => {
-								oldMaidState.playerTurn
-									? takePlayerTurn(oldMaidState.hands.playerHand, oldMaidState.hands.opponentHand)
-									: console.log('not my turn');
-							}}
-						>
-							<Player playerHand={oldMaidState.hands.playerHand} />
-							<Character character={oldMaidState.playerCharacter.user} />
+			<OldMaidBody>
+				{/* <Link to="/old-maid/gameoverscreen">
+					<button>gameoverscreen</button>
+				</Link> */}
+
+				<div className="body">
+					<Route path="/old-maid/startscreen">
+						<StartScreen />
+					</Route>
+
+					<Route path="/old-maid/gamescreen">
+						{/* <GameScreen /> */}
+						<div className="cards">
+							<div
+								className="hand opponentHand"
+								onClick={() => {
+									oldMaidState.playerTurn
+										? console.log('not my turn')
+										: takePlayerTurn(
+												oldMaidState.hands.opponentHand,
+												oldMaidState.hands.playerHand
+										  );
+								}}
+							>
+								<Character character={oldMaidState.playerCharacter.computer} />
+								<Player
+									playerHand={oldMaidState.hands.opponentHand}
+									isUser={false}
+									classNames="card opponentCard"
+								/>
+							</div>
+
+							<div
+								className="hand playerHand"
+								onClick={() => {
+									oldMaidState.playerTurn
+										? takePlayerTurn(oldMaidState.hands.playerHand, oldMaidState.hands.opponentHand)
+										: console.log('not my turn');
+								}}
+							>
+								<Player
+									playerHand={oldMaidState.hands.playerHand}
+									isUser={true}
+									classNames="card playerCard"
+								/>
+								<Character character={oldMaidState.playerCharacter.user} />
+							</div>
 						</div>
-					</div>
+					</Route>
+
+					<Route path="/old-maid/gameoverscreen">
+						<GameOverScreen handleNewGame={handleNewGame} />
+					</Route>
 				</div>
 			</OldMaidBody>
 		</>
