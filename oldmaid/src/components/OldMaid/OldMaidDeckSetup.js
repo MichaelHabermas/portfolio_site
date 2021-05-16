@@ -1,4 +1,4 @@
-import { shuffledDeck1 } from '../Deck';
+import { deckWSuits } from '../Deck';
 
 const shuffler = deckArray => {
 	deckArray.forEach((card, index) => {
@@ -57,6 +57,6 @@ export const OldMaidDeckSetup = () => {
 		};
 	};
 
-	const oldMaidDeck = shuffler(createOldMaidDeck(shuffledDeck1));
+	const oldMaidDeck = shuffler(createOldMaidDeck(deckWSuits));
 	return createHandsForOldMaid(oldMaidDeck);
 };
