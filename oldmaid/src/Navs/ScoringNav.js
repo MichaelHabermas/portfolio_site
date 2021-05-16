@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+// import OldMaidGame from '../components/OldMaidGame';
 
 const Nav = styled.div`
 	*,  /* '*'selects all things, the :: before and :: after grab *something else* */
@@ -94,30 +95,20 @@ const Nav = styled.div`
 `;
 
 const ScoringNav = props => {
-	const { oldMaidState, setOldMaidState, gameName } = props;
-
-	const resetScore = e => {
-		setOldMaidState({
-			...oldMaidState,
-			score: {
-				yourScore: 0,
-				theirScore: 0
-			}
-		});
-	};
+	const { gameState, resetScore } = props;
 
 	return (
 		<Nav>
 			<nav>
 				<div className="logo">
-					<h4>{gameName}</h4>
+					<h4>{gameState.gameName}</h4>
 				</div>
 				<ul className="nav-links">
 					<li>
-						<h4>You: {oldMaidState.score.yourScore}</h4>
+						<h4>You: {gameState.score.yourScore}</h4>
 					</li>
 					<li>
-						<h4>Them: {oldMaidState.score.theirScore}</h4>
+						<h4>Them: {gameState.score.theirScore}</h4>
 					</li>
 					<li>
 						<h4>Rules</h4>

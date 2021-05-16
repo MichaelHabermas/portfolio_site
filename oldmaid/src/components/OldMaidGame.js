@@ -4,25 +4,26 @@ import styled from 'styled-components';
 //components
 import ScoringNav from '../Navs/ScoringNav.js';
 import { OldMaidDeckSetup } from './OldMaidDeckSetup.js';
+
 //assets
 import cardBack from '../assets/card_face_selected.png';
 import cardFront from '../assets/card_face_norm.png';
 import woman_1 from '../assets/woman_1.png';
 import woman_2 from '../assets/woman_2.png';
-import woman_3 from '../assets/woman_1.png';
-import woman_4 from '../assets/woman_2.png';
-import woman_5 from '../assets/woman_1.png';
-import woman_6 from '../assets/woman_2.png';
-import woman_7 from '../assets/woman_1.png';
-import woman_8 from '../assets/woman_2.png';
+import woman_3 from '../assets/woman_3.png';
+import woman_4 from '../assets/woman_4.png';
+import woman_5 from '../assets/woman_5.png';
+import woman_6 from '../assets/woman_6.png';
+import woman_7 from '../assets/woman_7.png';
+import woman_8 from '../assets/woman_8.png';
 import man_1 from '../assets/man_1.png';
 import man_2 from '../assets/man_2.png';
-import man_3 from '../assets/man_1.png';
-import man_4 from '../assets/man_2.png';
-import man_5 from '../assets/man_1.png';
-import man_6 from '../assets/man_2.png';
-import man_7 from '../assets/man_1.png';
-import man_8 from '../assets/man_2.png';
+import man_3 from '../assets/man_3.png';
+import man_4 from '../assets/man_4.png';
+import man_5 from '../assets/man_5.png';
+import man_6 from '../assets/man_6.png';
+import man_7 from '../assets/man_7.png';
+import man_8 from '../assets/man_8.png';
 
 const OMHands = OldMaidDeckSetup();
 const characters = [
@@ -46,13 +47,15 @@ const characters = [
 // const initialScore = { yourScore: 0, theirScore: 0 };
 
 const initialState = {
+	gameName: 'Old Maid',
 	score: { yourScore: 0, theirScore: 0 },
 	hands: OMHands,
 	gameOver: false,
 	playerCharacter: {
 		user: characters[Math.floor(Math.random() * characters.length)],
 		computer: characters[Math.floor(Math.random() * characters.length)]
-	}
+	},
+	playerTurn: true
 };
 
 // styling
@@ -65,7 +68,7 @@ const OldMaidBody = styled.div`
 		width: 100vw;
 		height: 84vh;
 		// these are for the fading background colors
-		background: linear-gradient(44deg, #0060aa, #ffed10, #e20025, #010101);
+		background: linear-gradient(44deg, #00c9ff, #92fe9d);
 		background-size: 600% 600%;
 		-webkit-animation: AnimationName 10s ease infinite;
 		-moz-animation: AnimationName 10s ease infinite;
@@ -182,11 +185,6 @@ const OldMaidBody = styled.div`
 
 export default function OldMaidGame() {
 	const [oldMaidState, setOldMaidState] = useState(initialState);
-	// const [hands, setHands] = useState(OMHands);
-	// const [gameOver, setGameOver] = useState(false);
-	// const [score, setScore] = useState(initialScore); // belongs in the Old Maid File
-	// let playerTurn = true;
-	const [playerTurn, setPlayerTurn] = useState(true);
 
 	// handles each player taking their turn
 	const takePlayerTurn = (chooser, choosee) => {
@@ -208,17 +206,19 @@ export default function OldMaidGame() {
 		setOldMaidState({
 			...oldMaidState,
 			hands: {
-				playerHand: playerTurn ? newChooserHand : newChooseeHand,
-				opponentHand: playerTurn ? newChooseeHand : newChooserHand
-			}
+				playerHand: oldMaidState.playerTurn ? newChooserHand : newChooseeHand,
+				opponentHand: oldMaidState.playerTurn ? newChooseeHand : newChooserHand
+			},
+			playerTurn: !oldMaidState.playerTurn
 		});
 
-		setPlayerTurn(!playerTurn);
-
-		// if (newChooserHand < 1 || newChooseeHand < 1) {
-		// 	setGameOver(!gameOver);
-		// 	return;
-		// }
+		if (newChooserHand < 1 || newChooseeHand < 1) {
+			setOldMaidState({
+				...oldMaidState,
+				gameOver: !oldMaidState.gameOver
+			});
+			return;
+		}
 	};
 
 	// const handleScoreUpdate = () => {
@@ -235,9 +235,25 @@ export default function OldMaidGame() {
 	// 	}
 	// };
 
+	const resetScore = e => {
+		setOldMaidState({
+			...oldMaidState,
+			score: {
+				yourScore: 0,
+				theirScore: 0
+			}
+		});
+		console.log('reset working');
+	};
+
 	return (
 		<>
-			<ScoringNav gameName="Old Maid" oldMaidState={oldMaidState} setOldMaidState={setOldMaidState} />
+			<ScoringNav
+				gameName={oldMaidState.gameName}
+				gameState={oldMaidState}
+				setGameState={setOldMaidState}
+				resetScore={resetScore}
+			/>
 			{/* score={score} setScore={setScore} */}
 			<OldMaidBody>
 				<div className="body">
@@ -247,7 +263,7 @@ export default function OldMaidGame() {
 						<div
 							className="hand opponentHand"
 							onClick={() => {
-								playerTurn
+								oldMaidState.playerTurn
 									? console.log('not my turn')
 									: takePlayerTurn(oldMaidState.hands.opponentHand, oldMaidState.hands.playerHand);
 							}}
@@ -266,7 +282,7 @@ export default function OldMaidGame() {
 						<div
 							className="hand playerHand"
 							onClick={() => {
-								playerTurn
+								oldMaidState.playerTurn
 									? takePlayerTurn(oldMaidState.hands.playerHand, oldMaidState.hands.opponentHand)
 									: console.log('not my turn');
 							}}
