@@ -17,6 +17,7 @@ import Character from '../Character.js';
 import cardBack from '../../assets/card_face_selected.png';
 import cardFront from '../../assets/card_face_norm.png';
 import charactersArray from '../../assets/characters/Characters';
+import PairedCards from './pairAnimation.js';
 
 const newGameHands = OldMaidDeckSetup();
 
@@ -114,6 +115,12 @@ const OldMaidBody = styled.div`
 		padding: 20px;
 	}
 
+	.centered {
+		position: absolute;
+		top: 50%;
+		width: 100%;
+	}
+
 	.card {
 		padding: 1rem 0;
 		width: 60px;
@@ -153,6 +160,7 @@ const OldMaidBody = styled.div`
 export default function OldMaidGame() {
 	const [oldMaidState, setOldMaidState] = useState(initialState);
 	const { push } = useHistory();
+	const [paired, setPaired] = useState([])
 
 	// handles each player taking their turn
 	const takePlayerTurn = (chooser, choosee) => {
@@ -167,10 +175,10 @@ export default function OldMaidGame() {
 			newChooseeHand = [...choosee.filter(item => item[0] !== 'Q')];
 			newChooserHand = [...chooser, 'Q'];
 		} else {
+			setPaired([...paired, chosenCard]);
 			newChooseeHand = [...choosee.filter(item => item[0] !== chosenCard[0])];
 			newChooserHand = [...chooser.filter(item => item[0] !== chosenCard[0])];
 		}
-
 		setOldMaidState({
 			...oldMaidState,
 			hands: {
@@ -184,6 +192,7 @@ export default function OldMaidGame() {
 
 	const handleGameOver = () => {
 		handleScoreUpdate();
+		setPaired([]);
 		push('/old-maid/gameoverscreen');
 	};
 
@@ -234,7 +243,6 @@ export default function OldMaidGame() {
 	return (
 		<>
 			<ScoringNav gameState={oldMaidState} resetScore={resetScore} />
-
 			<OldMaidBody>
 				<div className="body">
 					<Route path="/old-maid/startscreen">
@@ -242,7 +250,9 @@ export default function OldMaidGame() {
 					</Route>
 
 					<Route path="/old-maid/gamescreen">
-						{/* <GameScreen /> */}
+						<div className="centered">
+							<PairedCards paired={paired} />
+						</div>
 						<div className="cards">
 							<div
 								className="hand opponentHand"
@@ -262,7 +272,6 @@ export default function OldMaidGame() {
 									classNames="card opponentCard"
 								/>
 							</div>
-
 							<div
 								className="hand playerHand"
 								onClick={() => {
