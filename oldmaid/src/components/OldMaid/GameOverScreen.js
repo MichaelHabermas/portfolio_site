@@ -21,32 +21,25 @@ const GameOverScreenStyles = styled.div`
 		transform: translate(-50%, -50%);
 	}
 
-	.start_btn {
-		position: absolute;
-		top: 75%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-	}
-
 	.gameOverBanner {
 		position: absolute;
-		bottom: 0%;
+		bottom: 5%;
 		left: 50%;
 		transform: translate(-50%, 0%);
 	}
 
 	.gameOverMessage {
 		position: absolute;
-		bottom: 5%;
+		bottom: 10%;
 		left: 50%;
 		transform: translate(-50%, -50%);
 	}
 
 	.play_again_btn {
 		position: absolute;
-		bottom: 5%;
-		right: 5%;
-		/* transform: translate(-50%, -50%); */
+		bottom: 10%;
+		right: 8%;
+		cursor: pointer;
 	}
 `;
 
