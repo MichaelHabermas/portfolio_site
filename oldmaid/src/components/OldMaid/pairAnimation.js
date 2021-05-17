@@ -1,6 +1,5 @@
 import React from 'react';
-import { Redirect } from 'react-router';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 
 import cardFront from '../../assets/card_face_norm.png';
 
