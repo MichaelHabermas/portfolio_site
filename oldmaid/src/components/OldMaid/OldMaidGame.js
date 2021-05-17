@@ -80,11 +80,11 @@ const OldMaidBody = styled.div`
 		}
 	}
 
-	h1 {
-		font-size: 3rem;
-		color: rebeccapurple;
-		margin: 2rem;
-	}
+	/* h1 { */
+	/* font-size: 3rem; */
+	/* color: rebeccapurple; */
+	/* margin: 2rem; */
+	/* } */
 
 	// game play element styling
 	.cards {
