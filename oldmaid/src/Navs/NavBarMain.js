@@ -65,7 +65,6 @@ const Nav = styled.div`
 		background-color: transparent;
 		font-family: 'Poppins', sans-serif;
 		border: none;
-
 		color: rgb(226, 226, 226);
 		text-decoration: none;
 		letter-spacing: 3px;

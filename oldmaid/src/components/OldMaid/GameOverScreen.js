@@ -1,5 +1,4 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
 import styled from 'styled-components';
 
 import gameOverBackground from '../../assets/OldMaidAssets/GameOverBackground.png';
@@ -22,29 +21,33 @@ const GameOverScreenStyles = styled.div`
 		transform: translate(-50%, -50%);
 	}
 
-	.start_btn {
+	.gameOverBanner {
 		position: absolute;
-		top: 75%;
+		bottom: 5%;
+		left: 50%;
+		transform: translate(-50%, 0%);
+	}
+
+	.gameOverMessage {
+		position: absolute;
+		bottom: 10%;
 		left: 50%;
 		transform: translate(-50%, -50%);
 	}
 
-	.gameOverBanner,
-	.gameOverMessage {
+	.play_again_btn {
 		position: absolute;
-		top: 70%;
-		left: 50%;
-		transform: translate(-50%, -50%);
+		bottom: 10%;
+		right: 8%;
+		cursor: pointer;
 	}
 `;
 
 const GameOverScreen = props => {
-	const { handleNewGame } = props;
-	const { push } = useHistory();
+	const { handleNewGame, playerWon } = props;
 
 	const handleClick = () => {
 		handleNewGame();
-		push('/old-maid/gamescreen');
 	};
 
 	return (
@@ -53,7 +56,7 @@ const GameOverScreen = props => {
 
 			<div>
 				<img className="gameOverBanner" src={gameOverBanner} alt="Game Over" />
-				<img className="gameOverMessage" src={true ? winLogo : loseText} alt="Who Won?" />
+				<img className="gameOverMessage" src={playerWon ? winLogo : loseText} alt="Who Won?" />
 			</div>
 
 			<div onClick={handleClick}>

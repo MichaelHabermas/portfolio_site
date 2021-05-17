@@ -1,13 +1,10 @@
 import React, { useState } from 'react';
-// import { Route, Link, NavLink, useParams, useRouteMatch, useHistory } from 'react-router-dom';
 import { Route, useHistory } from 'react-router-dom';
-
 import styled from 'styled-components';
 
 //components
 import ScoringNav from '../../Navs/ScoringNav.js';
 import StartScreen from './StartScreen';
-// import GameScreen from './GameScreen';
 import GameOverScreen from './GameOverScreen';
 import { OldMaidDeckSetup } from './OldMaidDeckSetup.js';
 import Player from '../Player.js';
@@ -19,12 +16,10 @@ import cardFront from '../../assets/card_face_norm.png';
 import charactersArray from '../../assets/characters/Characters';
 import PairedCards from './pairAnimation.js';
 
-const newGameHands = OldMaidDeckSetup();
-
 const initialState = {
 	gameName: 'Old Maid',
 	score: { yourScore: 0, theirScore: 0 },
-	hands: newGameHands,
+	hands: OldMaidDeckSetup(),
 	gameOver: false,
 	playerCharacter: {
 		user: charactersArray[Math.floor(Math.random() * charactersArray.length)],
@@ -160,7 +155,7 @@ const OldMaidBody = styled.div`
 export default function OldMaidGame() {
 	const [oldMaidState, setOldMaidState] = useState(initialState);
 	const { push } = useHistory();
-	const [paired, setPaired] = useState([])
+	const [paired, setPaired] = useState([]);
 
 	// handles each player taking their turn
 	const takePlayerTurn = (chooser, choosee) => {
@@ -190,12 +185,14 @@ export default function OldMaidGame() {
 		});
 	};
 
+	// handles the end of game transition
 	const handleGameOver = () => {
 		handleScoreUpdate();
 		setPaired([]);
 		push('/old-maid/gameoverscreen');
 	};
 
+	// updates score in OM Nav on game over
 	const handleScoreUpdate = () => {
 		if (oldMaidState.hands.playerHand.length === 0) {
 			setOldMaidState({
@@ -218,13 +215,20 @@ export default function OldMaidGame() {
 		}
 	};
 
+	// resets relevant data for an new game
 	const handleNewGame = () => {
-		const newHands = OldMaidDeckSetup();
 		setOldMaidState({
 			...oldMaidState,
-			hands: newHands,
+			hands: OldMaidDeckSetup(),
 			playerTurn: true
 		});
+		setPaired([]);
+		push('/old-maid/gamescreen');
+	};
+
+	// resets scores from the scoring nav
+	const isUserWinning = () => {
+		return oldMaidState.hands.playerHand.length > oldMaidState.hands.opponentHand;
 	};
 
 	// resets scores from the scoring nav
@@ -246,7 +250,7 @@ export default function OldMaidGame() {
 			<OldMaidBody>
 				<div className="body">
 					<Route path="/old-maid/startscreen">
-						<StartScreen />
+						<StartScreen handleNewGame={handleNewGame} />
 					</Route>
 
 					<Route path="/old-maid/gamescreen">
@@ -291,7 +295,7 @@ export default function OldMaidGame() {
 					</Route>
 
 					<Route path="/old-maid/gameoverscreen">
-						<GameOverScreen handleNewGame={handleNewGame} />
+						<GameOverScreen playerWon={isUserWinning} handleNewGame={handleNewGame} />
 					</Route>
 				</div>
 			</OldMaidBody>
