@@ -56,7 +56,7 @@ const Pile = styled.div`
 		100% {
 			left: 5%;
 			top: 50%;
-			transform: translateY(-50%) rotate(${300 + Math.floor(Math.random() * 360)}deg);
+			transform: translateY(-50%) rotate(${3000 + Math.floor(Math.random() * 360)}deg);
 		}
 	}
 `;

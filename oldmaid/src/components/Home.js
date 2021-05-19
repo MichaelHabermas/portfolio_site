@@ -1,27 +1,21 @@
 import React from 'react';
-// import { Parallax } from 'react-parallax'; // TimelineMax
-
-// import { ScrollMagic } from 'react-scroll-parallax'; // TimelineMax
-// import { Controller, Scene } from 'react-scrollmagic';
-// import { Tween } from 'react-gsap';
-// import { TweenMax } from 'gsap';
-
 import styled from 'styled-components';
 
-import bg1 from '../assets/bg1.png';
-import girl1 from '../assets/girl1.png';
-import rock1 from '../assets/rock1.png';
-import switzleft from '../assets/switzleft.png';
-import switzright from '../assets/switzright.png';
+import bg1 from '../assets/homePage/cBkgrnd4.png';
+// import girl1 from '../assets/girl1.png';
+// import rock1 from '../assets/rock1.png';
+import OldMaidImage from '../assets/homePage/OldMaidImage.png';
+import SpeaqDisplay from '../assets/homePage/SpeaqDisplay.png';
 
 const HomeDiv = styled.div`
 	* {
 		margin: 0;
 		padding: 0;
 		box-sizing: border-box;
-		color: #fff;
+		/* color: #fff; */
 		font-family: 'Poppins', sans-serif;
 	}
+
 	nav {
 		position: absolute;
 		width: 100%;
@@ -31,30 +25,33 @@ const HomeDiv = styled.div`
 	}
 
 	.container {
-		height: 100vh;
+		height: 70vh;
+		margin: 5% 0 0 0;
 	}
+
 	.container img {
 		width: 100%;
-		position: absolute;
-		height: 110vh;
+		/* position: absolute; */
+		/* height: 70vh; */
 		object-fit: cover;
-		z-index: -1;
+		/* z-index: -1; */
 	}
+
 	.main-title {
 		position: absolute;
-		top: 30%;
+		top: 45%;
 		left: 50%;
 		font-size: 4rem;
-		transform: translate(-50%, -30%);
+		transform: translate(-50%, -50%);
 	}
 
 	.content {
 		width: 100%;
-		background: rgb(24, 24, 24);
 		min-height: 100vh;
 		z-index: 2;
 		position: absolute;
 	}
+
 	.content-images {
 		display: flex;
 		justify-content: space-around;
@@ -63,65 +60,41 @@ const HomeDiv = styled.div`
 		text-align: center;
 	}
 
+	.content-image {
+		width: 40rem;
+		padding: 10px;
+		height: 22rem;
+		border-radius: 40px;
+		box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+		object-fit: center / cover;
+	}
+
 	.text {
 		padding: 2rem 20rem;
 		font-size: 1.1rem;
 	}
 `;
 
-// #########        SCRIPTS
-//  <script
-//       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"
-//       integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ=="
-//       crossorigin="anonymous"
-//     ></script>
-//     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
-//     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.js"></script>
-//     <script src="./script.js"></script>
-
-// #########        JAVASCRIPT
-// let controller = new ScrollMagic.Controller();
-// let timeline = new TimelineMax();
-
-// let timeline = new TweenMax();
-// timeline
-// 	.to('.rock', 10, { y: -300 })
-// 	.to('.girl', 10, { y: -200 }, '-=10')
-// 	.fromTo('.bg1', { y: -50 }, { y: 0, duration: 10 }, '-=10')
-// 	.to('.content', 10, { top: '0%' }, '-=10')
-// 	.fromTo('.content-images', { opacity: 0 }, { opacity: 1, duration: 3 })
-// 	.fromTo('.text', { opacity: 0 }, { opacity: 1, duration: 3 });
-
-// let scene = new ScrollMagic.Scene({
-// triggerElement: 'section',
-// duration: '300%',
-// triggerHook: 0
-// });
-// scene.setTween(timeline).setPin('section').addTo(controller);
-
 export default function Home() {
 	return (
-		// <Controller>
-		// 	<Scene pin={'section'} setTween={timeline} triggerElement="section" duration="300%" triggerHook="0">
-		// 		<Tween staggerFrom={{ value: 0, ease: 'Expo.easeOut' }} staggerTo={{ value: 90 }}>
 		<HomeDiv>
 			<div className="container">
-				<h2 className="main-title">Welcome to the Show</h2>
-				<img src={bg1} className="bg1" alt="" />
-				<img src={girl1} className="girl" alt="" />
-				<img src={rock1} className="rock" alt="" />
+				<h1 className="main-title">Welcome to the Show</h1>
+				<img src={bg1} className="bg1" alt="background" />
+				{/* <img src={girl1} className="girl" alt="" />
+				<img src={rock1} className="rock" alt="" /> */}
 			</div>
 			<div className="content">
 				<div className="content-images">
+					<a href="/old-maid/startscreen" alt="Old Maid">
+						<img className="content-image" src={OldMaidImage} alt="Old Maid" />
+						<h4>Old Maid</h4>
+						<h3>Pick a card...</h3>
+					</a>
 					<div>
-						<img src={switzleft} alt="" />
-						<h4>Switzerland</h4>
-						<h3>Mountains of tibidabo</h3>
-					</div>
-					<div>
-						<img src={switzright} alt="" />
-						<h4>Switzerland</h4>
-						<h3>Mountains of tibidabo</h3>
+						<img className="content-image" src={SpeaqDisplay} alt="Speaq" />
+						<h4>COMING SOON</h4>
+						<h3>A New Way to Learn Languages</h3>
 					</div>
 				</div>
 				<p className="text">
@@ -136,8 +109,5 @@ export default function Home() {
 				</p>
 			</div>
 		</HomeDiv>
-		// 		</Tween>
-		// 	</Scene>
-		// </Controller>
 	);
 }
