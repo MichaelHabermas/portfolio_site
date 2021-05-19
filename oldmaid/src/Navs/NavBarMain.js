@@ -202,7 +202,7 @@ const NavBarMain = () => {
 								: { animation: '' }
 						}
 					>
-						<Link to="/about">About</Link>
+						<Link to="/">About</Link>
 					</li>
 					<li
 						style={
@@ -211,7 +211,14 @@ const NavBarMain = () => {
 								: { animation: '' }
 						}
 					>
-						<Link to="/">Work</Link>
+						{/* <Link to="/work">Work</Link> */}
+						<div class="dropdown">
+							<button class="dropbtn">Work</button>
+							<div class="dropdown-content">
+								<Link to="/work">Parallax Examples</Link>
+								<a href="/">Link A</a>
+							</div>
+						</div>
 					</li>
 					<li
 						style={
