@@ -156,6 +156,7 @@ export default function OldMaidGame() {
 	const [oldMaidState, setOldMaidState] = useState(initialState);
 	const { push } = useHistory();
 	const [paired, setPaired] = useState([]);
+	const [lastPaired, setLastPaired] = useState('');
 
 	// handles each player taking their turn
 	const takePlayerTurn = (chooser, choosee) => {
@@ -164,6 +165,8 @@ export default function OldMaidGame() {
 
 		let newChooseeHand;
 		let newChooserHand;
+
+		setLastPaired(chosenCard);
 
 		if (chosenCard[0] === 'Q') {
 			// console.log('situationA');
@@ -187,8 +190,10 @@ export default function OldMaidGame() {
 
 	// handles the end of game transition
 	const handleGameOver = () => {
-		handleScoreUpdate();
-		setPaired([]);
+		setTimeout(() => {
+			handleScoreUpdate();
+			setPaired([]);
+		}, 2000);
 		push('/old-maid/gameoverscreen');
 	};
 
@@ -242,7 +247,7 @@ export default function OldMaidGame() {
 		});
 	};
 
-	if (oldMaidState.gameOver) handleGameOver();
+	if (oldMaidState.gameOver) handleGameOver(); // maybe pass this function down into the animation?
 
 	return (
 		<>
@@ -255,7 +260,7 @@ export default function OldMaidGame() {
 
 					<Route path="/old-maid/gamescreen">
 						<div className="centered">
-							<PairedCards paired={paired} />
+							<PairedCards lastPaired={lastPaired} paired={paired} />
 						</div>
 						<div className="cards">
 							<div

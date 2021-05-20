@@ -3,6 +3,10 @@ import styled from 'styled-components';
 
 import cardFront from '../../assets/card_face_norm.png';
 
+const random = () => {
+	return (-1 + Math.random() * 2).toFixed(2);
+};
+
 const Pile = styled.div`
 	.sidePair {
 		position: absolute;
@@ -37,7 +41,8 @@ const Pile = styled.div`
 		display: flex;
 		left: 50%;
 		transform: translate(-50%, -50%);
-		animation: Discarding 2s forwards cubic-bezier(0.28, -0.56, 0.65, 1.57);
+		/* animation: Discarding 2s forwards cubic-bezier(0.28, -0.56, 0.65, 1.57); */
+		animation: Discarding 1s forwards cubic-bezier(${Math.random()}, ${random}, ${Math.random()}, 2);
 	}
 
 	// these are for the fading background colors
@@ -52,7 +57,6 @@ const Pile = styled.div`
 		66% {
 			transform: translateY(50%) rotate(2000deg);
 		}
-
 		100% {
 			left: 5%;
 			top: 50%;
@@ -62,7 +66,13 @@ const Pile = styled.div`
 `;
 
 const PairedCards = props => {
-	const { paired } = props;
+	const { paired, lastPaired } = props;
+
+	// const [lastPaired, setLastPaired] = useState('');
+
+	// if (lastPaired === 'Q') {
+	// 	return <div></div>;
+	// }
 
 	return (
 		<Pile>
@@ -73,25 +83,29 @@ const PairedCards = props => {
 						<div key={Math.random()} className="sidePair">
 							<div
 								className="card"
-								style={{ transform: `rotate(${-90 + Math.floor(Math.random() * 360)}deg)` }}
+								style={{ transform: `rotate(${Math.floor(Math.random() * 360)}deg)` }}
 							>
 								{pair}
 							</div>
 							<div
 								className="card rightCard"
-								style={{ transform: `rotate(${-90 + Math.floor(Math.random() * 360)}deg)` }}
+								style={{ transform: `rotate(${Math.floor(Math.random() * 360)}deg)` }}
 							>
 								{pair}
 							</div>
 						</div>
 					);
 				}
-				return (
-					<div key={Math.random()} className="newPair">
-						<div className="card">{pair}</div>
-						<div className="card rightCard">{pair}</div>
-					</div>
-				);
+				if (lastPaired !== 'Q') {
+					return (
+						<div key={Math.random()} className="newPair">
+							<div className="card">{pair}</div>
+							<div className="card rightCard">{pair}</div>
+						</div>
+					);
+				} else {
+					return <div key={Math.random()}></div>;
+				}
 			})}
 		</Pile>
 	);

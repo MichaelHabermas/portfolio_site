@@ -212,9 +212,9 @@ const NavBarMain = () => {
 						}
 					>
 						{/* <Link to="/work">Work</Link> */}
-						<div class="dropdown">
-							<button class="dropbtn">Work</button>
-							<div class="dropdown-content">
+						<div className="dropdown">
+							<button className="dropbtn">Work</button>
+							<div className="dropdown-content">
 								<Link to="/work">Parallax Examples</Link>
 								<a href="/">Link A</a>
 							</div>
@@ -227,9 +227,9 @@ const NavBarMain = () => {
 								: { animation: '' }
 						}
 					>
-						<div class="dropdown">
-							<button class="dropbtn">Projects</button>
-							<div class="dropdown-content">
+						<div className="dropdown">
+							<button className="dropbtn">Projects</button>
+							<div className="dropdown-content">
 								<Link to="/old-maid/startscreen">Old Maid</Link>
 								<a href="/">Link 1</a>
 							</div>
