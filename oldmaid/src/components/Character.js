@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const CharStyle = styled.div`
 	.face {
-		height: 10vh;
+		height: 6rem;
 	}
 
 	.back {
