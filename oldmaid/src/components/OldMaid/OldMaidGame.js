@@ -9,6 +9,7 @@ import GameOverScreen from './GameOverScreen';
 import { OldMaidDeckSetup } from './OldMaidDeckSetup.js';
 import Player from '../Player.js';
 import Character from '../Character.js';
+import CharSelect from './CharSelect';
 
 //assets
 import cardBack from '../../assets/card_face_selected.png';
@@ -228,7 +229,7 @@ export default function OldMaidGame() {
 			playerTurn: true
 		});
 		setPaired([]);
-		push('/old-maid/gamescreen');
+		push('/old-maid/character-select');
 	};
 
 	// resets scores from the scoring nav
@@ -256,6 +257,9 @@ export default function OldMaidGame() {
 				<div className="body">
 					<Route path="/old-maid/startscreen">
 						<StartScreen handleNewGame={handleNewGame} />
+					</Route>
+					<Route path="/old-maid/character-select">
+						<CharSelect />
 					</Route>
 
 					<Route path="/old-maid/gamescreen">
