@@ -18,8 +18,7 @@ import charactersArray from '../../assets/characters/Characters';
 import CowTilt from '../../assets/OldMaidAssets/CowTilt.png';
 import tree1 from '../../assets/OldMaidAssets/tree1.png';
 import tree2 from '../../assets/OldMaidAssets/tree2.png';
-import PlayerCircle1 from '../../assets/OldMaidAssets/PlayerCircle1.png';
-import PlayerCircle2 from '../../assets/OldMaidAssets/PlayerCircle2.png';
+
 import PairedCards from './pairAnimation.js';
 
 const initialState = {
