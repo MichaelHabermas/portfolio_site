@@ -12,9 +12,15 @@ import Character from '../Character.js';
 import CharSelect from './CharSelect';
 
 //assets
+// game screen assets
 import cardBack from '../../assets/card_face_selected.png';
 import cardFront from '../../assets/card_face_norm.png';
 import charactersArray from '../../assets/characters/Characters';
+import CowTilt from '../../assets/OldMaidAssets/CowTilt.png';
+import tree1 from '../../assets/OldMaidAssets/tree1.png';
+import tree2 from '../../assets/OldMaidAssets/tree2.png';
+import PlayerCircle1 from '../../assets/OldMaidAssets/PlayerCircle1.png';
+import PlayerCircle2 from '../../assets/OldMaidAssets/PlayerCircle2.png';
 import PairedCards from './pairAnimation.js';
 
 const initialState = {
@@ -23,8 +29,14 @@ const initialState = {
 	hands: OldMaidDeckSetup(),
 	gameOver: false,
 	playerCharacter: {
-		user: charactersArray[Math.floor(Math.random() * charactersArray.length)],
-		computer: charactersArray[Math.floor(Math.random() * charactersArray.length)]
+		user: {
+			image: charactersArray[Math.floor(Math.random() * charactersArray.length)],
+			color: '#111111'
+		},
+		computer: {
+			image: charactersArray[Math.floor(Math.random() * charactersArray.length)],
+			color: '#999999'
+		}
 	},
 	playerTurn: true
 };
@@ -35,14 +47,14 @@ const OldMaidBody = styled.div`
 		width: 100vw;
 		height: 84vh;
 		// these are for the fading background colors
-		background: linear-gradient(44deg, #00c9ff, #92fe9d);
+		background: linear-gradient(to bottom, #97c53c, #ccdf69);
 		background-size: 600% 600%;
-		-webkit-animation: AnimationName 10s ease infinite;
+		/* -webkit-animation: AnimationName 10s ease infinite;
 		-moz-animation: AnimationName 10s ease infinite;
-		animation: AnimationName 10s ease infinite;
+		animation: AnimationName 10s ease infinite; */
 	}
 	// these are for the fading background colors
-	@-webkit-keyframes AnimationName {
+	/* @-webkit-keyframes AnimationName {
 		0% {
 			background-position: 26% 0%;
 		}
@@ -74,13 +86,39 @@ const OldMaidBody = styled.div`
 		100% {
 			background-position: 26% 0%;
 		}
-	}
+	} */
 
 	/* h1 { */
 	/* font-size: 3rem; */
 	/* color: rebeccapurple; */
 	/* margin: 2rem; */
 	/* } */
+
+	// gameplay background styling
+	.tree {
+		position: absolute;
+	}
+	.tree1 {
+		top: 5%;
+		left: 5%;
+		transform: translate(-50%, -50%);
+	}
+	.tree2 {
+		top: 50%;
+		right: 5%;
+		transform: translate(-50%, -50%);
+	}
+	.CowTilt {
+		position: absolute;
+		top: 60%;
+		right: 11%;
+		transform: translate(-50%, -50%);
+	}
+	.tree3 {
+		top: 80%;
+		left: 25%;
+		transform: translate(-50%, -50%);
+	}
 
 	// game play element styling
 	.cards {
@@ -191,11 +229,11 @@ export default function OldMaidGame() {
 
 	// handles the end of game transition
 	const handleGameOver = () => {
+		handleScoreUpdate();
+		setPaired([]);
 		setTimeout(() => {
-			handleScoreUpdate();
-			setPaired([]);
-		}, 2000);
-		push('/old-maid/gameoverscreen');
+			push('/old-maid/gameoverscreen');
+		}, 1000);
 	};
 
 	// updates score in OM Nav on game over
@@ -266,6 +304,12 @@ export default function OldMaidGame() {
 						<div className="centered">
 							<PairedCards lastPaired={lastPaired} paired={paired} />
 						</div>
+
+						<img className="tree tree1" src={tree1} alt="tree" />
+						<img className="CowTilt" src={CowTilt} alt="cow" />
+						<img className="tree tree2" src={tree2} alt="tree" />
+						<img className="tree tree3" src={tree2} alt="tree" />
+
 						<div className="cards">
 							<div
 								className="hand opponentHand"

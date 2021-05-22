@@ -42,14 +42,14 @@ export default function CharSelect() {
 
     return (
         <>
-            <Container>
+            <div>
                 <div className='characters'>
                     <h2>Choose Character</h2>
                     <div>
                         {Characters.map(character => {
                             return(
                                 <Character
-                                    character={character} 
+                                    character={{image: character, color: currentColor}} 
                                     setCurrentChar={setCurrentChar}
                                     currentColor={currentColor}
                             />
@@ -65,10 +65,10 @@ export default function CharSelect() {
                         onChange={handleChange}
                     />
                 </div>
-            </Container>
-            <CurrentContainer className='current-character' >
+            </div>
+            <div className='current-character' >
                     <img src={currentChar} />
-            </CurrentContainer>
+            </div>
         </>
     )
 }
