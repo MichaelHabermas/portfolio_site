@@ -4,14 +4,16 @@ import styled from 'styled-components';
 const CharStyle = styled.div`
 	.face {
 		height: 10vh;
-		margin: 15px;
-		padding: 1px;
 	}
 
 	.back {
 		border: 7px solid white;
 		border-radius: 50%;
+		height: 9rem;
+		width: 9rem;
 		margin: 5px;
+		display: grid;
+		place-items: center;
 	}
 `;
 
