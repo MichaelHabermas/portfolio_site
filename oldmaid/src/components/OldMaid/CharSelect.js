@@ -43,6 +43,9 @@ export default function CharSelect() {
     return (
         <>
             <div>
+                <div className='current-character' >
+                        <img src={currentChar} />
+                </div>
                 <div className='characters'>
                     <h2>Choose Character</h2>
                     <div>
@@ -65,9 +68,6 @@ export default function CharSelect() {
                         onChange={handleChange}
                     />
                 </div>
-            </div>
-            <div className='current-character' >
-                    <img src={currentChar} />
             </div>
         </>
     )
