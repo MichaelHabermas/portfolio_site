@@ -24,7 +24,7 @@ function App() {
 				<Route path="/old-maid">
 					<OldMaidGame />
 				</Route>
-				{/* <Route path="/about">
+				{/* <Route path="/">
 					<About />
 				</Route> */}
 				<Route path="/work">
