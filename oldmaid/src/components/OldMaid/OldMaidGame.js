@@ -236,43 +236,6 @@ const OldMaidGame = (props) => {
 		dispatch(settleTurn({newChooseeHand: newChooseeHand, newChooserHand: newChooserHand}))
 	};
 
-	// handles the end of game transition
-	//READY FOR FIRST TEST!!!
-	const handleGameOver = () => {
-		// handleScoreUpdate();
-		setPaired([]);
-		
-			handleScoreUpdate();
-			push('/old-maid/gameoverscreen');
-		
-	};
-
-	// updates score in OM Nav on game over
-	//READY FOR FIRST TEST!!!
-	const handleScoreUpdate = () => {
-		if (oldmaid.hands.playerHand.length === 0) {
-			dispatch(increaseUserWinScore())
-			// setOldMaidState({
-			// 	...oldMaidState,
-			// 	score: {
-			// 		yourScore: oldMaidState.score.yourScore + 1,
-			// 		theirScore: oldMaidState.score.theirScore
-			// 	},
-			// 	gameOver: false
-			// });
-		} else {
-			dispatch(increaseComputerWinScore())
-			// setOldMaidState({
-			// 	...oldMaidState,
-			// 	score: {
-			// 		yourScore: oldMaidState.score.yourScore,
-			// 		theirScore: oldMaidState.score.theirScore + 1
-			// 	},
-			// 	gameOver: false
-			// });
-		}
-	};
-
 	// resets relevant data for an new game
 	//READY FOR FIRST TEST!!!
 	const handleNewGame = () => {
@@ -305,6 +268,27 @@ const OldMaidGame = (props) => {
 		// 	}
 		// });
 	};
+		// handles the end of game transition
+	//READY FOR FIRST TEST!!!
+	const handleGameOver = () => {
+		// handleScoreUpdate();
+		setPaired([]);
+		
+			handleScoreUpdate();
+			push('/old-maid/gameoverscreen');
+		
+	};
+
+	// updates score in OM Nav on game over
+	//READY FOR FIRST TEST!!!
+	const handleScoreUpdate = () => {
+		if (oldmaid.hands.playerHand.length === 0) {
+			dispatch(increaseUserWinScore())
+		} else {
+			dispatch(increaseComputerWinScore())
+		}
+	};
+
 	// READY FOR FIRST TEST!!!
 	if (oldmaid.gameOver === true){
 		console.log("game over", props.gameOver)

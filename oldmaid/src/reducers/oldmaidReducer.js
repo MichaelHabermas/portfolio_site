@@ -24,7 +24,6 @@ const initialState = {
 const reducer = (state = initialState, action) => {
 	switch (action.type) {
 		case NEW_GAME:
-			console.log("start new game!!!!!!!")
 			return {
 				...state,
 				hands: OldMaidDeckSetup(),
@@ -57,8 +56,6 @@ const reducer = (state = initialState, action) => {
 				gameOver: false
 			}
 		case SETTLE_TURN:
-			console.log("payload:", action.payload)
-			console.log("in settle turn")
 			return {
 				...state,
 				hands: {
