@@ -7,6 +7,7 @@ export const SETTLE_TURN = 'SETTLE_TURN'
 
 
 export const newGame = () => {
+    console.log("new game started now")
     return { type: NEW_GAME }
 }
 
@@ -23,5 +24,6 @@ export const increaseComputerWinScore = () => {
 }
 
 export const settleTurn = (newHands) => {
+    console.log("hands are being used to settle turn")
     return { type: SETTLE_TURN, payload: newHands}
 }

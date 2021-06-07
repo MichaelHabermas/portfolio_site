@@ -1,7 +1,7 @@
-import { NEW_GAME, RESET_SCORE, INCREASE_USER_WIN_SCORE, INCREASE_COMPUTER_WIN_SCORE } from '../actions/oldmaidActions';
+import { NEW_GAME, RESET_SCORE, INCREASE_USER_WIN_SCORE, INCREASE_COMPUTER_WIN_SCORE, SETTLE_TURN } from '../actions/oldmaidActions';
 
 import { OldMaidDeckSetup } from '../components/OldMaid/OldMaidDeckSetup';
-import charactersArray from '../../assets/characters/Characters';
+import charactersArray from '../assets/characters/Characters';
 
 const initialState = {
 	gameName: 'Old Maid',
@@ -24,6 +24,7 @@ const initialState = {
 const reducer = (state = initialState, action) => {
 	switch (action.type) {
 		case NEW_GAME:
+			console.log("start new game!!!!!!!")
 			return {
 				...state,
 				hands: OldMaidDeckSetup(),
@@ -54,7 +55,19 @@ const reducer = (state = initialState, action) => {
 					theirScore: state.score.theirScore + 1
 				},
 				gameOver: false
-			}	
+			}
+		case SETTLE_TURN:
+			console.log("payload:", action.payload)
+			console.log("in settle turn")
+			return {
+				...state,
+				hands: {
+					playerHand: state.playerTurn ? action.payload.newChooserHand : action.payload.newChooseeHand,
+					opponentHand: state.playerTurn ? action.payload.newChooseeHand : action.payload.newChooserHand
+				},
+				playerTurn: !state.playerTurn,
+				gameOver: action.payload.newChooserHand.length < 1 || action.payload.newChooseeHand.length < 1 ? true : false
+			}
 		default:
 			return state;
 	}

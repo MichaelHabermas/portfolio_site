@@ -26,7 +26,7 @@ import tree2 from '../../assets/OldMaidAssets/tree2.png';
 import PairedCards from './pairAnimation.js';
 
 //actions
-import { newGame, resetScore, increaseUserWinScore, increaseComputerWinScore } from '../../actions/oldmaidActions';
+import { newGame, resetScore, increaseUserWinScore, increaseComputerWinScore, settleTurn } from '../../actions/oldmaidActions';
 
 // const initialState = {
 // 	gameName: 'Old Maid',
@@ -196,8 +196,8 @@ const OldMaidBody = styled.div`
 	}
 `;
 
-function OldMaidGame(props) {
-	const {oldmaid} = props
+const OldMaidGame = (props) => {
+	const { oldmaid, dispatch } = props
 	// const [oldMaidState, setOldMaidState] = useState(initialState);
 	const { push } = useHistory();
 	const [paired, setPaired] = useState([]);
@@ -222,32 +222,36 @@ function OldMaidGame(props) {
 			newChooseeHand = [...choosee.filter(item => item[0] !== chosenCard[0])];
 			newChooserHand = [...chooser.filter(item => item[0] !== chosenCard[0])];
 		}
-		setOldMaidState({
-			...oldMaidState,
-			hands: {
-				playerHand: oldMaidState.playerTurn ? newChooserHand : newChooseeHand,
-				opponentHand: oldMaidState.playerTurn ? newChooseeHand : newChooserHand
-			},
-			playerTurn: !oldMaidState.playerTurn,
-			gameOver: newChooserHand.length < 1 || newChooseeHand.length < 1 ? true : false
-		});
+		// setOldMaidState({
+		// 	...oldMaidState,
+		// 	hands: {
+		// 		playerHand: oldMaidState.playerTurn ? newChooserHand : newChooseeHand,
+		// 		opponentHand: oldMaidState.playerTurn ? newChooseeHand : newChooserHand
+		// 	},
+		// 	playerTurn: !oldMaidState.playerTurn,
+		// 	gameOver: newChooserHand.length < 1 || newChooseeHand.length < 1 ? true : false
+		// });
+
+		//new settle turn
+		dispatch(settleTurn({newChooseeHand: newChooseeHand, newChooserHand: newChooserHand}))
 	};
 
 	// handles the end of game transition
 	//READY FOR FIRST TEST!!!
 	const handleGameOver = () => {
-		handleScoreUpdate();
+		// handleScoreUpdate();
 		setPaired([]);
-		setTimeout(() => {
+		
+			handleScoreUpdate();
 			push('/old-maid/gameoverscreen');
-		}, 1000);
+		
 	};
 
 	// updates score in OM Nav on game over
 	//READY FOR FIRST TEST!!!
 	const handleScoreUpdate = () => {
 		if (oldmaid.hands.playerHand.length === 0) {
-			increaseUserWinScore()
+			dispatch(increaseUserWinScore())
 			// setOldMaidState({
 			// 	...oldMaidState,
 			// 	score: {
@@ -257,7 +261,7 @@ function OldMaidGame(props) {
 			// 	gameOver: false
 			// });
 		} else {
-			increaseComputerWinScore()
+			dispatch(increaseComputerWinScore())
 			// setOldMaidState({
 			// 	...oldMaidState,
 			// 	score: {
@@ -277,11 +281,12 @@ function OldMaidGame(props) {
 		// 	hands: OldMaidDeckSetup(),
 		// 	playerTurn: true
 		// });
-		newGame();
+		dispatch(newGame());
 		setPaired([]);
-		push('/old-maid/character-select');
+		// push('/old-maid/character-select');
+		push('/old-maid/gamescreen');
 	};
-
+	
 	// resets scores from the scoring nav
 	// READY FOR FIRST TEST!!!
 	const isUserWinning = () => {
@@ -291,7 +296,7 @@ function OldMaidGame(props) {
 	// resets scores from the scoring nav
 	// READY FOR FIRST TEST!!!
 	const handleResetScore = () => {
-		resetScore()
+		dispatch(resetScore())
 		// setOldMaidState({
 		// 	...oldMaidState,
 		// 	score: {
@@ -301,7 +306,10 @@ function OldMaidGame(props) {
 		// });
 	};
 	// READY FOR FIRST TEST!!!
-	if (oldmaid.gameOver) handleGameOver(); // maybe pass this function down into the animation?
+	if (oldmaid.gameOver === true){
+		console.log("game over", props.gameOver)
+		handleGameOver()
+	}; // maybe pass this function down into the animation?
 
 	return (
 		<>
@@ -373,8 +381,11 @@ function OldMaidGame(props) {
 
 const mapStateToProps = state => {
 	return {
-		oldmaid: state.oldmaid
+		oldmaid: state.oldmaid,
+		gameOver: state.oldmaid.gameOver
 	};
 };
 
-export default connect(mapStateToProps, { newGame, resetScore, increaseUserWinScore, increaseComputerWinScore })(OldMaidGame);
+export default connect(mapStateToProps)(OldMaidGame);
+
+// { newGame, resetScore, increaseUserWinScore, increaseComputerWinScore, settleTurn }
