@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { Route, useHistory } from 'react-router-dom';
 import styled from 'styled-components';
+import { connect } from 'react-redux';
+
 
 //components
 import ScoringNav from '../../Navs/ScoringNav.js';
 import StartScreen from './StartScreen';
 import GameOverScreen from './GameOverScreen';
-import { OldMaidDeckSetup } from './OldMaidDeckSetup.js';
+// import { OldMaidDeckSetup } from './OldMaidDeckSetup.js';
 import Player from '../Player.js';
 import Character from '../Character.js';
 import CharSelect from './CharSelect';
@@ -15,31 +17,34 @@ import CharSelect from './CharSelect';
 // game screen assets
 import cardBack from '../../assets/card_face_selected.png';
 import cardFront from '../../assets/card_face_norm.png';
-import charactersArray from '../../assets/characters/Characters';
+// import charactersArray from '../../assets/characters/Characters';
 import CowTilt from '../../assets/OldMaidAssets/CowTilt.png';
 import tree1 from '../../assets/OldMaidAssets/tree1.png';
 import tree2 from '../../assets/OldMaidAssets/tree2.png';
-import PlayerCircle1 from '../../assets/OldMaidAssets/PlayerCircle1.png';
-import PlayerCircle2 from '../../assets/OldMaidAssets/PlayerCircle2.png';
+// import PlayerCircle1 from '../../assets/OldMaidAssets/PlayerCircle1.png';
+// import PlayerCircle2 from '../../assets/OldMaidAssets/PlayerCircle2.png';
 import PairedCards from './pairAnimation.js';
 
-const initialState = {
-	gameName: 'Old Maid',
-	score: { yourScore: 0, theirScore: 0 },
-	hands: OldMaidDeckSetup(),
-	gameOver: false,
-	playerCharacter: {
-		user: {
-			image: charactersArray[Math.floor(Math.random() * charactersArray.length)],
-			color: '#111111'
-		},
-		computer: {
-			image: charactersArray[Math.floor(Math.random() * charactersArray.length)],
-			color: '#999999'
-		}
-	},
-	playerTurn: true
-};
+//actions
+import { newGame, resetScore, increaseUserWinScore, increaseComputerWinScore } from '../../actions/oldmaidActions';
+
+// const initialState = {
+// 	gameName: 'Old Maid',
+// 	score: { yourScore: 0, theirScore: 0 },
+// 	hands: OldMaidDeckSetup(),
+// 	gameOver: false,
+// 	playerCharacter: {
+// 		user: {
+// 			image: charactersArray[Math.floor(Math.random() * charactersArray.length)],
+// 			color: '#111111'
+// 		},
+// 		computer: {
+// 			image: charactersArray[Math.floor(Math.random() * charactersArray.length)],
+// 			color: '#999999'
+// 		}
+// 	},
+// 	playerTurn: true
+// };
 
 // styling
 const OldMaidBody = styled.div`
@@ -191,8 +196,9 @@ const OldMaidBody = styled.div`
 	}
 `;
 
-export default function OldMaidGame() {
-	const [oldMaidState, setOldMaidState] = useState(initialState);
+function OldMaidGame(props) {
+	const {oldmaid} = props
+	// const [oldMaidState, setOldMaidState] = useState(initialState);
 	const { push } = useHistory();
 	const [paired, setPaired] = useState([]);
 	const [lastPaired, setLastPaired] = useState('');
@@ -228,6 +234,7 @@ export default function OldMaidGame() {
 	};
 
 	// handles the end of game transition
+	//READY FOR FIRST TEST!!!
 	const handleGameOver = () => {
 		handleScoreUpdate();
 		setPaired([]);
@@ -237,60 +244,68 @@ export default function OldMaidGame() {
 	};
 
 	// updates score in OM Nav on game over
+	//READY FOR FIRST TEST!!!
 	const handleScoreUpdate = () => {
-		if (oldMaidState.hands.playerHand.length === 0) {
-			setOldMaidState({
-				...oldMaidState,
-				score: {
-					yourScore: oldMaidState.score.yourScore + 1,
-					theirScore: oldMaidState.score.theirScore
-				},
-				gameOver: false
-			});
+		if (oldmaid.hands.playerHand.length === 0) {
+			increaseUserWinScore()
+			// setOldMaidState({
+			// 	...oldMaidState,
+			// 	score: {
+			// 		yourScore: oldMaidState.score.yourScore + 1,
+			// 		theirScore: oldMaidState.score.theirScore
+			// 	},
+			// 	gameOver: false
+			// });
 		} else {
-			setOldMaidState({
-				...oldMaidState,
-				score: {
-					yourScore: oldMaidState.score.yourScore,
-					theirScore: oldMaidState.score.theirScore + 1
-				},
-				gameOver: false
-			});
+			increaseComputerWinScore()
+			// setOldMaidState({
+			// 	...oldMaidState,
+			// 	score: {
+			// 		yourScore: oldMaidState.score.yourScore,
+			// 		theirScore: oldMaidState.score.theirScore + 1
+			// 	},
+			// 	gameOver: false
+			// });
 		}
 	};
 
 	// resets relevant data for an new game
+	//READY FOR FIRST TEST!!!
 	const handleNewGame = () => {
-		setOldMaidState({
-			...oldMaidState,
-			hands: OldMaidDeckSetup(),
-			playerTurn: true
-		});
+		// setOldMaidState({
+		// 	...oldMaidState,
+		// 	hands: OldMaidDeckSetup(),
+		// 	playerTurn: true
+		// });
+		newGame();
 		setPaired([]);
 		push('/old-maid/character-select');
 	};
 
 	// resets scores from the scoring nav
+	// READY FOR FIRST TEST!!!
 	const isUserWinning = () => {
-		return oldMaidState.hands.playerHand.length > oldMaidState.hands.opponentHand;
+		return oldmaid.hands.playerHand.length > oldmaid.hands.opponentHand;
 	};
 
 	// resets scores from the scoring nav
-	const resetScore = e => {
-		setOldMaidState({
-			...oldMaidState,
-			score: {
-				yourScore: 0,
-				theirScore: 0
-			}
-		});
+	// READY FOR FIRST TEST!!!
+	const handleResetScore = () => {
+		resetScore()
+		// setOldMaidState({
+		// 	...oldMaidState,
+		// 	score: {
+		// 		yourScore: 0,
+		// 		theirScore: 0
+		// 	}
+		// });
 	};
-
-	if (oldMaidState.gameOver) handleGameOver(); // maybe pass this function down into the animation?
+	// READY FOR FIRST TEST!!!
+	if (oldmaid.gameOver) handleGameOver(); // maybe pass this function down into the animation?
 
 	return (
 		<>
-			<ScoringNav gameState={oldMaidState} resetScore={resetScore} />
+			<ScoringNav gameState={oldmaid} resetScore={handleResetScore} />
 			<OldMaidBody>
 				<div className="body">
 					<Route path="/old-maid/startscreen">
@@ -314,17 +329,17 @@ export default function OldMaidGame() {
 							<div
 								className="hand opponentHand"
 								onClick={() => {
-									oldMaidState.playerTurn
+									oldmaid.playerTurn
 										? console.log('not my turn')
 										: takePlayerTurn(
-												oldMaidState.hands.opponentHand,
-												oldMaidState.hands.playerHand
+											oldmaid.hands.opponentHand,
+											oldmaid.hands.playerHand
 										  );
 								}}
 							>
-								<Character character={oldMaidState.playerCharacter.computer} />
+								<Character character={oldmaid.playerCharacter.computer} />
 								<Player
-									playerHand={oldMaidState.hands.opponentHand}
+									playerHand={oldmaid.hands.opponentHand}
 									isUser={false}
 									classNames="card opponentCard"
 								/>
@@ -332,17 +347,17 @@ export default function OldMaidGame() {
 							<div
 								className="hand playerHand"
 								onClick={() => {
-									oldMaidState.playerTurn
-										? takePlayerTurn(oldMaidState.hands.playerHand, oldMaidState.hands.opponentHand)
+									oldmaid.playerTurn
+										? takePlayerTurn(oldmaid.hands.playerHand, oldmaid.hands.opponentHand)
 										: console.log('not my turn');
 								}}
 							>
 								<Player
-									playerHand={oldMaidState.hands.playerHand}
+									playerHand={oldmaid.hands.playerHand}
 									isUser={true}
 									classNames="card playerCard"
 								/>
-								<Character character={oldMaidState.playerCharacter.user} />
+								<Character character={oldmaid.playerCharacter.user} />
 							</div>
 						</div>
 					</Route>
@@ -355,3 +370,11 @@ export default function OldMaidGame() {
 		</>
 	);
 }
+
+const mapStateToProps = state => {
+	return {
+		oldmaid: state.oldmaid
+	};
+};
+
+export default connect(mapStateToProps, { newGame, resetScore, increaseUserWinScore, increaseComputerWinScore })(OldMaidGame);
