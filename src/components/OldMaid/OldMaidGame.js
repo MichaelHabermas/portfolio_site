@@ -3,12 +3,10 @@ import { Route, useHistory } from 'react-router-dom';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
 
-
 //components
 import ScoringNav from '../../Navs/ScoringNav.js';
 import StartScreen from './StartScreen';
 import GameOverScreen from './GameOverScreen';
-// import { OldMaidDeckSetup } from './OldMaidDeckSetup.js';
 import Player from '../Player.js';
 import Character from '../Character.js';
 import CharSelect from './CharSelect';
@@ -17,89 +15,29 @@ import CharSelect from './CharSelect';
 // game screen assets
 import cardBack from '../../assets/card_face_selected.png';
 import cardFront from '../../assets/card_face_norm.png';
-// import charactersArray from '../../assets/characters/Characters';
 import CowTilt from '../../assets/OldMaidAssets/CowTilt.png';
 import tree1 from '../../assets/OldMaidAssets/tree1.png';
 import tree2 from '../../assets/OldMaidAssets/tree2.png';
-// import PlayerCircle1 from '../../assets/OldMaidAssets/PlayerCircle1.png';
-// import PlayerCircle2 from '../../assets/OldMaidAssets/PlayerCircle2.png';
 import PairedCards from './pairAnimation.js';
 
 //actions
-import { newGame, resetScore, increaseUserWinScore, increaseComputerWinScore, settleTurn } from '../../actions/oldmaidActions';
-
-// const initialState = {
-// 	gameName: 'Old Maid',
-// 	score: { yourScore: 0, theirScore: 0 },
-// 	hands: OldMaidDeckSetup(),
-// 	gameOver: false,
-// 	playerCharacter: {
-// 		user: {
-// 			image: charactersArray[Math.floor(Math.random() * charactersArray.length)],
-// 			color: '#111111'
-// 		},
-// 		computer: {
-// 			image: charactersArray[Math.floor(Math.random() * charactersArray.length)],
-// 			color: '#999999'
-// 		}
-// 	},
-// 	playerTurn: true
-// };
+import {
+	newGame,
+	resetScore,
+	increaseUserWinScore,
+	increaseComputerWinScore,
+	settleTurn
+} from '../../actions/oldmaidActions';
 
 // styling
 const OldMaidBody = styled.div`
 	.body {
 		width: 100vw;
 		height: 84vh;
-		// these are for the fading background colors
 		background: linear-gradient(to bottom, #97c53c, #ccdf69);
-		background-size: 600% 600%;
-		/* -webkit-animation: AnimationName 10s ease infinite;
-		-moz-animation: AnimationName 10s ease infinite;
-		animation: AnimationName 10s ease infinite; */
 	}
-	// these are for the fading background colors
-	/* @-webkit-keyframes AnimationName {
-		0% {
-			background-position: 26% 0%;
-		}
-		50% {
-			background-position: 75% 100%;
-		}
-		100% {
-			background-position: 26% 0%;
-		}
-	}
-	@-moz-keyframes AnimationName {
-		0% {
-			background-position: 26% 0%;
-		}
-		50% {
-			background-position: 75% 100%;
-		}
-		100% {
-			background-position: 26% 0%;
-		}
-	}
-	@keyframes AnimationName {
-		0% {
-			background-position: 26% 0%;
-		}
-		50% {
-			background-position: 75% 100%;
-		}
-		100% {
-			background-position: 26% 0%;
-		}
-	} */
 
-	/* h1 { */
-	/* font-size: 3rem; */
-	/* color: rebeccapurple; */
-	/* margin: 2rem; */
-	/* } */
-
-	// gameplay background styling
+	// game play background styling
 	.tree {
 		position: absolute;
 	}
@@ -196,9 +134,8 @@ const OldMaidBody = styled.div`
 	}
 `;
 
-const OldMaidGame = (props) => {
-	const { oldmaid, dispatch } = props
-	// const [oldMaidState, setOldMaidState] = useState(initialState);
+const OldMaidGame = props => {
+	const { oldmaid, dispatch } = props;
 	const { push } = useHistory();
 	const [paired, setPaired] = useState([]);
 	const [lastPaired, setLastPaired] = useState('');
@@ -214,86 +151,70 @@ const OldMaidGame = (props) => {
 		setLastPaired(chosenCard);
 
 		if (chosenCard[0] === 'Q') {
-			// console.log('situationA');
 			newChooseeHand = [...choosee.filter(item => item[0] !== 'Q')];
 			newChooserHand = [...chooser, 'Q'];
 		} else {
 			setPaired([...paired, chosenCard]);
-			newChooseeHand = [...choosee.filter(item => item[0] !== chosenCard[0])];
-			newChooserHand = [...chooser.filter(item => item[0] !== chosenCard[0])];
+			newChooseeHand = [
+				...choosee.filter(item => item[0] !== chosenCard[0])
+			];
+			newChooserHand = [
+				...chooser.filter(item => item[0] !== chosenCard[0])
+			];
 		}
-		// setOldMaidState({
-		// 	...oldMaidState,
-		// 	hands: {
-		// 		playerHand: oldMaidState.playerTurn ? newChooserHand : newChooseeHand,
-		// 		opponentHand: oldMaidState.playerTurn ? newChooseeHand : newChooserHand
-		// 	},
-		// 	playerTurn: !oldMaidState.playerTurn,
-		// 	gameOver: newChooserHand.length < 1 || newChooseeHand.length < 1 ? true : false
-		// });
 
-		//new settle turn
-		dispatch(settleTurn({newChooseeHand: newChooseeHand, newChooserHand: newChooserHand}))
+		const newState = {
+			hands: {
+				playerHand: oldmaid.playerTurn
+					? newChooserHand
+					: newChooseeHand,
+				opponentHand: oldmaid.playerTurn
+					? newChooseeHand
+					: newChooserHand
+			},
+			playerTurn: !oldmaid.playerTurn,
+			gameOver:
+				newChooserHand.length < 1 || newChooseeHand.length < 1
+					? true
+					: false
+		};
+
+		dispatch(settleTurn(newState));
 	};
 
-	// resets relevant data for an new game
-	//READY FOR FIRST TEST!!!
 	const handleNewGame = () => {
-		// setOldMaidState({
-		// 	...oldMaidState,
-		// 	hands: OldMaidDeckSetup(),
-		// 	playerTurn: true
-		// });
 		dispatch(newGame());
 		setPaired([]);
 		// push('/old-maid/character-select');
 		push('/old-maid/gamescreen');
 	};
-	
-	// resets scores from the scoring nav
-	// READY FOR FIRST TEST!!!
+
 	const isUserWinning = () => {
 		return oldmaid.hands.playerHand.length > oldmaid.hands.opponentHand;
 	};
 
-	// resets scores from the scoring nav
-	// READY FOR FIRST TEST!!!
 	const handleResetScore = () => {
-		dispatch(resetScore())
-		// setOldMaidState({
-		// 	...oldMaidState,
-		// 	score: {
-		// 		yourScore: 0,
-		// 		theirScore: 0
-		// 	}
-		// });
-	};
-		// handles the end of game transition
-	//READY FOR FIRST TEST!!!
-	const handleGameOver = () => {
-		// handleScoreUpdate();
-		setPaired([]);
-		
-			handleScoreUpdate();
-			push('/old-maid/gameoverscreen');
-		
+		dispatch(resetScore());
 	};
 
-	// updates score in OM Nav on game over
-	//READY FOR FIRST TEST!!!
+	const handleGameOver = () => {
+		handleScoreUpdate();
+		push('/old-maid/gameoverscreen');
+	};
+
 	const handleScoreUpdate = () => {
 		if (oldmaid.hands.playerHand.length === 0) {
-			dispatch(increaseUserWinScore())
+			const newScore = oldmaid.score.yourScore + 1;
+			dispatch(increaseUserWinScore(newScore));
 		} else {
-			dispatch(increaseComputerWinScore())
+			const newScore = oldmaid.score.theirScore + 1;
+			dispatch(increaseComputerWinScore(newScore));
 		}
 	};
 
-	// READY FOR FIRST TEST!!!
-	if (oldmaid.gameOver === true){
-		console.log("game over", props.gameOver)
-		handleGameOver()
-	}; // maybe pass this function down into the animation?
+	if (oldmaid.gameOver === true) {
+		handleGameOver();
+	}
 
 	return (
 		<>
@@ -309,7 +230,10 @@ const OldMaidGame = (props) => {
 
 					<Route path="/old-maid/gamescreen">
 						<div className="centered">
-							<PairedCards lastPaired={lastPaired} paired={paired} />
+							<PairedCards
+								lastPaired={lastPaired}
+								paired={paired}
+							/>
 						</div>
 
 						<img className="tree tree1" src={tree1} alt="tree" />
@@ -324,12 +248,14 @@ const OldMaidGame = (props) => {
 									oldmaid.playerTurn
 										? console.log('not my turn')
 										: takePlayerTurn(
-											oldmaid.hands.opponentHand,
-											oldmaid.hands.playerHand
+												oldmaid.hands.opponentHand,
+												oldmaid.hands.playerHand
 										  );
 								}}
 							>
-								<Character character={oldmaid.playerCharacter.computer} />
+								<Character
+									character={oldmaid.playerCharacter.computer}
+								/>
 								<Player
 									playerHand={oldmaid.hands.opponentHand}
 									isUser={false}
@@ -340,7 +266,10 @@ const OldMaidGame = (props) => {
 								className="hand playerHand"
 								onClick={() => {
 									oldmaid.playerTurn
-										? takePlayerTurn(oldmaid.hands.playerHand, oldmaid.hands.opponentHand)
+										? takePlayerTurn(
+												oldmaid.hands.playerHand,
+												oldmaid.hands.opponentHand
+										  )
 										: console.log('not my turn');
 								}}
 							>
@@ -349,19 +278,24 @@ const OldMaidGame = (props) => {
 									isUser={true}
 									classNames="card playerCard"
 								/>
-								<Character character={oldmaid.playerCharacter.user} />
+								<Character
+									character={oldmaid.playerCharacter.user}
+								/>
 							</div>
 						</div>
 					</Route>
 
 					<Route path="/old-maid/gameoverscreen">
-						<GameOverScreen playerWon={isUserWinning} handleNewGame={handleNewGame} />
+						<GameOverScreen
+							playerWon={isUserWinning}
+							handleNewGame={handleNewGame}
+						/>
 					</Route>
 				</div>
 			</OldMaidBody>
 		</>
 	);
-}
+};
 
 const mapStateToProps = state => {
 	return {
@@ -371,5 +305,3 @@ const mapStateToProps = state => {
 };
 
 export default connect(mapStateToProps)(OldMaidGame);
-
-// { newGame, resetScore, increaseUserWinScore, increaseComputerWinScore, settleTurn }
