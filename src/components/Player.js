@@ -7,7 +7,14 @@ const Player = props => {
 		<>
 			<div>
 				{playerHand.map(card => {
-					return <Card key={Math.random()} classNames={classNames} isUser={isUser} card={card} />;
+					return (
+						<Card
+							key={Math.random()}
+							classNames={classNames}
+							isUser={isUser}
+							card={card}
+						/>
+					);
 				})}
 			</div>
 		</>
