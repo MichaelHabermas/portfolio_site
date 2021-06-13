@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Nav = styled.div`
-	*,  /* '*'selects all things, the :: before and :: after grab *something else* */
-    *::before,  /* these 3 are a safety to eliminate some presets */
-    *::after {
+	*,
+	*::before,
+	*::after {
 		margin: 0;
 		padding: 0;
 		box-sizing: border-box;
@@ -21,19 +21,10 @@ const Nav = styled.div`
 		align-items: center;
 		font-family: 'Poppins', sans-serif;
 		min-height: 8vh;
-		/* background: #200122; // fallback for old browsers */
-		/* background: -webkit-linear-gradient(
-			to right,
-			#6f0000,
-			#200122 */
-		/* Chrome 10-25, Safari 5.1-6 */
 		background: transparent;
-		/* background: linear-gradient(to right, #6f0000, #200122); */
-		/* z-index: 10; */
 	}
 
 	.logo {
-		/* color: rgb(226, 226, 226); */
 		text-transform: uppercase;
 		letter-spacing: 5px;
 		font-size: 20px;
@@ -50,7 +41,6 @@ const Nav = styled.div`
 	}
 
 	.nav-links a {
-		/* color: rgb(226, 226, 226); */
 		text-decoration: none;
 		letter-spacing: 3px;
 		font-weight: bold;
@@ -75,7 +65,6 @@ const Nav = styled.div`
 		background-color: transparent;
 		font-family: 'Poppins', sans-serif;
 		border: none;
-		/* color: rgb(226, 226, 226); */
 		text-decoration: none;
 		letter-spacing: 3px;
 		font-weight: bold;
@@ -133,17 +122,6 @@ const Nav = styled.div`
 			right: 0px;
 			height: 92vh;
 			top: 8vh;
-			background: #200122; /* fallback for old browsers */
-			/* background: -webkit-linear-gradient(
-				to top,
-				#6f0000,
-				#200122
-			); Chrome 10-25, Safari 5.1-6 
-			background: linear-gradient(
-				to top,
-				#6f0000,
-				#200122
-			); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 			background: transparent;
 			display: flex;
 			flex-direction: column;
@@ -228,7 +206,6 @@ const NavBarMain = () => {
 								: { animation: '' }
 						}
 					>
-						{/* <Link to="/">About</Link> */}
 						<div className="dropdown">
 							<button className="dropbtn">About</button>
 							<div className="dropdown-content">
@@ -249,7 +226,6 @@ const NavBarMain = () => {
 								: { animation: '' }
 						}
 					>
-						{/* <Link to="/work">Work</Link> */}
 						<div className="dropdown">
 							<button className="dropbtn">Work</button>
 							<div className="dropdown-content">

@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Nav = styled.div`
-	*,  /* '*'selects all things, the :: before and :: after grab *something else* */
-	*::before,  /* these 3 are a safety to eliminate some presets */
+	*,
+	*::before,
 	*::after {
 		margin: 0;
 		padding: 0;
@@ -19,13 +19,13 @@ const Nav = styled.div`
 		align-items: center;
 		font-family: 'Poppins', sans-serif;
 		min-height: 8vh;
-		background: #002c6f; /* fallback for old browsers */
+		background: #f3b38d; /* fallback for old browsers */
 		background: -webkit-linear-gradient(
-			to right,
-			#6f0000,
-			#002c6f
+			to bottom right,
+			#f3b38d,
+			#f3d48c
 		); /* Chrome 10-25, Safari 5.1-6 */
-		background: linear-gradient(to right, #6f0000, #002c6f);
+		background: linear-gradient(to bottom right, #f3b38d, #f3d48c);
 	}
 
 	.logo {
@@ -57,7 +57,7 @@ const Nav = styled.div`
 
 	button {
 		color: rgb(226, 226, 226);
-		background-color: #6f0000;
+		background-color: #bd8dda;
 		border: 3px solid rgb(226, 226, 226);
 		border-radius: 100%;
 		font-weight: bold;

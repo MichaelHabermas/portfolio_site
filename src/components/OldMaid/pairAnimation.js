@@ -41,8 +41,8 @@ const Pile = styled.div`
 		display: flex;
 		left: 50%;
 		transform: translate(-50%, -50%);
-		/* animation: Discarding 2s forwards cubic-bezier(0.28, -0.56, 0.65, 1.57); */
-		animation: Discarding 1s forwards cubic-bezier(${Math.random()}, ${random}, ${Math.random()}, 2);
+		animation: Discarding 1s forwards
+			cubic-bezier(${Math.random()}, ${random}, ${Math.random()}, 2);
 	}
 
 	// these are for the fading background colors
@@ -60,19 +60,14 @@ const Pile = styled.div`
 		100% {
 			left: 5%;
 			top: 50%;
-			transform: translateY(-50%) rotate(${3000 + Math.floor(Math.random() * 360)}deg);
+			transform: translateY(-50%)
+				rotate(${3000 + Math.floor(Math.random() * 360)}deg);
 		}
 	}
 `;
 
 const PairedCards = props => {
 	const { paired, lastPaired } = props;
-
-	// const [lastPaired, setLastPaired] = useState('');
-
-	// if (lastPaired === 'Q') {
-	// 	return <div></div>;
-	// }
 
 	return (
 		<Pile>
@@ -83,13 +78,21 @@ const PairedCards = props => {
 						<div key={Math.random()} className="sidePair">
 							<div
 								className="card"
-								style={{ transform: `rotate(${Math.floor(Math.random() * 360)}deg)` }}
+								style={{
+									transform: `rotate(${Math.floor(
+										Math.random() * 360
+									)}deg)`
+								}}
 							>
 								{pair}
 							</div>
 							<div
 								className="card rightCard"
-								style={{ transform: `rotate(${Math.floor(Math.random() * 360)}deg)` }}
+								style={{
+									transform: `rotate(${Math.floor(
+										Math.random() * 360
+									)}deg)`
+								}}
 							>
 								{pair}
 							</div>
