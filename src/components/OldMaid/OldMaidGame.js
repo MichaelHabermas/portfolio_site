@@ -31,6 +31,8 @@ import {
 
 // styling
 const OldMaidBody = styled.div`
+	background-color: #a3c7ff;
+
 	.body {
 		width: 100vw;
 		height: 84vh;
@@ -193,13 +195,16 @@ const OldMaidGame = props => {
 		return oldmaid.hands.playerHand.length > oldmaid.hands.opponentHand;
 	};
 
-	const handleResetScore = () => {
+	const handleScoreReset = () => {
 		dispatch(resetScore());
 	};
 
 	const handleGameOver = () => {
 		handleScoreUpdate();
-		push('/old-maid/gameoverscreen');
+		setTimeout(() => {
+			push('/old-maid/gameoverscreen');
+		}, 1100);
+		// push('/old-maid/gameoverscreen');
 	};
 
 	const handleScoreUpdate = () => {
@@ -218,7 +223,7 @@ const OldMaidGame = props => {
 
 	return (
 		<>
-			<ScoringNav gameState={oldmaid} resetScore={handleResetScore} />
+			<ScoringNav gameState={oldmaid} resetScore={handleScoreReset} />
 			<OldMaidBody>
 				<div className="body">
 					<Route path="/old-maid/startscreen">

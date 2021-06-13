@@ -1,4 +1,5 @@
 /* @import url{' fonts for use'} //  */
+/* @import url('../fonts/scriptina.regular.ttf'); */
 
 * {
 	margin: 0;
@@ -6,8 +7,17 @@
 	box-sizing: border-box;
 	/* font-family: 'FONT', sans-serif; */
 	list-style-type: none;
+	/* background-color: #fcf5b8; */
 }
 
 body {
 	overflow-x: hidden;
+	background-color: #fcf5b8;
+}
+
+@font-face {
+	font-family: 'scriptina';
+	src: local('scriptina'),
+		url('../fonts/scriptina.regular.ttf') format('truetype');
+	font-weight: normal;
 }

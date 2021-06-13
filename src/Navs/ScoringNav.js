@@ -9,15 +9,22 @@ const Nav = styled.div`
 		padding: 0;
 		box-sizing: border-box;
 	}
+	margin: 0 20%;
 
 	nav {
+		z-index: 1;
+		border-radius: 100px;
 		display: flex;
 		justify-content: space-around;
 		align-items: center;
 		font-family: 'Poppins', sans-serif;
 		min-height: 8vh;
 		background: #002c6f; /* fallback for old browsers */
-		background: -webkit-linear-gradient(to right, #6f0000, #002c6f); /* Chrome 10-25, Safari 5.1-6 */
+		background: -webkit-linear-gradient(
+			to right,
+			#6f0000,
+			#002c6f
+		); /* Chrome 10-25, Safari 5.1-6 */
 		background: linear-gradient(to right, #6f0000, #002c6f);
 	}
 

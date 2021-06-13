@@ -4,11 +4,15 @@ import styled from 'styled-components';
 
 const Nav = styled.div`
 	*,  /* '*'selects all things, the :: before and :: after grab *something else* */
-*::before,  /* these 3 are a safety to eliminate some presets */
-*::after {
+    *::before,  /* these 3 are a safety to eliminate some presets */
+    *::after {
 		margin: 0;
 		padding: 0;
 		box-sizing: border-box;
+		z-index: 1;
+		color: white;
+		list-style: none;
+		text-decoration: none;
 	}
 
 	nav {
@@ -17,13 +21,19 @@ const Nav = styled.div`
 		align-items: center;
 		font-family: 'Poppins', sans-serif;
 		min-height: 8vh;
-		background: #200122; /* fallback for old browsers */
-		background: -webkit-linear-gradient(to right, #6f0000, #200122); /* Chrome 10-25, Safari 5.1-6 */
-		background: linear-gradient(to right, #6f0000, #200122);
+		/* background: #200122; // fallback for old browsers */
+		/* background: -webkit-linear-gradient(
+			to right,
+			#6f0000,
+			#200122 */
+		/* Chrome 10-25, Safari 5.1-6 */
+		background: transparent;
+		/* background: linear-gradient(to right, #6f0000, #200122); */
+		/* z-index: 10; */
 	}
 
 	.logo {
-		color: rgb(226, 226, 226);
+		/* color: rgb(226, 226, 226); */
 		text-transform: uppercase;
 		letter-spacing: 5px;
 		font-size: 20px;
@@ -40,7 +50,7 @@ const Nav = styled.div`
 	}
 
 	.nav-links a {
-		color: rgb(226, 226, 226);
+		/* color: rgb(226, 226, 226); */
 		text-decoration: none;
 		letter-spacing: 3px;
 		font-weight: bold;
@@ -65,7 +75,7 @@ const Nav = styled.div`
 		background-color: transparent;
 		font-family: 'Poppins', sans-serif;
 		border: none;
-		color: rgb(226, 226, 226);
+		/* color: rgb(226, 226, 226); */
 		text-decoration: none;
 		letter-spacing: 3px;
 		font-weight: bold;
@@ -124,13 +134,17 @@ const Nav = styled.div`
 			height: 92vh;
 			top: 8vh;
 			background: #200122; /* fallback for old browsers */
-			background: -webkit-linear-gradient(to top, #6f0000, #200122); /* Chrome 10-25, Safari 5.1-6 */
+			/* background: -webkit-linear-gradient(
+				to top,
+				#6f0000,
+				#200122
+			); Chrome 10-25, Safari 5.1-6 
 			background: linear-gradient(
 				to top,
 				#6f0000,
 				#200122
-			); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+			); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+			background: transparent;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
@@ -140,6 +154,10 @@ const Nav = styled.div`
 		}
 		.nav-links li {
 			opacity: 0;
+		}
+		.nav-links li a,
+		.nav-links li button {
+			color: #db8ca1;
 		}
 		.burger {
 			display: block;
@@ -189,7 +207,11 @@ const NavBarMain = () => {
 					<li
 						style={
 							isOpen
-								? { animation: `navLinkFade 0.5s ease forwards ${1 / 7 + 0.15}s` }
+								? {
+										animation: `navLinkFade 0.5s ease forwards ${
+											1 / 7 + 0.15
+										}s`
+								  }
 								: { animation: '' }
 						}
 					>
@@ -198,16 +220,32 @@ const NavBarMain = () => {
 					<li
 						style={
 							isOpen
-								? { animation: `navLinkFade 0.5s ease forwards ${2 / 7 + 0.15}s` }
+								? {
+										animation: `navLinkFade 0.5s ease forwards ${
+											2 / 7 + 0.15
+										}s`
+								  }
 								: { animation: '' }
 						}
 					>
-						<Link to="/">About</Link>
+						{/* <Link to="/">About</Link> */}
+						<div className="dropdown">
+							<button className="dropbtn">About</button>
+							<div className="dropdown-content">
+								<Link to="/work">Will Moon</Link>
+								<Link to="/work">Adrian Van Der Valk</Link>
+								<Link to="/work">Michael Habermas</Link>
+							</div>
+						</div>
 					</li>
 					<li
 						style={
 							isOpen
-								? { animation: `navLinkFade 0.5s ease forwards ${3 / 7 + 0.15}s` }
+								? {
+										animation: `navLinkFade 0.5s ease forwards ${
+											3 / 7 + 0.15
+										}s`
+								  }
 								: { animation: '' }
 						}
 					>
@@ -223,7 +261,11 @@ const NavBarMain = () => {
 					<li
 						style={
 							isOpen
-								? { animation: `navLinkFade 0.5s ease forwards ${4 / 7 + 0.15}s` }
+								? {
+										animation: `navLinkFade 0.5s ease forwards ${
+											4 / 7 + 0.15
+										}s`
+								  }
 								: { animation: '' }
 						}
 					>
@@ -236,7 +278,10 @@ const NavBarMain = () => {
 						</div>
 					</li>
 				</ul>
-				<div className={isOpen ? 'burger toggle' : 'burger'} onClick={() => setIsOpen(!isOpen)}>
+				<div
+					className={isOpen ? 'burger toggle' : 'burger'}
+					onClick={() => setIsOpen(!isOpen)}
+				>
 					<div className="line1"></div>
 					<div className="line2"></div>
 					<div className="line3"></div>

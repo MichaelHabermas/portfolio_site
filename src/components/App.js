@@ -1,6 +1,6 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-// import styled from 'styled-components';
+import styled from 'styled-components';
 
 import '../cssFiles/App.css';
 //components
@@ -16,9 +16,15 @@ import OldMaidGame from './OldMaid/OldMaidGame';
 //	#f04393		  linear-gradient(145deg, #f04393, #f9c449);	4-5
 //	#f9c449		  linear-gradient(145deg, #f9c449, #E8A49c);	5-1
 
+const AppDiv = styled.div`
+	* {
+		/* background-color: #fcf5b8; */
+	}
+`;
+
 function App() {
 	return (
-		<>
+		<AppDiv>
 			<NavBarMain />
 			<Switch>
 				<Route path="/old-maid">
@@ -34,7 +40,7 @@ function App() {
 					<Home />
 				</Route>
 			</Switch>
-		</>
+		</AppDiv>
 	);
 }
 
