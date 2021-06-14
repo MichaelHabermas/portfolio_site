@@ -3,12 +3,13 @@ import styled from 'styled-components';
 
 const Nav = styled.div`
 	position: absolute;
-	top: 8%;
+	top: 10%;
 	left: 0;
 	right: 0;
 	margin-left: auto;
 	margin-right: auto;
-	width: 50%;
+	width: 70%;
+    color: white;
 	*,
 	*::before,
 	*::after {
@@ -35,7 +36,8 @@ const Nav = styled.div`
 	}
 
 	.logo {
-		color: rgb(226, 226, 226);
+		/* color: rgb(226, 226, 226); */
+		color: #FFFFFF,
 		text-transform: uppercase;
 		letter-spacing: 5px;
 		font-size: 20px;
@@ -54,7 +56,8 @@ const Nav = styled.div`
 	}
 
 	.nav-links h4 {
-		color: rgb(226, 226, 226);
+		/* color: rgb(226, 226, 226); */
+		color: #FFFFFF,
 		text-decoration: none;
 		letter-spacing: 3px;
 		font-weight: bold;
@@ -62,12 +65,14 @@ const Nav = styled.div`
 	}
 
 	button {
-		color: rgb(226, 226, 226);
-		background-color: #bd8dda;
+        background-color: #bd8dda;
 		border: 3px solid rgb(226, 226, 226);
 		border-radius: 100%;
 		font-weight: bold;
 		padding: 0.5rem;
+		/* color: rgb(226, 226, 226); */
+		color: #BD8DDA;
+		color: #FFFFFF;
 	}
 
 	/* TABLET ZONE */

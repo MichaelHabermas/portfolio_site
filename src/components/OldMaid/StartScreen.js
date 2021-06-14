@@ -30,14 +30,16 @@ const StartScreenStyles = styled.div`
 
 	.cow1 {
 		position: absolute;
-		bottom: 20%;
-		left: 15%;
+		bottom: 17%;
+		left: 13%;
+		transform: scale(0.7);
 	}
 
 	.milkmaid {
 		position: absolute;
-		bottom: 15%;
+		bottom: 20%;
 		right: 15%;
+		transform: scale(0.9);
 	}
 `;
 
@@ -52,7 +54,12 @@ const StartScreen = props => {
 			<img className="main_logo" src={OldMaidLogo} alt="Start Logo" />
 			<img className="cow1" src={cow_1} alt="cow" />
 			<img className="milkmaid" src={milkmaid} alt="milkmaid" />
-			<img onClick={handleClick} className="start_btn" src={StartButton} alt="Start Logo" />
+			<img
+				onClick={handleClick}
+				className="start_btn"
+				src={StartButton}
+				alt="Start Logo"
+			/>
 		</StartScreenStyles>
 	);
 };

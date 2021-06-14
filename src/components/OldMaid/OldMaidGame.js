@@ -67,8 +67,8 @@ const OldMaidBody = styled.div`
 
 	// game play element styling
 	.cards {
-		border: 1px solid rebeccapurple;
 		height: 100%;
+		padding: 5% 0 0 0;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-around;
