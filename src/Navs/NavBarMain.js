@@ -19,11 +19,12 @@ const Nav = styled.div`
 
 	nav {
 		display: flex;
-		justify-content: space-around;
+		justify-content: space-between;
 		align-items: center;
 		font-family: 'Poppins', sans-serif;
 		min-height: 8vh;
 		background: transparent;
+		margin: 0 5%;
 	}
 
 	.logo {

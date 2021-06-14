@@ -110,12 +110,6 @@ const HomeDiv = styled.div`
 		}
 	}
 `;
-// let bkImage;
-// if (window.screen.width > 600) {
-// 	bkImage = landingPage2;
-// } else {
-// 	bkImage = landingPage3;
-// }
 
 export default function Home() {
 	return (
