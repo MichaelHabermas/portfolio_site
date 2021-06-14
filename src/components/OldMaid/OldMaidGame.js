@@ -223,7 +223,7 @@ const OldMaidGame = props => {
 	return (
 		<>
 			<OldMaidBody>
-			<ScoringNav gameState={oldmaid} resetScore={handleScoreReset} />
+				<ScoringNav gameState={oldmaid} resetScore={handleScoreReset} />
 				<div className="body">
 					<Route path="/old-maid/startscreen">
 						<StartScreen handleNewGame={handleNewGame} />
