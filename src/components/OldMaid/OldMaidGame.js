@@ -35,7 +35,7 @@ const OldMaidBody = styled.div`
 
 	.body {
 		width: 100vw;
-		height: 84vh;
+		height: 100vh;
 		background: linear-gradient(to bottom, #97c53c, #ccdf69);
 	}
 
@@ -222,8 +222,8 @@ const OldMaidGame = props => {
 
 	return (
 		<>
-			<ScoringNav gameState={oldmaid} resetScore={handleScoreReset} />
 			<OldMaidBody>
+				<ScoringNav gameState={oldmaid} resetScore={handleScoreReset} />
 				<div className="body">
 					<Route path="/old-maid/startscreen">
 						<StartScreen handleNewGame={handleNewGame} />

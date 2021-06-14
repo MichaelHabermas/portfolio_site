@@ -2,6 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Nav = styled.div`
+	position: absolute;
+	top: 8%;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
 	*,
 	*::before,
 	*::after {
@@ -9,7 +16,6 @@ const Nav = styled.div`
 		padding: 0;
 		box-sizing: border-box;
 	}
-	margin: 0 20%;
 
 	nav {
 		z-index: 1;
