@@ -204,7 +204,6 @@ const OldMaidGame = props => {
 		setTimeout(() => {
 			push('/old-maid/gameoverscreen');
 		}, 1100);
-		// push('/old-maid/gameoverscreen');
 	};
 
 	const handleScoreUpdate = () => {

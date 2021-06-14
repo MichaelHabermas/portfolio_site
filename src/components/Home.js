@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 // import landingPage from '../assets/homePage/landingPage.svg';
 import landingPage2 from '../assets/homePage/landingPage2.svg';
+import landingPage3 from '../assets/homePage/landingPage3.svg';
 
 import OldMaidImage from '../assets/homePage/OldMaidImage.png';
 import SpeaqDisplay from '../assets/homePage/SpeaqDisplay.png';
@@ -76,13 +77,57 @@ const HomeDiv = styled.div`
 		padding: 2rem 20rem;
 		font-size: 1.1rem;
 	}
+
+	@media screen and (max-width: 1600px) {
+		.main-title,
+		h1 {
+			font-size: 4rem;
+			top: 20%;
+		}
+	}
+
+	@media screen and (max-width: 1200px) {
+		.main-title,
+		h1 {
+			font-size: 3.5rem;
+			top: 15%;
+		}
+	}
+
+	@media screen and (max-width: 800px) {
+		.main-title,
+		h1 {
+			font-size: 2rem;
+			top: 10%;
+		}
+	}
+
+	@media screen and (max-width: 600px) {
+		.main-title,
+		h1 {
+			font-size: 1.5rem;
+			top: 20%;
+		}
+	}
 `;
+// let bkImage;
+// if (window.screen.width > 600) {
+// 	bkImage = landingPage2;
+// } else {
+// 	bkImage = landingPage3;
+// }
 
 export default function Home() {
 	return (
 		<HomeDiv>
 			<div className="background-image">
-				<img className="landingP" src={landingPage2} alt="background" />
+				<img
+					className="landingP"
+					src={
+						window.screen.width > 600 ? landingPage2 : landingPage3
+					}
+					alt="background"
+				/>
 				<h1 className="main-title">
 					Hi!
 					<br />
@@ -110,18 +155,6 @@ export default function Home() {
 							<h3>A New Way to Learn Languages</h3>
 						</div>
 					</div>
-					<p className="text">
-						Lorem, ipsum dolor sit amet consectetur adipisicing
-						elit. Facere neque consequuntur a nisi, illo quia
-						cupiditate fuga et eos minima voluptatum cum dolorum
-						quas repellat eaque beatae vitae veritatis quae.
-					</p>
-					<p className="text">
-						Lorem, ipsum dolor sit amet consectetur adipisicing
-						elit. Facere neque consequuntur a nisi, illo quia
-						cupiditate fuga et eos minima voluptatum cum dolorum
-						quas repellat eaque beatae vitae veritatis quae.
-					</p>
 				</div>
 			</div>
 		</HomeDiv>

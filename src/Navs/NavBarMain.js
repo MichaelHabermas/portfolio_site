@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
+import Logo from '../assets/homePage/Logo.svg';
+
 const Nav = styled.div`
 	*,
 	*::before,
@@ -25,9 +27,12 @@ const Nav = styled.div`
 	}
 
 	.logo {
-		text-transform: uppercase;
+		/* text-transform: uppercase;
 		letter-spacing: 5px;
-		font-size: 20px;
+		font-size: 20px; */
+		width: 10rem;
+		margin-top: 10px;
+		padding-top: 5px;
 	}
 
 	.nav-links {
@@ -120,13 +125,13 @@ const Nav = styled.div`
 		.nav-links {
 			position: absolute;
 			right: 0px;
-			height: 92vh;
-			top: 8vh;
+			height: 60vh;
+			top: 6vh;
 			background: transparent;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			width: 40%;
+			width: 30%;
 			transform: translateX(100%);
 			transition: transform 0.5s ease-in;
 		}
@@ -168,6 +173,13 @@ const Nav = styled.div`
 	.toggle .line3 {
 		transform: rotate(45deg) translate(-5px, -6px);
 	}
+
+	/* .logo {
+		/* text-transform: uppercase;
+		letter-spacing: 5px;
+		font-size: 20px; 
+		width: 6rem;
+	} */
 `;
 
 const NavBarMain = () => {
@@ -177,8 +189,9 @@ const NavBarMain = () => {
 		<Nav>
 			<nav>
 				<Link to="/">
-					<div className="logo">
-						<h4>T.R.I.</h4>
+					<div>
+						{/* <h4>T.R.I.</h4> */}
+						<img className="logo" src={Logo} alt={Logo} />
 					</div>
 				</Link>
 				<ul className={isOpen ? 'nav-links nav-active' : 'nav-links'}>
