@@ -5,6 +5,8 @@ import styled from 'styled-components';
 import Logo from '../assets/homePage/Logo.svg';
 
 const Nav = styled.div`
+	position: absolute;
+	width: 100%;
 	*,
 	*::before,
 	*::after {
@@ -19,11 +21,13 @@ const Nav = styled.div`
 
 	nav {
 		display: flex;
-		justify-content: space-around;
+		justify-content: space-between;
 		align-items: center;
 		font-family: 'Poppins', sans-serif;
 		min-height: 8vh;
 		background: transparent;
+		width: 90%;
+		margin: auto;
 	}
 
 	.logo {
@@ -38,12 +42,12 @@ const Nav = styled.div`
 	.nav-links {
 		display: flex;
 		justify-content: space-around;
-		width: 30%;
+		width: 40%;
 	}
 
-	.nav-links li {
-		list-style: none;
-	}
+	// .nav-links li {
+
+	// }
 
 	.nav-links a {
 		text-decoration: none;
