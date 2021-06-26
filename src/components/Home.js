@@ -35,13 +35,12 @@ const HomeDiv = styled.div`
 		object-fit: cover;
 	}
 
-	.main-title,
-	h1 {
+	.main-title {
 		position: absolute;
 		top: 30%;
 		left: 50%;
 		font-size: 6rem;
-		transform: translate(-50%, -50%);
+		transform: translate(-100%, -50%);
 		font-family: 'scriptina', 'Poppins', sans-serif;
 		color: white;
 		z-index: 12;
@@ -76,6 +75,55 @@ const HomeDiv = styled.div`
 	.text {
 		padding: 2rem 20rem;
 		font-size: 1.1rem;
+	}
+
+	.word {
+		display: inline-block;
+	}
+	.word span {
+		padding: 0 50px 80px 0;
+		font-family: 'scriptina', 'Poppins', sans-serif;
+		position: absolute;
+		top: 0;
+		overflow: hidden;
+		animation: animate 8s linear infinite;
+		opacity: 0;
+	}
+
+	@keyframes animate {
+		0% {
+			opacity: 0;
+			transform: translateY(-50px);
+		}
+		2% {
+			opacity: 1;
+			transform: translateY(0px);
+		}
+		18% {
+			opacity: 1;
+			transform: translateY(0px);
+		}
+		20% {
+			opacity: 0;
+			transform: translateY(50px);
+		}
+		100% {
+			opacity: 0;
+			transform: translateY(50px);
+		}
+	}
+
+	.word span:nth-child(1) {
+		animation-delay: 0s;
+	}
+	.word span:nth-child(2) {
+		animation-delay: 2s;
+	}
+	.word span:nth-child(3) {
+		animation-delay: 4s;
+	}
+	.word span:nth-child(4) {
+		animation-delay: 6s;
 	}
 
 	@media screen and (max-width: 1600px) {
@@ -122,10 +170,15 @@ export default function Home() {
 					}
 					alt="background"
 				/>
+
 				<h1 className="main-title">
-					Hi!
-					<br />
-					We're Programmers
+					Hi! We're
+					<div className="word">
+						<span> Programmers</span>
+						<span> Designers</span>
+						<span> Artists</span>
+						<span> You're New Best Friends</span>
+					</div>
 				</h1>
 
 				<div className="content">
