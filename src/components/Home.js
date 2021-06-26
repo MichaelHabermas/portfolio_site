@@ -4,12 +4,13 @@ import styled from 'styled-components';
 // import landingPage from '../assets/homePage/landingPage.svg';
 import landingPage2 from '../assets/homePage/landingPage2.svg';
 import landingPage3 from '../assets/homePage/landingPage3.svg';
+import landingPage4 from '../assets/homePage/landingPage4.svg';
 
 import OldMaidImage from '../assets/homePage/OldMaidImage.png';
 import SpeaqDisplay from '../assets/homePage/SpeaqDisplay.png';
 
 const HomeDiv = styled.div`
-	height: 300vh;
+	height: 80vh;
 	width: 200%;
 	* {
 		margin: 0;
@@ -40,7 +41,7 @@ const HomeDiv = styled.div`
 		top: 30%;
 		left: 50%;
 		font-size: 6rem;
-		transform: translate(-100%, -50%);
+		transform: translate(-80%, -50%);
 		font-family: 'scriptina', 'Poppins', sans-serif;
 		color: white;
 		z-index: 12;
@@ -81,7 +82,7 @@ const HomeDiv = styled.div`
 		display: inline-block;
 	}
 	.word span {
-		padding: 0 50px 80px 0;
+		padding: 0 80px 80px 0;
 		font-family: 'scriptina', 'Poppins', sans-serif;
 		position: absolute;
 		top: 0;
@@ -166,7 +167,7 @@ export default function Home() {
 				<img
 					className="landingP"
 					src={
-						window.screen.width > 600 ? landingPage2 : landingPage3
+						window.screen.width > 600 ? landingPage4 : landingPage3
 					}
 					alt="background"
 				/>
@@ -177,11 +178,11 @@ export default function Home() {
 						<span> Programmers</span>
 						<span> Designers</span>
 						<span> Artists</span>
-						<span> You're New Best Friends</span>
+						<span>...Your New Best Friends</span>
 					</div>
 				</h1>
 
-				<div className="content">
+				{/* <div className="content">
 					<div className="content-images">
 						<a href="/old-maid/startscreen" alt="Old Maid">
 							<img
@@ -202,7 +203,7 @@ export default function Home() {
 							<h3>A New Way to Learn Languages</h3>
 						</div>
 					</div>
-				</div>
+				</div> */}
 			</div>
 		</HomeDiv>
 	);
