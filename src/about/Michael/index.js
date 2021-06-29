@@ -25,20 +25,26 @@ const Mpage = styled.div`
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 2%;
+        // padding: 2%;
         font-family: 'Poppins', sans-serif;
+        position: absolute;
+        top: 5%;
+        right: 5%;
+        width: 90%;
+        // border: 1px solid yellow;
+        font-size: 1.5rem;
     }
 
     nav h2 {
         font-family: 'Lobster', cursive;
         font-weight: 1;
-        margin-left: 3.5%;
     }
 
     nav ul {
         display: flex;
-        justify-content: space-around;
-        width: 40%;
+        justify-content: space-between;
+        width: 30%;
+        font-size: 1.5rem;
     }
 
 `

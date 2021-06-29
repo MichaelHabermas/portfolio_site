@@ -2,17 +2,25 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { FaLinkedin, FaGithub, FaTwitterSquare } from 'react-icons/fa';
-import spaceImage from '../../assets/space_background.png'
+import spaceImage from '../../assets/michael_main_widescreen.png'
 
 const AboutMichael = styled.div`
-    height: 100%;
+    // height: 100%;
     .spaceBackground {
-        width: 100vw;
-        height: 100%;
-		position: absolute;
-		top: 0;
+        // width: 100vw;
+        // height: 100vh;
+		// position: absolute;
+		// top: 0;
         z-index: -1;
     }
+    background: url(${spaceImage}) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+    // position: absolute;
+    // top: 0;
 
     .spacePic {
         width: 100%;
@@ -36,15 +44,24 @@ const AboutMichael = styled.div`
     }
 
     .seeMore {
-        margin-left: 30%;
-        font-size: 2rem;
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        font-size: 2.5rem;
+        transform: translate(-50%, -50%)
     }
 
     .socials {
-        display: flex;
-        justify-content: space-evenly;
-        width: 30%;
+        position: absolute;
+        bottom: 5%;
+        right: 5%;
         font-size: 2.5rem;
+        transform: translate(50%, 50%)
+        width: 30%;
+    }
+
+    .socials > * {
+        margin-left: 20px;
     }
 `
 
@@ -53,9 +70,9 @@ const About = () => {
 
     return (
         <AboutMichael>
-            <div className='spaceBackground'>
+            {/* <div className='spaceBackground'>
                 <img className='spacePic' src={spaceImage} alt="background"/>
-            </div>
+            </div> */}
             <div className='test'>
                 <div>
                     <h1>Hi, I'm Michael.</h1>
