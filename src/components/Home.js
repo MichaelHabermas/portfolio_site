@@ -182,28 +182,6 @@ export default function Home() {
 					</div>
 				</h1>
 
-				{/* <div className="content">
-					<div className="content-images">
-						<a href="/old-maid/startscreen" alt="Old Maid">
-							<img
-								className="content-image"
-								src={OldMaidImage}
-								alt="Old Maid"
-							/>
-							<h4>Old Maid</h4>
-							<h3>Pick a card...</h3>
-						</a>
-						<div>
-							<img
-								className="content-image"
-								src={SpeaqDisplay}
-								alt="Speaq"
-							/>
-							<h4>COMING SOON</h4>
-							<h3>A New Way to Learn Languages</h3>
-						</div>
-					</div>
-				</div> */}
 			</div>
 		</HomeDiv>
 	);
