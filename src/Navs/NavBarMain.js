@@ -226,9 +226,9 @@ const NavBarMain = () => {
 						<div className="dropdown">
 							<button className="dropbtn">About</button>
 							<div className="dropdown-content">
-								<Link to="/work">Will Moon</Link>
-								<Link to="/work">Adrian Van Der Valk</Link>
-								<Link to="/work">Michael Habermas</Link>
+								<Link to="/about/will">Will Moon</Link>
+								<Link to="/about/adrian">Adrian Van Der Valk</Link>
+								<Link to="/about/michael">Michael Habermas</Link>
 							</div>
 						</div>
 					</li>
