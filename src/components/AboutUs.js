@@ -8,25 +8,29 @@ import adrianImage from '../assets/adrianPage/Adrian.png';
 const AboutPage = styled.div`
 	background: linear-gradient(170deg, #e8c7fb, #ffffff);
 	height: 300vh;
-	color: white;
+	color: #81374a;
+
+	.aboutIntro {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding-top: 10%;
+	}
 
 	h1 {
-		position: absolute;
-		top: 35%;
-		left: 50%;
-		transform: translate(-50%, -50%);
+		margin: 0 auto;
 		font-family: 'Stalemate', cursive;
-		font-size: 9rem;
-		font-weight: 1;
+		font-size: 12rem;
+		font-weight: 100;
+		color: white;
 	}
 
 	.aboutIntro p {
-		position: absolute;
-		top: 60%;
-		left: 50%;
-		transform: translate(-50%, -50%);
+		width: 40ch;
+		margin: 0 auto;
 		text-align: center;
-		font-size: 1.3rem;
+		font-size: 1.7rem;
 	}
 
 	img {
@@ -123,6 +127,7 @@ const AboutUs = () => {
 					contributions... You Rock!!!
 				</p>
 			</div>
+
 			<div className="gallery">
 				<div className="personInfoW">
 					<Link to="/personal-info/will">
