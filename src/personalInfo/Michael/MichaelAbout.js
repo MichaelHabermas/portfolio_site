@@ -21,6 +21,10 @@ const MAboutPage = styled.div`
         right: 7%; 
     }
 
+    h1, p, .seeMore {
+        color: white;
+    }
+
     h1 {
         margin-left: 5%;
         margin-bottom: 4%;
