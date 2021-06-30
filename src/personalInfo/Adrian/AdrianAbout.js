@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FaLinkedin, FaGithub, FaTwitterSquare } from 'react-icons/fa';
-import { RiMailFill } from 'react-icons/ri';
+import { FaLinkedin, FaTwitterSquare } from 'react-icons/fa';
+import { AiFillFacebook } from 'react-icons/ai';
+import { ImYoutube } from 'react-icons/im';
+import { GrInstagram } from 'react-icons/gr';
 import heroImg from '../../assets/adrianPage/hero_img.png';
 import subImg1 from '../../assets/adrianPage/sub_img_1.png';
 import subImg2 from '../../assets/adrianPage/sub_img_2.png';
@@ -19,7 +21,7 @@ const MAboutPage = styled.div`
 
 	h1 {
 		margin-top: 9%;
-		margin-bottom: 2%;
+		margin-bottom: 1%;
 		margin-left: 10%;
 		font-size: 5rem;
 		font-family: 'Lobster', cursive, sans-serif;
@@ -38,7 +40,7 @@ const MAboutPage = styled.div`
 
 	h3 {
 		margin-left: 10%;
-		margin-bottom: 2%;
+		margin-bottom: 3%;
 		/* margin-top: 5%; */
 		width: 40%;
 		font-size: 1.7rem;
@@ -103,10 +105,11 @@ const MAboutPage = styled.div`
 		bottom: 5%;
 		font-size: 3rem;
 		transform: translate(0%, -50%);
+		/* width: 40%; */
 	}
 
 	.socials > * {
-		margin-left: 20px;
+		margin-left: 55px;
 	}
 
 	.socials a {
@@ -163,7 +166,14 @@ const AdrianAbout = () => {
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							<FaGithub />
+							<GrInstagram />
+						</a>
+						<a
+							href="https://github.com/AdrianHabermas?tab=repositories"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<ImYoutube />
 						</a>
 						<a
 							href="https://www.linkedin.com/in/adrian-habermas"
@@ -172,8 +182,12 @@ const AdrianAbout = () => {
 						>
 							<FaLinkedin className="linkImg" />
 						</a>
-						<a href="mailto:adrianghabermas@gmail.com">
-							<RiMailFill className="mailImg" />
+						<a
+							href="https://twitter.com/habermoose"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<AiFillFacebook />
 						</a>
 						<a
 							href="https://twitter.com/habermoose"
