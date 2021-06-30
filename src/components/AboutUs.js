@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import willImage from '../assets/WillPage/Will.png';
+import willImage from '../assets/willPage/Will.png';
 import michaelImage from '../assets/michaelPage/Michael.png';
 import adrianImage from '../assets/adrianPage/Adrian.png';
 
