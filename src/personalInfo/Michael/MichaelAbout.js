@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { FaLinkedin, FaGithub, FaTwitterSquare } from 'react-icons/fa';
+// import { Parallax } from 'react-parallax';
 import { RiMailFill } from 'react-icons/ri';
+import { FaLinkedin, FaGithub, FaTwitterSquare } from 'react-icons/fa';
 import spaceImage from '../../assets/michaelPage/michael_main_widescreen.svg';
 import moonImage from '../../assets/michaelPage/moon.svg';
 
