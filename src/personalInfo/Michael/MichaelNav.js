@@ -48,7 +48,9 @@ const MichaelNav = () => {
 	return (
 		<Mpage>
 			<nav>
-				<h2>Michael Habermas</h2>
+				<Link to="/personal-info/michael/">
+					<h2>Michael Habermas</h2>
+				</Link>
 				<ul>
 					<li>
 						<Link to="/personal-info/michael/projects">

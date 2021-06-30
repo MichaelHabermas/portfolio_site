@@ -52,6 +52,7 @@ const MAboutPage = styled.div`
 		bottom: 5%;
 		left: 50%;
 		font-size: 2.5rem;
+		font-weight: bold;
 		transform: translate(-50%, -50%);
 	}
 
@@ -66,6 +67,10 @@ const MAboutPage = styled.div`
 
 	.socials > * {
 		margin-left: 20px;
+	}
+
+	.socials a {
+		color: black;
 	}
 
 	.mailImg {
