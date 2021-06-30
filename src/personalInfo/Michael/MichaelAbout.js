@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { FaLinkedin, FaGithub, FaTwitterSquare } from 'react-icons/fa';
 import { RiMailFill } from 'react-icons/ri';
-import spaceImage from '../../assets/michaelPage/michael_main_widescreen.png';
-import moonImage from '../../assets/michaelPage/moon.png';
+import spaceImage from '../../assets/michaelPage/michael_main_widescreen.svg';
+import moonImage from '../../assets/michaelPage/moon.svg';
 
 const MAboutPage = styled.div`
 	background: url(${spaceImage}) no-repeat center center fixed;
@@ -16,9 +16,13 @@ const MAboutPage = styled.div`
 
 	.moon {
 		position: absolute;
-		transform: scale(0.8);
 		bottom: 50%;
-		right: 7%;
+		right: 10%;
+		transition: all 1s ease-in-out;
+	}
+
+	.moon:hover {
+		transform: scale(1.5) translate(-10%, 10%);
 	}
 
 	h1,
@@ -28,7 +32,7 @@ const MAboutPage = styled.div`
 	}
 
 	h1 {
-		margin-left: 5%;
+		margin-left: 10%;
 		margin-bottom: 4%;
 		margin-top: 5%;
 		font-size: 5rem;
@@ -36,7 +40,7 @@ const MAboutPage = styled.div`
 
 	p {
 		width: 40%;
-		margin-left: 5%;
+		margin-left: 10%;
 		font-size: 1.7rem;
 	}
 
@@ -53,16 +57,15 @@ const MAboutPage = styled.div`
 		left: 50%;
 		font-size: 2.5rem;
 		font-weight: bold;
-		transform: translate(-50%, -50%);
+		transform: translate(-60%, -50%);
 	}
 
 	.socials {
 		position: absolute;
-		right: 5%;
+		right: 10%;
 		bottom: 5%;
-		font-size: 2.5rem;
-		width: 30%;
-		transform: translate(50%, -50%);
+		font-size: 3rem;
+		transform: translate(0%, -50%);
 	}
 
 	.socials > * {
@@ -71,6 +74,11 @@ const MAboutPage = styled.div`
 
 	.socials a {
 		color: black;
+	}
+
+	.socials a:hover {
+		color: white;
+		transition: all 0.3s;
 	}
 
 	.mailImg {
@@ -93,8 +101,9 @@ const MichaelAbout = () => {
 					<p>
 						A passionate Full Stack Web Developer having experience
 						building Web applications with JavaScript / Reactjs /
-						Nodejs, some other cool libraries and frameworks, as
-						well as dabbling in design.
+						Nodejs, some other cool libraries and frameworks. I also
+						dabble in design, love prototyping, and <em>adore</em>{' '}
+						Figma.
 					</p>
 				</div>
 				<footer>

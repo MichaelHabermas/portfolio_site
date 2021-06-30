@@ -25,8 +25,8 @@ const Mpage = styled.div`
 		font-family: 'Poppins', sans-serif;
 		position: absolute;
 		top: 5%;
-		right: 5%;
-		width: 90%;
+		left: 10%;
+		width: 80%;
 		font-size: 1.5rem;
 	}
 
