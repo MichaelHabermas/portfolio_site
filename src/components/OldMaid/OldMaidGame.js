@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { connect } from 'react-redux';
 
 //components
-import ScoringNav from '../../Navs/ScoringNav.js';
+import ScoringNav from '../../navs/ScoringNav.js';
 import StartScreen from './StartScreen';
 import GameOverScreen from './GameOverScreen';
 import Player from '../Player.js';
@@ -15,9 +15,9 @@ import CharSelect from './CharSelect';
 // game screen assets
 import cardBack from '../../assets/cardGameAssets/card_face_selected.png';
 import cardFront from '../../assets/cardGameAssets/card_face_norm.png';
-import CowTilt from '../../assets/OldMaidAssets/CowTilt.png';
-import tree1 from '../../assets/OldMaidAssets/tree1.png';
-import tree2 from '../../assets/OldMaidAssets/tree2.png';
+import CowTilt from '../../assets/oldMaidAssets/CowTilt.png';
+import tree1 from '../../assets/oldMaidAssets/tree1.png';
+import tree2 from '../../assets/oldMaidAssets/tree2.png';
 import PairedCards from './pairAnimation.js';
 
 //actions

@@ -6,6 +6,7 @@ import Logo from '../assets/homePage/Logo.svg';
 
 const Nav = styled.div`
 	position: absolute;
+	top: 3%;
 	width: 100%;
 	*,
 	*::before,
@@ -24,36 +25,32 @@ const Nav = styled.div`
 		justify-content: space-between;
 		align-items: center;
 		font-family: 'Poppins', sans-serif;
-		min-height: 8vh;
+		min-height: 10vh;
 		background: transparent;
-		width: 90%;
+		width: 80%;
 		margin: auto;
+		/* font-size: 1.5rem; */
 	}
 
 	.logo {
-		/* text-transform: uppercase;
-		letter-spacing: 5px;
-		font-size: 20px; */
 		width: 10rem;
-		margin-top: 10px;
-		padding-top: 5px;
+		margin-top: 5%;
 	}
 
 	.nav-links {
 		display: flex;
 		justify-content: space-around;
 		width: 40%;
+		/* font-size: 1.5rem; */
 	}
-
-	// .nav-links li {
-
-	// }
 
 	.nav-links a {
 		text-decoration: none;
 		letter-spacing: 3px;
 		font-weight: bold;
-		font-size: 14px;
+	}
+	.link-text {
+		font-size: 1.5rem;
 	}
 
 	// burger styling
@@ -77,7 +74,7 @@ const Nav = styled.div`
 		text-decoration: none;
 		letter-spacing: 3px;
 		font-weight: bold;
-		font-size: 14px;
+		font-size: 1.5rem;
 	}
 
 	.dropdown {
@@ -177,13 +174,6 @@ const Nav = styled.div`
 	.toggle .line3 {
 		transform: rotate(45deg) translate(-5px, -6px);
 	}
-
-	/* .logo {
-		/* text-transform: uppercase;
-		letter-spacing: 5px;
-		font-size: 20px; 
-		width: 6rem;
-	} */
 `;
 
 const NavBarMain = () => {
@@ -194,7 +184,6 @@ const NavBarMain = () => {
 			<nav>
 				<Link to="/">
 					<div>
-						{/* <h4>T.R.I.</h4> */}
 						<img className="logo" src={Logo} alt={Logo} />
 					</div>
 				</Link>
@@ -210,7 +199,9 @@ const NavBarMain = () => {
 								: { animation: '' }
 						}
 					>
-						<Link to="/">Home</Link>
+						<Link to="/" className="link-text">
+							Home
+						</Link>
 					</li>
 					<li
 						style={
@@ -224,13 +215,19 @@ const NavBarMain = () => {
 						}
 					>
 						<div className="dropdown">
-							<Link to='/about-us'>
-							<button className="dropbtn">About</button>
+							<Link to="/about-us">
+								<button className="dropbtn link-text">
+									About
+								</button>
 							</Link>
 							<div className="dropdown-content">
 								<Link to="/personal-info/will">Will Moon</Link>
-								<Link to="/personal-info/adrian">Adrian Van Der Valk</Link>
-								<Link to="/personal-info/michael">Michael Habermas</Link>
+								<Link to="/personal-info/adrian">
+									Adrian Van Der Valk
+								</Link>
+								<Link to="/personal-info/michael">
+									Michael Habermas
+								</Link>
 							</div>
 						</div>
 					</li>
@@ -246,7 +243,7 @@ const NavBarMain = () => {
 						}
 					>
 						<div className="dropdown">
-							<button className="dropbtn">Work</button>
+							<button className="dropbtn link-text">Work</button>
 							<div className="dropdown-content">
 								<Link to="/work">Parallax Examples</Link>
 								<a href="/">Link A</a>
@@ -265,7 +262,9 @@ const NavBarMain = () => {
 						}
 					>
 						<div className="dropdown">
-							<button className="dropbtn">Projects</button>
+							<button className="dropbtn link-text">
+								Projects
+							</button>
 							<div className="dropdown-content">
 								<Link to="/old-maid/startscreen">Old Maid</Link>
 								<a href="/">Link 1</a>

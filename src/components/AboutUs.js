@@ -1,13 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import willImage from '../assets/theWillPage/Will.png';
+import willImage from '../assets/willPage/Will.png';
 import michaelImage from '../assets/michaelPage/Michael.png';
 import adrianImage from '../assets/adrianPage/Adrian.png';
 
 const AboutPage = styled.div`
 	background: linear-gradient(170deg, #e8c7fb, #ffffff);
 	height: 300vh;
+	color: white;
 
 	h1 {
 		position: absolute;

@@ -41,8 +41,8 @@ const HomeDiv = styled.div`
 		top: 30%;
 		left: 50%;
 		font-size: 6rem;
-		transform: translate(-80%, -50%);
-		font-family: 'scriptina', 'Poppins', sans-serif;
+		transform: translate(-100%, -50%);
+		font-family: 'Stalemate', cursive;
 		color: white;
 		z-index: 12;
 		text-align: center;
@@ -82,8 +82,8 @@ const HomeDiv = styled.div`
 		display: inline-block;
 	}
 	.word span {
-		padding: 0 80px 80px 0;
-		font-family: 'scriptina', 'Poppins', sans-serif;
+		padding: 2px 80px 80px 20px;
+		font-family: 'Stalemate', cursive;
 		position: absolute;
 		top: 0;
 		overflow: hidden;

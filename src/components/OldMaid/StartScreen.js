@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import StartScreenBkRnd from '../../assets/OldMaidAssets/StartBackground.png';
-import OldMaidLogo from '../../assets/OldMaidAssets/OldMaidLogo.png';
-import StartButton from '../../assets/OldMaidAssets/StartButton.png';
-import cow_1 from '../../assets/OldMaidAssets/Cow_1.png';
-import milkmaid from '../../assets/OldMaidAssets/milkmaid.png';
+import StartScreenBkRnd from '../../assets/oldMaidAssets/StartBackground.png';
+import OldMaidLogo from '../../assets/oldMaidAssets/OldMaidLogo.png';
+import StartButton from '../../assets/oldMaidAssets/StartButton.png';
+import cow_1 from '../../assets/oldMaidAssets/Cow_1.png';
+import milkmaid from '../../assets/oldMaidAssets/milkmaid.png';
 
 const StartScreenStyles = styled.div`
 	height: 100%;
