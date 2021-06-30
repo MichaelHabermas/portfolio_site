@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 
 import MichaelNav from './MichaelNav';
 import MichaelAbout from './MichaelAbout';
-import Projects from './MichaelProjects';
+import MichaelProjects from './MichaelProjects';
 
 
 
@@ -14,7 +14,7 @@ const Michael = () => {
             <MichaelNav />
             <Switch>
                 <Route path='/personal-info/michael/projects'>
-                    <Projects />
+                    <MichaelProjects />
                 </Route>
                 <Route path='/personal-info/michael'>
                     <MichaelAbout />
