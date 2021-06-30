@@ -58,7 +58,6 @@ const MichaelNav = () => {
 						</Link>
 					</li>
 					<li>
-						{/* <Link to="/personal-info/michael">Contact</Link> */}
 						<a href={`mailto:michaelghabermas@gmail.com`}>
 							Contact
 						</a>
