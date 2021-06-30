@@ -1,17 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 
-// import landingPage from '../assets/homePage/landingPage.svg';
-// import landingPage2 from '../assets/homePage/landingPage2.svg';
-import landingPage3 from '../assets/homePage/landingPage3.svg';
-import landingPage4 from '../assets/homePage/landingPage4.svg';
-
-// import OldMaidImage from '../assets/homePage/OldMaidImage.png';
-// import SpeaqDisplay from '../assets/homePage/SpeaqDisplay.png';
+import landingPageWide from '../assets/homePage/landing_page_widescreen.svg';
 
 const HomeDiv = styled.div`
-	height: 80vh;
-	width: 200%;
+	background: url(${landingPageWide}) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	height: 100vh;
+
 	* {
 		margin: 0;
 		padding: 0;
@@ -31,64 +30,35 @@ const HomeDiv = styled.div`
 		width: 100%;
 	}
 
-	.container img {
-		width: 100%;
-		object-fit: cover;
-	}
-
 	.main-title {
+		font-family: 'Stalemate', cursive;
+		color: white;
+		font-size: 8rem;
+		font-weight: 100;
+		line-height: 1;
+		z-index: 3;
 		position: absolute;
 		top: 30%;
 		left: 50%;
-		font-size: 6rem;
 		transform: translate(-100%, -50%);
-		font-family: 'Stalemate', cursive;
-		color: white;
-		z-index: 12;
-		text-align: center;
-		line-height: 2.5ch;
-	}
-
-	.content {
-		width: 100%;
-		min-height: 100vh;
-		z-index: 2;
-		position: absolute;
-	}
-
-	.content-images {
-		display: flex;
-		justify-content: space-around;
-		align-items: center;
-		min-height: 60vh;
-		text-align: center;
-	}
-
-	.content-image {
-		width: 40rem;
-		padding: 10px;
-		height: 22rem;
-		border-radius: 40px;
-		box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-		object-fit: center / cover;
-	}
-
-	.text {
-		padding: 2rem 20rem;
-		font-size: 1.1rem;
+		padding-top: 1%;
 	}
 
 	.word {
 		display: inline-block;
 	}
 	.word span {
-		padding: 2px 80px 80px 20px;
 		font-family: 'Stalemate', cursive;
 		position: absolute;
 		top: 0;
 		overflow: hidden;
 		animation: animate 8s linear infinite;
 		opacity: 0;
+		padding: 7% 80px 80px 20px;
+	}
+
+	.lastspan {
+		width: 200%;
 	}
 
 	@keyframes animate {
@@ -163,25 +133,25 @@ const HomeDiv = styled.div`
 export default function Home() {
 	return (
 		<HomeDiv>
-			<div className="background-image">
+			{/* <div className="background-image">
 				<img
 					className="landingP"
 					src={
 						window.screen.width > 600 ? landingPage4 : landingPage3
 					}
 					alt="background"
-				/>
+				/> */}
 
-				<h1 className="main-title">
-					Hi! We're
-					<div className="word">
-						<span> Programmers</span>
-						<span> Designers</span>
-						<span> Artists</span>
-						<span>...Your New Best Friends</span>
-					</div>
-				</h1>
-			</div>
+			<h1 className="main-title">
+				Hi! We're
+				<div className="word">
+					<span> Programmers</span>
+					<span> Designers</span>
+					<span> Artists</span>
+					<span className="lastspan">...Your New Best Friends</span>
+				</div>
+			</h1>
+			{/* </div> */}
 		</HomeDiv>
 	);
 }
