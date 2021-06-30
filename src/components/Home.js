@@ -2,12 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 
 // import landingPage from '../assets/homePage/landingPage.svg';
-import landingPage2 from '../assets/homePage/landingPage2.svg';
+// import landingPage2 from '../assets/homePage/landingPage2.svg';
 import landingPage3 from '../assets/homePage/landingPage3.svg';
 import landingPage4 from '../assets/homePage/landingPage4.svg';
 
-import OldMaidImage from '../assets/homePage/OldMaidImage.png';
-import SpeaqDisplay from '../assets/homePage/SpeaqDisplay.png';
+// import OldMaidImage from '../assets/homePage/OldMaidImage.png';
+// import SpeaqDisplay from '../assets/homePage/SpeaqDisplay.png';
 
 const HomeDiv = styled.div`
 	height: 80vh;
@@ -181,7 +181,6 @@ export default function Home() {
 						<span>...Your New Best Friends</span>
 					</div>
 				</h1>
-
 			</div>
 		</HomeDiv>
 	);

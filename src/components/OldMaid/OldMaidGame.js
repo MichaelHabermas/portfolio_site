@@ -13,8 +13,8 @@ import CharSelect from './CharSelect';
 
 //assets
 // game screen assets
-import cardBack from '../../assets/card_face_selected.png';
-import cardFront from '../../assets/card_face_norm.png';
+import cardBack from '../../assets/cardGameAssets/card_face_selected.png';
+import cardFront from '../../assets/cardGameAssets/card_face_norm.png';
 import CowTilt from '../../assets/OldMaidAssets/CowTilt.png';
 import tree1 from '../../assets/OldMaidAssets/tree1.png';
 import tree2 from '../../assets/OldMaidAssets/tree2.png';
