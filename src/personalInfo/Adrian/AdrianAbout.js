@@ -41,7 +41,6 @@ const MAboutPage = styled.div`
 	h3 {
 		margin-left: 10%;
 		margin-bottom: 3%;
-		/* margin-top: 5%; */
 		width: 40%;
 		font-size: 1.7rem;
 		font-weight: 600;
@@ -59,7 +58,6 @@ const MAboutPage = styled.div`
 	.test {
 		display: flex;
 		flex-flow: column;
-		/* justify-content: space-evenly; */
 		height: 100%;
 	}
 
