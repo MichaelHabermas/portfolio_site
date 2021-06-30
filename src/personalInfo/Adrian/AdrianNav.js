@@ -27,7 +27,7 @@ const Apage = styled.div`
 		top: 5%;
 		left: 10%;
 		width: 80%;
-		font-size: 1.5rem;
+		font-size: 2rem;
 	}
 
 	nav h2 {

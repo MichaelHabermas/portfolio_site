@@ -2,23 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import { FaLinkedin, FaGithub, FaTwitterSquare } from 'react-icons/fa';
 import { RiMailFill } from 'react-icons/ri';
-// import spaceImage from '../../assets/adrianPage/adrian_main_widescreen.svg';
-// import moonImage from '../../assets/adrianPage/moon.svg';
+import heroImg from '../../assets/adrianPage/hero_img.png';
+import subImg1 from '../../assets/adrianPage/sub_img_1.png';
+import subImg2 from '../../assets/adrianPage/sub_img_2.png';
+import subImg3 from '../../assets/adrianPage/sub_img_3.png';
 
 const MAboutPage = styled.div`
 	background-color: white;
 	height: 100vh;
-
-	.moon {
-		position: absolute;
-		bottom: 50%;
-		right: 10%;
-		transition: all 1s ease-in-out;
-	}
-
-	.moon:hover {
-		transform: scale(1.5) translate(-10%, 10%);
-	}
 
 	h1,
 	h3,
@@ -27,19 +18,30 @@ const MAboutPage = styled.div`
 	}
 
 	h1 {
+		margin-top: 9%;
+		margin-bottom: 2%;
 		margin-left: 10%;
-		margin-bottom: 4%;
-		margin-top: 5%;
 		font-size: 5rem;
 		font-family: 'Lobster', cursive, sans-serif;
 	}
 
+	.gradient-text {
+		background-color: #f3ec78;
+		padding-right: 10px;
+		background-image: linear-gradient(45deg, #f3ec78, #af4261);
+		background-size: 100%;
+		-webkit-background-clip: text;
+		-moz-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		-moz-text-fill-color: transparent;
+	}
+
 	h3 {
 		margin-left: 10%;
-		margin-bottom: 4%;
-		margin-top: 5%;
+		margin-bottom: 2%;
+		/* margin-top: 5%; */
 		width: 40%;
-		font-size: 2rem;
+		font-size: 1.7rem;
 		font-weight: 600;
 		color: #555555;
 	}
@@ -55,8 +57,35 @@ const MAboutPage = styled.div`
 	.test {
 		display: flex;
 		flex-flow: column;
-		justify-content: space-evenly;
+		/* justify-content: space-evenly; */
 		height: 100%;
+	}
+
+	.heroImg,
+	.subImages,
+	.subImg {
+		height: auto;
+	}
+
+	.heroImg,
+	.subImg {
+		box-shadow: 6px 6px 10px rgba(122, 122, 122, 0.5);
+		border-radius: 20px;
+	}
+
+	.heroImg {
+		position: absolute;
+		right: 10%;
+		top: 50%;
+		width: 25%;
+		transform: translate(0%, -50%);
+	}
+	.subImages {
+		margin-left: 10%;
+	}
+	.subImg {
+		margin-right: 2%;
+		width: 13%;
 	}
 
 	.seeMore {
@@ -107,13 +136,22 @@ const AdrianAbout = () => {
 					<h1>
 						Take a Valk on
 						<br />
-						the Vild Side
+						the <span className="gradient-text">Vild</span> Side
 					</h1>
 					<h3>
 						From the Mind and hand of <br />
 						Adrian van Der Valk
 					</h3>
 				</div>
+
+				<img className="heroImg" src={heroImg} alt="hero" />
+
+				<div className="subImages">
+					<img className="subImg" src={subImg1} alt="pic1" />
+					<img className="subImg" src={subImg2} alt="pic2" />
+					<img className="subImg" src={subImg3} alt="pic3" />
+				</div>
+
 				<footer>
 					<p>
 						Copyright ©2021 Adrian van der Valk. All Rights
