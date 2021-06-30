@@ -3,18 +3,18 @@ import { Switch, Route } from 'react-router-dom';
 
 import '../cssFiles/App.css';
 
-import Main from './Main';
-import About from '../about';
+import MainRoute from './MainRoute';
+import PersonalInfo from '../personalInfo';
 
 function App() {
 	return (
 		<>
 			<Switch>
-				<Route path='/about'>
-					<About />
+				<Route path='/personal-info'>
+					<PersonalInfo />
 				</Route>
 				<Route path='/'>
-					<Main />
+					<MainRoute />
 				</Route>
 			</Switch>
 		</>

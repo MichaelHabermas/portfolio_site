@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 
 import '../cssFiles/App.css';
 //components
-import Michael from './Michael';
+import MichaelAbout from './Michael';
 import Will from './Will';
 import Adrian from './Adrian';
 
@@ -13,13 +13,13 @@ function About() {
 	return (
 		<>
             <Switch>
-			    <Route path='/about/michael'>
-			        <Michael />
+			    <Route path='/personal-info/michael'>
+			        <MichaelAbout />
 			    </Route>
-			    <Route path='/about/will'>
+			    <Route path='/personal-info/will'>
 			        <Will />
 			    </Route>
-			    <Route path='/about/adrian'>
+			    <Route path='/personal-info/adrian'>
 			        <Adrian />
 			    </Route>
             </Switch>

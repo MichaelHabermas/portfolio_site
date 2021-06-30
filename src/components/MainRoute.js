@@ -5,10 +5,11 @@ import '../cssFiles/App.css';
 //components
 import Home from './Home.js';
 import Work from './Work.js';
+import AboutUs from './AboutUs.js';
 import NavBarMain from '../Navs/NavBarMain.js';
 import OldMaidGame from './OldMaid/OldMaidGame';
 
-function Main() {
+function MainRoute() {
 	return (
 		<>
 			<NavBarMain />
@@ -19,6 +20,9 @@ function Main() {
 				<Route path="/work">
 					<Work />
 				</Route>
+				<Route path="/about-us">
+					<AboutUs />
+				</Route>
 				<Route exact path="/">
 					<Home />
 				</Route>
@@ -27,4 +31,4 @@ function Main() {
 	);
 }
 
-export default Main;
+export default MainRoute;

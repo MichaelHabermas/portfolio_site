@@ -1,9 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Switch, Route, Link } from 'react-router-dom';
-
-import About from './about';
-import Projects from './projects';
+import { Link } from 'react-router-dom';
 
 const Mpage = styled.div`
 	position: absolute;
@@ -49,7 +46,7 @@ const Mpage = styled.div`
 
 `
 
-const Michael = () => {
+const MichaelNav = () => {
 
 
     return (
@@ -58,10 +55,10 @@ const Michael = () => {
                 <h2>Michael Habermas</h2>
                 <ul>
                     <li>
-                        <Link to='/about/michael/projects'>Projects</Link>
+                        <Link to='/personal-info/michael/projects'>Projects</Link>
                     </li>
                     <li>
-                        <Link to='/about/michael'>Contacts</Link>
+                        <Link to='/personal-info/michael'>Contacts</Link>
                         {/* make email links */}
                     </li>
                     <li>
@@ -69,16 +66,8 @@ const Michael = () => {
                     </li>
                 </ul>
             </nav>
-            <Switch>
-                <Route path='/about/michael/projects'>
-                    <Projects />
-                </Route>
-                <Route path='/about/michael'>
-                    <About />
-                </Route>
-            </Switch>
         </Mpage>
     )
 }
 
-export default Michael
+export default MichaelNav

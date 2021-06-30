@@ -224,11 +224,13 @@ const NavBarMain = () => {
 						}
 					>
 						<div className="dropdown">
+							<Link to='/about-us'>
 							<button className="dropbtn">About</button>
+							</Link>
 							<div className="dropdown-content">
-								<Link to="/about/will">Will Moon</Link>
-								<Link to="/about/adrian">Adrian Van Der Valk</Link>
-								<Link to="/about/michael">Michael Habermas</Link>
+								<Link to="/personal-info/will">Will Moon</Link>
+								<Link to="/personal-info/adrian">Adrian Van Der Valk</Link>
+								<Link to="/personal-info/michael">Michael Habermas</Link>
 							</div>
 						</div>
 					</li>
