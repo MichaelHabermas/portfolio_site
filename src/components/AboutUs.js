@@ -7,7 +7,6 @@ import adrianImage from '../assets/adrianPage/Adrian.png';
 
 const AboutPage = styled.div`
 	background: linear-gradient(170deg, #e8c7fb, #ffffff);
-	height: 300vh;
 	color: #81374a;
 
 	.aboutIntro {
@@ -16,6 +15,7 @@ const AboutPage = styled.div`
 		align-items: center;
 		justify-content: center;
 		padding-top: 10%;
+		margin-bottom: 3%;
 	}
 
 	h1 {
@@ -24,92 +24,48 @@ const AboutPage = styled.div`
 		font-size: 12rem;
 		font-weight: 100;
 		color: white;
+		transform: translate(-3%, 0);
+		line-height: 1;
+	}
+
+	p {
+		font-size: 1.7rem;
+		line-height: 1.5;
 	}
 
 	.aboutIntro p {
 		width: 40ch;
 		margin: 0 auto;
-		text-align: center;
 		font-size: 1.7rem;
 	}
 
 	img {
-		transform: scale(0.7);
 		border-radius: 50%;
 	}
 
-	// .gallery {
-	//     display: flex;
-	//     flex-direction: column;
-	//     position: absolute;
-	//     top: 65%;
-	//     padding-left: 10%;
-	// }
-
-	// .personInfo {
-	//     display: flex;
-	//     width: 90%;
-	// }
-
-	// .personInfo p {
-	//     margin-top: 10%;
-	//     margin-left: 10%;
-	//     width: 50%;
-	// }
-
 	.gallery {
-		width: 100%;
+		width: 70%;
+		margin: 0 auto;
+		padding-bottom: 5%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 	}
 
-	.personInfoW {
-		position: absolute;
-		top: 85%;
-		left: 10%;
-		width: 100%;
+	.personInfo {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.personInfo p {
+		width: 80%;
 	}
 
-	.personInfoW p {
-		position: absolute;
-		top: 32%;
-		right: 23%;
-		width: 40%;
-		font-size: 1.3rem;
-	}
-
-	.personInfoM {
-		position: absolute;
-		top: 160%;
-		left: 10%;
-		width: 100%;
-		height: 80%;
-	}
-
-	.personInfoM p {
-		position: absolute;
-		top: 25%;
-		left: 5%;
-		width: 40%;
-		font-size: 1.3rem;
-	}
-
-	.personInfoM img {
-		position: absolute;
-		right: 18%;
-	}
-
-	.personInfoA {
-		position: absolute;
-		top: 240%;
-		left: 10%;
-		width: 100%;
-	}
-
-	.personInfoA p {
-		position: absolute;
-		top: 32%;
-		right: 23%;
-		width: 40%;
-		font-size: 1.3rem;
+	.description {
+		width: 80%;
+		display: flex;
+		justify-content: center;
 	}
 `;
 
@@ -118,52 +74,64 @@ const AboutUs = () => {
 		<AboutPage>
 			<div className="aboutIntro">
 				<h1>About This Site</h1>
+
 				<p>
 					This portfolio site is a collaborative work through the
 					effort of Will Moon, Adrian van der Valk, and Michael
 					Habermas. Click on the links below to learn more more about
-					each individuala and their talents. A special thanks goes
-					out to Vera P. and Devin M. for their specialized
+					each individual and their talents. A special thanks goes out
+					to Vera P. and Devin M. for their specialized
 					contributions... You Rock!!!
 				</p>
 			</div>
 
 			<div className="gallery">
-				<div className="personInfoW">
+				<div className="personInfo">
 					<Link to="/personal-info/will">
 						<img src={willImage} alt="Will" />
 					</Link>
-					<p>
-						This portfolio site is a collaborative work through the
-						effort of Will Moon, Adrian Van Der Valk, and Michael
-						Habermas. Click on the links below to learn more more
-						about each individual. A special thanks goes out to Vera
-						P. and Devin M. for their specialized contributions.
-					</p>
+					<div className="description">
+						<p>
+							This portfolio site is a collaborative work through
+							the effort of Will Moon, Adrian Van Der Valk, and
+							Michael Habermas. Click on the links below to learn
+							more more about each individual. A special thanks
+							goes out to Vera P. and Devin M. for their
+							specialized contributions.
+						</p>
+					</div>
 				</div>
-				<div className="personInfoM">
-					<p>
-						This portfolio site is a collaborative work through the
-						effort of Will Moon, Adrian Van Der Valk, and Michael
-						Habermas. Click on the links below to learn more more
-						about each individual. A special thanks goes out to Vera
-						P. and Devin M. for their specialized contributions.
-					</p>
+
+				<div className="personInfo">
+					<div className="description">
+						<p>
+							Michael is a former overseas teacher of ten years.
+							Driven by inefficiencies in the educational system,
+							he found a new passion in the problem solving arena
+							of software development. Michael values clarity and
+							simplicity while performing rapid and efficient
+							deployment.
+						</p>
+					</div>
 					<Link to="/personal-info/michael">
 						<img src={michaelImage} alt="Michael" />
 					</Link>
 				</div>
-				<div className="personInfoA">
+
+				<div className="personInfo">
 					<Link to="/personal-info/adrian">
 						<img src={adrianImage} alt="Adrian" />
 					</Link>
-					<p>
-						This portfolio site is a collaborative work through the
-						effort of Will Moon, Adrian Van Der Valk, and Michael
-						Habermas. Click on the links below to learn more more
-						about each individual. A special thanks goes out to Vera
-						P. and Devin M. for their specialized contributions.
-					</p>
+					<div className="description">
+						<p>
+							This portfolio site is a collaborative work through
+							the effort of Will Moon, Adrian Van Der Valk, and
+							Michael Habermas. Click on the links below to learn
+							more more about each individual. A special thanks
+							goes out to Vera P. and Devin M. for their
+							specialized contributions.
+						</p>
+					</div>
 				</div>
 			</div>
 		</AboutPage>
