@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { FaLinkedin, FaGithub, FaTwitterSquare } from 'react-icons/fa';
 import { RiMailFill } from 'react-icons/ri';
-import spaceImage from '../../assets/michael_main_widescreen.png';
-import moonImage from '../../assets/moon.png';
+import spaceImage from '../../assets/michaelPage/michael_main_widescreen.png';
+import moonImage from '../../assets/michaelPage/moon.png';
 
 const MAboutPage = styled.div`
 	background: url(${spaceImage}) no-repeat center center fixed;

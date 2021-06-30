@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import cardFront from '../../assets/card_face_norm.png';
+import cardFront from '../../assets/cardGameAssets/card_face_norm.png';
 
 const random = () => {
 	return (-1 + Math.random() * 2).toFixed(2);

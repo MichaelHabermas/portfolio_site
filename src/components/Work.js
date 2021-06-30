@@ -3,9 +3,9 @@ import { Parallax } from 'react-parallax';
 import styled from 'styled-components';
 
 // images
-import bg1 from '../assets/bg1.png';
-import girl1 from '../assets/girl1.png';
-import rock1 from '../assets/rock1.png';
+import bg1 from '../assets/parallaxAssets/bg1.png';
+import girl1 from '../assets/parallaxAssets/girl1.png';
+import rock1 from '../assets/parallaxAssets/rock1.png';
 // import switzleft from '../assets/switzleft.png';
 // import switzright from '../assets/switzright.png';
 
@@ -13,7 +13,8 @@ const image1 =
 	'https://images.unsplash.com/photo-1498092651296-641e88c3b057?auto=format&fit=crop&w=1778&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D';
 const image2 =
 	'https://brightcove04pmdo-a.akamaihd.net/5104226627001/5104226627001_5297440765001_5280261645001-vs.jpg?pubId=5104226627001&videoId=5280261645001';
-const image3 = 'https://img00.deviantart.net/2bd0/i/2009/276/c/9/magic_forrest_wallpaper_by_goergen.jpg';
+const image3 =
+	'https://img00.deviantart.net/2bd0/i/2009/276/c/9/magic_forrest_wallpaper_by_goergen.jpg';
 const image4 =
 	'https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/empire-state-building-black-and-white-square-format-john-farnan.jpg';
 
@@ -130,10 +131,14 @@ export default function Work() {
 								width: '100px',
 								height: '100px',
 								borderRadius: '50%',
-								background: `rgba(255, 123, 23, ${percentage * 1})`,
+								background: `rgba(255, 123, 23, ${
+									percentage * 1
+								})`,
 								left: '50%',
 								top: '50%',
-								transform: `translate(-50%, -50%) scale(${percentage * 5})`
+								transform: `translate(-50%, -50%) scale(${
+									percentage * 5
+								})`
 							}}
 						></div>
 					)}
