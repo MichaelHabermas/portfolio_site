@@ -29,7 +29,6 @@ const Nav = styled.div`
 		background: transparent;
 		width: 80%;
 		margin: auto;
-		/* font-size: 1.5rem; */
 	}
 
 	.logo {
@@ -41,7 +40,6 @@ const Nav = styled.div`
 		display: flex;
 		justify-content: space-around;
 		width: 40%;
-		/* font-size: 1.5rem; */
 	}
 
 	.nav-links a {
@@ -110,15 +108,45 @@ const Nav = styled.div`
 		background-color: #3e8e41;
 	}
 
-	/* TABLET ZONE */
-	@media screen and (max-width: 1024px) {
-		.nav-links {
-			width: 40%;
+	/* ANIMATIONS  */
+	.nav-active {
+		transform: translateX(0%);
+	}
+
+	@keyframes navLinkFade {
+		from {
+			opacity: 0;
+			transform: translateX(50px);
+		}
+		to {
+			opacity: 1;
+			transform: translateX(0px);
 		}
 	}
 
-	/* MOBILE DESIGN  */
-	@media screen and (max-width: 768px) {
+	.toggle .line1 {
+		transform: rotate(-45deg) translate(-5px, 6px);
+	}
+	.toggle .line2 {
+		opacity: 0;
+	}
+	.toggle .line3 {
+		transform: rotate(45deg) translate(-5px, -6px);
+	}
+
+	@media (max-width: 425px) {
+		.logo {
+			width: 2rem;
+		}
+	}
+	@media (max-width: 426px) {
+		/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+		.logo {
+			width: 3rem;
+		}
+	}
+	@media (max-width: 641px) {
+		/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
 		body {
 			overflow-x: hidden;
 		}
@@ -147,32 +175,44 @@ const Nav = styled.div`
 			display: block;
 			cursor: pointer;
 		}
-	}
-
-	/* ANIMATIONS  */
-	.nav-active {
-		transform: translateX(0%);
-	}
-
-	@keyframes navLinkFade {
-		from {
-			opacity: 0;
-			transform: translateX(50px);
-		}
-		to {
-			opacity: 1;
-			transform: translateX(0px);
+		.logo {
+			width: 5rem;
 		}
 	}
-
-	.toggle .line1 {
-		transform: rotate(-45deg) translate(-5px, 6px);
+	@media (max-width: 961px) {
+		/* tablet, landscape iPad, lo-res laptops ands desktops */
+		.link-text {
+			font-size: 0.8rem;
+		}
+		.nav-links {
+			width: 70%;
+		}
+		.logo {
+			width: 8rem;
+		}
 	}
-	.toggle .line2 {
-		opacity: 0;
+	@media (max-width: 1281px) {
+		/* big landscape tablets, laptops, and desktops */
+		.link-text {
+			font-size: 0.9rem;
+		}
+		.nav-links {
+			width: 50%;
+		}
+		.logo {
+			width: 9rem;
+		}
 	}
-	.toggle .line3 {
-		transform: rotate(45deg) translate(-5px, -6px);
+	@media (min-width: 1281px) {
+		.link-text {
+			font-size: 1.1rem;
+		}
+		.nav-links {
+			width: 50%;
+		}
+		.logo {
+			width: 10rem;
+		}
 	}
 `;
 

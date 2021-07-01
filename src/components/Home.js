@@ -44,7 +44,7 @@ const HomeDiv = styled.div`
 		top: 30%;
 		left: 50%;
 		transform: translate(-100%, -50%);
-		padding-top: 1%;
+		padding-top: 1.5%;
 	}
 
 	.word {
@@ -132,6 +132,9 @@ const HomeDiv = styled.div`
 		}
 		.nameLinks {
 			font-size: 3rem;
+			top: initial;
+			left: 45%;
+			bottom: 10%;
 		}
 		.nameLink2 {
 			transform: translate(0%, -150%);
