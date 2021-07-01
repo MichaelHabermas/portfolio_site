@@ -3,16 +3,16 @@ import styled from 'styled-components';
 
 import { FaGithub } from 'react-icons/fa';
 
-import cyanBack from '../../assets/michaelPage/RectangleCyan.svg';
-import profilePic from '../../assets/michaelPage/michael_peru_buddy.png';
-import project_1 from '../../assets/michaelPage/p1_recipeazy.png';
-import project_2 from '../../assets/michaelPage/p2_water_plants.png';
-import project_3 from '../../assets/michaelPage/p3_adrian_page.png';
-import project_4 from '../../assets/michaelPage/p4_workout.png';
-import project_5 from '../../assets/michaelPage/p5_language.png';
-import project_6 from '../../assets/michaelPage/p6_oldmaid.png';
-import project_7 from '../../assets/michaelPage/p7_geo_images.png';
-import webIcon from '../../assets/generalAssets/web_icon.svg';
+import cyanBack from '../../../assets/michaelPage/RectangleCyan.svg';
+import profilePic from '../../../assets/michaelPage/michael_peru_buddy.png';
+import project_1 from '../../../assets/michaelPage/p1_recipeazy.png';
+import project_2 from '../../../assets/michaelPage/p2_water_plants.png';
+import project_3 from '../../../assets/michaelPage/p3_adrian_page.png';
+import project_4 from '../../../assets/michaelPage/p4_workout.png';
+import project_5 from '../../../assets/michaelPage/p5_language.png';
+import project_6 from '../../../assets/michaelPage/p6_oldmaid.png';
+import project_7 from '../../../assets/michaelPage/p7_geo_images.png';
+import webIcon from '../../../assets/generalAssets/web_icon.svg';
 
 const ProjectsPage = styled.div`
 	background: url(${cyanBack}) no-repeat center center fixed;

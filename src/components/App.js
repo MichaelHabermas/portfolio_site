@@ -4,16 +4,16 @@ import { Switch, Route } from 'react-router-dom';
 import '../cssFiles/App.css';
 
 import MainRoute from './MainRoute';
-import PersonalInfo from '../personalInfo';
+import PersonalInfo from '../components/personalInfo/index';
 
 function App() {
 	return (
 		<>
 			<Switch>
-				<Route path='/personal-info'>
+				<Route path="/personal-info">
 					<PersonalInfo />
 				</Route>
-				<Route path='/'>
+				<Route path="/">
 					<MainRoute />
 				</Route>
 			</Switch>

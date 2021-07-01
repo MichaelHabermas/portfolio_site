@@ -4,10 +4,10 @@ import { FaLinkedin, FaTwitterSquare } from 'react-icons/fa';
 import { AiFillFacebook } from 'react-icons/ai';
 import { ImYoutube } from 'react-icons/im';
 import { GrInstagram } from 'react-icons/gr';
-import heroImg from '../../assets/adrianPage/hero_img.png';
-import subImg1 from '../../assets/adrianPage/sub_img_1.png';
-import subImg2 from '../../assets/adrianPage/sub_img_2.png';
-import subImg3 from '../../assets/adrianPage/sub_img_3.png';
+import heroImg from '../../../assets/adrianPage/hero_img.png';
+import subImg1 from '../../../assets/adrianPage/sub_img_1.png';
+import subImg2 from '../../../assets/adrianPage/sub_img_2.png';
+import subImg3 from '../../../assets/adrianPage/sub_img_3.png';
 
 const MAboutPage = styled.div`
 	background-color: white;

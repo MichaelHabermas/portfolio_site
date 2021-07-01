@@ -4,8 +4,8 @@ import styled from 'styled-components';
 // import { Parallax } from 'react-parallax';
 import { RiMailFill } from 'react-icons/ri';
 import { FaLinkedin, FaGithub, FaTwitterSquare } from 'react-icons/fa';
-import spaceImage from '../../assets/michaelPage/michael_main_widescreen.svg';
-import moonImage from '../../assets/michaelPage/moon.svg';
+import spaceImage from '../../../assets/michaelPage/michael_main_widescreen.svg';
+import moonImage from '../../../assets/michaelPage/moon.svg';
 
 const MAboutPage = styled.div`
 	background: url(${spaceImage}) no-repeat center center fixed;
