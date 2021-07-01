@@ -124,10 +124,10 @@ const HomeDiv = styled.div`
 		transform: translate(0%, -60%);
 	}
 
-	@media (min-width: 320px) {
+	@media (max-width: 425px) {
 		background: url(${landingPageMobile}) no-repeat center center fixed;
 	}
-	@media (min-width: 481px) {
+	@media (min-width: 426px) {
 		/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
 		background: url(${landingPageTablet}) no-repeat center center fixed;
 	}
