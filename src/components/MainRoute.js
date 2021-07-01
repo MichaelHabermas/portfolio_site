@@ -11,7 +11,7 @@ import OldMaidGame from './OldMaid/OldMaidGame';
 
 function MainRoute() {
 	return (
-		<>
+		<div>
 			<NavBarMain />
 			<Switch>
 				<Route path="/old-maid">
@@ -27,7 +27,7 @@ function MainRoute() {
 					<Home />
 				</Route>
 			</Switch>
-		</>
+		</div>
 	);
 }
 

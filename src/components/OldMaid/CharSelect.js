@@ -11,7 +11,7 @@ export default function CharSelect() {
 	};
 
 	return (
-		<>
+		<React.Fragment>
 			<div>
 				<div className="current-character">
 					<img src={currentChar} alt="character" />
@@ -42,6 +42,6 @@ export default function CharSelect() {
 					/>
 				</div>
 			</div>
-		</>
+		</React.Fragment>
 	);
 }

@@ -4,7 +4,7 @@ import Card from './Card';
 const Player = props => {
 	const { playerHand, isUser, classNames } = props;
 	return (
-		<>
+		<React.Fragment>
 			<div>
 				{playerHand.map(card => {
 					return (
@@ -17,7 +17,7 @@ const Player = props => {
 					);
 				})}
 			</div>
-		</>
+		</React.Fragment>
 	);
 };
 

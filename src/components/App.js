@@ -8,7 +8,7 @@ import PersonalInfo from '../components/personalInfo/index';
 
 function App() {
 	return (
-		<>
+		<div>
 			<Switch>
 				<Route path="/personal-info">
 					<PersonalInfo />
@@ -17,7 +17,7 @@ function App() {
 					<MainRoute />
 				</Route>
 			</Switch>
-		</>
+		</div>
 	);
 }
 

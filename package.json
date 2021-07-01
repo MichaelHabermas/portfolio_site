@@ -20,7 +20,7 @@
     "react-parallax": "^3.3.0",
     "react-redux": "^7.2.4",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.3",
+    "react-scripts": "^1.1.5",
     "react-scroll-parallax": "^2.4.0",
     "react-scrollmagic": "^2.3.0",
     "redux": "^4.1.0",
@@ -54,7 +54,7 @@
     ]
   },
   "devDependencies": {
-    "@pmmmwh/react-refresh-webpack-plugin": "^0.4.3",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.3.0",
     "chokidar": "^3.5.2",
     "react-refresh": "^0.10.0",
     "type-fest": "^1.2.1"

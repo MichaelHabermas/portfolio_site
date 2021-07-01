@@ -5,23 +5,20 @@ import MichaelNav from './MichaelNav';
 import MichaelAbout from './MichaelAbout';
 import MichaelProjects from './MichaelProjects';
 
-
-
-const Michael = () => {
-
-    return (
-        <div>
-            <MichaelNav />
-            <Switch>
-                <Route path='/personal-info/michael/projects'>
-                    <MichaelProjects />
-                </Route>
-                <Route path='/personal-info/michael'>
-                    <MichaelAbout />
-                </Route>
-            </Switch>
-        </div>
-    )
+function Michael() {
+	return (
+		<div>
+			<MichaelNav />
+			<Switch>
+				<Route path="/personal-info/michael/projects">
+					<MichaelProjects />
+				</Route>
+				<Route path="/personal-info/michael">
+					<MichaelAbout />
+				</Route>
+			</Switch>
+		</div>
+	);
 }
 
-export default Michael
+export default Michael;

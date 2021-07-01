@@ -221,7 +221,7 @@ const OldMaidGame = props => {
 	}
 
 	return (
-		<>
+		<React.Fragment>
 			<OldMaidBody>
 				<ScoringNav gameState={oldmaid} resetScore={handleScoreReset} />
 				<div className="body">
@@ -297,7 +297,7 @@ const OldMaidGame = props => {
 					</Route>
 				</div>
 			</OldMaidBody>
-		</>
+		</React.Fragment>
 	);
 };
 

@@ -85,7 +85,7 @@ const inlineStyle = {
 
 export default function Work() {
 	return (
-		<>
+		<React.Fragment>
 			<WorkDiv>
 				<Parallax className="main" bgImage={bg1} strength={800}>
 					{/* <Parallax> */}
@@ -149,6 +149,6 @@ export default function Work() {
 				</Parallax>
 				<div style={{ height: '100vh' }}></div>
 			</div>
-		</>
+		</React.Fragment>
 	);
 }
