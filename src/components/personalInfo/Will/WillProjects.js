@@ -26,13 +26,12 @@ const ProjectsPage = styled.div`
 		justify-content: space-around;
 		align-items: center;
 		padding-top: 10%;
-		width: 60%;
+		width: 50%;
 		margin: 0 auto;
 		margin-bottom: 5%;
 	}
 
 	h1 {
-		padding: 4%;
 		background-color: #f3ec78;
 		padding-right: 10px;
 		background-image: linear-gradient(
@@ -57,11 +56,9 @@ const ProjectsPage = styled.div`
 		font-weight: 100;
 	}
 
-	header p {
-		padding: 4%;
-	}
 	header img {
 		border-radius: 50%;
+		transform: scale(0.8);
 	}
 
 	.gallery {
@@ -115,7 +112,7 @@ const WillProjects = () => {
 		<ProjectsPage>
 			<header>
 				<h1>
-					About: <span className="fancyFont">Will</span>
+					About:<span className="fancyFont">Will</span>
 				</h1>
 				<img src={profilePic} alt="Will" />
 			</header>
