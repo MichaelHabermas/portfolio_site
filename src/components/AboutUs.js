@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import michaelImage from '../assets/michaelPage/Michael.png';
 import adrianImage from '../assets/adrianPage/Adrian.png';
-import willimage from '../assets/willPage/Will.png';
+import willimage from '../assets/will_page/will.png';
 
 const AboutPage = styled.div`
 	background: linear-gradient(170deg, #e8c7fb, #ffffff);

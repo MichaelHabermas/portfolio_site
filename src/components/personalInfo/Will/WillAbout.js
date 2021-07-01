@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { FaLinkedin, FaGithub, FaTwitterSquare } from 'react-icons/fa';
 import { RiMailFill } from 'react-icons/ri';
-import mountainSide from '../../../assets/willPage/will_main_widescreen.svg';
+import mountainSide from '../../../assets/will_page/will_main_widescreen.svg';
 
 const WAboutPage = styled.div`
 	background: url(${mountainSide}) no-repeat center center fixed;
