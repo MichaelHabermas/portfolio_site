@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { connect } from 'react-redux';
 
 //components
-import ScoringNav from '../../navs/ScoringNav.js';
+import ScoringNav from '../navs/ScoringNav.js';
 import StartScreen from './StartScreen';
 import GameOverScreen from './GameOverScreen';
 import Player from '../Player.js';

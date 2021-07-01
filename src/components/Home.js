@@ -124,6 +124,7 @@ const HomeDiv = styled.div`
 		transform: translate(0%, -60%);
 	}
 
+	/* MEDIA QUERIES */
 	@media (max-width: 425px) {
 		background: url(${landingPageMobile}) no-repeat center center fixed;
 	}
