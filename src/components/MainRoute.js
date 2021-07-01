@@ -6,7 +6,7 @@ import '../cssFiles/App.css';
 import Home from './Home.js';
 import Work from './Work.js';
 import AboutUs from './AboutUs.js';
-import NavBarMain from '../navs/NavBarMain.js';
+import NavBarMain from '../navs/NavBarMain';
 import OldMaidGame from './OldMaid/OldMaidGame';
 
 function MainRoute() {
