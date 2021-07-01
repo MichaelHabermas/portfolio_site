@@ -28,11 +28,11 @@ const ProjectsPage = styled.div`
 
 	header {
 		display: flex;
+		justify-content: space-around;
+		align-items: center;
 		padding-top: 10%;
 		width: 60%;
 		margin: 0 auto;
-		justify-content: space-around;
-		align-items: center;
 		margin-bottom: 5%;
 	}
 

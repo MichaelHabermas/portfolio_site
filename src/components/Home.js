@@ -1,10 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 import landingPageWide from '../assets/homePage/landing_page_widescreen.svg';
+import landingPageDesktop from '../assets/homePage/landing_page_desktop.svg';
+import landingPageTablet from '../assets/homePage/landing_page_tablet.svg';
+import landingPageMobile from '../assets/homePage/landing_page_mobile.svg';
 
 const HomeDiv = styled.div`
-	background: url(${landingPageWide}) no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -97,51 +100,57 @@ const HomeDiv = styled.div`
 		animation-delay: 6s;
 	}
 
-	@media screen and (max-width: 1600px) {
-		.main-title,
-		h1 {
-			font-size: 4rem;
-			top: 20%;
-		}
+	.nameLinks {
+		font-size: 5rem;
+		font-weight: 100;
+		line-height: 1;
+		z-index: 3;
+		position: absolute;
+		top: 63%;
+		left: 48%;
+		transform: translate(-50%, -50%);
+		padding-top: 1%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 67%;
+	}
+	.nameLink {
+		font-family: 'Stalemate', cursive;
+		color: white;
 	}
 
-	@media screen and (max-width: 1200px) {
-		.main-title,
-		h1 {
-			font-size: 3.5rem;
-			top: 15%;
-		}
+	.nameLink2 {
+		transform: translate(0%, -60%);
 	}
 
-	@media screen and (max-width: 800px) {
-		.main-title,
-		h1 {
-			font-size: 2rem;
-			top: 10%;
-		}
+	@media (min-width: 320px) {
+		background: url(${landingPageMobile}) no-repeat center center fixed;
 	}
-
-	@media screen and (max-width: 600px) {
-		.main-title,
-		h1 {
-			font-size: 1.5rem;
-			top: 20%;
-		}
+	@media (min-width: 481px) {
+		/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+		background: url(${landingPageTablet}) no-repeat center center fixed;
+	}
+	@media (min-width: 641px) {
+		/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+		background: url(${landingPageDesktop}) no-repeat center center fixed;
+	}
+	@media (min-width: 961px) {
+		/* tablet, landscape iPad, lo-res laptops ands desktops */
+		background: url(${landingPageDesktop}) no-repeat center center fixed;
+	}
+	@media (min-width: 1025px) {
+		/* big landscape tablets, laptops, and desktops */
+		background: url(${landingPageDesktop}) no-repeat center center fixed;
+	}
+	@media (min-width: 1281px) {
+		background: url(${landingPageWide}) no-repeat center center fixed;
 	}
 `;
 
 export default function Home() {
 	return (
 		<HomeDiv>
-			{/* <div className="background-image">
-				<img
-					className="landingP"
-					src={
-						window.screen.width > 600 ? landingPage4 : landingPage3
-					}
-					alt="background"
-				/> */}
-
 			<h1 className="main-title">
 				Hi! We're
 				<div className="word">
@@ -151,7 +160,17 @@ export default function Home() {
 					<span className="lastspan">...Your New Best Friends</span>
 				</div>
 			</h1>
-			{/* </div> */}
+			<div className="nameLinks">
+				<Link to="/personal-info/michael/">
+					<div className="nameLink nameLink1">Michael</div>
+				</Link>
+				<Link className="nameLink" to="/personal-info/adrian/">
+					<div className="nameLink nameLink2">Adrian</div>
+				</Link>
+				<Link className="nameLink" to="/personal-info/will/">
+					<div className="nameLink nameLink3">Will</div>
+				</Link>
+			</div>
 		</HomeDiv>
 	);
 }
