@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import michaelImage from '../assets/michaelPage/Michael.png';
 import adrianImage from '../assets/adrianPage/Adrian.png';
-import willImage from '../assets/willPage/Will.png';
+import willimage from '../assets/willPage/Will.png';
 
 const AboutPage = styled.div`
 	background: linear-gradient(170deg, #e8c7fb, #ffffff);
@@ -88,7 +88,7 @@ const AboutUs = () => {
 			<div className="gallery">
 				<div className="personInfo">
 					<Link to="/personal-info/will">
-						<img src={willImage} alt="Will" />
+						<img src={willimage} alt="Will" />
 					</Link>
 					<div className="description">
 						<p>
