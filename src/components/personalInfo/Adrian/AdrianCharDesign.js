@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { FaGithub } from 'react-icons/fa';
-
 import cyanBack from '../../../assets/michaelPage/RectangleCyan.svg';
 import pic_1 from '../../../assets/adrianPage/char_design_pics/night_druid.png';
 import pic_2 from '../../../assets/adrianPage/char_design_pics/shoulder_jacket.png';
