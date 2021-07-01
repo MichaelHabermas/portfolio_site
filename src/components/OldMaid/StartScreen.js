@@ -5,7 +5,7 @@ import StartScreenBkRnd from '../../assets/oldMaidAssets/start_background.png';
 import OldMaidLogo from '../../assets/oldMaidAssets/old_maid_logo.png';
 import StartButton from '../../assets/oldMaidAssets/start_button.png';
 import cow_1 from '../../assets/oldMaidAssets/cow_cards_a.png';
-import milkmaid from '../../assets/oldMaidAssets/milkmaid.png';
+import milkmaid from '../../assets/oldMaidAssets/milk_maid.png';
 
 const StartScreenStyles = styled.div`
 	height: 100%;
