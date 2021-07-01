@@ -20,11 +20,6 @@ const ProjectsPage = styled.div`
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	// height: 800vh;
-
-	// * {
-	// border: 1px solid black;
-	// }
 
 	header {
 		display: flex;
