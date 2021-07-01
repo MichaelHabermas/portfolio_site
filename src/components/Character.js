@@ -18,15 +18,21 @@ const CharStyle = styled.div`
 `;
 
 const Character = props => {
-	const { character, setCurrentChar } = props;
+	const { character } = props;
 
 	const handleClick = () => {
-		setCurrentChar(character.image)
-	}
+		// setCurrentChar(character.image)
+		console.log('hi');
+	};
 	return (
 		<CharStyle>
 			<div className="back" style={{ backgroundColor: character.color }}>
-				<img onClick={handleClick} className="face" src={character.image} alt="Eyes Without a FA-AACE" />
+				<img
+					onClick={handleClick}
+					className="face"
+					src={character.image}
+					alt="Eyes Without a FA-AACE"
+				/>
 			</div>
 		</CharStyle>
 	);
