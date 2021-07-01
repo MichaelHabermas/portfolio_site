@@ -55,14 +55,14 @@ const HomeDiv = styled.div`
 		position: absolute;
 		top: 0;
 		overflow: hidden;
-		animation: animate 8s linear infinite;
+		animation: animate 6s linear infinite;
 		opacity: 0;
 		padding: 7% 80px 80px 20px;
 	}
 
-	.lastspan {
+	/* .lastspan {
 		width: 200%;
-	}
+	} */
 
 	@keyframes animate {
 		0% {
@@ -96,9 +96,9 @@ const HomeDiv = styled.div`
 	.word span:nth-child(3) {
 		animation-delay: 4s;
 	}
-	.word span:nth-child(4) {
+	/* .word span:nth-child(4) {
 		animation-delay: 6s;
-	}
+	} */
 
 	.nameLinks {
 		font-size: 5rem;
@@ -106,7 +106,7 @@ const HomeDiv = styled.div`
 		line-height: 1;
 		z-index: 3;
 		position: absolute;
-		top: 63%;
+		top: 55%;
 		left: 48%;
 		transform: translate(-50%, -50%);
 		padding-top: 1%;
@@ -127,25 +127,75 @@ const HomeDiv = styled.div`
 	/* MEDIA QUERIES */
 	@media (max-width: 425px) {
 		background: url(${landingPageMobile}) no-repeat center center fixed;
+		.main-title {
+			font-size: 3rem;
+		}
+		.nameLinks {
+			font-size: 3rem;
+		}
+		.nameLink2 {
+			transform: translate(0%, -150%);
+		}
 	}
 	@media (min-width: 426px) {
 		/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
 		background: url(${landingPageTablet}) no-repeat center center fixed;
+		.main-title {
+			font-size: 4rem;
+		}
+		.nameLinks {
+			font-size: 3rem;
+		}
+		.nameLink2 {
+			transform: translate(0%, -150%);
+		}
 	}
 	@media (min-width: 641px) {
 		/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
 		background: url(${landingPageDesktop}) no-repeat center center fixed;
+		.main-title {
+			font-size: 5rem;
+		}
+		.nameLinks {
+			font-size: 4rem;
+		}
+		.nameLink2 {
+			transform: translate(0%, -100%);
+		}
 	}
 	@media (min-width: 961px) {
 		/* tablet, landscape iPad, lo-res laptops ands desktops */
 		background: url(${landingPageDesktop}) no-repeat center center fixed;
+		.main-title {
+			font-size: 6rem;
+		}
+		.nameLinks {
+			font-size: 4rem;
+			width: 55%;
+		}
+		.nameLink2 {
+			transform: translate(0%, -60%);
+		}
 	}
 	@media (min-width: 1025px) {
 		/* big landscape tablets, laptops, and desktops */
 		background: url(${landingPageDesktop}) no-repeat center center fixed;
+		.main-title {
+			font-size: 6rem;
+		}
+		.nameLinks {
+			font-size: 5rem;
+			width: 55%;
+		}
 	}
 	@media (min-width: 1281px) {
 		background: url(${landingPageWide}) no-repeat center center fixed;
+		.main-title {
+			font-size: 8rem;
+		}
+		.nameLinks {
+			width: 70%;
+		}
 	}
 `;
 
@@ -158,7 +208,7 @@ export default function Home() {
 					<span> Programmers</span>
 					<span> Designers</span>
 					<span> Artists</span>
-					<span className="lastspan">...Your New Best Friends</span>
+					{/* <span className="lastspan">...Your New Best Friends</span> */}
 				</div>
 			</h1>
 			<div className="nameLinks">
