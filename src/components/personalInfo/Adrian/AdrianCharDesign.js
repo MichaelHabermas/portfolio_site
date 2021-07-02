@@ -37,7 +37,7 @@ const ProjectsPage = styled.div`
 
 	h1 {
 		background-color: #f3ec78;
-		padding-right: 5rem;
+		/* padding-right: 5rem; */
 		background-image: linear-gradient(135deg, #af4261, #f3ec78);
 		background-size: 100%;
 		-webkit-background-clip: text;
@@ -51,7 +51,7 @@ const ProjectsPage = styled.div`
 		font-size: 13rem;
 		font-family: 'Lobster', cursive, sans-serif;
 		font-weight: 100;
-		margin-left: 2rem;
+		/* margin-left: 1rem; */
 	}
 
 	p {
