@@ -6,8 +6,6 @@ import styled from 'styled-components';
 import bg1 from '../assets/parallaxAssets/bg1.png';
 import girl1 from '../assets/parallaxAssets/girl1.png';
 import rock1 from '../assets/parallaxAssets/rock1.png';
-// import switzleft from '../assets/switzleft.png';
-// import switzright from '../assets/switzright.png';
 
 const image1 =
 	'https://images.unsplash.com/photo-1498092651296-641e88c3b057?auto=format&fit=crop&w=1778&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D';
@@ -26,17 +24,10 @@ const WorkDiv = styled.div`
 	.main {
 		color: white;
 		width: 100vw;
-		/* position: absolute; */
-		/* height: 110vh; */
-		/* object-fit: center / cover; */
-		/* z-index: -1; */
 	}
 	.container img {
 		width: 100%;
-		/* position: absolute; */
-		/* height: 110vh; */
 		object-fit: cover;
-		/* z-index: -1; */
 	}
 	.main-title {
 		position: absolute;
@@ -69,6 +60,23 @@ const WorkDiv = styled.div`
 		z-index: 11;
 		position: relative;
 		top: 0;
+	}
+
+	@media (max-width: 425px) {
+	}
+	@media (max-width: 426px) {
+		/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+	}
+	@media (max-width: 641px) {
+		/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+	}
+	@media (max-width: 961px) {
+		/* tablet, landscape iPad, lo-res laptops ands desktops */
+	}
+	@media (max-width: 1281px) {
+		/* big landscape tablets, laptops, and desktops */
+	}
+	@media (min-width: 1281px) {
 	}
 `;
 

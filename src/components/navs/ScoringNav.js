@@ -9,7 +9,7 @@ const Nav = styled.div`
 	margin-left: auto;
 	margin-right: auto;
 	width: 70%;
-    color: white;
+	color: white;
 	*,
 	*::before,
 	*::after {
@@ -37,7 +37,7 @@ const Nav = styled.div`
 
 	.logo {
 		/* color: rgb(226, 226, 226); */
-		color: #FFFFFF,
+		color: #ffffff;
 		text-transform: uppercase;
 		letter-spacing: 5px;
 		font-size: 20px;
@@ -57,7 +57,7 @@ const Nav = styled.div`
 
 	.nav-links h4 {
 		/* color: rgb(226, 226, 226); */
-		color: #FFFFFF,
+		color: #ffffff;
 		text-decoration: none;
 		letter-spacing: 3px;
 		font-weight: bold;
@@ -65,14 +65,14 @@ const Nav = styled.div`
 	}
 
 	button {
-        background-color: #bd8dda;
+		background-color: #bd8dda;
 		border: 3px solid rgb(226, 226, 226);
 		border-radius: 100%;
 		font-weight: bold;
 		padding: 0.5rem;
 		/* color: rgb(226, 226, 226); */
-		color: #BD8DDA;
-		color: #FFFFFF;
+		color: #bd8dda;
+		color: #ffffff;
 	}
 
 	/* TABLET ZONE */
@@ -107,8 +107,24 @@ const Nav = styled.div`
 		.burger {
 			display: block;
 			cursor: pointer;
-		} */
-	/* } */
+		} 
+    } */
+	@media (max-width: 425px) {
+	}
+	@media (max-width: 426px) {
+		/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+	}
+	@media (max-width: 641px) {
+		/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+	}
+	@media (max-width: 961px) {
+		/* tablet, landscape iPad, lo-res laptops ands desktops */
+	}
+	@media (max-width: 1281px) {
+		/* big landscape tablets, laptops, and desktops */
+	}
+	@media (min-width: 1281px) {
+	}
 `;
 
 const ScoringNav = props => {

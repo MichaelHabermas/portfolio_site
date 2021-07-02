@@ -27,17 +27,17 @@ const ProjectsPage = styled.div`
 
 	header {
 		display: flex;
-		justify-content: center;
+		justify-content: flex-end;
 		align-items: center;
-		padding-top: 10%;
-		width: 80%;
-		margin: 0 auto;
-		margin-bottom: 5rem;
+		padding-top: 7%;
+		width: 90%;
+		/* margin: 0 auto; */
+		/* padding-right: 3rem; */
+		margin-bottom: -5rem;
 	}
 
 	h1 {
 		background-color: #f3ec78;
-		/* padding-right: 5rem; */
 		background-image: linear-gradient(135deg, #af4261, #f3ec78);
 		background-size: 100%;
 		-webkit-background-clip: text;
@@ -51,12 +51,10 @@ const ProjectsPage = styled.div`
 		font-size: 13rem;
 		font-family: 'Lobster', cursive, sans-serif;
 		font-weight: 100;
-		/* margin-left: 1rem; */
 	}
 
 	p {
 		width: 70%;
-		/* margin: 5%; */
 		font-size: 1.8rem;
 	}
 
@@ -129,6 +127,29 @@ const ProjectsPage = styled.div`
 	}
 	@media (max-width: 1281px) {
 		/* big landscape tablets, laptops, and desktops */
+		header {
+			padding-top: 10%;
+		}
+
+		h1 {
+			font-size: 2rem;
+		}
+
+		.fancyFont {
+			font-size: 8rem;
+		}
+		p {
+			/* width: 80%; */
+			font-size: 1rem;
+		}
+		.projZone {
+			height: 30rem;
+			/* margin-bottom: -5rem; */
+		}
+		.info h3 {
+			/* width: 70%; */
+			font-size: 2rem;
+		}
 	}
 	@media (min-width: 1281px) {
 	}
