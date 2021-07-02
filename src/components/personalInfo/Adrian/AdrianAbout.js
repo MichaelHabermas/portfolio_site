@@ -159,7 +159,7 @@ const MAboutPage = styled.div`
 	@media (min-width: 641px) and (max-width: 961px) {
 		/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
 		h1 {
-			font-size: 13rem;
+			font-size: 3rem;
 		}
 		h3 {
 			font-size: 1.1rem;

@@ -61,7 +61,6 @@ const Apage = styled.div`
 	}
 
 	// MEDIA QUERIES
-
 	@media (max-width: 425px) {
 		body {
 			overflow-x: hidden;
@@ -131,36 +130,15 @@ const Apage = styled.div`
 	}
 	@media (min-width: 641px) and (max-width: 961px) {
 		/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
-		body {
-			overflow-x: hidden;
-		}
 		h2 {
-			font-size: 1rem;
+			font-size: 2rem;
 		}
 		.nav-links {
-			position: absolute;
-			right: 0px;
-			height: 40vh;
-			top: 15vh;
-			background: white;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: space-around;
-			width: 30%;
-			transform: translateX(100%);
-			transition: transform 0.5s ease-in;
+			width: 60%;
 		}
-		.nav-links li {
-			opacity: 0;
-		}
-		.nav-links li a,
-		.nav-links li button {
-			color: #333333;
-		}
-		.burger {
-			display: block;
-			cursor: pointer;
+
+		.link-text {
+			font-size: 0.9rem;
 		}
 	}
 	@media (min-width: 961px) and (max-width: 1100px) {
