@@ -27,7 +27,7 @@ const ProjectsPage = styled.div`
 
 	header {
 		display: flex;
-		justify-content: space-around;
+		justify-content: space-between;
 		align-items: center;
 		padding-top: 10%;
 		width: 80%;
@@ -37,7 +37,7 @@ const ProjectsPage = styled.div`
 
 	h1 {
 		background-color: #f3ec78;
-		padding-right: 10px;
+		padding-right: 5rem;
 		background-image: linear-gradient(85deg, #af4261, #f3ec78);
 		background-size: 100%;
 		-webkit-background-clip: text;
@@ -48,20 +48,21 @@ const ProjectsPage = styled.div`
 	}
 
 	.fancyFont {
-		font-size: 10rem;
+		font-size: 13rem;
 		font-family: 'Lobster', cursive, sans-serif;
 		font-weight: 100;
+		margin-left: 2rem;
 	}
 
 	p {
 		width: 70%;
-		margin: 5%;
+		/* margin: 5%; */
 		font-size: 1.8rem;
 	}
 
 	header p {
 		width: 70ch;
-		margin: 2rem 0 0;
+		margin: 1rem 0 0;
 		font-size: 0.9rem;
 	}
 
@@ -85,16 +86,18 @@ const ProjectsPage = styled.div`
 		margin-bottom: 15rem;
 	}
 
-	.artBoard {
-		flex-direction: column;
-		text-align: center;
-	}
-
 	.info {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		width: 100%;
+	}
+
+	.info h3 {
+		width: 70%;
+		font-size: 3rem;
+		text-align: left;
+		margin-bottom: 1rem;
 	}
 
 	.projPic {
@@ -105,6 +108,7 @@ const ProjectsPage = styled.div`
 
 	.projPicMid {
 		border-radius: 40px;
+		margin-bottom: 2rem;
 	}
 
 	footer p {
@@ -120,9 +124,6 @@ const MichaelProjects = () => {
 	return (
 		<ProjectsPage>
 			<header>
-				<h1>
-					the<span className="fancyFont">Revelry</span>
-				</h1>
 				<div>
 					<p>
 						All artwork and content on this and related website
@@ -148,6 +149,9 @@ const MichaelProjects = () => {
 						artwork. Thank you.
 					</p>
 				</div>
+				<h1>
+					the<span className="fancyFont">Revelry</span>
+				</h1>
 			</header>
 			<div className="gallery">
 				<div className="projZone">
