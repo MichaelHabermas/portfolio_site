@@ -130,34 +130,22 @@ const WillAbout = () => {
 					</Link>
 					<div className="socials">
 						<a
-							// fix this
-							href="https://github.com/willHabermas?tab=repositories"
+							href="https://github.com/william-d-moon"
 							target="_blank"
 							rel="noopener noreferrer"
 						>
 							<FaGithub />
 						</a>
 						<a
-							// fix this
-							href="https://www.linkedin.com/in/will-habermas"
+							href="https://www.linkedin.com/in/william-d-moon"
 							target="_blank"
 							rel="noopener noreferrer"
 						>
 							<FaLinkedin className="linkImg" />
 						</a>
 
-						<a href="mailto:willghabermas@gmail.com">
-							{' '}
-							{/* // fix this */}
+						<a href="mailto:wmoon0113@gmail.com">
 							<RiMailFill className="mailImg" />
-						</a>
-						<a
-							// fix this
-							href="https://twitter.com/habermoose"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<FaTwitterSquare />
 						</a>
 					</div>
 				</footer>
