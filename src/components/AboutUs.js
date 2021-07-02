@@ -9,6 +9,10 @@ const AboutPage = styled.div`
 	background: linear-gradient(170deg, #e8c7fb, #ffffff);
 	color: #81374a;
 
+	* {
+		border: 1px solid yellow;
+	}
+
 	.aboutIntro {
 		display: flex;
 		flex-direction: column;
@@ -83,6 +87,12 @@ const AboutPage = styled.div`
 		/* big landscape tablets, laptops, and desktops */
 	}
 	@media (min-width: 1281px) and (max-width: 1500px) {
+		h1 {
+		}
+		p {
+		}
+		img {
+		}
 	}
 	@media (min-width: 1500px) {
 	}
