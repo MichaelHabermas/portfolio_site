@@ -28,12 +28,12 @@ const Apage = styled.div`
 		top: 5%;
 		left: 10%;
 		width: 80%;
-		font-size: 2rem;
+		font-size: 3rem;
 	}
 
 	nav h2 {
 		font-family: 'Lobster', cursive, sans-serif;
-		font-weight: 1;
+		font-weight: 1.5rem;
 	}
 
 	nav ul {
@@ -43,15 +43,30 @@ const Apage = styled.div`
 		font-size: 1.5rem;
 		font-weight: bold;
 	}
+
+	// burger styling
+	.burger {
+		display: none;
+	}
+
+	.burger div {
+		width: 25px;
+		height: 3px;
+		background-color: rgb(226, 226, 226);
+		margin: 5px;
+		transition: all 0.3s ease;
+	}
+
+	// MEDIA QUERIES
 	@media (max-width: 425px) {
-		.logo {
-			width: 2rem;
+		h2 {
+			font-size: 1rem;
 		}
 	}
 	@media (max-width: 426px) {
 		/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
-		.logo {
-			width: 3rem;
+		h2 {
+			font-size: 1rem;
 		}
 	}
 	@media (max-width: 641px) {
@@ -84,8 +99,8 @@ const Apage = styled.div`
 			display: block;
 			cursor: pointer;
 		}
-		.logo {
-			width: 5rem;
+		h2 {
+			font-size: 1rem;
 		}
 	}
 	@media (max-width: 961px) {
@@ -96,8 +111,8 @@ const Apage = styled.div`
 		.nav-links {
 			width: 70%;
 		}
-		.logo {
-			width: 8rem;
+		h2 {
+			font-size: 1.1rem;
 		}
 	}
 	@media (max-width: 1281px) {
@@ -108,8 +123,8 @@ const Apage = styled.div`
 		.nav-links {
 			width: 50%;
 		}
-		.logo {
-			width: 9rem;
+		h2 {
+			font-size: 2rem;
 		}
 	}
 	@media (min-width: 1281px) {
@@ -119,8 +134,8 @@ const Apage = styled.div`
 		.nav-links {
 			width: 50%;
 		}
-		.logo {
-			width: 10rem;
+		h2 {
+			font-size: 3rem;
 		}
 	}
 `;
@@ -131,7 +146,7 @@ const AdrianNav = () => {
 		<Apage>
 			<nav>
 				<Link to="/personal-info/adrian/">
-					<h2 className="logo">VanderLust</h2>
+					<h2>VanderLust</h2>
 				</Link>
 				<ul className={isOpen ? 'nav-links nav-active' : 'nav-links'}>
 					<li className="link-text">
@@ -146,6 +161,14 @@ const AdrianNav = () => {
 						<Link to="/">Back to Main</Link>
 					</li>
 				</ul>
+				<div
+					className={isOpen ? 'burger toggle' : 'burger'}
+					onClick={() => setIsOpen(!isOpen)}
+				>
+					<div className="line1"></div>
+					<div className="line2"></div>
+					<div className="line3"></div>
+				</div>
 			</nav>
 		</Apage>
 	);
