@@ -41,6 +41,22 @@ const StartScreenStyles = styled.div`
 		right: 15%;
 		transform: scale(0.9);
 	}
+	@media (max-width: 425px) {
+	}
+	@media (max-width: 426px) {
+		/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+	}
+	@media (max-width: 641px) {
+		/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+	}
+	@media (max-width: 961px) {
+		/* tablet, landscape iPad, lo-res laptops ands desktops */
+	}
+	@media (max-width: 1281px) {
+		/* big landscape tablets, laptops, and desktops */
+	}
+	@media (min-width: 1281px) {
+	}
 `;
 
 const StartScreen = props => {
