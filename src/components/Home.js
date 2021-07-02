@@ -203,19 +203,21 @@ const HomeDiv = styled.div`
 
 	@media (max-width: 425px) {
 	}
-	@media (max-width: 426px) {
+	@media (min-width: 425px) and (max-width: 641px) {
 		/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
 	}
-	@media (max-width: 641px) {
+	@media (min-width: 641px) and (max-width: 961px) {
 		/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
 	}
-	@media (max-width: 961px) {
+	@media (min-width: 961px) and (max-width: 1100px) {
 		/* tablet, landscape iPad, lo-res laptops ands desktops */
 	}
-	@media (max-width: 1281px) {
+	@media (min-width: 1100px) and (max-width: 1281px) {
 		/* big landscape tablets, laptops, and desktops */
 	}
-	@media (min-width: 1281px) {
+	@media (min-width: 1281px) and (max-width: 1500px) {
+	}
+	@media (min-width: 1500px) {
 	}
 `;
 
