@@ -66,24 +66,27 @@ const Apage = styled.div`
 			overflow-x: hidden;
 		}
 		h2 {
-			font-size: 1rem;
+			font-size: 1.5rem;
 		}
 		.nav-links {
 			position: absolute;
 			right: 0px;
-			height: 40vh;
-			top: 15vh;
+			height: 100vh;
+			top: 0vh;
 			background: white;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			justify-content: space-around;
+			padding-top: 10%;
+			padding-bottom: 70%;
 			width: 30%;
 			transform: translateX(100%);
 			transition: transform 0.5s ease-in;
 		}
 		.nav-links li {
 			opacity: 0;
+			text-align: center;
 		}
 		.nav-links li a,
 		.nav-links li button {
@@ -100,24 +103,27 @@ const Apage = styled.div`
 			overflow-x: hidden;
 		}
 		h2 {
-			font-size: 1rem;
+			font-size: 1.5rem;
 		}
 		.nav-links {
 			position: absolute;
 			right: 0px;
-			height: 40vh;
-			top: 15vh;
+			height: 100vh;
+			top: 0vh;
 			background: white;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			justify-content: space-around;
+			padding-top: 10%;
+			padding-bottom: 50%;
 			width: 30%;
 			transform: translateX(100%);
 			transition: transform 0.5s ease-in;
 		}
 		.nav-links li {
 			opacity: 0;
+			text-align: center;
 		}
 		.nav-links li a,
 		.nav-links li button {
