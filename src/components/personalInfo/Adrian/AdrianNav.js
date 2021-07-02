@@ -72,14 +72,15 @@ const Apage = styled.div`
 			position: absolute;
 			right: 0px;
 			height: 100vh;
-			top: 0vh;
+			top: 0;
+			margin-top: -10%;
 			background: white;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			justify-content: space-around;
 			padding-top: 10%;
-			padding-bottom: 70%;
+			padding-bottom: 50%;
 			width: 30%;
 			transform: translateX(100%);
 			transition: transform 0.5s ease-in;
@@ -99,6 +100,7 @@ const Apage = styled.div`
 	}
 	@media (min-width: 425px) and (max-width: 641px) {
 		/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+
 		body {
 			overflow-x: hidden;
 		}
@@ -109,7 +111,8 @@ const Apage = styled.div`
 			position: absolute;
 			right: 0px;
 			height: 100vh;
-			top: 0vh;
+			top: 0;
+			margin-top: -5%;
 			background: white;
 			display: flex;
 			flex-direction: column;
