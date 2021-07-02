@@ -16,7 +16,7 @@ const Apage = styled.div`
 		color: #333333;
 		list-style: none;
 		text-decoration: none;
-		border: 1px solid green;
+		/* border: 1px solid green; */
 	}
 
 	nav {

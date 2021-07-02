@@ -27,12 +27,13 @@ const ProjectsPage = styled.div`
 
 	header {
 		display: flex;
-		justify-content: center;
+		justify-content: flex-end;
 		align-items: center;
-		padding-top: 10%;
-		width: 80%;
-		margin: 0 auto;
-		margin-bottom: 5rem;
+		padding-top: 7%;
+		width: 90%;
+		/* margin: 0 auto; */
+		/* padding-right: 3rem; */
+		margin-bottom: -5rem;
 	}
 
 	h1 {
@@ -127,7 +128,7 @@ const ProjectsPage = styled.div`
 	@media (max-width: 1281px) {
 		/* big landscape tablets, laptops, and desktops */
 		header {
-			width: 80%;
+			padding-top: 10%;
 		}
 
 		h1 {
@@ -135,7 +136,7 @@ const ProjectsPage = styled.div`
 		}
 
 		.fancyFont {
-			font-size: 10rem;
+			font-size: 8rem;
 		}
 		p {
 			/* width: 80%; */
