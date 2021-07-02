@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
@@ -126,22 +126,23 @@ const Apage = styled.div`
 `;
 
 const AdrianNav = () => {
+	const [isOpen, setIsOpen] = useState(false);
 	return (
 		<Apage>
 			<nav>
 				<Link to="/personal-info/adrian/">
-					<h2>VanderLust</h2>
+					<h2 className="logo">VanderLust</h2>
 				</Link>
-				<ul>
-					<li>
+				<ul className={isOpen ? 'nav-links nav-active' : 'nav-links'}>
+					<li className="link-text">
 						<Link to="/personal-info/adrian/characterdesign">
 							Character Design
 						</Link>
 					</li>
-					<li>
+					<li className="link-text">
 						<a href={`mailto:adrianghabermas@gmail.com`}>Contact</a>
 					</li>
-					<li>
+					<li className="link-text">
 						<Link to="/">Back to Main</Link>
 					</li>
 				</ul>
