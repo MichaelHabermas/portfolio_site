@@ -13,7 +13,7 @@ const Mpage = styled.div`
 		padding: 0;
 		box-sizing: border-box;
 		z-index: 1;
-		color: #333333;
+		color: white;
 		list-style: none;
 		text-decoration: none;
 		/* border: 1px solid green; */
