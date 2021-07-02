@@ -78,16 +78,16 @@ const Apage = styled.div`
 		body {
 			overflow-x: hidden;
 		}
-
 		.nav-links {
 			position: absolute;
 			right: 0px;
-			height: 60vh;
-			top: 6vh;
-			background: transparent;
+			height: 40vh;
+			top: 15vh;
+			background: white;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
+			justify-content: space-around;
 			width: 30%;
 			transform: translateX(100%);
 			transition: transform 0.5s ease-in;
@@ -97,7 +97,7 @@ const Apage = styled.div`
 		}
 		.nav-links li a,
 		.nav-links li button {
-			color: #db8ca1;
+			color: #333333;
 		}
 		.burger {
 			display: block;
