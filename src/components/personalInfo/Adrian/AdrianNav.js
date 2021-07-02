@@ -28,7 +28,7 @@ const Apage = styled.div`
 		top: 5%;
 		left: 10%;
 		width: 80%;
-		font-size: 3rem;
+		/* font-size: 3rem; */
 	}
 
 	nav h2 {
@@ -45,11 +45,11 @@ const Apage = styled.div`
 
 	.nav-links a {
 		text-decoration: none;
-		letter-spacing: 3px;
+		/* letter-spacing: 3px; */
 		font-weight: bold;
 	}
 	.link-text {
-		font-size: 1.5rem;
+		/* font-size: 1.5rem; */
 	}
 
 	// burger styling
@@ -114,16 +114,36 @@ const Apage = styled.div`
 	@media (max-width: 961px) {
 		/* tablet, landscape iPad, lo-res laptops ands desktops */
 		.link-text {
-			font-size: 0.8rem;
+			font-size: 0.6rem;
 		}
 		.nav-links {
-			width: 70%;
+			width: 100%;
 		}
 		h2 {
 			font-size: 1.1rem;
 		}
 	}
+	@media (max-width: 1100px) {
+		.link-text {
+			font-size: 0.7rem;
+		}
+		.nav-links {
+			width: 100%;
+		}
+	}
 	@media (max-width: 1281px) {
+		/* big landscape tablets, laptops, and desktops */
+		.link-text {
+			font-size: 0.8rem;
+		}
+		.nav-links {
+			width: 80%;
+		}
+		h2 {
+			font-size: 2rem;
+		}
+	}
+	@media (max-width: 1550px) {
 		/* big landscape tablets, laptops, and desktops */
 		.link-text {
 			font-size: 0.9rem;
@@ -135,12 +155,12 @@ const Apage = styled.div`
 			font-size: 2rem;
 		}
 	}
-	@media (min-width: 1281px) {
+	@media (min-width: 1550px) {
 		.link-text {
 			font-size: 1.3rem;
 		}
 		.nav-links {
-			width: 45%;
+			width: 50%;
 		}
 		h2 {
 			font-size: 3rem;

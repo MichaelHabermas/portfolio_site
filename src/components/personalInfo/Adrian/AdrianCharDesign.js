@@ -136,7 +136,7 @@ const ProjectsPage = styled.div`
 		}
 
 		.fancyFont {
-			font-size: 8rem;
+			font-size: 6rem;
 		}
 		p {
 			/* width: 80%; */
@@ -151,7 +151,12 @@ const ProjectsPage = styled.div`
 			font-size: 2rem;
 		}
 	}
-	@media (min-width: 1281px) {
+	@media (max-width: 1500px) {
+		.fancyFont {
+			font-size: 8rem;
+		}
+	}
+	@media (min-width: 1500px) {
 	}
 `;
 
