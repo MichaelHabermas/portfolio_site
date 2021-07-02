@@ -108,32 +108,6 @@ const Nav = styled.div`
 		background-color: #3e8e41;
 	}
 
-	/* ANIMATIONS  */
-	.nav-active {
-		transform: translateX(0%);
-	}
-
-	@keyframes navLinkFade {
-		from {
-			opacity: 0;
-			transform: translateX(50px);
-		}
-		to {
-			opacity: 1;
-			transform: translateX(0px);
-		}
-	}
-
-	.toggle .line1 {
-		transform: rotate(-45deg) translate(-5px, 6px);
-	}
-	.toggle .line2 {
-		opacity: 0;
-	}
-	.toggle .line3 {
-		transform: rotate(45deg) translate(-5px, -6px);
-	}
-
 	@media (max-width: 425px) {
 		.logo {
 			width: 2rem;
@@ -213,6 +187,31 @@ const Nav = styled.div`
 		.logo {
 			width: 10rem;
 		}
+	}
+	/* ANIMATIONS  */
+	.nav-active {
+		transform: translateX(0%);
+	}
+
+	@keyframes navLinkFade {
+		from {
+			opacity: 0;
+			transform: translateX(50px);
+		}
+		to {
+			opacity: 1;
+			transform: translateX(0px);
+		}
+	}
+
+	.toggle .line1 {
+		transform: rotate(-45deg) translate(-5px, 6px);
+	}
+	.toggle .line2 {
+		opacity: 0;
+	}
+	.toggle .line3 {
+		transform: rotate(45deg) translate(-5px, -6px);
 	}
 `;
 
@@ -316,9 +315,9 @@ const NavBarMain = () => {
 					className={isOpen ? 'burger toggle' : 'burger'}
 					onClick={() => setIsOpen(!isOpen)}
 				>
-					<div className="line1"></div>
-					<div className="line2"></div>
-					<div className="line3"></div>
+					<div className="line line1"></div>
+					<div className="line line2"></div>
+					<div className="line line3"></div>
 				</div>
 			</nav>
 		</Nav>

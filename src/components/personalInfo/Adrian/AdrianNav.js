@@ -4,19 +4,19 @@ import { Link } from 'react-router-dom';
 
 const Apage = styled.div`
 	position: absolute;
+	top: 3%;
 	width: 100%;
-	height: 100%;
 	*,
 	*::before,
 	*::after {
 		margin: 0;
-		padding: 0%;
+		padding: 0;
 		box-sizing: border-box;
 		z-index: 1;
 		color: #333333;
 		list-style: none;
 		text-decoration: none;
-		border: 1px solid green;
+		/* border: 1px solid green; */
 	}
 
 	nav {
@@ -24,11 +24,10 @@ const Apage = styled.div`
 		justify-content: space-between;
 		align-items: center;
 		font-family: 'Poppins', sans-serif;
-		position: absolute;
-		top: 5%;
-		left: 10%;
+		min-height: 10vh;
+		background: transparent;
 		width: 80%;
-		/* font-size: 3rem; */
+		margin: auto;
 	}
 
 	nav h2 {
@@ -39,17 +38,14 @@ const Apage = styled.div`
 	.nav-links {
 		display: flex;
 		justify-content: space-between;
-		width: 30%;
+		align-items: center;
 		font-weight: bold;
 	}
 
-	.nav-links a {
-		text-decoration: none;
-		/* letter-spacing: 3px; */
-		font-weight: bold;
-	}
 	.link-text {
-		/* font-size: 1.5rem; */
+		text-decoration: none;
+		font-weight: bold;
+		height: 100%;
 	}
 
 	// burger styling
@@ -60,7 +56,7 @@ const Apage = styled.div`
 	.burger div {
 		width: 25px;
 		height: 3px;
-		background-color: rgb(226, 226, 226);
+		background-color: #333333;
 		margin: 5px;
 		transition: all 0.3s ease;
 	}
@@ -137,7 +133,7 @@ const Apage = styled.div`
 			font-size: 0.8rem;
 		}
 		.nav-links {
-			width: 80%;
+			width: 40%;
 		}
 		h2 {
 			font-size: 2rem;
@@ -158,13 +154,42 @@ const Apage = styled.div`
 	@media (min-width: 1550px) {
 		.link-text {
 			font-size: 1.3rem;
+
+			height: 100%;
 		}
 		.nav-links {
 			width: 50%;
+			height: 100%;
 		}
 		h2 {
 			font-size: 3rem;
 		}
+	}
+
+	/* ANIMATIONS  */
+	.nav-active {
+		transform: translateX(0%);
+	}
+
+	@keyframes navLinkFade {
+		from {
+			opacity: 0;
+			transform: translateX(50px);
+		}
+		to {
+			opacity: 1;
+			transform: translateX(0px);
+		}
+	}
+
+	.toggle .line1 {
+		transform: rotate(-45deg) translate(-5px, 6px);
+	}
+	.toggle .line2 {
+		opacity: 0;
+	}
+	.toggle .line3 {
+		transform: rotate(45deg) translate(-5px, -6px);
 	}
 `;
 
@@ -177,25 +202,65 @@ const AdrianNav = () => {
 					<h2>VanderLust</h2>
 				</Link>
 				<ul className={isOpen ? 'nav-links nav-active' : 'nav-links'}>
-					<li className="link-text">
-						<Link to="/personal-info/adrian/characterdesign">
+					<li
+						style={
+							isOpen
+								? {
+										animation: `navLinkFade 0.5s ease forwards ${
+											1 / 7 + 0.15
+										}s`
+								  }
+								: { animation: '' }
+						}
+					>
+						<a
+							className="link-text"
+							href="/personal-info/adrian/characterdesign"
+						>
 							Character Design
-						</Link>
+						</a>
 					</li>
-					<li className="link-text">
-						<a href={`mailto:adrianghabermas@gmail.com`}>Contact</a>
+					<li
+						style={
+							isOpen
+								? {
+										animation: `navLinkFade 0.5s ease forwards ${
+											1 / 7 + 0.15
+										}s`
+								  }
+								: { animation: '' }
+						}
+					>
+						<a
+							className="link-text"
+							href={`mailto:adrianghabermas@gmail.com`}
+						>
+							Contact
+						</a>
 					</li>
-					<li className="link-text">
-						<Link to="/">Back to Main</Link>
+					<li
+						style={
+							isOpen
+								? {
+										animation: `navLinkFade 0.5s ease forwards ${
+											1 / 7 + 0.15
+										}s`
+								  }
+								: { animation: '' }
+						}
+					>
+						<a className="link-text" href="/">
+							Back to Main
+						</a>
 					</li>
 				</ul>
 				<div
 					className={isOpen ? 'burger toggle' : 'burger'}
 					onClick={() => setIsOpen(!isOpen)}
 				>
-					<div className="line1"></div>
-					<div className="line2"></div>
-					<div className="line3"></div>
+					<div className="line line1"></div>
+					<div className="line line2"></div>
+					<div className="line line3"></div>
 				</div>
 			</nav>
 		</Apage>
