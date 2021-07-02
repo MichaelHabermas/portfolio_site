@@ -16,7 +16,7 @@ const Apage = styled.div`
 		color: #333333;
 		list-style: none;
 		text-decoration: none;
-		/* border: 1px solid green; */
+		border: 1px solid green;
 	}
 
 	nav {
@@ -24,7 +24,7 @@ const Apage = styled.div`
 		justify-content: space-between;
 		align-items: center;
 		font-family: 'Poppins', sans-serif;
-		min-height: 10vh;
+		/* min-height: 10vh; */
 		background: transparent;
 		width: 80%;
 		margin: auto;
@@ -109,60 +109,58 @@ const Apage = styled.div`
 	}
 	@media (max-width: 961px) {
 		/* tablet, landscape iPad, lo-res laptops ands desktops */
-		.link-text {
-			font-size: 0.6rem;
-		}
-		.nav-links {
-			width: 100%;
-		}
 		h2 {
 			font-size: 1.1rem;
 		}
-	}
-	@media (max-width: 1100px) {
-		.link-text {
-			font-size: 0.7rem;
-		}
 		.nav-links {
 			width: 100%;
+		}
+		.link-text {
+			font-size: 0.6rem;
+		}
+	}
+	@media (max-width: 1100px) {
+		.nav-links {
+			width: 100%;
+		}
+		.link-text {
+			font-size: 0.7rem;
 		}
 	}
 	@media (max-width: 1281px) {
 		/* big landscape tablets, laptops, and desktops */
-		.link-text {
-			font-size: 0.8rem;
-		}
-		.nav-links {
-			width: 40%;
-		}
 		h2 {
 			font-size: 2rem;
+		}
+		.nav-links {
+			width: 50%;
+		}
+
+		.link-text {
+			font-size: 0.8rem;
 		}
 	}
 	@media (max-width: 1550px) {
 		/* big landscape tablets, laptops, and desktops */
-		.link-text {
-			font-size: 0.9rem;
-		}
-		.nav-links {
-			width: 50%;
-		}
 		h2 {
 			font-size: 2rem;
 		}
+		.nav-links {
+			width: 40%;
+		}
+		.link-text {
+			font-size: 0.9rem;
+		}
 	}
 	@media (min-width: 1550px) {
-		.link-text {
-			font-size: 1.3rem;
-
-			height: 100%;
-		}
-		.nav-links {
-			width: 50%;
-			height: 100%;
-		}
 		h2 {
 			font-size: 3rem;
+		}
+		.nav-links {
+			width: 35%;
+		}
+		.link-text {
+			font-size: 1.3rem;
 		}
 	}
 
