@@ -27,7 +27,7 @@ const ProjectsPage = styled.div`
 
 	header {
 		display: flex;
-		justify-content: space-between;
+		justify-content: center;
 		align-items: center;
 		padding-top: 10%;
 		width: 80%;
@@ -38,7 +38,7 @@ const ProjectsPage = styled.div`
 	h1 {
 		background-color: #f3ec78;
 		padding-right: 5rem;
-		background-image: linear-gradient(85deg, #af4261, #f3ec78);
+		background-image: linear-gradient(135deg, #af4261, #f3ec78);
 		background-size: 100%;
 		-webkit-background-clip: text;
 		-moz-background-clip: text;
@@ -58,12 +58,6 @@ const ProjectsPage = styled.div`
 		width: 70%;
 		/* margin: 5%; */
 		font-size: 1.8rem;
-	}
-
-	header p {
-		width: 70ch;
-		margin: 1rem 0 0;
-		font-size: 0.9rem;
 	}
 
 	.gallery {
@@ -111,12 +105,15 @@ const ProjectsPage = styled.div`
 		margin-bottom: 2rem;
 	}
 
-	footer p {
-		margin: 0;
+	footer {
+		margin: 0 auto;
 		padding: 10rem 0 5rem;
-		font-size: 1rem;
-		text-align: right;
-		width: 100%;
+		width: 70%;
+	}
+	footer p {
+		margin: 0 auto;
+		font-size: 0.8rem;
+		text-align: center;
 	}
 
 	@media (max-width: 425px) {
@@ -141,31 +138,6 @@ const MichaelProjects = () => {
 	return (
 		<ProjectsPage>
 			<header>
-				<div>
-					<p>
-						All artwork and content on this and related website
-						pages are legally protected by U.S. & International
-						copyright laws.
-					</p>
-					<p>
-						Under NO circumstance is it permitted for you to use
-						them for commercial purposes, without proper and prior
-						permission from Adrian van der Valk, or his legal
-						advisers.
-					</p>
-					<p>
-						Unauthorized duplication or usage for commercial
-						purposes is prohibited by the Copyright law and will be
-						prosecuted. We protect our copyright interests.
-					</p>
-					<p>
-						Adrian van der Valk retains all of the copyrights to all
-						artwork on this site, regardless of having sold the
-						legal advisors in order to use an image for commercial
-						purposes, whether or not you now own the original
-						artwork. Thank you.
-					</p>
-				</div>
 				<h1>
 					the<span className="fancyFont">Revelry</span>
 				</h1>
@@ -176,10 +148,11 @@ const MichaelProjects = () => {
 					<div className="info">
 						<h3>Title</h3>
 						<p>
-							Contributed to the design and implementation of a
-							React app that gathers and shares family recipes.
-							This app uses Redux to manage state, and makes axios
-							calls to our concurrent team’s Node API.
+							Lorem ipsum dolor sit amet, consectetur adipiscing
+							elit. In accumsan porttitor est ac vehicula.
+							Pellentesque at nisi vitae sem viverra dapibus nec
+							ut enim. Vivamus vitae dignissim est, at hendrerit
+							augue.
 						</p>
 					</div>
 				</div>
@@ -187,10 +160,11 @@ const MichaelProjects = () => {
 					<div className="info">
 						<h3>Title</h3>
 						<p>
-							Implemented a Redux state management system to our
-							team’s React application. The app helped its users
-							organize their time and efforts towards keeping
-							their plants healthy and watered.
+							Lorem ipsum dolor sit amet, consectetur adipiscing
+							elit. In accumsan porttitor est ac vehicula.
+							Pellentesque at nisi vitae sem viverra dapibus nec
+							ut enim. Vivamus vitae dignissim est, at hendrerit
+							augue.
 						</p>
 					</div>
 					<img className="projPic" src={pic_2} alt="pic 2" />
@@ -200,10 +174,11 @@ const MichaelProjects = () => {
 					<div className="info">
 						<h3>Title</h3>
 						<p>
-							Created a personal site for an up-and-coming local
-							Los Angeles character artist. Designed layout and
-							collaborated on background displays for each
-							character.
+							Lorem ipsum dolor sit amet, consectetur adipiscing
+							elit. In accumsan porttitor est ac vehicula.
+							Pellentesque at nisi vitae sem viverra dapibus nec
+							ut enim. Vivamus vitae dignissim est, at hendrerit
+							augue.
 						</p>
 					</div>
 				</div>
@@ -211,11 +186,11 @@ const MichaelProjects = () => {
 					<div className="info">
 						<h3>Title</h3>
 						<p>
-							Built a Restful CRUD API for a fitness class
-							reservation application using Node.js and Express as
-							well as used JWT authentication for login security,
-							while a concurrent team built out the design and
-							features for front end using React/Redux
+							Lorem ipsum dolor sit amet, consectetur adipiscing
+							elit. In accumsan porttitor est ac vehicula.
+							Pellentesque at nisi vitae sem viverra dapibus nec
+							ut enim. Vivamus vitae dignissim est, at hendrerit
+							augue.
 						</p>
 					</div>
 					<img className="projPic" src={pic_4} alt="pic 4" />
@@ -228,9 +203,11 @@ const MichaelProjects = () => {
 					/>
 					<div className="info">
 						<p>
-							A current super-secret pic that’s in the works.
-							Aspires to bring a new approach to the foreign
-							language learning world. Don’t tell anyone....
+							Lorem ipsum dolor sit amet, consectetur adipiscing
+							elit. In accumsan porttitor est ac vehicula.
+							Pellentesque at nisi vitae sem viverra dapibus nec
+							ut enim. Vivamus vitae dignissim est, at hendrerit
+							augue.
 						</p>
 					</div>
 				</div>
@@ -238,9 +215,11 @@ const MichaelProjects = () => {
 					<div className="info">
 						<h3>Title</h3>
 						<p>
-							Collaborated on this small pic based on the classic
-							card game, Old Maid. Contributions include asset
-							design as well as functionality.
+							Lorem ipsum dolor sit amet, consectetur adipiscing
+							elit. In accumsan porttitor est ac vehicula.
+							Pellentesque at nisi vitae sem viverra dapibus nec
+							ut enim. Vivamus vitae dignissim est, at hendrerit
+							augue.
 						</p>
 					</div>
 					<img className="projPic" src={pic_6} alt="pic 6" />
@@ -250,10 +229,11 @@ const MichaelProjects = () => {
 					<div className="info">
 						<h3>Title</h3>
 						<p>
-							Created a personal site for an up-and-coming local
-							Los Angeles character artist. Designed layout and
-							collaborated on background displays for each
-							character.
+							Lorem ipsum dolor sit amet, consectetur adipiscing
+							elit. In accumsan porttitor est ac vehicula.
+							Pellentesque at nisi vitae sem viverra dapibus nec
+							ut enim. Vivamus vitae dignissim est, at hendrerit
+							augue.
 						</p>
 					</div>
 				</div>
@@ -261,11 +241,11 @@ const MichaelProjects = () => {
 					<div className="info">
 						<h3>Title</h3>
 						<p>
-							Built a Restful CRUD API for a fitness class
-							reservation application using Node.js and Express as
-							well as used JWT authentication for login security,
-							while a concurrent team built out the design and
-							features for front end using React/Redux
+							Lorem ipsum dolor sit amet, consectetur adipiscing
+							elit. In accumsan porttitor est ac vehicula.
+							Pellentesque at nisi vitae sem viverra dapibus nec
+							ut enim. Vivamus vitae dignissim est, at hendrerit
+							augue.
 						</p>
 					</div>
 					<img className="projPic" src={pic_8} alt="pic 8" />
@@ -275,9 +255,11 @@ const MichaelProjects = () => {
 					<div className="info">
 						<h3>Title</h3>
 						<p>
-							A current super-secret pic that’s in the works.
-							Aspires to bring a new approach to the foreign
-							language learning world. Don’t tell anyone....
+							Lorem ipsum dolor sit amet, consectetur adipiscing
+							elit. In accumsan porttitor est ac vehicula.
+							Pellentesque at nisi vitae sem viverra dapibus nec
+							ut enim. Vivamus vitae dignissim est, at hendrerit
+							augue.
 						</p>
 					</div>
 				</div>
@@ -285,11 +267,11 @@ const MichaelProjects = () => {
 					<div className="info">
 						<h3>Title</h3>
 						<p>
-							Built a Restful CRUD API for a fitness class
-							reservation application using Node.js and Express as
-							well as used JWT authentication for login security,
-							while a concurrent team built out the design and
-							features for front end using React/Redux
+							Lorem ipsum dolor sit amet, consectetur adipiscing
+							elit. In accumsan porttitor est ac vehicula.
+							Pellentesque at nisi vitae sem viverra dapibus nec
+							ut enim. Vivamus vitae dignissim est, at hendrerit
+							augue.
 						</p>
 					</div>
 					<img className="projPic" src={pic_10} alt="pic 10" />
@@ -297,7 +279,22 @@ const MichaelProjects = () => {
 				<footer>
 					<p>
 						Copyright ©2021 Adrian van der Valk. All Rights
-						Reserved.
+						Reserved.{' '}
+					</p>
+					<p>
+						All artwork and content on this and related website
+						pages are legally protected by U.S. & International
+						copyright laws. Under NO circumstance is it permitted
+						for anyone to use them for commercial purposes, without
+						proper, express, and prior permission from Adrian van
+						der Valk, or his legal advisers. Unauthorized
+						duplication or usage for commercial purposes is
+						prohibited by the Copyright law. Adrian van der Valk
+						retains all of the copyrights to all artwork on this
+						site, regardless of having sold the original image. You
+						must contact him or his legal advisors in order to use
+						an image for commercial purposes, whether or not you now
+						own the original artwork.
 					</p>
 				</footer>
 			</div>
