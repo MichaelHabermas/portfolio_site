@@ -16,6 +16,7 @@ const Apage = styled.div`
 		color: #333333;
 		list-style: none;
 		text-decoration: none;
+		border: 1px solid green;
 	}
 
 	nav {
@@ -41,6 +42,86 @@ const Apage = styled.div`
 		width: 40%;
 		font-size: 1.5rem;
 		font-weight: bold;
+	}
+	@media (max-width: 425px) {
+		.logo {
+			width: 2rem;
+		}
+	}
+	@media (max-width: 426px) {
+		/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+		.logo {
+			width: 3rem;
+		}
+	}
+	@media (max-width: 641px) {
+		/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+		body {
+			overflow-x: hidden;
+		}
+
+		.nav-links {
+			position: absolute;
+			right: 0px;
+			height: 60vh;
+			top: 6vh;
+			background: transparent;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 30%;
+			transform: translateX(100%);
+			transition: transform 0.5s ease-in;
+		}
+		.nav-links li {
+			opacity: 0;
+		}
+		.nav-links li a,
+		.nav-links li button {
+			color: #db8ca1;
+		}
+		.burger {
+			display: block;
+			cursor: pointer;
+		}
+		.logo {
+			width: 5rem;
+		}
+	}
+	@media (max-width: 961px) {
+		/* tablet, landscape iPad, lo-res laptops ands desktops */
+		.link-text {
+			font-size: 0.8rem;
+		}
+		.nav-links {
+			width: 70%;
+		}
+		.logo {
+			width: 8rem;
+		}
+	}
+	@media (max-width: 1281px) {
+		/* big landscape tablets, laptops, and desktops */
+		.link-text {
+			font-size: 0.9rem;
+		}
+		.nav-links {
+			width: 50%;
+		}
+		.logo {
+			width: 9rem;
+		}
+	}
+	@media (min-width: 1281px) {
+		.link-text {
+			font-size: 1.1rem;
+		}
+		.nav-links {
+			width: 50%;
+		}
+		.logo {
+			width: 10rem;
+		}
 	}
 `;
 
