@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { FaLinkedin, FaGithub, FaTwitterSquare } from 'react-icons/fa';
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import { RiMailFill } from 'react-icons/ri';
 import mountainSide from '../../../assets/will_page/will_main_widescreen.svg';
 
