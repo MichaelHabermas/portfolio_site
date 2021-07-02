@@ -75,7 +75,7 @@ const ProjectsPage = styled.div`
 	.pzMid {
 		flex-direction: column;
 		margin-top: 10rem;
-		margin-bottom: 15rem;
+		margin-bottom: 10rem;
 	}
 
 	.info {

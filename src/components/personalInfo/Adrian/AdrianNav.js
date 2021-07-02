@@ -16,7 +16,7 @@ const Apage = styled.div`
 		color: #333333;
 		list-style: none;
 		text-decoration: none;
-		/* border: 1px solid green; */
+		border: 1px solid green;
 	}
 
 	nav {
@@ -36,12 +36,20 @@ const Apage = styled.div`
 		font-weight: 1.5rem;
 	}
 
-	nav ul {
+	.nav-links {
 		display: flex;
 		justify-content: space-between;
-		width: 40%;
-		font-size: 1.5rem;
+		width: 30%;
 		font-weight: bold;
+	}
+
+	.nav-links a {
+		text-decoration: none;
+		letter-spacing: 3px;
+		font-weight: bold;
+	}
+	.link-text {
+		font-size: 1.5rem;
 	}
 
 	// burger styling
@@ -129,10 +137,10 @@ const Apage = styled.div`
 	}
 	@media (min-width: 1281px) {
 		.link-text {
-			font-size: 1.1rem;
+			font-size: 1.3rem;
 		}
 		.nav-links {
-			width: 50%;
+			width: 45%;
 		}
 		h2 {
 			font-size: 3rem;
