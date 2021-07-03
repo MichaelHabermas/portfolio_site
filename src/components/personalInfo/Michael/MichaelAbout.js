@@ -5,6 +5,10 @@ import styled from 'styled-components';
 import { RiMailFill } from 'react-icons/ri';
 import { FaLinkedin, FaGithub, FaTwitterSquare } from 'react-icons/fa';
 import spaceImage from '../../../assets/michaelPage/michael_main_widescreen.svg';
+import spaceImageDesktop from '../../../assets/michaelPage/space_background_desktop.svg';
+import spaceImageTablet from '../../../assets/michaelPage/space_background_tablet.svg';
+import spaceImageTabletTest from '../../../assets/michaelPage/michael_main_tablet.png';
+import spaceImageMobile from '../../../assets/michaelPage/space_background_mobile.svg';
 import moonImage from '../../../assets/michaelPage/moon.svg';
 
 const MAboutPage = styled.div`
@@ -15,13 +19,18 @@ const MAboutPage = styled.div`
 	background-size: cover;
 	height: 100vh;
 
+	* {
+		transition: all .5s ease-in-out;
+		border: 1px solid yellow;
+	}
+
 	.moon {
 		position: absolute;
 		bottom: 50%;
 		right: 10%;
 		transition: all 1s ease-in-out;
 	}
-
+	
 	.moon:hover {
 		transform: scale(1.5) translate(-10%, 10%);
 	}
@@ -49,7 +58,7 @@ const MAboutPage = styled.div`
 		display: flex;
 		flex-flow: column;
 		justify-content: space-evenly;
-		height: 100%;
+		height: 100vh;
 	}
 
 	.seeMore {
@@ -91,21 +100,204 @@ const MAboutPage = styled.div`
 		transform: scale(1.08, 1);
 	}
 
-	@media (max-width: 425px) {
-	}
 	@media (max-width: 426px) {
-		/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+		background: url(${spaceImageMobile}) no-repeat center center fixed;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		height: 100vh;
+
+		.moon {
+			display: none;
+		}
+	
+		h1 {
+			font-size: 2rem;
+			margin-left: 50%;
+			transform: translate(-50%, -50%);
+			// text-align: center
+			// width: 100%;
+		}
+	
+		p {
+			font-size: 1rem;
+			margin-left: 8%;
+			width: 50%;
+		}
+	
+		.seeMore {
+			left: 52%;
+			font-size: 2rem;
+		}
+	
+		.socials {
+			right: 8%;
+			bottom: 4%;
+			font-size: 2.2rem;
+		}
 	}
-	@media (max-width: 641px) {
-		/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+	@media screen and (min-width: 427px) and (max-width: 641px) {
+		background: url(${spaceImageTabletTest}) no-repeat center center fixed;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		height: 100vh;
+		width: 100vw;
+
+		.moon {
+			right: 2%;
+			bottom: 43%;
+			transform: scale(.6);
+		}
+	
+		h1 {
+			font-size: 2.2rem;
+			margin-left: 50%;
+			transform: translate(-50%, -50%);
+			// text-align: center
+			// width: 100%;
+		}
+	
+		p {
+			font-size: 1.2rem;
+			margin-left: 8%;
+			width: 50%;
+		}
+	
+		.seeMore {
+			left: 52%;
+			font-size: 2rem;
+		}
+	
+		.socials {
+			right: 8%;
+			bottom: 4%;
+			font-size: 2.2rem;
+		}
 	}
-	@media (max-width: 961px) {
-		/* tablet, landscape iPad, lo-res laptops ands desktops */
+
+	@media (min-width: 642px) and (max-width: 799px) {
+		background: url(${spaceImageTablet}) no-repeat center center fixed;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		height: 100vh;
+		
+		.moon {
+			right: 2%;
+			bottom: 43%;
+			transform: scale(.6);
+		}
+	
+		.moon:hover {
+			transform: scale(.6) translate(-8%, 8%);
+		}
+
+		h1 {
+			font-size: 2.5rem;
+			margin-left: 8%;
+			margin-bottom: 7%;
+			margin-top: 6%;
+		}
+	
+		p {
+			font-size: 1.1rem;
+			margin-left: 8%;
+			width: 50%;
+		}
+	
+		.seeMore {
+			left: 55%;
+			bottom: 3%;
+			font-size: 1.5rem;
+		}
+	
+		.socials {
+			right: 4%;
+			bottom: 1.5%;
+			font-size: 2rem;
+		}
 	}
-	@media (max-width: 1281px) {
-		/* big landscape tablets, laptops, and desktops */
+
+	@media (min-width: 800px) and (max-width: 961px) {
+		background: url(${spaceImageTablet}) no-repeat center center fixed;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		height: 100vh;
+		
+		.moon {
+			right: 4%;
+			transform: scale(.7);
+		}
+	
+		.moon:hover {
+			transform: scale(.9) translate(-8%, 8%);
+		}
+	
+		h1 {
+			font-size: 3rem;
+			margin-left: 8%;
+		}
+	
+		p {
+			font-size: 1.3rem;
+			margin-left: 8%;
+			width: 50%;
+		}
+	
+		.seeMore {
+			left: 52%;
+			font-size: 2rem;
+		}
+	
+		.socials {
+			right: 8%;
+			bottom: 4%;
+			font-size: 2.2rem;
+		}
 	}
-	@media (min-width: 1281px) {
+	@media (min-width: 962px) and (max-width: 1281px) {
+		background: url(${spaceImageDesktop}) no-repeat center center fixed;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		height: 100vh;
+
+		.moon {
+			right: 8%;
+			transform: scale(.8);
+		}
+
+		.moon:hover {
+			transform: scale(1.2) translate(-8%, 8%);
+		}
+
+		h1 {
+			font-size: 4rem;
+			margin-left: 8%;
+		}
+
+		p {
+			font-size: 1.5rem;
+			margin-left: 8%;
+		}
+
+		.seeMore {
+			left: 52%;
+			font-size: 2.2rem;
+		}
+
+		.socials {
+			right: 8%;
+			bottom: 4%;
+			font-size: 2.5rem;
+		}
 	}
 `;
 
