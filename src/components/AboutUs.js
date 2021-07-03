@@ -11,6 +11,7 @@ const AboutPage = styled.div`
 
 	* {
 		border: 1px solid yellow;
+		margin: 0 auto;
 	}
 
 	.aboutIntro {
@@ -39,17 +40,17 @@ const AboutPage = styled.div`
 
 	.aboutIntro p {
 		width: 40ch;
-		margin: 0 auto;
-		font-size: 1.7rem;
 	}
 
 	img {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		border-radius: 50%;
 	}
 
 	.gallery {
 		width: 70%;
-		margin: 0 auto;
 		padding-bottom: 5%;
 		display: flex;
 		flex-direction: column;
@@ -61,6 +62,7 @@ const AboutPage = styled.div`
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		margin-bottom: -5%;
 	}
 	.personInfo p {
 		width: 80%;
@@ -70,28 +72,146 @@ const AboutPage = styled.div`
 		width: 80%;
 		display: flex;
 		justify-content: center;
+		align-items: center;
 	}
 
 	@media (max-width: 425px) {
 	}
 	@media (min-width: 425px) and (max-width: 641px) {
 		/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+		aboutIntro {
+			padding-top: 10%;
+			margin-bottom: 3%;
+		}
+
+		h1 {
+			padding-top: 5%;
+			font-size: 6rem;
+			font-weight: 100;
+		}
+		p {
+			font-size: 1rem;
+			line-height: 1.3;
+		}
+		.aboutIntro p {
+			width: 40ch;
+		}
+		img {
+			width: 70%;
+			height: auto;
+			margin-bottom: 5%;
+		}
+		.gallery {
+			width: 90%;
+		}
+		.personInfo {
+			flex-direction: column;
+			margin-bottom: 5%;
+		}
+		.personInfoOdd {
+			flex-direction: column-reverse;
+		}
 	}
 	@media (min-width: 641px) and (max-width: 961px) {
 		/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+		aboutIntro {
+			padding-top: 10%;
+			margin-bottom: 3%;
+		}
+
+		h1 {
+			padding-top: 5%;
+			font-size: 6rem;
+			font-weight: 100;
+		}
+		p {
+			font-size: 1rem;
+			line-height: 1.3;
+		}
+		.aboutIntro p {
+			width: 40ch;
+		}
+		img {
+			width: 70%;
+			height: auto;
+		}
+		.gallery {
+			width: 90%;
+		}
 	}
 	@media (min-width: 961px) and (max-width: 1100px) {
 		/* tablet, landscape iPad, lo-res laptops ands desktops */
+		aboutIntro {
+			padding-top: 10%;
+			margin-bottom: 3%;
+		}
+
+		h1 {
+			padding-top: 5%;
+			font-size: 6rem;
+			font-weight: 100;
+		}
+		p {
+			font-size: 1rem;
+			line-height: 1.3;
+		}
+		.aboutIntro p {
+			width: 40ch;
+		}
+		img {
+			width: 70%;
+			height: auto;
+		}
+		.gallery {
+			width: 80%;
+		}
 	}
 	@media (min-width: 1100px) and (max-width: 1281px) {
 		/* big landscape tablets, laptops, and desktops */
-	}
-	@media (min-width: 1281px) and (max-width: 1500px) {
+		aboutIntro {
+			padding-top: 10%;
+			margin-bottom: 3%;
+		}
+
 		h1 {
+			padding-top: 5%;
+			font-size: 8rem;
+			font-weight: 100;
 		}
 		p {
+			font-size: 1.1rem;
+			line-height: 1.3;
+		}
+		.aboutIntro p {
+			width: 40ch;
 		}
 		img {
+			width: 80%;
+			height: auto;
+		}
+		.gallery {
+			width: 80%;
+		}
+	}
+	@media (min-width: 1281px) and (max-width: 1500px) {
+		aboutIntro {
+			padding-top: 10%;
+			margin-bottom: 3%;
+		}
+		h1 {
+			font-size: 10rem;
+			font-weight: 100;
+		}
+		p {
+			font-size: 1.4rem;
+			line-height: 1.2;
+		}
+		img {
+			width: 80%;
+			height: auto;
+		}
+		.gallery {
+			width: 80%;
 		}
 	}
 	@media (min-width: 1500px) {
@@ -131,7 +251,7 @@ const AboutUs = () => {
 					</div>
 				</div>
 
-				<div className="personInfo">
+				<div className="personInfo personInfoOdd">
 					<div className="description">
 						<p>
 							Michael is a former overseas teacher of ten years.
