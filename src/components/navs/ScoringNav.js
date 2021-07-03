@@ -70,60 +70,28 @@ const Nav = styled.div`
 		border-radius: 100%;
 		font-weight: bold;
 		padding: 0.5rem;
-		/* color: rgb(226, 226, 226); */
 		color: #bd8dda;
 		color: #ffffff;
 	}
 
-	/* TABLET ZONE */
-	/* @media screen and (max-width: 1024px) {
-		.nav-links {
-			width: 40%;
-		}
-	} */
-
-	/* MOBILE DESIGN  */
-	/* @media screen and (max-width: 768px) {
-		body {
-			overflow-x: hidden;
-		}
-
-		.nav-links {
-			position: absolute;
-			right: 0px;
-			height: 92vh;
-			top: 8vh;
-			background-color: #5d5d5d;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			width: 40%;
-			transform: translateX(100%);
-			transition: transform 0.5s ease-in;
-		}
-		.nav-links li {
-			opacity: 0;
-		}
-		.burger {
-			display: block;
-			cursor: pointer;
-		} 
-    } */
-	@media (max-width: 425px) {
+	// MEDIA QUERIES
+	@media only screen and (max-width: 425px) {
 	}
-	@media (max-width: 426px) {
+	@media only screen and (min-width: 425px) and (max-width: 641px) {
 		/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
 	}
-	@media (max-width: 641px) {
+	@media only screen and (min-width: 641px) and (max-width: 961px) {
 		/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
 	}
-	@media (max-width: 961px) {
+	@media only screen and (min-width: 961px) and (max-width: 1100px) {
 		/* tablet, landscape iPad, lo-res laptops ands desktops */
 	}
-	@media (max-width: 1281px) {
+	@media only screen and (min-width: 1100px) and (max-width: 1281px) {
 		/* big landscape tablets, laptops, and desktops */
 	}
-	@media (min-width: 1281px) {
+	@media only screen and (min-width: 1281px) and (max-width: 1500px) {
+	}
+	@media only screen and (min-width: 1500px) {
 	}
 `;
 

@@ -16,6 +16,7 @@ const Apage = styled.div`
 		color: #333333;
 		list-style: none;
 		text-decoration: none;
+		overflow-x: hidden;
 		/* border: 1px solid green; */
 	}
 
@@ -24,7 +25,6 @@ const Apage = styled.div`
 		justify-content: space-between;
 		align-items: center;
 		font-family: 'Poppins', sans-serif;
-		/* min-height: 10vh; */
 		background: transparent;
 		width: 80%;
 		margin: auto;
@@ -62,38 +62,33 @@ const Apage = styled.div`
 	}
 
 	// MEDIA QUERIES
-	@media (max-width: 425px) {
-		h2 {
-			font-size: 1rem;
-		}
-	}
-	@media (max-width: 426px) {
-		/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
-		h2 {
-			font-size: 1rem;
-		}
-	}
-	@media (max-width: 641px) {
-		/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+	@media only screen and (max-width: 425px) {
 		body {
 			overflow-x: hidden;
+		}
+		h2 {
+			font-size: 1.5rem;
 		}
 		.nav-links {
 			position: absolute;
 			right: 0px;
-			height: 40vh;
-			top: 15vh;
+			height: 90vh;
+			top: 0;
+			margin-top: -10%;
 			background: white;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			justify-content: space-around;
+			padding-top: 10%;
+			padding-bottom: 50%;
 			width: 30%;
 			transform: translateX(100%);
 			transition: transform 0.5s ease-in;
 		}
 		.nav-links li {
 			opacity: 0;
+			text-align: center;
 		}
 		.nav-links li a,
 		.nav-links li button {
@@ -103,32 +98,61 @@ const Apage = styled.div`
 			display: block;
 			cursor: pointer;
 		}
+	}
+	@media only screen and (min-width: 425px) and (max-width: 641px) {
+		/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+
+		body {
+			overflow-x: hidden;
+		}
 		h2 {
-			font-size: 1rem;
+			font-size: 1.5rem;
+		}
+		.nav-links {
+			position: absolute;
+			right: 0px;
+			height: 90vh;
+			top: 0;
+			margin-top: -5%;
+			background: white;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-around;
+			padding-top: 10%;
+			padding-bottom: 50%;
+			width: 30%;
+			transform: translateX(100%);
+			transition: transform 0.5s ease-in;
+		}
+		.nav-links li {
+			opacity: 0;
+			text-align: center;
+		}
+		.nav-links li a,
+		.nav-links li button {
+			color: #333333;
+		}
+		.burger {
+			display: block;
+			cursor: pointer;
 		}
 	}
-	@media (max-width: 961px) {
+	@media only screen and (min-width: 641px) and (max-width: 961px) {
+		/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+		h2 {
+			font-size: 2rem;
+		}
+		.nav-links {
+			width: 60%;
+		}
+
+		.link-text {
+			font-size: 0.9rem;
+		}
+	}
+	@media only screen and (min-width: 961px) and (max-width: 1100px) {
 		/* tablet, landscape iPad, lo-res laptops ands desktops */
-		h2 {
-			font-size: 1.1rem;
-		}
-		.nav-links {
-			width: 100%;
-		}
-		.link-text {
-			font-size: 0.6rem;
-		}
-	}
-	@media (max-width: 1100px) {
-		.nav-links {
-			width: 100%;
-		}
-		.link-text {
-			font-size: 0.7rem;
-		}
-	}
-	@media (max-width: 1281px) {
-		/* big landscape tablets, laptops, and desktops */
 		h2 {
 			font-size: 2rem;
 		}
@@ -137,27 +161,40 @@ const Apage = styled.div`
 		}
 
 		.link-text {
-			font-size: 0.8rem;
+			font-size: 1rem;
 		}
 	}
-	@media (max-width: 1550px) {
-		/* big landscape tablets, laptops, and desktops */
+	@media only screen and (min-width: 1100px) and (max-width: 1281px) {
 		h2 {
-			font-size: 2rem;
+			font-size: 2.4rem;
 		}
 		.nav-links {
 			width: 40%;
 		}
+
 		.link-text {
-			font-size: 0.9rem;
+			font-size: 1rem;
 		}
 	}
-	@media (min-width: 1550px) {
+	@media only screen and (min-width: 1281px) and (max-width: 1500px) {
+		/* big landscape tablets, laptops, and desktops */
+		h2 {
+			font-size: 2.7rem;
+		}
+		.nav-links {
+			width: 40%;
+		}
+
+		.link-text {
+			font-size: 1rem;
+		}
+	}
+	@media only screen and (min-width: 1500px) {
 		h2 {
 			font-size: 3rem;
 		}
 		.nav-links {
-			width: 35%;
+			width: 40%;
 		}
 		.link-text {
 			font-size: 1.3rem;

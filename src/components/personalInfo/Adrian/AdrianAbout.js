@@ -11,7 +11,14 @@ import subImg3 from '../../../assets/adrianPage/sub_img_3.png';
 
 const MAboutPage = styled.div`
 	background-color: white;
-	height: 100vh;
+	width: 100vw;
+
+	* {
+		border: 1px solid orange;
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+	}
 
 	h1,
 	h3,
@@ -20,9 +27,7 @@ const MAboutPage = styled.div`
 	}
 
 	h1 {
-		margin-top: 9%;
-		margin-bottom: 1%;
-		margin-left: 10%;
+		margin-top: 7%;
 		font-size: 5rem;
 		font-family: 'Lobster', cursive, sans-serif;
 	}
@@ -38,27 +43,28 @@ const MAboutPage = styled.div`
 		-moz-text-fill-color: transparent;
 	}
 
+	h1,
 	h3 {
-		margin-left: 10%;
-		margin-bottom: 3%;
-		width: 40%;
+		width: 50%;
+	}
+
+	h3 {
 		font-size: 1.7rem;
 		font-weight: 600;
 		color: #555555;
 	}
 
 	p {
-		position: absolute;
-		width: 40%;
-		left: 10%;
-		bottom: 10%;
 		font-size: 1rem;
 	}
 
-	.test {
+	.container {
 		display: flex;
 		flex-flow: column;
+		justify-content: space-around;
 		height: 100%;
+		width: 80%;
+		margin: 0 auto;
 	}
 
 	.heroImg,
@@ -70,48 +76,48 @@ const MAboutPage = styled.div`
 	.heroImg,
 	.subImg {
 		box-shadow: 6px 6px 10px rgba(122, 122, 122, 0.5);
-		border-radius: 20px;
+		border-radius: 30px;
 	}
 
 	.heroImg {
 		position: absolute;
 		right: 10%;
 		top: 50%;
-		width: 25%;
+		width: 28%;
 		transform: translate(0%, -50%);
 	}
 	.subImages {
-		margin-left: 10%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 60%;
 	}
 	.subImg {
-		margin-right: 2%;
-		width: 13%;
+		width: 30%;
 	}
 
-	.seeMore {
-		position: absolute;
-		bottom: 5%;
-		left: 50%;
-		font-size: 2.5rem;
-		font-weight: bold;
-		transform: translate(-60%, -50%);
+	footer {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		width: 100%;
+		margin: 0 auto;
 	}
 
 	.socials {
-		position: absolute;
-		right: 10%;
-		bottom: 5%;
 		font-size: 3rem;
-		transform: translate(0%, -50%);
-		/* width: 40%; */
-	}
-
-	.socials > * {
-		margin-left: 55px;
+		display: flex;
+		justify-content: flex-end;
+		width: 50%;
 	}
 
 	.socials a {
+		margin: 0 1.2%;
 		color: #333333;
+	}
+
+	.socials a * {
+		display: flex;
 	}
 
 	.socials a:hover {
@@ -119,55 +125,128 @@ const MAboutPage = styled.div`
 		transition: all 0.3s;
 	}
 
-	.mailImg {
-		margin-top: 1%;
-		transform: scale(1.085, 1.16);
-	}
+	// MEDIA QUERIES
+	@media only screen and (max-width: 425px) {
+		h1 {
+			font-size: 2rem;
+		}
 
-	.linkImg {
-		transform: scale(1.08, 1);
+		h3 {
+			font-size: 1rem;
+		}
+		.socials {
+			font-size: 2.7rem;
+		}
+		.socials a {
+			margin-left: 4%;
+		}
 	}
-
-	@media (max-width: 425px) {
-	}
-	@media (max-width: 426px) {
+	@media only screen and (min-width: 425px) and (max-width: 641px) {
 		/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+		h1 {
+			font-size: 3rem;
+		}
+		h3 {
+			font-size: 1rem;
+		}
+		.socials {
+			font-size: 2.7rem;
+		}
+		.socials a {
+			margin-left: 4%;
+		}
 	}
-	@media (max-width: 641px) {
+	@media only screen and (min-width: 641px) and (max-width: 961px) {
 		/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+		h1 {
+			font-size: 3rem;
+		}
+		h3 {
+			font-size: 1.1rem;
+		}
+		.socials {
+			font-size: 2.7rem;
+		}
+		.socials a {
+			margin-left: 4%;
+		}
 	}
-	@media (max-width: 961px) {
+	@media only screen and (min-width: 961px) and (max-width: 1100px) {
 		/* tablet, landscape iPad, lo-res laptops ands desktops */
+		h1 {
+			font-size: 3rem;
+		}
+		h3 {
+			font-size: 1.2rem;
+		}
+		.socials {
+			font-size: 2.5rem;
+		}
+		.socials a {
+			margin-left: 4%;
+		}
 	}
-	@media (max-width: 1281px) {
+	@media only screen and (min-width: 1100px) and (max-width: 1281px) {
 		/* big landscape tablets, laptops, and desktops */
+		h1 {
+			font-size: 4rem;
+		}
+		h3 {
+			font-size: 1.4rem;
+		}
+		.socials {
+			font-size: 2.7rem;
+		}
+		.socials a {
+			margin-left: 4%;
+		}
 	}
-	@media (min-width: 1281px) {
+	@media only screen and (min-width: 1281px) and (max-width: 1500px) {
+		/* big landscape tablets, laptops, and desktops */
+		h1 {
+			font-size: 5rem;
+		}
+		h3 {
+			font-size: 1.5rem;
+		}
+		.socials {
+			font-size: 3rem;
+		}
+		.socials a {
+			margin-left: 4%;
+		}
+	}
+	@media only screen and (min-width: 1500px) {
+		.socials {
+			font-size: 3rem;
+		}
+		.socials a {
+			margin-left: 7%;
+		}
 	}
 `;
 
 const AdrianAbout = () => {
 	return (
 		<MAboutPage>
-			<div className="test">
-				<div>
-					<h1>
-						Take a Valk on
-						<br />
-						the <span className="gradient-text">Vild</span> Side
-					</h1>
-					<h3>
-						From the Mind and hand of <br />
-						Adrian van Der Valk
-					</h3>
-				</div>
+			<div className="container">
+				<h1>
+					Take a Valk on
+					<br />
+					the <span className="gradient-text">Vild</span> Side
+				</h1>
+				<h3>
+					From the Mind and hand of <br />
+					Adrian van Der Valk
+				</h3>
 
-				<img className="heroImg" src={heroImg} alt="hero" />
-
-				<div className="subImages">
-					<img className="subImg" src={subImg1} alt="pic1" />
-					<img className="subImg" src={subImg2} alt="pic2" />
-					<img className="subImg" src={subImg3} alt="pic3" />
+				<div className="images">
+					<div className="subImages">
+						<img className="subImg" src={subImg1} alt="pic1" />
+						<img className="subImg" src={subImg2} alt="pic2" />
+						<img className="subImg" src={subImg3} alt="pic3" />
+					</div>
+					<img className="heroImg" src={heroImg} alt="hero" />
 				</div>
 
 				<footer>

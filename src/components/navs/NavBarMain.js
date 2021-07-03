@@ -8,16 +8,19 @@ const Nav = styled.div`
 	position: absolute;
 	top: 3%;
 	width: 100%;
+	z-index: 20;
+
 	*,
 	*::before,
 	*::after {
 		margin: 0;
 		padding: 0;
 		box-sizing: border-box;
-		z-index: 1;
+		z-index: 10;
 		color: white;
 		list-style: none;
 		text-decoration: none;
+		border: 1px solid blue;
 	}
 
 	nav {
@@ -108,20 +111,12 @@ const Nav = styled.div`
 		background-color: #3e8e41;
 	}
 
-	@media (max-width: 425px) {
-		.logo {
-			width: 2rem;
-		}
-	}
-	@media (max-width: 426px) {
-		/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
-		.logo {
-			width: 3rem;
-		}
-	}
-	@media (max-width: 641px) {
-		/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
-		body {
+	// MEDIA QUERIES
+	@media screen and (max-width: 425px) {
+		/* body {
+			overflow-x: hidden;
+		} */
+		nav {
 			overflow-x: hidden;
 		}
 
@@ -131,7 +126,7 @@ const Nav = styled.div`
 			height: 60vh;
 			top: 6vh;
 			background: transparent;
-			display: flex;
+			display: none;
 			flex-direction: column;
 			align-items: center;
 			width: 30%;
@@ -152,45 +147,104 @@ const Nav = styled.div`
 		.logo {
 			width: 5rem;
 		}
-	}
-	@media (max-width: 961px) {
-		/* tablet, landscape iPad, lo-res laptops ands desktops */
 		.link-text {
 			font-size: 0.8rem;
 		}
+	}
+	@media screen and (min-width: 425px) and (max-width: 641px) {
+		/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+		nav {
+			overflow-x: hidden;
+		}
+
 		.nav-links {
-			width: 70%;
+			position: absolute;
+			right: 0px;
+			height: 60vh;
+			top: 6vh;
+			background: transparent;
+			display: none;
+			flex-direction: column;
+			align-items: center;
+			width: 30%;
+			transform: translateX(100%);
+			transition: transform 0.5s ease-in;
+		}
+		.nav-links li {
+			opacity: 0;
+		}
+		.nav-links li a,
+		.nav-links li button {
+			color: #db8ca1;
+		}
+		.burger {
+			display: block;
+			cursor: pointer;
 		}
 		.logo {
-			width: 8rem;
+			width: 7rem;
+		}
+		.link-text {
+			font-size: 0.8rem;
 		}
 	}
-	@media (max-width: 1281px) {
-		/* big landscape tablets, laptops, and desktops */
+	@media screen and (min-width: 641px) and (max-width: 961px) {
+		/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+
+		.logo {
+			width: 8.5rem;
+		}
+		.nav-links {
+			width: 60%;
+		}
+
 		.link-text {
 			font-size: 0.9rem;
 		}
+	}
+	@media screen and (min-width: 961px) and (max-width: 1100px) {
+		/* tablet, landscape iPad, lo-res laptops ands desktops */
+
 		.nav-links {
 			width: 50%;
 		}
-		.logo {
-			width: 9rem;
+
+		.link-text {
+			font-size: 1rem;
 		}
 	}
-	@media (min-width: 1281px) {
-		.link-text {
-			font-size: 1.1rem;
-		}
+	@media screen and (min-width: 1100px) and (max-width: 1281px) {
 		.nav-links {
-			width: 50%;
+			width: 40%;
 		}
-		.logo {
-			width: 10rem;
+
+		.link-text {
+			font-size: 1rem;
+		}
+	}
+	@media screen and (min-width: 1281px) and (max-width: 1500px) {
+		/* big landscape tablets, laptops, and desktops */
+
+		.nav-links {
+			width: 40%;
+		}
+
+		.link-text {
+			font-size: 1rem;
+		}
+	}
+	@media screen and (min-width: 1500px) {
+		.nav-links {
+			width: 40%;
+		}
+		.link-text {
+			font-size: 1.3rem;
 		}
 	}
 	/* ANIMATIONS  */
 	.nav-active {
 		transform: translateX(0%);
+		display: flex;
 	}
 
 	@keyframes navLinkFade {

@@ -100,6 +100,7 @@ const MAboutPage = styled.div`
 		transform: scale(1.08, 1);
 	}
 
+
 	@media (max-width: 426px) {
 		background: url(${spaceImageMobile}) no-repeat center center fixed;
 		-webkit-background-size: cover;
@@ -298,6 +299,7 @@ const MAboutPage = styled.div`
 			bottom: 4%;
 			font-size: 2.5rem;
 		}
+
 	}
 `;
 
