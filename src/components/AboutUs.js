@@ -8,9 +8,10 @@ import willimage from '../assets/will_page/will.png';
 const AboutPage = styled.div`
 	background: linear-gradient(170deg, #e8c7fb, #ffffff);
 	color: #81374a;
-
+	/* width: 100vw; */
+	margin: 0 auto;
 	* {
-		border: 1px solid yellow;
+		border: 1px solid green;
 		margin: 0 auto;
 	}
 
@@ -75,10 +76,7 @@ const AboutPage = styled.div`
 		align-items: center;
 	}
 
-	@media (max-width: 425px) {
-	}
-	@media (min-width: 425px) and (max-width: 641px) {
-		/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+	@media only screen and (max-width: 425px) {
 		aboutIntro {
 			padding-top: 10%;
 			margin-bottom: 3%;
@@ -94,7 +92,7 @@ const AboutPage = styled.div`
 			line-height: 1.3;
 		}
 		.aboutIntro p {
-			width: 40ch;
+			width: 90%;
 		}
 		img {
 			width: 70%;
@@ -112,7 +110,42 @@ const AboutPage = styled.div`
 			flex-direction: column-reverse;
 		}
 	}
-	@media (min-width: 641px) and (max-width: 961px) {
+	@media only screen and (min-width: 425px) and (max-width: 641px) {
+		/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+		aboutIntro {
+			padding-top: 10%;
+			margin-bottom: 3%;
+		}
+
+		h1 {
+			padding-top: 5%;
+			font-size: 6rem;
+			font-weight: 100;
+		}
+		p {
+			font-size: 1rem;
+			line-height: 1.3;
+		}
+		.aboutIntro p {
+			width: 90%;
+		}
+		img {
+			width: 70%;
+			height: auto;
+			margin-bottom: 5%;
+		}
+		.gallery {
+			width: 90%;
+		}
+		.personInfo {
+			flex-direction: column;
+			margin-bottom: 5%;
+		}
+		.personInfoOdd {
+			flex-direction: column-reverse;
+		}
+	}
+	@media only screen and (min-width: 641px) and (max-width: 961px) {
 		/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
 		aboutIntro {
 			padding-top: 10%;
@@ -139,7 +172,7 @@ const AboutPage = styled.div`
 			width: 90%;
 		}
 	}
-	@media (min-width: 961px) and (max-width: 1100px) {
+	@media only screen and (min-width: 961px) and (max-width: 1100px) {
 		/* tablet, landscape iPad, lo-res laptops ands desktops */
 		aboutIntro {
 			padding-top: 10%;
@@ -166,7 +199,7 @@ const AboutPage = styled.div`
 			width: 80%;
 		}
 	}
-	@media (min-width: 1100px) and (max-width: 1281px) {
+	@media only screen and (min-width: 1100px) and (max-width: 1281px) {
 		/* big landscape tablets, laptops, and desktops */
 		aboutIntro {
 			padding-top: 10%;
@@ -193,7 +226,7 @@ const AboutPage = styled.div`
 			width: 80%;
 		}
 	}
-	@media (min-width: 1281px) and (max-width: 1500px) {
+	@media only screen and (min-width: 1281px) and (max-width: 1500px) {
 		aboutIntro {
 			padding-top: 10%;
 			margin-bottom: 3%;
@@ -214,7 +247,7 @@ const AboutPage = styled.div`
 			width: 80%;
 		}
 	}
-	@media (min-width: 1500px) {
+	@media only screen and (min-width: 1500px) {
 	}
 `;
 
