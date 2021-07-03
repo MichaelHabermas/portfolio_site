@@ -8,11 +8,21 @@ import willimage from '../assets/will_page/will.png';
 const AboutPage = styled.div`
 	background: linear-gradient(170deg, #e8c7fb, #ffffff);
 	color: #81374a;
-	/* width: 100vw; */
-	margin: 0 auto;
-	* {
-		border: 1px solid green;
+	height: 100%;
+
+	*,
+	*::before,
+	*::after {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		z-index: 10;
+		color: white;
+		list-style: none;
+		text-decoration: none;
+		/* overflow: hidden; */
 		margin: 0 auto;
+		border: 1px solid green;
 	}
 
 	.aboutIntro {
@@ -76,7 +86,7 @@ const AboutPage = styled.div`
 		align-items: center;
 	}
 
-	@media only screen and (max-width: 425px) {
+	@media screen and (max-width: 425px) {
 		aboutIntro {
 			padding-top: 10%;
 			margin-bottom: 3%;
@@ -110,8 +120,9 @@ const AboutPage = styled.div`
 			flex-direction: column-reverse;
 		}
 	}
-	@media only screen and (min-width: 425px) and (max-width: 641px) {
+	@media screen and (min-width: 425px) and (max-width: 641px) {
 		/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+
 		aboutIntro {
 			padding-top: 10%;
 			margin-bottom: 3%;
@@ -145,7 +156,7 @@ const AboutPage = styled.div`
 			flex-direction: column-reverse;
 		}
 	}
-	@media only screen and (min-width: 641px) and (max-width: 961px) {
+	@media screen and (min-width: 641px) and (max-width: 961px) {
 		/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
 		aboutIntro {
 			padding-top: 10%;
@@ -172,7 +183,7 @@ const AboutPage = styled.div`
 			width: 90%;
 		}
 	}
-	@media only screen and (min-width: 961px) and (max-width: 1100px) {
+	@media screen and (min-width: 961px) and (max-width: 1100px) {
 		/* tablet, landscape iPad, lo-res laptops ands desktops */
 		aboutIntro {
 			padding-top: 10%;
@@ -199,7 +210,7 @@ const AboutPage = styled.div`
 			width: 80%;
 		}
 	}
-	@media only screen and (min-width: 1100px) and (max-width: 1281px) {
+	@media screen and (min-width: 1100px) and (max-width: 1281px) {
 		/* big landscape tablets, laptops, and desktops */
 		aboutIntro {
 			padding-top: 10%;
@@ -226,7 +237,7 @@ const AboutPage = styled.div`
 			width: 80%;
 		}
 	}
-	@media only screen and (min-width: 1281px) and (max-width: 1500px) {
+	@media screen and (min-width: 1281px) and (max-width: 1500px) {
 		aboutIntro {
 			padding-top: 10%;
 			margin-bottom: 3%;
@@ -247,7 +258,7 @@ const AboutPage = styled.div`
 			width: 80%;
 		}
 	}
-	@media only screen and (min-width: 1500px) {
+	@media screen and (min-width: 1500px) {
 	}
 `;
 

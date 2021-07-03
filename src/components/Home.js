@@ -125,7 +125,7 @@ const HomeDiv = styled.div`
 	}
 
 	/* MEDIA QUERIES */
-	@media (max-width: 425px) {
+	@media only screen and (max-width: 425px) {
 		background: url(${landingPageMobile}) no-repeat center center fixed;
 		.main-title {
 			font-size: 3rem;
@@ -140,7 +140,7 @@ const HomeDiv = styled.div`
 			transform: translate(0%, -150%);
 		}
 	}
-	@media (min-width: 426px) {
+	@media only screen and (min-width: 426px) {
 		/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
 		background: url(${landingPageTablet}) no-repeat center center fixed;
 		.main-title {
@@ -153,7 +153,7 @@ const HomeDiv = styled.div`
 			transform: translate(0%, -150%);
 		}
 	}
-	@media (min-width: 641px) {
+	@media only screen and (min-width: 641px) {
 		/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
 		background: url(${landingPageDesktop}) no-repeat center center fixed;
 		.main-title {
@@ -166,7 +166,7 @@ const HomeDiv = styled.div`
 			transform: translate(0%, -100%);
 		}
 	}
-	@media (min-width: 961px) {
+	@media only screen and (min-width: 961px) {
 		/* tablet, landscape iPad, lo-res laptops ands desktops */
 		background: url(${landingPageDesktop}) no-repeat center center fixed;
 		.main-title {
@@ -180,7 +180,7 @@ const HomeDiv = styled.div`
 			transform: translate(0%, -60%);
 		}
 	}
-	@media (min-width: 1025px) {
+	@media only screen and (min-width: 1025px) {
 		/* big landscape tablets, laptops, and desktops */
 		background: url(${landingPageDesktop}) no-repeat center center fixed;
 		.main-title {
@@ -191,7 +191,7 @@ const HomeDiv = styled.div`
 			width: 55%;
 		}
 	}
-	@media (min-width: 1281px) {
+	@media only screen and (min-width: 1281px) {
 		background: url(${landingPageWide}) no-repeat center center fixed;
 		.main-title {
 			font-size: 8rem;
@@ -201,23 +201,23 @@ const HomeDiv = styled.div`
 		}
 	}
 
-	@media (max-width: 425px) {
+	@media only screen and (max-width: 425px) {
 	}
-	@media (min-width: 425px) and (max-width: 641px) {
+	@media only screen and (min-width: 425px) and (max-width: 641px) {
 		/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
 	}
-	@media (min-width: 641px) and (max-width: 961px) {
+	@media only screen and (min-width: 641px) and (max-width: 961px) {
 		/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
 	}
-	@media (min-width: 961px) and (max-width: 1100px) {
+	@media only screen and (min-width: 961px) and (max-width: 1100px) {
 		/* tablet, landscape iPad, lo-res laptops ands desktops */
 	}
-	@media (min-width: 1100px) and (max-width: 1281px) {
+	@media only screen and (min-width: 1100px) and (max-width: 1281px) {
 		/* big landscape tablets, laptops, and desktops */
 	}
-	@media (min-width: 1281px) and (max-width: 1500px) {
+	@media only screen and (min-width: 1281px) and (max-width: 1500px) {
 	}
-	@media (min-width: 1500px) {
+	@media only screen and (min-width: 1500px) {
 	}
 `;
 

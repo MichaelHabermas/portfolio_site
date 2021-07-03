@@ -61,7 +61,7 @@ const Wpage = styled.div`
 	}
 
 	// MEDIA QUERIES
-	@media (max-width: 425px) {
+	@media only screen and (max-width: 425px) {
 		body {
 			overflow-x: hidden;
 		}
@@ -98,7 +98,7 @@ const Wpage = styled.div`
 			cursor: pointer;
 		}
 	}
-	@media (min-width: 425px) and (max-width: 641px) {
+	@media only screen and (min-width: 425px) and (max-width: 641px) {
 		/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
 
 		body {
@@ -137,7 +137,7 @@ const Wpage = styled.div`
 			cursor: pointer;
 		}
 	}
-	@media (min-width: 641px) and (max-width: 961px) {
+	@media only screen and (min-width: 641px) and (max-width: 961px) {
 		/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
 		h2 {
 			font-size: 2rem;
@@ -150,7 +150,7 @@ const Wpage = styled.div`
 			font-size: 0.9rem;
 		}
 	}
-	@media (min-width: 961px) and (max-width: 1100px) {
+	@media only screen and (min-width: 961px) and (max-width: 1100px) {
 		/* tablet, landscape iPad, lo-res laptops ands desktops */
 		h2 {
 			font-size: 2rem;
@@ -163,7 +163,7 @@ const Wpage = styled.div`
 			font-size: 1rem;
 		}
 	}
-	@media (min-width: 1100px) and (max-width: 1281px) {
+	@media only screen and (min-width: 1100px) and (max-width: 1281px) {
 		h2 {
 			font-size: 2.4rem;
 		}
@@ -175,7 +175,7 @@ const Wpage = styled.div`
 			font-size: 1rem;
 		}
 	}
-	@media (min-width: 1281px) and (max-width: 1500px) {
+	@media only screen and (min-width: 1281px) and (max-width: 1500px) {
 		/* big landscape tablets, laptops, and desktops */
 		h2 {
 			font-size: 2.7rem;
@@ -188,7 +188,7 @@ const Wpage = styled.div`
 			font-size: 1rem;
 		}
 	}
-	@media (min-width: 1500px) {
+	@media only screen and (min-width: 1500px) {
 		h2 {
 			font-size: 3rem;
 		}

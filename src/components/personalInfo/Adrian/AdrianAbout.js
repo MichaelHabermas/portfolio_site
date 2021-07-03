@@ -11,7 +11,7 @@ import subImg3 from '../../../assets/adrianPage/sub_img_3.png';
 
 const MAboutPage = styled.div`
 	background-color: white;
-	height: 100vh;
+	width: 100vw;
 
 	* {
 		border: 1px solid orange;
@@ -126,7 +126,7 @@ const MAboutPage = styled.div`
 	}
 
 	// MEDIA QUERIES
-	@media (max-width: 425px) {
+	@media only screen and (max-width: 425px) {
 		h1 {
 			font-size: 2rem;
 		}
@@ -141,7 +141,7 @@ const MAboutPage = styled.div`
 			margin-left: 4%;
 		}
 	}
-	@media (min-width: 425px) and (max-width: 641px) {
+	@media only screen and (min-width: 425px) and (max-width: 641px) {
 		/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
 		h1 {
 			font-size: 3rem;
@@ -156,7 +156,7 @@ const MAboutPage = styled.div`
 			margin-left: 4%;
 		}
 	}
-	@media (min-width: 641px) and (max-width: 961px) {
+	@media only screen and (min-width: 641px) and (max-width: 961px) {
 		/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
 		h1 {
 			font-size: 3rem;
@@ -171,7 +171,7 @@ const MAboutPage = styled.div`
 			margin-left: 4%;
 		}
 	}
-	@media (min-width: 961px) and (max-width: 1100px) {
+	@media only screen and (min-width: 961px) and (max-width: 1100px) {
 		/* tablet, landscape iPad, lo-res laptops ands desktops */
 		h1 {
 			font-size: 3rem;
@@ -186,7 +186,7 @@ const MAboutPage = styled.div`
 			margin-left: 4%;
 		}
 	}
-	@media (min-width: 1100px) and (max-width: 1281px) {
+	@media only screen and (min-width: 1100px) and (max-width: 1281px) {
 		/* big landscape tablets, laptops, and desktops */
 		h1 {
 			font-size: 4rem;
@@ -201,7 +201,7 @@ const MAboutPage = styled.div`
 			margin-left: 4%;
 		}
 	}
-	@media (min-width: 1281px) and (max-width: 1500px) {
+	@media only screen and (min-width: 1281px) and (max-width: 1500px) {
 		/* big landscape tablets, laptops, and desktops */
 		h1 {
 			font-size: 5rem;
@@ -216,7 +216,7 @@ const MAboutPage = styled.div`
 			margin-left: 4%;
 		}
 	}
-	@media (min-width: 1500px) {
+	@media only screen and (min-width: 1500px) {
 		.socials {
 			font-size: 3rem;
 		}

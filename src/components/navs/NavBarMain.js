@@ -8,6 +8,8 @@ const Nav = styled.div`
 	position: absolute;
 	top: 3%;
 	width: 100%;
+	z-index: 20;
+
 	*,
 	*::before,
 	*::after {
@@ -18,6 +20,7 @@ const Nav = styled.div`
 		color: white;
 		list-style: none;
 		text-decoration: none;
+		border: 1px solid blue;
 	}
 
 	nav {
@@ -109,8 +112,11 @@ const Nav = styled.div`
 	}
 
 	// MEDIA QUERIES
-	@media (max-width: 425px) {
-		body {
+	@media screen and (max-width: 425px) {
+		/* body {
+			overflow-x: hidden;
+		} */
+		nav {
 			overflow-x: hidden;
 		}
 
@@ -120,7 +126,7 @@ const Nav = styled.div`
 			height: 60vh;
 			top: 6vh;
 			background: transparent;
-			display: flex;
+			display: none;
 			flex-direction: column;
 			align-items: center;
 			width: 30%;
@@ -141,10 +147,13 @@ const Nav = styled.div`
 		.logo {
 			width: 5rem;
 		}
+		.link-text {
+			font-size: 0.8rem;
+		}
 	}
-	@media (min-width: 425px) and (max-width: 641px) {
+	@media screen and (min-width: 425px) and (max-width: 641px) {
 		/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
-		body {
+		nav {
 			overflow-x: hidden;
 		}
 
@@ -154,7 +163,7 @@ const Nav = styled.div`
 			height: 60vh;
 			top: 6vh;
 			background: transparent;
-			display: flex;
+			display: none;
 			flex-direction: column;
 			align-items: center;
 			width: 30%;
@@ -175,8 +184,11 @@ const Nav = styled.div`
 		.logo {
 			width: 7rem;
 		}
+		.link-text {
+			font-size: 0.8rem;
+		}
 	}
-	@media (min-width: 641px) and (max-width: 961px) {
+	@media screen and (min-width: 641px) and (max-width: 961px) {
 		/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
 
 		.logo {
@@ -190,7 +202,7 @@ const Nav = styled.div`
 			font-size: 0.9rem;
 		}
 	}
-	@media (min-width: 961px) and (max-width: 1100px) {
+	@media screen and (min-width: 961px) and (max-width: 1100px) {
 		/* tablet, landscape iPad, lo-res laptops ands desktops */
 
 		.nav-links {
@@ -201,7 +213,7 @@ const Nav = styled.div`
 			font-size: 1rem;
 		}
 	}
-	@media (min-width: 1100px) and (max-width: 1281px) {
+	@media screen and (min-width: 1100px) and (max-width: 1281px) {
 		.nav-links {
 			width: 40%;
 		}
@@ -210,7 +222,7 @@ const Nav = styled.div`
 			font-size: 1rem;
 		}
 	}
-	@media (min-width: 1281px) and (max-width: 1500px) {
+	@media screen and (min-width: 1281px) and (max-width: 1500px) {
 		/* big landscape tablets, laptops, and desktops */
 
 		.nav-links {
@@ -221,7 +233,7 @@ const Nav = styled.div`
 			font-size: 1rem;
 		}
 	}
-	@media (min-width: 1500px) {
+	@media screen and (min-width: 1500px) {
 		.nav-links {
 			width: 40%;
 		}
@@ -232,6 +244,7 @@ const Nav = styled.div`
 	/* ANIMATIONS  */
 	.nav-active {
 		transform: translateX(0%);
+		display: flex;
 	}
 
 	@keyframes navLinkFade {
