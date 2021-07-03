@@ -22,7 +22,7 @@ const AboutPage = styled.div`
 		text-decoration: none;
 		/* overflow: hidden; */
 		margin: 0 auto;
-		border: 1px solid green;
+		/* border: 1px solid green; */
 	}
 
 	.aboutIntro {

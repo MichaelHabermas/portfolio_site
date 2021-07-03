@@ -20,8 +20,8 @@ const MAboutPage = styled.div`
 	height: 100vh;
 
 	* {
-		transition: all .5s ease-in-out;
-		border: 1px solid yellow;
+		transition: all 0.5s ease-in-out;
+		/* border: 1px solid yellow; */
 	}
 
 	.moon {
@@ -30,7 +30,7 @@ const MAboutPage = styled.div`
 		right: 10%;
 		transition: all 1s ease-in-out;
 	}
-	
+
 	.moon:hover {
 		transform: scale(1.5) translate(-10%, 10%);
 	}
@@ -100,7 +100,6 @@ const MAboutPage = styled.div`
 		transform: scale(1.08, 1);
 	}
 
-
 	@media (max-width: 426px) {
 		background: url(${spaceImageMobile}) no-repeat center center fixed;
 		-webkit-background-size: cover;
@@ -112,7 +111,7 @@ const MAboutPage = styled.div`
 		.moon {
 			display: none;
 		}
-	
+
 		h1 {
 			font-size: 2rem;
 			margin-left: 50%;
@@ -120,18 +119,18 @@ const MAboutPage = styled.div`
 			// text-align: center
 			// width: 100%;
 		}
-	
+
 		p {
 			font-size: 1rem;
 			margin-left: 8%;
 			width: 50%;
 		}
-	
+
 		.seeMore {
 			left: 52%;
 			font-size: 2rem;
 		}
-	
+
 		.socials {
 			right: 8%;
 			bottom: 4%;
@@ -150,9 +149,9 @@ const MAboutPage = styled.div`
 		.moon {
 			right: 2%;
 			bottom: 43%;
-			transform: scale(.6);
+			transform: scale(0.6);
 		}
-	
+
 		h1 {
 			font-size: 2.2rem;
 			margin-left: 50%;
@@ -160,18 +159,18 @@ const MAboutPage = styled.div`
 			// text-align: center
 			// width: 100%;
 		}
-	
+
 		p {
 			font-size: 1.2rem;
 			margin-left: 8%;
 			width: 50%;
 		}
-	
+
 		.seeMore {
 			left: 52%;
 			font-size: 2rem;
 		}
-	
+
 		.socials {
 			right: 8%;
 			bottom: 4%;
@@ -186,15 +185,15 @@ const MAboutPage = styled.div`
 		-o-background-size: cover;
 		background-size: cover;
 		height: 100vh;
-		
+
 		.moon {
 			right: 2%;
 			bottom: 43%;
-			transform: scale(.6);
+			transform: scale(0.6);
 		}
-	
+
 		.moon:hover {
-			transform: scale(.6) translate(-8%, 8%);
+			transform: scale(0.6) translate(-8%, 8%);
 		}
 
 		h1 {
@@ -203,19 +202,19 @@ const MAboutPage = styled.div`
 			margin-bottom: 7%;
 			margin-top: 6%;
 		}
-	
+
 		p {
 			font-size: 1.1rem;
 			margin-left: 8%;
 			width: 50%;
 		}
-	
+
 		.seeMore {
 			left: 55%;
 			bottom: 3%;
 			font-size: 1.5rem;
 		}
-	
+
 		.socials {
 			right: 4%;
 			bottom: 1.5%;
@@ -230,32 +229,32 @@ const MAboutPage = styled.div`
 		-o-background-size: cover;
 		background-size: cover;
 		height: 100vh;
-		
+
 		.moon {
 			right: 4%;
-			transform: scale(.7);
+			transform: scale(0.7);
 		}
-	
+
 		.moon:hover {
-			transform: scale(.9) translate(-8%, 8%);
+			transform: scale(0.9) translate(-8%, 8%);
 		}
-	
+
 		h1 {
 			font-size: 3rem;
 			margin-left: 8%;
 		}
-	
+
 		p {
 			font-size: 1.3rem;
 			margin-left: 8%;
 			width: 50%;
 		}
-	
+
 		.seeMore {
 			left: 52%;
 			font-size: 2rem;
 		}
-	
+
 		.socials {
 			right: 8%;
 			bottom: 4%;
@@ -272,7 +271,7 @@ const MAboutPage = styled.div`
 
 		.moon {
 			right: 8%;
-			transform: scale(.8);
+			transform: scale(0.8);
 		}
 
 		.moon:hover {
@@ -299,7 +298,6 @@ const MAboutPage = styled.div`
 			bottom: 4%;
 			font-size: 2.5rem;
 		}
-
 	}
 `;
 

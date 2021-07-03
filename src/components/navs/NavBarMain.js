@@ -20,7 +20,7 @@ const Nav = styled.div`
 		color: white;
 		list-style: none;
 		text-decoration: none;
-		border: 1px solid blue;
+		/* border: 1px solid blue; */
 	}
 
 	nav {

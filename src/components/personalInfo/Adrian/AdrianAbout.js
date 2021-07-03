@@ -14,7 +14,7 @@ const MAboutPage = styled.div`
 	width: 100vw;
 
 	* {
-		border: 1px solid orange;
+		/* border: 1px solid orange; */
 		padding: 0;
 		margin: 0;
 		box-sizing: border-box;
