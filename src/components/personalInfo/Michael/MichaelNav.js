@@ -51,6 +51,7 @@ const Mpage = styled.div`
 	// burger styling
 	.burger {
 		display: none;
+
 	}
 
 	.burger div {
@@ -62,10 +63,10 @@ const Mpage = styled.div`
 	}
 
 	// MEDIA QUERIES
+
+
 	@media only screen and (max-width: 425px) {
-		body {
-			overflow-x: hidden;
-		}
+
 		h2 {
 			font-size: 1.5rem;
 		}
@@ -98,11 +99,17 @@ const Mpage = styled.div`
 			cursor: pointer;
 		}
 	}
-	@media only screen and (min-width: 425px) and (max-width: 641px) {
-		/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
-		body {
+
+	@media only screen and (min-width: 427px) and (max-width: 641px) {
+		/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+	
+		
+		nav {
+
 			overflow-x: hidden;
+			left: 10%;
 		}
+
 		h2 {
 			font-size: 1.5rem;
 		}
@@ -111,8 +118,8 @@ const Mpage = styled.div`
 			right: 0px;
 			height: 100vh;
 			top: 0vh;
-			background: white;
-			display: flex;
+			background: transparent;
+			display: none;
 			flex-direction: column;
 			align-items: center;
 			justify-content: space-around;
@@ -121,6 +128,7 @@ const Mpage = styled.div`
 			width: 30%;
 			transform: translateX(100%);
 			transition: transform 0.5s ease-in;
+			font-size: .8rem;
 		}
 		.nav-links li {
 			opacity: 0;
@@ -128,13 +136,15 @@ const Mpage = styled.div`
 		}
 		.nav-links li a,
 		.nav-links li button {
-			color: #333333;
+			color: white;
 		}
 		.burger {
 			display: block;
 			cursor: pointer;
+			background: transparent;
 		}
 	}
+
 	@media only screen and (min-width: 641px) and (max-width: 961px) {
 		/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
 		h2 {
@@ -148,6 +158,7 @@ const Mpage = styled.div`
 			font-size: 0.9rem;
 		}
 	}
+
 	@media only screen and (min-width: 961px) and (max-width: 1100px) {
 		/* tablet, landscape iPad, lo-res laptops ands desktops */
 		h2 {
@@ -156,7 +167,6 @@ const Mpage = styled.div`
 		.nav-links {
 			width: 50%;
 		}
-
 		.link-text {
 			font-size: 1rem;
 		}
@@ -173,6 +183,7 @@ const Mpage = styled.div`
 			font-size: 1rem;
 		}
 	}
+
 	@media only screen and (min-width: 1281px) and (max-width: 1500px) {
 		/* big landscape tablets, laptops, and desktops */
 		h2 {
@@ -201,6 +212,7 @@ const Mpage = styled.div`
 	/* ANIMATIONS  */
 	.nav-active {
 		transform: translateX(0%);
+		display: flex;
 	}
 
 	@keyframes navLinkFade {
