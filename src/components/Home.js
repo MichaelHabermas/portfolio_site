@@ -2,16 +2,18 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-import landingPageWide from '../assets/homePage/landing_page_widescreen.svg';
-import landingPageDesktop from '../assets/homePage/landing_page_desktop.svg';
-import landingPageTablet from '../assets/homePage/landing_page_tablet.svg';
-import landingPageMobile from '../assets/homePage/landing_page_mobile.svg';
+import landingPageWide from '../assets/homePage/landing_page_widescreen.png';
+import landingPageDesktop from '../assets/homePage/landing_page_desktop.png';
+import landingPageTablet from '../assets/homePage/landing_page_tablet.png';
+import landingPageMobile from '../assets/homePage/landing_page_mobile.png';
 
 const HomeDiv = styled.div`
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
 	background-size: cover;
+	background-image: url(${landingPageMobile});
+
 	height: 100vh;
 
 	* {
@@ -125,8 +127,9 @@ const HomeDiv = styled.div`
 	}
 
 	/* MEDIA QUERIES */
-	@media only screen and (max-width: 425px) {
-		background: url(${landingPageMobile}) no-repeat center center fixed;
+	@media only screen and (max-width: 480px) {
+		background-image: url(${landingPageMobile});
+
 		.main-title {
 			font-size: 3rem;
 		}
@@ -142,7 +145,7 @@ const HomeDiv = styled.div`
 	}
 	@media only screen and (min-width: 426px) {
 		/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
-		background: url(${landingPageTablet}) no-repeat center center fixed;
+		/* background: url(${landingPageTablet}) no-repeat center center fixed; */
 		.main-title {
 			font-size: 4rem;
 		}
