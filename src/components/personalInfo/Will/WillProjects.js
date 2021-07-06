@@ -27,8 +27,8 @@ const ProjectsPage = styled.div`
 	height: 100vh;
 
 	/* overflow: hidden; */
-	overscroll-behavior: none;
-	-webkit-overflow-scrolling: touch;
+	/* overscroll-behavior: none; */
+	/* -webkit-overflow-scrolling: touch; */
 
 	header {
 		display: flex;
