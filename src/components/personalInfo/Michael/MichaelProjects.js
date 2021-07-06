@@ -26,7 +26,7 @@ const ProjectsPage = styled.div`
 
 	height: 100%;
 
-	/* overflow: hidden; */
+	overflow: hidden;
 	overscroll-behavior: none;
 	-webkit-overflow-scrolling: touch;
 
