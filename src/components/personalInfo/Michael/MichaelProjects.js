@@ -21,14 +21,14 @@ const ProjectsPage = styled.div`
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
-	position: fixed;
-	inset: 0rem;
+	/* position: fixed;
+	inset: 0rem; */
 
 	height: 100%;
 
-	overflow: hidden;
+	/* overflow: hidden;
 	overscroll-behavior: none;
-	-webkit-overflow-scrolling: touch;
+	-webkit-overflow-scrolling: touch; */
 
 	header {
 		display: flex;
