@@ -65,7 +65,7 @@ const HomeDiv = styled.div`
 		overflow: hidden;
 		animation: animate 6s linear infinite;
 		opacity: 0;
-		padding: 7%;
+		padding: 6%;
 	}
 
 	/* .lastspan {
