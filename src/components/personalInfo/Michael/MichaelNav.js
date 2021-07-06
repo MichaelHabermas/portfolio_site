@@ -51,7 +51,6 @@ const Mpage = styled.div`
 	// burger styling
 	.burger {
 		display: none;
-
 	}
 
 	.burger div {
@@ -64,9 +63,7 @@ const Mpage = styled.div`
 
 	// MEDIA QUERIES
 
-
 	@media only screen and (max-width: 425px) {
-
 		h2 {
 			font-size: 1.5rem;
 		}
@@ -76,7 +73,7 @@ const Mpage = styled.div`
 			height: 100vh;
 			top: 0vh;
 			background: white;
-			display: flex;
+			display: none;
 			flex-direction: column;
 			align-items: center;
 			justify-content: space-around;
@@ -102,10 +99,8 @@ const Mpage = styled.div`
 
 	@media only screen and (min-width: 427px) and (max-width: 641px) {
 		/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
-	
-		
-		nav {
 
+		nav {
 			overflow-x: hidden;
 			left: 10%;
 		}
@@ -128,7 +123,7 @@ const Mpage = styled.div`
 			width: 30%;
 			transform: translateX(100%);
 			transition: transform 0.5s ease-in;
-			font-size: .8rem;
+			font-size: 0.8rem;
 		}
 		.nav-links li {
 			opacity: 0;

@@ -76,7 +76,7 @@ const Apage = styled.div`
 			top: 0;
 			margin-top: -10%;
 			background: white;
-			display: flex;
+			display: none;
 			flex-direction: column;
 			align-items: center;
 			justify-content: space-around;
@@ -115,7 +115,7 @@ const Apage = styled.div`
 			top: 0;
 			margin-top: -5%;
 			background: white;
-			display: flex;
+			display: none;
 			flex-direction: column;
 			align-items: center;
 			justify-content: space-around;
@@ -204,6 +204,7 @@ const Apage = styled.div`
 	/* ANIMATIONS  */
 	.nav-active {
 		transform: translateX(0%);
+		display: flex;
 	}
 
 	@keyframes navLinkFade {

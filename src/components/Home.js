@@ -14,6 +14,8 @@ const HomeDiv = styled.div`
 	background-size: cover;
 	background-image: url(${landingPageMobile});
 	overflow: hidden;
+	/* position: fixed;
+	inset: 0rem; */
 
 	height: 100vh;
 
