@@ -13,13 +13,14 @@ const HomeDiv = styled.div`
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-image: url(${landingPageMobile});
-	overflow: hidden;
 	/* position: fixed;
 	inset: 0rem; */
 
 	height: 100vh;
 
+	overflow: hidden;
 	overscroll-behavior: none;
+	-webkit-overflow-scrolling: touch;
 
 	* {
 		margin: 0;
