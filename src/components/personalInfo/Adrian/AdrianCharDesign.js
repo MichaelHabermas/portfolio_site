@@ -23,7 +23,7 @@ const ProjectsPage = styled.div`
 	/* position: fixed;
 	inset: 0rem; */
 
-	height: 100vh;
+	height: 100%;
 
 	/* overflow: hidden;
 	overscroll-behavior: none;
