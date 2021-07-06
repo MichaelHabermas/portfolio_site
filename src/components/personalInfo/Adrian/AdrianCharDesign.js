@@ -27,7 +27,7 @@ const ProjectsPage = styled.div`
 
 	overflow: hidden;
 	overscroll-behavior: none;
-	/* -webkit-overflow-scrolling: touch; */
+	-webkit-overflow-scrolling: touch;
 
 	color: #555555;
 
