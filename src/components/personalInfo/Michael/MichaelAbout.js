@@ -12,12 +12,20 @@ import spaceImageMobile from '../../../assets/michaelPage/space_background_mobil
 import moonImage from '../../../assets/michaelPage/moon.svg';
 
 const MAboutPage = styled.div`
-	background: url(${spaceImage}) no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
+	/* background: url() no-repeat center center fixed; */
+	background-image: url(${spaceImage});
+	background-position: center center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
 	background-size: cover;
+	position: fixed;
+	inset: 0rem;
+
 	height: 100vh;
+
+	overflow: hidden;
+	overscroll-behavior: none;
+	-webkit-overflow-scrolling: touch;
 
 	* {
 		transition: all 0.5s ease-in-out;

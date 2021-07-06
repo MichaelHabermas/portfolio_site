@@ -14,11 +14,21 @@ import pic_9 from '../../../assets/adrianPage/char_design_pics/high_socks.png';
 import pic_10 from '../../../assets/adrianPage/char_design_pics/hair_pocket.png';
 
 const ProjectsPage = styled.div`
-	background: url(${cyanBack}) no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
+	/* background: url() no-repeat center center fixed; */
+	background-image: url(${cyanBack});
+	background-position: center center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
 	background-size: cover;
+	position: fixed;
+	inset: 0rem;
+
+	height: 100vh;
+
+	overflow: hidden;
+	overscroll-behavior: none;
+	-webkit-overflow-scrolling: touch;
+
 	color: #555555;
 
 	/* * {

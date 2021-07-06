@@ -15,11 +15,20 @@ import project_7 from '../../../assets/michaelPage/p7_geo_images.png';
 import webIcon from '../../../assets/generalAssets/web_icon.svg';
 
 const ProjectsPage = styled.div`
-	background: url(${cyanBack}) no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
+	/* background: url() no-repeat center center fixed; */
+	background-image: url(${cyanBack});
+	background-position: center center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
 	background-size: cover;
+	position: fixed;
+	inset: 0rem;
+
+	height: 100vh;
+
+	overflow: hidden;
+	overscroll-behavior: none;
+	-webkit-overflow-scrolling: touch;
 
 	header {
 		display: flex;

@@ -6,12 +6,20 @@ import { RiMailFill } from 'react-icons/ri';
 import mountainSide from '../../../assets/will_page/will_main_widescreen.svg';
 
 const WAboutPage = styled.div`
-	background: url(${mountainSide}) no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
+	/* background: url() no-repeat center center fixed; */
+	background-image: url(${mountainSide});
+	background-position: center center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
 	background-size: cover;
+	position: fixed;
+	inset: 0rem;
+
 	height: 100vh;
+
+	overflow: hidden;
+	overscroll-behavior: none;
+	-webkit-overflow-scrolling: touch;
 
 	.moon {
 		position: absolute;

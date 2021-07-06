@@ -8,11 +8,11 @@ import landingPageTablet from '../assets/homePage/landing_page_tablet.png';
 import landingPageMobile from '../assets/homePage/landing_page_mobile.png';
 
 const HomeDiv = styled.div`
+	background-image: url(${landingPageMobile});
 	background-position: center center;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-image: url(${landingPageMobile});
 	position: fixed;
 	inset: 0rem;
 

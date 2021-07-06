@@ -11,9 +11,19 @@ import subImg3 from '../../../assets/adrianPage/sub_img_3.png';
 
 const MAboutPage = styled.div`
 	background-color: white;
+	// change
+	background-position: center center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: fixed;
+	inset: 0rem;
+
 	height: 100vh;
-	/* position: fixed;
-	inset: 0rem; */
+
+	overflow: hidden;
+	overscroll-behavior: none;
+	-webkit-overflow-scrolling: touch;
 
 	* {
 		/* border: 1px solid orange; */
