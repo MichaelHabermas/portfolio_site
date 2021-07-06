@@ -13,8 +13,8 @@ const HomeDiv = styled.div`
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-image: url(${landingPageMobile});
-	/* position: fixed;
-	inset: 0rem; */
+	position: fixed;
+	inset: 0rem;
 
 	height: 100vh;
 
