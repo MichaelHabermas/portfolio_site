@@ -17,7 +17,6 @@ const AboutPage = styled.div`
 		padding: 0;
 		box-sizing: border-box;
 		z-index: 10;
-		color: white;
 		list-style: none;
 		text-decoration: none;
 		/* overflow: hidden; */
