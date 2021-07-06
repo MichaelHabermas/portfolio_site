@@ -13,6 +13,7 @@ const HomeDiv = styled.div`
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-image: url(${landingPageMobile});
+	overflow: hidden;
 
 	height: 100vh;
 
@@ -21,7 +22,7 @@ const HomeDiv = styled.div`
 		padding: 0;
 		box-sizing: border-box;
 		font-family: 'Poppins', sans-serif;
-		z-index: -1;
+		/* z-index: -1; */
 	}
 
 	.background-image {
