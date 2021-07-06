@@ -11,7 +11,6 @@ import subImg3 from '../../../assets/adrianPage/sub_img_3.png';
 
 const MAboutPage = styled.div`
 	background-color: white;
-	// change
 	background-position: center center;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
