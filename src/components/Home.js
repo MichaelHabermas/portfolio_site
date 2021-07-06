@@ -19,6 +19,8 @@ const HomeDiv = styled.div`
 
 	height: 100vh;
 
+	overscroll-behavior: contain;
+
 	* {
 		margin: 0;
 		padding: 0;
