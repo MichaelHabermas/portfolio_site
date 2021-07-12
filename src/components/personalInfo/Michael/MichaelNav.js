@@ -1,11 +1,7 @@
 import React, { useState } from 'react';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-const slide = keyframes`
-	from { transform: translateX(0%) }
-	to { transform: translateX(50%) }
-`
 
 const Mpage = styled.div`
 	position: absolute;
