@@ -13,19 +13,17 @@ import moonImage from '../../../assets/michaelPage/moon.svg';
 
 const MAboutPage = styled.div`
 	/* background: url() no-repeat center center fixed; */
-	background-image: url(${spaceImage});
+	background-image: url(${spaceImageMobile});
 	background-position: center center;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
-	position: fixed;
-	inset: 0rem;
 
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: space-between;
 	height: 100vh;
-
-	overflow: hidden;
-	overscroll-behavior: none;
-	-webkit-overflow-scrolling: touch;
 
 	* {
 		transition: all 0.5s ease-in-out;
@@ -33,14 +31,16 @@ const MAboutPage = styled.div`
 	}
 
 	.moon {
-		position: absolute;
-		bottom: 50%;
-		right: 10%;
-		transition: all 1s ease-in-out;
+		display: none;
 	}
 
-	.moon:hover {
-		transform: scale(1.5) translate(-10%, 10%);
+	.mainAboutDiv {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-self: center;
+		width: 80%;
+		transform: translateY(70%);
 	}
 
 	h1,
@@ -50,44 +50,38 @@ const MAboutPage = styled.div`
 	}
 
 	h1 {
-		margin-left: 10%;
-		margin-bottom: 4%;
-		margin-top: 5%;
-		font-size: 5rem;
+		font-size: 2rem;
+		text-align: left;
 	}
 
-	p {
-		width: 40%;
-		margin-left: 10%;
-		font-size: 1.7rem;
+	p {	
+		margin-top: 15%;
+		font-size: 1.1rem;
+		width: 90%;
 	}
 
-	.test {
+	footer {
 		display: flex;
-		flex-flow: column;
-		justify-content: space-evenly;
-		height: 100vh;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
 	}
 
 	.seeMore {
-		position: absolute;
-		bottom: 5%;
-		left: 50%;
-		font-size: 2.5rem;
+		font-size: 1.6rem;
 		font-weight: bold;
-		transform: translate(-60%, -50%);
+		transform: translate(6%, -50%);
 	}
 
 	.socials {
-		position: absolute;
-		right: 10%;
-		bottom: 5%;
-		font-size: 3rem;
-		transform: translate(0%, -50%);
+		display: flex;
+		justify-content: space-evenly;
+		font-size: 2rem;
+		width: 90%;
 	}
 
 	.socials > * {
-		margin-left: 20px;
+		// margin-left: 20px;
 	}
 
 	.socials a {
@@ -108,129 +102,56 @@ const MAboutPage = styled.div`
 		transform: scale(1.08, 1);
 	}
 
-	@media (max-width: 426px) {
-		background: url(${spaceImageMobile}) no-repeat center center fixed;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover;
-		height: 100vh;
+	@media (max-width: 500px) {
 
-		.moon {
-			display: none;
-		}
-
-		h1 {
-			font-size: 2rem;
-			margin-left: 50%;
-			transform: translate(-50%, -50%);
-			// text-align: center
-			// width: 100%;
-		}
-
-		p {
-			font-size: 1rem;
-			margin-left: 8%;
-			width: 50%;
-		}
-
-		.seeMore {
-			left: 52%;
-			font-size: 2rem;
-		}
-
-		.socials {
-			right: 8%;
-			bottom: 4%;
-			font-size: 2.2rem;
-		}
 	}
-	@media screen and (min-width: 427px) and (max-width: 641px) {
+	@media (min-width: 500px) {
 		background: url(${spaceImageTabletTest}) no-repeat center center fixed;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
 		background-size: cover;
 		height: 100vh;
-		width: 100vw;
 
 		.moon {
-			right: 2%;
-			bottom: 43%;
-			transform: scale(0.6);
+			display: block;
+			position: absolute;
+			bottom: 41%;
+			left: 55%;
+			transition: all 1s ease-in-out;
+			transform: scale(.45)
 		}
-
-		h1 {
-			font-size: 2.2rem;
-			margin-left: 50%;
-			transform: translate(-50%, -50%);
-			// text-align: center
-			// width: 100%;
-		}
-
-		p {
-			font-size: 1.2rem;
-			margin-left: 8%;
-			width: 50%;
-		}
-
-		.seeMore {
-			left: 52%;
-			font-size: 2rem;
-		}
-
-		.socials {
-			right: 8%;
-			bottom: 4%;
-			font-size: 2.2rem;
-		}
-	}
-
-	@media (min-width: 642px) and (max-width: 799px) {
-		background: url(${spaceImageTablet}) no-repeat center center fixed;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover;
-		height: 100vh;
-
-		.moon {
-			right: 2%;
-			bottom: 43%;
-			transform: scale(0.6);
-		}
-
+	
 		.moon:hover {
-			transform: scale(0.6) translate(-8%, 8%);
+			transform: scale(.65) translate(-10%, 10%);
+		}
+
+		.mainAboutDiv {
+			transform: translateY(60%);
 		}
 
 		h1 {
-			font-size: 2.5rem;
-			margin-left: 8%;
-			margin-bottom: 7%;
-			margin-top: 6%;
+			font-size: 2.3rem;
 		}
 
 		p {
 			font-size: 1.1rem;
-			margin-left: 8%;
-			width: 50%;
+			width: 60%;
 		}
 
 		.seeMore {
-			left: 55%;
-			bottom: 3%;
-			font-size: 1.5rem;
+			font-size: 1.7rem;
 		}
 
 		.socials {
-			right: 4%;
-			bottom: 1.5%;
-			font-size: 2rem;
+			font-size: 2.1rem;
 		}
 	}
 
-	@media (min-width: 800px) and (max-width: 961px) {
+
+	/* Tablet */
+
+	@media (min-width: 650px) {
 		background: url(${spaceImageTablet}) no-repeat center center fixed;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
@@ -239,37 +160,76 @@ const MAboutPage = styled.div`
 		height: 100vh;
 
 		.moon {
-			right: 4%;
-			transform: scale(0.7);
+			left: 62%;
+			bottom: 45%;
+			transform: scale(.6)
+		}
+	
+		.moon:hover {
+			transform: scale(.8) translate(-10%, 10%);
 		}
 
+		.mainAboutDiv {
+			transform: translateY(48%);
+		}
+
+		h1 {
+			font-size: 2.8rem;
+		}
+
+		p {
+			margin-top: 10%;
+			font-size: 1.3rem;
+		}
+
+		.seeMore {
+			font-size: 1.8rem;
+		}
+
+		.socials {
+			font-size: 2.3rem;
+		}
+
+	@media (min-width: 900px) {
+		background: url(${spaceImageTablet}) no-repeat center center fixed;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		height: 100vh;
+
+		.moon {
+			left: 68%;
+			bottom: 42%;
+			transform: scale(.8)
+		}
+	
 		.moon:hover {
-			transform: scale(0.9) translate(-8%, 8%);
+			transform: scale(1) translate(-10%, 10%);
+		}
+
+		.mainAboutDiv {
+			transform: translateY(55%);
 		}
 
 		h1 {
 			font-size: 3rem;
-			margin-left: 8%;
 		}
 
 		p {
-			font-size: 1.3rem;
-			margin-left: 8%;
-			width: 50%;
+			font-size: 1.4rem;
 		}
 
 		.seeMore {
-			left: 52%;
-			font-size: 2rem;
+			font-size: 1.8rem;
 		}
 
 		.socials {
-			right: 8%;
-			bottom: 4%;
-			font-size: 2.2rem;
+			font-size: 2.3rem;
 		}
 	}
-	@media (min-width: 962px) and (max-width: 1281px) {
+
+	@media (min-width: 1000px) {
 		background: url(${spaceImageDesktop}) no-repeat center center fixed;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
@@ -278,49 +238,109 @@ const MAboutPage = styled.div`
 		height: 100vh;
 
 		.moon {
-			right: 8%;
-			transform: scale(0.8);
+			left: 68%;
+			bottom: 42%;
+			transform: scale(.8)
+		}
+	
+		.moon:hover {
+			transform: scale(1) translate(-10%, 10%);
 		}
 
-		.moon:hover {
-			transform: scale(1.2) translate(-8%, 8%);
+		.mainAboutDiv {
+			transform: translateY(53%);
+			width: 85%;
 		}
 
 		h1 {
-			font-size: 4rem;
-			margin-left: 8%;
+			font-size: 3rem;
 		}
 
 		p {
-			font-size: 1.5rem;
-			margin-left: 8%;
+			font-size: 1.4rem;
 		}
 
+		footer {
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-end;
+		}
+	
 		.seeMore {
-			left: 52%;
-			font-size: 2.2rem;
+			font-size: 2.6rem;
+			transform: translateY(-10%);
 		}
 
 		.socials {
-			right: 8%;
-			bottom: 4%;
-			font-size: 2.5rem;
+			justify-content: space-between;
+			font-size: 3rem;
+			width: 30%;
+			margin-right: 2%;
+			margin-left: 7%;
 		}
+	}
+	@media (min-width: 1400px) {
+		background: url(${spaceImage}) no-repeat center center fixed;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+
+		.moon {
+			left: 68%;
+			bottom: 42%;
+			transform: scale(.8)
+		}
+	
+		.moon:hover {
+			transform: scale(1) translate(-10%, 10%);
+		}
+
+		.mainAboutDiv {
+			transform: translateY(60%);
+		}
+
+		h1 {
+			font-size: 3.2rem;
+		}
+
+		p {
+			margin-top: 5%;
+			font-size: 1.6rem;
+		}
+
+		footer {
+			margin-bottom: 1%;
+		}
+	
+		.seeMore {
+			font-size: 2.6rem;
+		}
+
+		.socials {
+			justify-content: space-between;
+			font-size: 3rem;
+			width: 35%;
+			padding-left: 8%;
+			margin-right: 2%;
+			margin-left: 8%;
+		}
+
 	}
 `;
 
 const MichaelAbout = () => {
 	return (
 		<MAboutPage>
-			<div className="test">
+
 				<img className="moon" src={moonImage} alt="moon" />
-				<div>
+				<div className="mainAboutDiv">
 					<h1>Hi, I'm Michael.</h1>
 					<p>
 						A passionate Full Stack Web Developer having experience
 						building Web applications with JavaScript / Reactjs /
 						Nodejs, some other cool libraries and frameworks. I also
-						dabble in design, love prototyping, and <em>adore</em>{' '}
+						dabble in design, love prototyping, and<em> adore</em>{' '}
 						Figma.
 					</p>
 				</div>
@@ -358,7 +378,7 @@ const MichaelAbout = () => {
 						</a>
 					</div>
 				</footer>
-			</div>
+
 		</MAboutPage>
 	);
 };

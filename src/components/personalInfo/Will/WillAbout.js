@@ -3,135 +3,305 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import { RiMailFill } from 'react-icons/ri';
-import mountainSide from '../../../assets/will_page/will_main_widescreen.svg';
+import mountainSideWide from '../../../assets/will_page/will_main_widescreen.svg';
+import mountainSideMobile from '../../../assets/will_page/will_main_mobile.svg';
+import mountainSideMobileLarge from '../../../assets/will_page/will_main_mobile_large.svg';
+import mountainSideTablet from '../../../assets/will_page/will_main_tablet.svg';
+import mountainSideDesktop from '../../../assets/will_page/will_main_desktop.svg';
+
 
 const WAboutPage = styled.div`
-	/* background: url() no-repeat center center fixed; */
-	background-image: url(${mountainSide});
-	background-position: center center;
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	background-size: cover;
-	position: fixed;
-	inset: 0rem;
+background-image: url(${mountainSideMobile});
+background-position: center center;
+background-attachment: fixed;
+background-repeat: no-repeat;
+background-size: cover;
 
-	height: 100vh;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-content: space-between;
+height: 100vh;
 
-	overflow: hidden;
-	overscroll-behavior: none;
-	-webkit-overflow-scrolling: touch;
+* {
+	transition: all 0.5s ease-in-out;
+	/* border: 1px solid yellow; */
+}
 
-	.moon {
-		position: absolute;
-		bottom: 50%;
-		right: 10%;
-		transition: all 1s ease-in-out;
-	}
+.mainAboutDiv {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-self: center;
+	width: 80%;
+	margin-top: 20%;
+	transform: translateY(68%);
+}
 
-	.moon:hover {
-		transform: scale(1.5) translate(-10%, 10%);
-	}
+p,
+h1 {
+	color: black;
+}
 
-	h1,
-	p,
-	.seeMore {
-		color: white;
+h1 {
+	font-size: 2rem;
+	text-align: left;
+}
+
+p {	
+	margin-top: 28%;
+	font-size: 1.1rem;
+	width: 90%;
+}
+
+footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+}
+
+.seeMore {
+	font-size: 1.6rem;
+	font-weight: bold;
+	transform: translate(5%, -50%);
+	color: white;
+}
+
+.socials {
+	display: flex;
+	justify-content: space-evenly;
+	font-size: 2rem;
+	width: 90%;
+}
+
+.socials a {
+	color: white;
+}
+
+.socials a:hover {
+	color: cyan;
+	transition: all 0.3s;
+}
+
+.mailImg {
+	margin-top: 1%;
+	transform: scale(1.085, 1.16);
+}
+
+.linkImg {
+	transform: scale(1.08, 1);
+}
+
+/*  --- MOBILE ---  */
+
+@media (max-width: 450px) {
+
+}
+
+@media (min-width: 450px) {
+	.mainAboutDiv {
+		margin-top: 20%;
+		transform: translateY(48%);
 	}
 
 	h1 {
-		position: absolute;
-		/* width: 40%; */
-		top: 22%;
-		left: 10%;
-		font-size: 6.5rem;
+		font-size: 2.3rem;
 	}
 
 	p {
-		position: absolute;
-		width: 40%;
-		top: 43%;
-		right: 10%;
-		font-size: 1.7rem;
+		font-size: 1.2rem;
+		font-weight: 500;
+		margin-top: 32%;
+	}
 	}
 
-	.test {
-		display: flex;
-		flex-flow: column;
-		justify-content: space-evenly;
-		height: 100%;
+	@media (min-width: 500px) {
+		background-image: url(${mountainSideMobileLarge});
+		background-position: center center;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		background-size: cover;
+
+		.mainAboutDiv {
+			margin-top: 15%;
+			transform: translateY(29%);
+		}
+	
+		h1 {
+			font-size: 2.3rem;
+		}
+	
+		p {
+			font-size: 1.3rem;
+			font-weight: 500;
+			margin-top: 35%;
+		}
+		}
 	}
 
-	.seeMore {
-		position: absolute;
-		bottom: 5%;
-		left: 10%;
-		font-size: 2.5rem;
-		font-weight: bold;
-		transform: translate(0%, -100%);
+	@media (min-width: 600px) {
+		background-image: url(${mountainSideTablet});
+		background-position: center center;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		background-size: cover;
+
+		.mainAboutDiv {
+			transform: translateY(30%);
+		}
+	
+		h1 {
+			font-size: 3rem;
+		}
+	
+		p {
+			font-size: 1.7rem;
+			margin-top: 10%;
+		}
+		
+		footer {
+			margin-bottom: 2%;
+		}
+		
+		.seeMore {
+			font-size: 1.9rem;
+			margin-bottom: 2%;
+		}
+		
+		.socials {
+			font-size: 2.8rem;
+		}
 	}
 
-	.socials {
-		position: absolute;
-		right: 10%;
-		bottom: 5%;
-		font-size: 4rem;
-		transform: translate(0%, -40%);
+	@media (min-width: 750px) {
+		p {
+			font-size: 2rem;
+		}
+		
+		footer {
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-end;
+			width: 100%;
+			transform: translateY(20%);
+		}
+	
+		.seeMore {
+			font-size: 2.3rem;
+			font-weight: bold;
+			transform: translate(10%, 0%);
+		}
+
+		.socials {
+			display: flex;
+			justify-content: space-evenly;
+			font-size: 2.5rem;
+			width: 40%;
+			padding-left: 5%;
+		}
 	}
 
-	.socials > * {
-		margin-left: 20px;
+	@media (min-width: 900px) {
+		.mainAboutDiv {
+			margin-top: 20%;
+			transform: translateY(25%);
+		}
+	
+		h1 {
+			font-size: 3.6rem;
+		}
+		
+		.seeMore {
+			font-size: 2.5rem;
+		}
 	}
 
-	.socials a {
-		color: white;
+	@media only screen and (min-width: 1000px) {
+		background-image: url(${mountainSideDesktop});
+		background-position: center center;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		background-size: cover;
+
+		.mainAboutDiv {
+			margin-top: 22%;
+			transform: translateY(30%);
+		}
+	
+		p {
+			margin-top: 5%;
+		}
+	
+		.seeMore {
+			font-size: 2.6rem;
+		}
+
+		.socials {
+			font-size: 3.4rem;
+		}
 	}
 
-	.socials a:hover {
-		color: #5080a2;
-		transition: all 0.3s;
+	@media only screen and (min-width: 1300px) {
+		background-image: url(${mountainSideDesktop});
+		background-position: center center;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		background-size: cover;
+
+		.mainAboutDiv {
+			margin-top: 14%;
+			transform: translateY(25%);
+		}
+	
+		p {
+			margin-top: 8%;
+		}
+	
+		.seeMore {
+			font-size: 2.8rem;
+			transform: translateX(-10%);
+		}
+
+		.socials {
+			font-size: 3.8rem;
+		}
 	}
 
-	.mailImg {
-		margin-top: 1%;
-		transform: scale(1.085, 1.16);
-	}
-
-	.linkImg {
-		transform: scale(1.08, 1);
-	}
-
-	@media only screen and (max-width: 425px) {
-	}
-	@media only screen and (min-width: 425px) and (max-width: 641px) {
-		/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
-	}
-	@media only screen and (min-width: 641px) and (max-width: 961px) {
-		/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
-	}
-	@media only screen and (min-width: 961px) and (max-width: 1100px) {
-		/* tablet, landscape iPad, lo-res laptops ands desktops */
-	}
-	@media only screen and (min-width: 1100px) and (max-width: 1281px) {
-		/* big landscape tablets, laptops, and desktops */
-	}
-	@media only screen and (min-width: 1281px) and (max-width: 1500px) {
-	}
 	@media only screen and (min-width: 1500px) {
+		background-image: url(${mountainSideWide});
+		background-position: center center;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		background-size: cover;
+
+		.mainAboutDiv {
+			margin-top: 14%;
+			transform: translateY(25%);
+		}
+	
+		p {
+			margin-top: 5%;
+		}
+	
+		.seeMore {
+			font-size: 2.8rem;
+			transform: translateX(-15%);
+		}
+
+		.socials {
+			font-size: 4rem;
+		}
 	}
 `;
 
 const WillAbout = () => {
 	return (
 		<WAboutPage>
-			<div className="test">
-				<div>
-					<h1>Hi, I'm Will.</h1>
+				<div className='mainAboutDiv'>
+					<h1>This is Will.</h1>
 					<p>
-						{/* // fix this  */}A passionate Full Stack Web
-						Developer having experience building Web applications
-						with JavaScript / React / Nodejs, some other cool
-						libraries and frameworks. I also dabble in design, love
-						prototyping, and <em>adore</em> Figma.
+						An enthusiastic software engineer, 
 					</p>
 				</div>
 				<footer>
@@ -159,7 +329,6 @@ const WillAbout = () => {
 						</a>
 					</div>
 				</footer>
-			</div>
 		</WAboutPage>
 	);
 };
