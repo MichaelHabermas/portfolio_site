@@ -3,7 +3,8 @@ import styled from 'styled-components';
 
 import { FaGithub } from 'react-icons/fa';
 
-import cyanBack from '../../../assets/michaelPage/RectangleCyan.svg';
+// import cyanBack from '../../../assets/michaelPage/RectangleCyan.svg';
+import michaelProjectsBGWide from '../../../assets/michaelPage/michael_projects_widescreen.png';
 import profilePic from '../../../assets/michaelPage/michael_peru_buddy.png';
 import project_1 from '../../../assets/michaelPage/p1_recipeazy.png';
 import project_2 from '../../../assets/michaelPage/p2_water_plants.png';
@@ -16,7 +17,7 @@ import webIcon from '../../../assets/generalAssets/web_icon.svg';
 
 const ProjectsPage = styled.div`
 	/* background: url() no-repeat center center fixed; */
-	background-image: url(${cyanBack});
+	background-image: url(${michaelProjectsBGWide});
 	background-position: center center;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
