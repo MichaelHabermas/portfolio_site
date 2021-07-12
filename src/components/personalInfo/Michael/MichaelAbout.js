@@ -18,6 +18,9 @@ const MAboutPage = styled.div`
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
+	position: fixed;
+	inset: 0rem;
+
 
 	display: flex;
 	flex-wrap: wrap;

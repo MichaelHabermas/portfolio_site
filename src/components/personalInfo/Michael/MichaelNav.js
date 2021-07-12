@@ -1,11 +1,7 @@
 import React, { useState } from 'react';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-const slide = keyframes`
-	from { transform: translateX(0%) }
-	to { transform: translateX(50%) }
-`
 
 const Mpage = styled.div`
 	position: absolute;
@@ -52,10 +48,11 @@ const Mpage = styled.div`
 		height: 100%;
 	}
 
-	// burger styling
-	.burger {
-		display: none;
-	}
+	// --burger styling-- //
+
+	// .burger {
+	// 	display: none;
+	// }
 
 	.burger div {
 		width: 25px;
@@ -103,7 +100,7 @@ const Mpage = styled.div`
 		}
 	}
 
-	@media (min-width: 425px) {
+	@media (max-width: 450px) {
 		/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
 
 		nav {
@@ -146,8 +143,9 @@ const Mpage = styled.div`
 		}
 	}
 
-	@media only screen and (min-width: 641px) and (max-width: 961px) {
+	@media (min-width: 450px) {
 		/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+
 		h2 {
 			font-size: 2rem;
 		}
@@ -157,6 +155,11 @@ const Mpage = styled.div`
 
 		.link-text {
 			font-size: 0.9rem;
+		}
+
+		// burger styling
+		.burger {
+			display: none;
 		}
 	}
 
