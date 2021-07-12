@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { Link } from 'react-router-dom';
+
+const slide = keyframes`
+	from { transform: translateX(0%) }
+	to { transform: translateX(50%) }
+`
 
 const Mpage = styled.div`
 	position: absolute;
-	top: 3%;
 	width: 100%;
 	*,
 	*::before,
@@ -26,7 +30,7 @@ const Mpage = styled.div`
 		font-family: 'Poppins', sans-serif;
 		min-height: 10vh;
 		background: transparent;
-		width: 80%;
+		width: 85%;
 		margin: auto;
 	}
 
@@ -72,14 +76,16 @@ const Mpage = styled.div`
 			right: 0px;
 			height: 100vh;
 			top: 0vh;
-			background: white;
+			background: linear-gradient(100deg, #33ccff 0%, #ff99cc 100%);
+			border-top-left-radius: 40px;
+			border-bottom-left-radius: 40px;
 			display: none;
-			flex-direction: column;
+			flex-direction: column-reverse;
 			align-items: center;
-			justify-content: space-around;
-			padding-top: 10%;
-			padding-bottom: 70%;
-			width: 30%;
+			justify-content: space-evenly;
+			// padding-top: 10%;
+			padding-bottom: 25%;
+			width: 25%;
 			transform: translateX(100%);
 			transition: transform 0.5s ease-in;
 		}
@@ -97,7 +103,7 @@ const Mpage = styled.div`
 		}
 	}
 
-	@media only screen and (min-width: 427px) and (max-width: 641px) {
+	@media (min-width: 425px) {
 		/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
 
 		nav {
@@ -240,7 +246,33 @@ const MichaelNav = () => {
 				<Link to="/personal-info/michael/">
 					<h2>Michael Habermas</h2>
 				</Link>
-				<ul className={isOpen ? 'nav-links nav-active' : 'nav-links'}>
+				<ul className={isOpen ? 'nav-links nav-active' : 'nav-links'} 
+				// style={
+				// 			isOpen
+				// 				? {
+				// 						animation: `navLinkFade 0.5s ease forwards ${
+				// 							1 / 7 + 0.15
+				// 						}s`,
+				// 						transform: "translateX(0%)"
+				// 				  }
+				// 				: { animation: '' }
+				// 		}
+						>
+					<li
+						style={
+							isOpen
+								? {
+										animation: `navLinkFade 0.5s ease forwards ${
+											1 / 7 + 0.15
+										}s`
+								  }
+								: { animation: '' }
+						}
+					>
+						<a className="link-text" href="/">
+							Home
+						</a>
+					</li>
 					<li
 						style={
 							isOpen
@@ -275,21 +307,6 @@ const MichaelNav = () => {
 							href={`mailto:michaelghabermas@gmail.com`}
 						>
 							Contact
-						</a>
-					</li>
-					<li
-						style={
-							isOpen
-								? {
-										animation: `navLinkFade 0.5s ease forwards ${
-											1 / 7 + 0.15
-										}s`
-								  }
-								: { animation: '' }
-						}
-					>
-						<a className="link-text" href="/">
-							Back to Main
 						</a>
 					</li>
 				</ul>
