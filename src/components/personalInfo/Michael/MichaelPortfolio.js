@@ -13,12 +13,29 @@ const MichaelPortfolioStyles = styled.div`
 	}
 
 	color: red;
-	width: 90%;
-	margin: 0 auto;
 
 	h1,
 	h2 {
 		text-align: center;
+	}
+
+	.landing,
+	.skills,
+	.projects {
+	}
+	.landing {
+	}
+
+	.skills {
+		background-color: white;
+	}
+
+	.projects {
+	}
+
+	.sub_section {
+		width: 90%;
+		margin: 0 auto;
 	}
 
 	@media screen and (min-width: 480px) {
@@ -42,20 +59,34 @@ function MichaelPortfolio() {
 	return (
 		<MichaelPortfolioStyles>
 			<section className="landing">
-				<nav></nav>
-				<h1>Hi, I'm Michael</h1>
-				<p>
-					A passionate Full Stack Web Developer having experience building Web
-					applications with JavaScript / React / Nodejs, some other cool
-					libraries and frameworks. I also dabble in design, love prototyping,
-					and<em> adore</em> Figma.
-				</p>
+				<div className="sub_section">
+					<nav>Hi, I'm the nav!</nav>
+					<h1>Hi, I'm Michael</h1>
+					<p>
+						A passionate Full Stack Web Developer having experience building Web
+						applications with JavaScript / React / Nodejs, some other cool
+						libraries and frameworks. I also dabble in design, love prototyping,
+						and<em> adore</em> Figma.
+					</p>
+					<div className="arrow">arrow</div>
+				</div>
 			</section>
+
 			<section className="skills">
-				<h2>Skills</h2>
+				<div className="sub_section">
+					<h2>Skills</h2>
+					<div className="skill_icons">skill</div>
+				</div>
 			</section>
+
 			<section className="projects">
-				<h2>Projects</h2>
+				<div className="sub_section">
+					<h2>Projects</h2>
+					<div className="project_cards">
+						<div className="card">card</div>
+						<div className="card">card</div>
+					</div>
+				</div>
 			</section>
 		</MichaelPortfolioStyles>
 	);
