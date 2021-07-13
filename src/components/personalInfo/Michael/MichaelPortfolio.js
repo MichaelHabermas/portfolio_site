@@ -2,6 +2,18 @@ import React from "react";
 import styled from "styled-components";
 
 // icon imports
+import { RiMailFill } from "react-icons/ri";
+import { FaLinkedin, FaGithub, FaTwitterSquare } from "react-icons/fa";
+
+// asset imports
+import landingBackgroundMobile from "../../../assets/michaelPage/michael_landing_background_mobile.svg";
+import projectsBackgroundMobile from "../../../assets/michaelPage/projects_background_mobile.png";
+
+// import spaceImage from "../../../assets/michaelPage/michael_main_widescreen.svg";
+// import spaceImageDesktop from "../../../assets/michaelPage/space_background_desktop.svg";
+// import spaceImageTablet from "../../../assets/michaelPage/space_background_tablet.svg";
+// import spaceImageTabletTest from "../../../assets/michaelPage/michael_main_tablet.png";
+// import moonImage from "../../../assets/michaelPage/moon.svg";
 
 // built for mobile first, media queries at the end
 const MichaelPortfolioStyles = styled.div`
@@ -19,15 +31,7 @@ const MichaelPortfolioStyles = styled.div`
 		border: 1px dotted rebeccapurple;
 	}
 
-	color: red;
-
-	background-position: center center;
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	background-size: cover;
-	position: fixed;
-	inset: 0rem;
-	height: 100vh;
+	color: red; /* for testing purposes */
 
 	h1,
 	h2 {
@@ -40,6 +44,12 @@ const MichaelPortfolioStyles = styled.div`
 	}
 
 	.landing {
+		background-image: url(${landingBackgroundMobile});
+		background-position: center center;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 100vh;
 	}
 
 	.skills {
@@ -47,6 +57,11 @@ const MichaelPortfolioStyles = styled.div`
 	}
 
 	.projects {
+		background-image: url(${projectsBackgroundMobile});
+		/* background-position: center center;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		background-size: cover; */
 	}
 
 	.sub_section {
@@ -91,7 +106,12 @@ function MichaelPortfolio() {
 			<section className="skills">
 				<div className="sub_section">
 					<h2>Skills</h2>
-					<div className="skill_icons">skill</div>
+					<div className="skill_icons">
+						<FaLinkedin className="icon" />
+						<FaGithub className="icon" />
+						<FaTwitterSquare className="icon" />
+						<RiMailFill className="icon" />
+					</div>
 				</div>
 			</section>
 
@@ -102,6 +122,13 @@ function MichaelPortfolio() {
 						<div className="card">card</div>
 						<div className="card">card</div>
 					</div>
+					<footer>
+						<FaLinkedin className="icon" />
+						<FaGithub className="icon" />
+						<button>Download My CV</button>
+						<FaTwitterSquare className="icon" />
+						<RiMailFill className="icon" />
+					</footer>
 				</div>
 			</section>
 		</MichaelPortfolioStyles>
