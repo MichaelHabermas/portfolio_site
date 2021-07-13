@@ -8,7 +8,7 @@ const MichaelPortfolioStyles = styled`
 function MichaelPortfolio() {
 	return (
 		<MichaelPortfolioStyles>
-			<h1> Hi, I'm Michael</h1>
+			<h1>Hi, I'm Michael</h1>
 		</MichaelPortfolioStyles>
 	);
 }
