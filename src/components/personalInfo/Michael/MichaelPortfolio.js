@@ -1,16 +1,25 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 // built for mobile first, media queries at the end
 const MichaelPortfolioStyles = styled.div`
+	* {
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+		list-style: none;
+		text-decoration: none;
+		border: 1px dotted rebeccapurple;
+	}
 
 	color: red;
+	width: 90%;
+	margin: 0 auto;
 
-    * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-        
+	h1,
+	h2 {
+		text-align: center;
+	}
 
 	@media screen and (min-width: 480px) {
 		color: blue;
@@ -32,16 +41,22 @@ const MichaelPortfolioStyles = styled.div`
 function MichaelPortfolio() {
 	return (
 		<MichaelPortfolioStyles>
-			<div>
+			<section className="landing">
 				<nav></nav>
 				<h1>Hi, I'm Michael</h1>
 				<p>
-					A passionate Full Stack Web Developer having experience
-					building Web applications with JavaScript / React / Nodejs,
-					some other cool libraries and frameworks. I also dabble in
-					design, love prototyping, and<em> adore</em> Figma.
+					A passionate Full Stack Web Developer having experience building Web
+					applications with JavaScript / React / Nodejs, some other cool
+					libraries and frameworks. I also dabble in design, love prototyping,
+					and<em> adore</em> Figma.
 				</p>
-			</div>
+			</section>
+			<section className="skills">
+				<h2>Skills</h2>
+			</section>
+			<section className="projects">
+				<h2>Projects</h2>
+			</section>
 		</MichaelPortfolioStyles>
 	);
 }
