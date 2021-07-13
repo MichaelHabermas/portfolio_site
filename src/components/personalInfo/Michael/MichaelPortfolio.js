@@ -3,6 +3,11 @@ import styled from "styled-components";
 
 // built for mobile first, media queries at the end
 const MichaelPortfolioStyles = styled.div`
+	html {
+		scroll-behavior: smooth;
+		scroll-padding-top: 5rem;
+	}
+
 	* {
 		padding: 0;
 		margin: 0;
@@ -13,6 +18,14 @@ const MichaelPortfolioStyles = styled.div`
 	}
 
 	color: red;
+	background-image: url(${spaceImageMobile});
+	background-position: center center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: fixed;
+	inset: 0rem;
+	height: 100vh;
 
 	h1,
 	h2 {
@@ -23,6 +36,7 @@ const MichaelPortfolioStyles = styled.div`
 	.skills,
 	.projects {
 	}
+
 	.landing {
 	}
 
