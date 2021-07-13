@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
+// icon imports
+
 // built for mobile first, media queries at the end
 const MichaelPortfolioStyles = styled.div`
 	html {
@@ -18,7 +20,7 @@ const MichaelPortfolioStyles = styled.div`
 	}
 
 	color: red;
-	background-image: url(${spaceImageMobile});
+
 	background-position: center center;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
