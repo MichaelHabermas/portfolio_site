@@ -29,7 +29,8 @@ const MAboutPage = styled.div`
 	height: 100vh;
 
 	* {
-		transition: all 0.5s ease-in-out;
+		box-sizing: border-box;
+		// transition: all 0.2s ease-in-out;
 		/* border: 1px solid yellow; */
 	}
 
@@ -93,7 +94,7 @@ const MAboutPage = styled.div`
 
 	.socials a:hover {
 		color: white;
-		transition: all 0.3s;
+		transition: all 0.3s ease-in-out;
 	}
 
 	.mailImg {
@@ -126,6 +127,7 @@ const MAboutPage = styled.div`
 		}
 	
 		.moon:hover {
+			transition: all 1s ease-in-out;
 			transform: scale(.65) translate(-10%, 10%);
 		}
 
@@ -208,6 +210,7 @@ const MAboutPage = styled.div`
 		}
 	
 		.moon:hover {
+			transition: all 1s ease-in-out;
 			transform: scale(1) translate(-10%, 10%);
 		}
 
@@ -247,6 +250,7 @@ const MAboutPage = styled.div`
 		}
 	
 		.moon:hover {
+			transition: all 1s ease-in-out;
 			transform: scale(1) translate(-10%, 10%);
 		}
 
@@ -296,6 +300,7 @@ const MAboutPage = styled.div`
 		}
 	
 		.moon:hover {
+			transition: all 1s ease-in-out;
 			transform: scale(1) translate(-10%, 10%);
 		}
 
