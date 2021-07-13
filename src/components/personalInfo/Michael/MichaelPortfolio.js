@@ -2,6 +2,17 @@ import React from "react";
 import styled from "styled-components";
 
 // icon imports
+import { RiMailFill } from "react-icons/ri";
+import { FaLinkedin, FaGithub, FaTwitterSquare } from "react-icons/fa";
+
+// asset imports
+import landingMobile from "../../../assets/michaelPage/michael_landing_background_mobile.svg";
+
+// import spaceImage from "../../../assets/michaelPage/michael_main_widescreen.svg";
+// import spaceImageDesktop from "../../../assets/michaelPage/space_background_desktop.svg";
+// import spaceImageTablet from "../../../assets/michaelPage/space_background_tablet.svg";
+// import spaceImageTabletTest from "../../../assets/michaelPage/michael_main_tablet.png";
+// import moonImage from "../../../assets/michaelPage/moon.svg";
 
 // built for mobile first, media queries at the end
 const MichaelPortfolioStyles = styled.div`
@@ -21,14 +32,6 @@ const MichaelPortfolioStyles = styled.div`
 
 	color: red;
 
-	background-position: center center;
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	background-size: cover;
-	position: fixed;
-	inset: 0rem;
-	height: 100vh;
-
 	h1,
 	h2 {
 		text-align: center;
@@ -40,6 +43,14 @@ const MichaelPortfolioStyles = styled.div`
 	}
 
 	.landing {
+		background-image: url(${landingMobile});
+		background-position: center center;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: fixed;
+		inset: 0rem;
+		height: 100vh;
 	}
 
 	.skills {
@@ -91,7 +102,12 @@ function MichaelPortfolio() {
 			<section className="skills">
 				<div className="sub_section">
 					<h2>Skills</h2>
-					<div className="skill_icons">skill</div>
+					<div className="skill_icons">
+						<FaLinkedin className="icon" />
+						<FaGithub className="icon" />
+						<FaTwitterSquare className="icon" />
+						<RiMailFill className="icon" />
+					</div>
 				</div>
 			</section>
 
@@ -102,6 +118,12 @@ function MichaelPortfolio() {
 						<div className="card">card</div>
 						<div className="card">card</div>
 					</div>
+					<footer>
+						<FaLinkedin className="icon" />
+						<FaGithub className="icon" />
+						<FaTwitterSquare className="icon" />
+						<RiMailFill className="icon" />
+					</footer>
 				</div>
 			</section>
 		</MichaelPortfolioStyles>
