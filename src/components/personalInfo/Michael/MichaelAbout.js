@@ -1,15 +1,15 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import React from "react";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
 // import { Parallax } from 'react-parallax';
-import { RiMailFill } from 'react-icons/ri';
-import { FaLinkedin, FaGithub, FaTwitterSquare } from 'react-icons/fa';
-import spaceImage from '../../../assets/michaelPage/michael_main_widescreen.svg';
-import spaceImageDesktop from '../../../assets/michaelPage/space_background_desktop.svg';
-import spaceImageTablet from '../../../assets/michaelPage/space_background_tablet.svg';
-import spaceImageTabletTest from '../../../assets/michaelPage/michael_main_tablet.png';
-import spaceImageMobile from '../../../assets/michaelPage/space_background_mobile.svg';
-import moonImage from '../../../assets/michaelPage/moon.svg';
+import { RiMailFill } from "react-icons/ri";
+import { FaLinkedin, FaGithub, FaTwitterSquare } from "react-icons/fa";
+import spaceImage from "../../../assets/michaelPage/michael_main_widescreen.svg";
+import spaceImageDesktop from "../../../assets/michaelPage/space_background_desktop.svg";
+import spaceImageTablet from "../../../assets/michaelPage/space_background_tablet.svg";
+import spaceImageTabletTest from "../../../assets/michaelPage/michael_main_tablet.png";
+import spaceImageMobile from "../../../assets/michaelPage/space_background_mobile.svg";
+import moonImage from "../../../assets/michaelPage/moon.svg";
 
 const MAboutPage = styled.div`
 	/* background: url() no-repeat center center fixed; */
@@ -20,7 +20,6 @@ const MAboutPage = styled.div`
 	background-size: cover;
 	position: fixed;
 	inset: 0rem;
-
 
 	display: flex;
 	flex-wrap: wrap;
@@ -58,7 +57,7 @@ const MAboutPage = styled.div`
 		text-align: left;
 	}
 
-	p {	
+	p {
 		margin-top: 15%;
 		font-size: 1.1rem;
 		width: 90%;
@@ -107,7 +106,6 @@ const MAboutPage = styled.div`
 	}
 
 	@media (max-width: 500px) {
-
 	}
 	@media (min-width: 500px) {
 		background: url(${spaceImageTabletTest}) no-repeat center center fixed;
@@ -123,12 +121,12 @@ const MAboutPage = styled.div`
 			bottom: 41%;
 			left: 55%;
 			transition: all 1s ease-in-out;
-			transform: scale(.45)
+			transform: scale(0.45);
 		}
-	
+
 		.moon:hover {
 			transition: all 1s ease-in-out;
-			transform: scale(.65) translate(-10%, 10%);
+			transform: scale(0.65) translate(-10%, 10%);
 		}
 
 		.mainAboutDiv {
@@ -153,7 +151,6 @@ const MAboutPage = styled.div`
 		}
 	}
 
-
 	/* Tablet */
 
 	@media (min-width: 650px) {
@@ -167,11 +164,11 @@ const MAboutPage = styled.div`
 		.moon {
 			left: 62%;
 			bottom: 45%;
-			transform: scale(.6)
+			transform: scale(0.6);
 		}
-	
+
 		.moon:hover {
-			transform: scale(.8) translate(-10%, 10%);
+			transform: scale(0.8) translate(-10%, 10%);
 		}
 
 		.mainAboutDiv {
@@ -194,6 +191,7 @@ const MAboutPage = styled.div`
 		.socials {
 			font-size: 2.3rem;
 		}
+	}
 
 	@media (min-width: 900px) {
 		background: url(${spaceImageTablet}) no-repeat center center fixed;
@@ -206,9 +204,9 @@ const MAboutPage = styled.div`
 		.moon {
 			left: 68%;
 			bottom: 42%;
-			transform: scale(.8)
+			transform: scale(0.8);
 		}
-	
+
 		.moon:hover {
 			transition: all 1s ease-in-out;
 			transform: scale(1) translate(-10%, 10%);
@@ -246,9 +244,9 @@ const MAboutPage = styled.div`
 		.moon {
 			left: 68%;
 			bottom: 42%;
-			transform: scale(.8)
+			transform: scale(0.8);
 		}
-	
+
 		.moon:hover {
 			transition: all 1s ease-in-out;
 			transform: scale(1) translate(-10%, 10%);
@@ -272,7 +270,7 @@ const MAboutPage = styled.div`
 			flex-direction: row;
 			justify-content: flex-end;
 		}
-	
+
 		.seeMore {
 			font-size: 2.6rem;
 			transform: translateY(-10%);
@@ -296,9 +294,9 @@ const MAboutPage = styled.div`
 		.moon {
 			left: 68%;
 			bottom: 42%;
-			transform: scale(.8)
+			transform: scale(0.8);
 		}
-	
+
 		.moon:hover {
 			transition: all 1s ease-in-out;
 			transform: scale(1) translate(-10%, 10%);
@@ -320,7 +318,7 @@ const MAboutPage = styled.div`
 		footer {
 			margin-bottom: 1%;
 		}
-	
+
 		.seeMore {
 			font-size: 2.6rem;
 		}
@@ -333,60 +331,53 @@ const MAboutPage = styled.div`
 			margin-right: 2%;
 			margin-left: 8%;
 		}
-
 	}
 `;
 
 const MichaelAbout = () => {
 	return (
 		<MAboutPage>
-
-				<img className="moon" src={moonImage} alt="moon" />
-				<div className="mainAboutDiv">
-					<h1>Hi, I'm Michael.</h1>
-					<p>
-						A passionate Full Stack Web Developer having experience
-						building Web applications with JavaScript / Reactjs /
-						Nodejs, some other cool libraries and frameworks. I also
-						dabble in design, love prototyping, and<em> adore</em>{' '}
-						Figma.
-					</p>
-				</div>
-				<footer>
-					<Link
-						className="seeMore"
-						to="/personal-info/michael/projects"
+			<img className="moon" src={moonImage} alt="moon" />
+			<div className="mainAboutDiv">
+				<h1>Hi, I'm Michael.</h1>
+				<p>
+					A passionate Full Stack Web Developer having experience building Web
+					applications with JavaScript / Reactjs / Nodejs, some other cool
+					libraries and frameworks. I also dabble in design, love prototyping,
+					and<em> adore</em> Figma.
+				</p>
+			</div>
+			<footer>
+				<Link className="seeMore" to="/personal-info/michael/projects">
+					See more...
+				</Link>
+				<div className="socials">
+					<a
+						href="https://github.com/MichaelHabermas?tab=repositories"
+						target="_blank"
+						rel="noopener noreferrer"
 					>
-						See more...
-					</Link>
-					<div className="socials">
-						<a
-							href="https://github.com/MichaelHabermas?tab=repositories"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<FaGithub />
-						</a>
-						<a
-							href="https://www.linkedin.com/in/michael-habermas"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<FaLinkedin className="linkImg" />
-						</a>
-						<a href="mailto:michaelghabermas@gmail.com">
-							<RiMailFill className="mailImg" />
-						</a>
-						<a
-							href="https://twitter.com/habermoose"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<FaTwitterSquare />
-						</a>
-					</div>
-				</footer>
-
+						<FaGithub />
+					</a>
+					<a
+						href="https://www.linkedin.com/in/michael-habermas"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<FaLinkedin className="linkImg" />
+					</a>
+					<a href="mailto:michaelghabermas@gmail.com">
+						<RiMailFill className="mailImg" />
+					</a>
+					<a
+						href="https://twitter.com/habermoose"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<FaTwitterSquare />
+					</a>
+				</div>
+			</footer>
 		</MAboutPage>
 	);
 };
