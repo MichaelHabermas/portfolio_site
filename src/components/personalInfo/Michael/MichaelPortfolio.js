@@ -6,7 +6,8 @@ import { RiMailFill } from "react-icons/ri";
 import { FaLinkedin, FaGithub, FaTwitterSquare } from "react-icons/fa";
 
 // asset imports
-import landingMobile from "../../../assets/michaelPage/michael_landing_background_mobile.svg";
+import landingBackgroundMobile from "../../../assets/michaelPage/michael_landing_background_mobile.svg";
+import projectsBackgroundMobile from "../../../assets/michaelPage/projects_background_mobile.png";
 
 // import spaceImage from "../../../assets/michaelPage/michael_main_widescreen.svg";
 // import spaceImageDesktop from "../../../assets/michaelPage/space_background_desktop.svg";
@@ -30,7 +31,7 @@ const MichaelPortfolioStyles = styled.div`
 		border: 1px dotted rebeccapurple;
 	}
 
-	color: red;
+	color: red; /* for testing purposes */
 
 	h1,
 	h2 {
@@ -43,13 +44,11 @@ const MichaelPortfolioStyles = styled.div`
 	}
 
 	.landing {
-		background-image: url(${landingMobile});
+		background-image: url(${landingBackgroundMobile});
 		background-position: center center;
 		background-attachment: fixed;
 		background-repeat: no-repeat;
 		background-size: cover;
-		/* position: fixed; */
-		/* inset: 0rem; */
 		height: 100vh;
 	}
 
@@ -58,6 +57,11 @@ const MichaelPortfolioStyles = styled.div`
 	}
 
 	.projects {
+		background-image: url(${projectsBackgroundMobile});
+		/* background-position: center center;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		background-size: cover; */
 	}
 
 	.sub_section {
@@ -121,6 +125,7 @@ function MichaelPortfolio() {
 					<footer>
 						<FaLinkedin className="icon" />
 						<FaGithub className="icon" />
+						<button>Download My CV</button>
 						<FaTwitterSquare className="icon" />
 						<RiMailFill className="icon" />
 					</footer>
