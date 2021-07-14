@@ -26,7 +26,7 @@ const MichaelPortfolioStyles = styled.div`
 		box-sizing: border-box;
 		list-style: none;
 		text-decoration: none;
-		border: 1px dotted rebeccapurple;
+		/* border: 1px dotted rebeccapurple; */
 	}
 
 	/* for testing purposes */
