@@ -1,6 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
+// component import
+import Nav from "../../personal_info_2/about_us_nav";
+
 // icon imports
 import { RiMailFill } from "react-icons/ri";
 import { FaLinkedin, FaGithub, FaTwitterSquare } from "react-icons/fa";
@@ -28,14 +31,24 @@ const MichaelPortfolioStyles = styled.div`
 		box-sizing: border-box;
 		list-style: none;
 		text-decoration: none;
-		border: 1px dotted rebeccapurple;
+		/* border: 1px dotted rebeccapurple; */
 	}
 
-	color: red; /* for testing purposes */
+	/* for testing purposes */
+	color: red;
+	background-color: black;
 
 	h1,
 	h2 {
 		text-align: center;
+	}
+
+	h1 {
+		font-size: 5rem;
+	}
+
+	h2 {
+		font-size: 3rem;
 	}
 
 	.landing,
@@ -50,6 +63,12 @@ const MichaelPortfolioStyles = styled.div`
 		background-repeat: no-repeat;
 		background-size: cover;
 		height: 100vh;
+
+		color: white;
+	}
+
+	.landing p {
+		font-size: 2rem;
 	}
 
 	.skills {
@@ -58,10 +77,10 @@ const MichaelPortfolioStyles = styled.div`
 
 	.projects {
 		background-image: url(${projectsBackgroundMobile});
-		/* background-position: center center;
-		background-attachment: fixed;
-		background-repeat: no-repeat;
-		background-size: cover; */
+		background-position: center center;
+		/* background-attachment: fixed; */
+		/* background-repeat: no-repeat; */
+		/* background-size: cover;  */
 	}
 
 	.sub_section {
@@ -91,7 +110,7 @@ function MichaelPortfolio() {
 		<MichaelPortfolioStyles>
 			<section className="landing">
 				<div className="sub_section">
-					<nav>Hi, I'm the nav!</nav>
+					<Nav name="Michael Habermas" cvLink="" color="white" />
 					<h1>Hi, I'm Michael</h1>
 					<p>
 						A passionate Full Stack Web Developer having experience building Web

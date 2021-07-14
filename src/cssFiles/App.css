@@ -6,6 +6,7 @@
 	box-sizing: border-box;
 	list-style-type: none;
 	text-decoration: none;
+	font-size: 10px;
 }
 
 body {
@@ -14,8 +15,8 @@ body {
 }
 
 @font-face {
-	font-family: 'scriptina';
-	src: local('scriptina'),
-		url('../fonts/scriptina.regular.ttf') format('truetype');
+	font-family: "scriptina";
+	src: local("scriptina"),
+		url("../fonts/scriptina.regular.ttf") format("truetype");
 	font-weight: normal;
 }
