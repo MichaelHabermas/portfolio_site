@@ -10,7 +10,6 @@ const NavBar = styled.div`
 		text-decoration: none;
 		font-size: 2rem;
 		font-weight: bold;
-		/* border: 1px dotted green; */
 	}
 
 	nav,
