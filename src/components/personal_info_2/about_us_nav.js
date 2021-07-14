@@ -8,10 +8,10 @@ const NavBar = styled.div`
 		box-sizing: border-box;
 		list-style: none;
 		text-decoration: none;
+		font-size: 2rem;
+		font-weight: bold;
 		border: 1px dotted green;
 	}
-
-	padding-top: 5%;
 
 	nav,
 	ul {
@@ -25,10 +25,12 @@ const NavBar = styled.div`
 	}
 
 	li {
-		margin-left: 2rem;
+		margin-left: 3rem;
 	}
 
 	.nameLogo {
+		font-family: "Lobster", cursive, sans-serif;
+		font-size: 3rem;
 	}
 
 	@media screen and (min-width: 480px) {
