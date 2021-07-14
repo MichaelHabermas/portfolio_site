@@ -45,7 +45,16 @@ const MichaelPortfolioStyles = styled.div`
 	}
 
 	h2 {
-		font-size: 3rem;
+		font-size: 5rem;
+		background-color: #f3ec78;
+		/* padding-right: 10px; */
+		background-image: linear-gradient(120deg, #000000, #ff0000);
+		background-size: 100%;
+		-webkit-background-clip: text;
+		-moz-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		-moz-text-fill-color: transparent;
+		font-family: "Lobster", cursive, sans-serif;
 	}
 
 	.landing,
