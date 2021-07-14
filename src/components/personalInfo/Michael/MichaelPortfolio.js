@@ -11,12 +11,7 @@ import { FaLinkedin, FaGithub, FaTwitterSquare } from "react-icons/fa";
 // asset imports
 import landingBackgroundMobile from "../../../assets/michaelPage/michael_landing_background_mobile.svg";
 import projectsBackgroundMobile from "../../../assets/michaelPage/projects_background_mobile.png";
-
-// import spaceImage from "../../../assets/michaelPage/michael_main_widescreen.svg";
-// import spaceImageDesktop from "../../../assets/michaelPage/space_background_desktop.svg";
-// import spaceImageTablet from "../../../assets/michaelPage/space_background_tablet.svg";
-// import spaceImageTabletTest from "../../../assets/michaelPage/michael_main_tablet.png";
-// import moonImage from "../../../assets/michaelPage/moon.svg";
+import arrows from "../../../assets/michaelPage/arrows.svg";
 
 // built for mobile first, media queries at the end
 const MichaelPortfolioStyles = styled.div`
@@ -44,11 +39,22 @@ const MichaelPortfolioStyles = styled.div`
 	}
 
 	h1 {
-		font-size: 5rem;
+		font-size: 6rem;
+		width: 90%;
+		margin: 5% auto;
 	}
 
 	h2 {
-		font-size: 3rem;
+		font-size: 5rem;
+		background-color: #f3ec78;
+		/* padding-right: 10px; */
+		background-image: linear-gradient(120deg, #000000, #ff0000);
+		background-size: 100%;
+		-webkit-background-clip: text;
+		-moz-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		-moz-text-fill-color: transparent;
+		font-family: "Lobster", cursive, sans-serif;
 	}
 
 	.landing,
@@ -67,8 +73,22 @@ const MichaelPortfolioStyles = styled.div`
 		color: white;
 	}
 
+	.landing p,
+	.landing p em {
+		font-size: 1.5rem;
+		width: 80%;
+		margin: 0 auto;
+	}
+
 	.landing p {
-		font-size: 2rem;
+		margin-bottom: 7rem;
+	}
+
+	.arrows {
+		width: 100%;
+		text-align: center;
+	}
+	.arrow img {
 	}
 
 	.skills {
@@ -113,12 +133,14 @@ function MichaelPortfolio() {
 					<Nav name="Michael Habermas" cvLink="" color="white" />
 					<h1>Hi, I'm Michael</h1>
 					<p>
-						A passionate Full Stack Web Developer having experience building Web
-						applications with JavaScript / React / Nodejs, some other cool
+						A passionate Full Stack Web Dev having experience building Web
+						applications with JavaScript / React / Nodejs, plus some other cool
 						libraries and frameworks. I also dabble in design, love prototyping,
 						and<em> adore</em> Figma.
 					</p>
-					<div className="arrow">arrow</div>
+					<div className="arrows">
+						<img src={arrows} alt="arrows" />
+					</div>
 				</div>
 			</section>
 

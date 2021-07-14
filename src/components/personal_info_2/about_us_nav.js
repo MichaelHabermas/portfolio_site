@@ -54,6 +54,9 @@ const Nav = props => {
 				<div className="nameLogo">{name}</div>
 				<ul>
 					<li>
+						{/* <Link to={cvLink} target="_blank" download>
+							CV
+						</Link> */}
 						<a
 							href={cvLink}
 							target="_blank"
