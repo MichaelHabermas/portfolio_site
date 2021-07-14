@@ -26,7 +26,7 @@ const MichaelPortfolioStyles = styled.div`
 		box-sizing: border-box;
 		list-style: none;
 		text-decoration: none;
-		border: 1px dotted rebeccapurple;
+		/* border: 1px dotted rebeccapurple; */
 	}
 
 	/* for testing purposes */
@@ -69,6 +69,10 @@ const MichaelPortfolioStyles = styled.div`
 		font-size: 1.5rem;
 		width: 80%;
 		margin: 0 auto;
+	}
+
+	.landing p {
+		margin-bottom: 7rem;
 	}
 
 	.arrows {
@@ -120,8 +124,8 @@ function MichaelPortfolio() {
 					<Nav name="Michael Habermas" cvLink="" color="white" />
 					<h1>Hi, I'm Michael</h1>
 					<p>
-						A passionate Full Stack Web Developer having experience building Web
-						applications with JavaScript / React / Nodejs, some other cool
+						A passionate Full Stack Web Dev having experience building Web
+						applications with JavaScript / React / Nodejs, plus some other cool
 						libraries and frameworks. I also dabble in design, love prototyping,
 						and<em> adore</em> Figma.
 					</p>
