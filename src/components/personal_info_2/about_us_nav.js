@@ -23,6 +23,7 @@ const NavBar = styled.div`
 		margin: 0 auto;
 		justify-content: space-between;
 		align-items: center;
+		padding-top: 2rem;
 	}
 
 	li {
@@ -32,6 +33,7 @@ const NavBar = styled.div`
 	.nameLogo {
 		font-family: "Lobster", cursive, sans-serif;
 		font-size: 3rem;
+		line-height: 3rem;
 	}
 
 	@media screen and (min-width: 480px) {

@@ -46,7 +46,6 @@ const MichaelPortfolioStyles = styled.div`
 
 	h2 {
 		font-size: 5rem;
-		background-color: #f3ec78;
 		background-image: linear-gradient(
 			170deg,
 			#000000,
