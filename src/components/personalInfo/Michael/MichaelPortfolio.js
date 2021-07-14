@@ -41,7 +41,7 @@ const MichaelPortfolioStyles = styled.div`
 	h1 {
 		font-size: 6rem;
 		width: 90%;
-		margin: 5% auto;
+		margin: 0 auto 3rem;
 	}
 
 	h2 {
@@ -76,6 +76,8 @@ const MichaelPortfolioStyles = styled.div`
 	.landing .sub_section {
 		display: flex;
 		flex-direction: column;
+		height: 90vh;
+		justify-content: space-around;
 	}
 
 	.landing p,
@@ -86,7 +88,7 @@ const MichaelPortfolioStyles = styled.div`
 	}
 
 	.landing p {
-		margin-bottom: 7rem;
+		/* margin-bottom: 7rem; */
 	}
 
 	.arrows {
@@ -136,13 +138,15 @@ function MichaelPortfolio() {
 			<section className="landing">
 				<Nav name="Michael Habermas" cvLink="" color="white" />
 				<div className="sub_section">
-					<h1>Hi, I'm Michael</h1>
-					<p>
-						A passionate Full Stack Web Dev having experience building Web
-						applications with JavaScript / React / Nodejs, plus some other cool
-						libraries and frameworks. I also dabble in design, love prototyping,
-						and<em> adore</em> Figma.
-					</p>
+					<div>
+						<h1>Hi, I'm Michael</h1>
+						<p>
+							A passionate Full Stack Web Dev having experience building Web
+							applications with JavaScript / React / Nodejs, plus some other
+							cool libraries and frameworks. I also dabble in design, love
+							prototyping, and<em> adore</em> Figma.
+						</p>
+					</div>
 					<div className="arrows">
 						<img src={arrows} alt="arrows" />
 					</div>
