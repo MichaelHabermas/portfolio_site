@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import styled from "styled-components";
 
 // component import
@@ -26,7 +26,7 @@ const MichaelPortfolioStyles = styled.div`
 		box-sizing: border-box;
 		list-style: none;
 		text-decoration: none;
-		/* border: 1px dotted rebeccapurple; */
+		border: 1px dotted rebeccapurple;
 	}
 
 	/* for testing purposes */
@@ -41,14 +41,25 @@ const MichaelPortfolioStyles = styled.div`
 	h1 {
 		font-size: 6rem;
 		width: 90%;
-		margin: 5% auto;
+		margin: 0 auto 3rem;
 	}
 
 	h2 {
 		font-size: 5rem;
 		background-color: #f3ec78;
-		/* padding-right: 10px; */
-		background-image: linear-gradient(120deg, #000000, #ff0000);
+		background-image: linear-gradient(
+			170deg,
+			#000000,
+			#000000,
+			#000000,
+			#000000,
+			#000000,
+			#ff0000,
+			#ff0000,
+			#ff0000,
+			#ff0000,
+			#ff0000
+		);
 		background-size: 100%;
 		-webkit-background-clip: text;
 		-moz-background-clip: text;
@@ -73,6 +84,13 @@ const MichaelPortfolioStyles = styled.div`
 		color: white;
 	}
 
+	.landing .sub_section {
+		display: flex;
+		flex-direction: column;
+		height: 90vh;
+		justify-content: space-around;
+	}
+
 	.landing p,
 	.landing p em {
 		font-size: 1.5rem;
@@ -81,7 +99,7 @@ const MichaelPortfolioStyles = styled.div`
 	}
 
 	.landing p {
-		margin-bottom: 7rem;
+		/* margin-bottom: 7rem; */
 	}
 
 	.arrows {
@@ -98,6 +116,7 @@ const MichaelPortfolioStyles = styled.div`
 	.projects {
 		background-image: url(${projectsBackgroundMobile});
 		background-position: center center;
+		height: 300vh;
 		/* background-attachment: fixed; */
 		/* background-repeat: no-repeat; */
 		/* background-size: cover;  */
@@ -126,19 +145,31 @@ const MichaelPortfolioStyles = styled.div`
 `;
 
 function MichaelPortfolio() {
+	let myRef = useRef();
+
 	return (
 		<MichaelPortfolioStyles>
 			<section className="landing">
+				<Nav name="Michael Habermas" cvLink="" color="white" />
 				<div className="sub_section">
-					<Nav name="Michael Habermas" cvLink="" color="white" />
-					<h1>Hi, I'm Michael</h1>
-					<p>
-						A passionate Full Stack Web Dev having experience building Web
-						applications with JavaScript / React / Nodejs, plus some other cool
-						libraries and frameworks. I also dabble in design, love prototyping,
-						and<em> adore</em> Figma.
-					</p>
-					<div className="arrows">
+					<div>
+						<h1>Hi, I'm Michael</h1>
+						<p>
+							A passionate Full Stack Web Dev having experience building Web
+							applications with JavaScript / React / Nodejs, working in Python,
+							plus some other cool libraries and frameworks. I also dabble in
+							design, love prototyping, and<em> adore</em> Figma.
+						</p>
+					</div>
+					<div
+						className="arrows"
+						onClick={() =>
+							window.scrollTo({
+								behavior: "smooth",
+								top: myRef.current.offsetTop,
+							})
+						}
+					>
 						<img src={arrows} alt="arrows" />
 					</div>
 				</div>
@@ -156,7 +187,7 @@ function MichaelPortfolio() {
 				</div>
 			</section>
 
-			<section className="projects">
+			<section className="projects" ref={myRef}>
 				<div className="sub_section">
 					<h2>Projects</h2>
 					<div className="project_cards">

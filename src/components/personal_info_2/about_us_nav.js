@@ -10,7 +10,6 @@ const NavBar = styled.div`
 		text-decoration: none;
 		font-size: 2rem;
 		font-weight: bold;
-		/* border: 1px dotted green; */
 	}
 
 	nav,
@@ -19,7 +18,9 @@ const NavBar = styled.div`
 	}
 
 	nav {
-		padding: 5% 0;
+		width: 90%;
+		height: 7rem;
+		margin: 0 auto;
 		justify-content: space-between;
 		align-items: center;
 	}
