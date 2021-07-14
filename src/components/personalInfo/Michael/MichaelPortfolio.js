@@ -11,6 +11,7 @@ import { FaLinkedin, FaGithub, FaTwitterSquare } from "react-icons/fa";
 // asset imports
 import landingBackgroundMobile from "../../../assets/michaelPage/michael_landing_background_mobile.svg";
 import projectsBackgroundMobile from "../../../assets/michaelPage/projects_background_mobile.png";
+import arrows from "../../../assets/michaelPage/arrows.svg";
 
 // built for mobile first, media queries at the end
 const MichaelPortfolioStyles = styled.div`
@@ -70,6 +71,13 @@ const MichaelPortfolioStyles = styled.div`
 		margin: 0 auto;
 	}
 
+	.arrows {
+		width: 100%;
+		text-align: center;
+	}
+	.arrow img {
+	}
+
 	.skills {
 		background-color: white;
 	}
@@ -117,7 +125,9 @@ function MichaelPortfolio() {
 						libraries and frameworks. I also dabble in design, love prototyping,
 						and<em> adore</em> Figma.
 					</p>
-					<div className="arrow">arrow</div>
+					<div className="arrows">
+						<img src={arrows} alt="arrows" />
+					</div>
 				</div>
 			</section>
 
