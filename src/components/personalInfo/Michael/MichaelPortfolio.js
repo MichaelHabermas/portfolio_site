@@ -118,8 +118,8 @@ const MichaelPortfolioStyles = styled.div`
 		background-position: center center;
 		height: 300vh;
 		/* background-attachment: fixed; */
-		/* background-repeat: no-repeat; */
-		/* background-size: cover;  */
+		background-repeat: no-repeat;
+		background-size: cover;
 	}
 
 	.sub_section {
