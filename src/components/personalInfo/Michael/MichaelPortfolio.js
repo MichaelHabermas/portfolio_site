@@ -34,7 +34,8 @@ const MichaelPortfolioStyles = styled.div`
 		/* border: 1px dotted rebeccapurple; */
 	}
 
-	color: red; /* for testing purposes */
+	/* for testing purposes */
+	color: red;
 	background-color: black;
 
 	h1,
