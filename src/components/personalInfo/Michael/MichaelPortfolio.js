@@ -10,6 +10,7 @@ import { FaLinkedin, FaGithub, FaTwitterSquare } from "react-icons/fa";
 
 // asset imports
 import landingBackgroundMobile from "../../../assets/michaelPage/michael_landing_background_mobile.svg";
+
 import projectsBackgroundMobile from "../../../assets/michaelPage/projects_background_mobile.png";
 
 // import spaceImage from "../../../assets/michaelPage/michael_main_widescreen.svg";
