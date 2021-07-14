@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import styled from "styled-components";
 
 // component import
@@ -105,6 +105,7 @@ const MichaelPortfolioStyles = styled.div`
 	.projects {
 		background-image: url(${projectsBackgroundMobile});
 		background-position: center center;
+		height: 300vh;
 		/* background-attachment: fixed; */
 		/* background-repeat: no-repeat; */
 		/* background-size: cover;  */
@@ -133,6 +134,8 @@ const MichaelPortfolioStyles = styled.div`
 `;
 
 function MichaelPortfolio() {
+	let myRef = useRef();
+
 	return (
 		<MichaelPortfolioStyles>
 			<section className="landing">
@@ -142,12 +145,20 @@ function MichaelPortfolio() {
 						<h1>Hi, I'm Michael</h1>
 						<p>
 							A passionate Full Stack Web Dev having experience building Web
-							applications with JavaScript / React / Nodejs, plus some other
-							cool libraries and frameworks. I also dabble in design, love
-							prototyping, and<em> adore</em> Figma.
+							applications with JavaScript / React / Nodejs, working in Python,
+							plus some other cool libraries and frameworks. I also dabble in
+							design, love prototyping, and<em> adore</em> Figma.
 						</p>
 					</div>
-					<div className="arrows">
+					<div
+						className="arrows"
+						onClick={() =>
+							window.scrollTo({
+								behavior: "smooth",
+								top: myRef.current.offsetTop,
+							})
+						}
+					>
 						<img src={arrows} alt="arrows" />
 					</div>
 				</div>
@@ -165,7 +176,7 @@ function MichaelPortfolio() {
 				</div>
 			</section>
 
-			<section className="projects">
+			<section className="projects" ref={myRef}>
 				<div className="sub_section">
 					<h2>Projects</h2>
 					<div className="project_cards">
