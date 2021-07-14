@@ -19,7 +19,9 @@ const NavBar = styled.div`
 	}
 
 	nav {
-		padding: 5% 0;
+		width: 90%;
+		height: 7rem;
+		margin: 0 auto;
 		justify-content: space-between;
 		align-items: center;
 	}

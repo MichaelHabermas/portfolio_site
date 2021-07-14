@@ -26,7 +26,7 @@ const MichaelPortfolioStyles = styled.div`
 		box-sizing: border-box;
 		list-style: none;
 		text-decoration: none;
-		/* border: 1px dotted rebeccapurple; */
+		border: 1px dotted rebeccapurple;
 	}
 
 	/* for testing purposes */
@@ -71,6 +71,11 @@ const MichaelPortfolioStyles = styled.div`
 		height: 100vh;
 
 		color: white;
+	}
+
+	.landing .sub_section {
+		display: flex;
+		flex-direction: column;
 	}
 
 	.landing p,
@@ -129,8 +134,8 @@ function MichaelPortfolio() {
 	return (
 		<MichaelPortfolioStyles>
 			<section className="landing">
+				<Nav name="Michael Habermas" cvLink="" color="white" />
 				<div className="sub_section">
-					<Nav name="Michael Habermas" cvLink="" color="white" />
 					<h1>Hi, I'm Michael</h1>
 					<p>
 						A passionate Full Stack Web Dev having experience building Web
