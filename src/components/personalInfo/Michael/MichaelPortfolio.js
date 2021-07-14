@@ -31,7 +31,7 @@ const MichaelPortfolioStyles = styled.div`
 		box-sizing: border-box;
 		list-style: none;
 		text-decoration: none;
-		border: 1px dotted rebeccapurple;
+		/* border: 1px dotted rebeccapurple; */
 	}
 
 	color: red; /* for testing purposes */
@@ -109,7 +109,7 @@ function MichaelPortfolio() {
 		<MichaelPortfolioStyles>
 			<section className="landing">
 				<div className="sub_section">
-					<Nav name="Michael Habermas" cvLink="" />
+					<Nav name="Michael Habermas" cvLink="" color="white" />
 					<h1>Hi, I'm Michael</h1>
 					<p>
 						A passionate Full Stack Web Developer having experience building Web
