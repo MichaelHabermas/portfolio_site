@@ -1,27 +1,19 @@
 import React from "react";
 import styled from "styled-components";
 
-// import { iconComponent } from "../assets/icons";
-
 const SkillCardStyle = styled.div`
 	.icon_card {
+		width: 8rem;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		margin: 0 1rem 1rem 0;
-		/* border: 1px solid black; */
+		padding: 1rem;
 	}
 
-	/* .iconImg_card {
-		width: 5rem;
-		height: 5rem;
-	} */
-
 	.iconTitle_card {
-		/* width: 90%; */
 		text-align: center;
-		font-size: 2rem;
+		font-size: 1.7rem;
 		color: black;
 	}
 `;

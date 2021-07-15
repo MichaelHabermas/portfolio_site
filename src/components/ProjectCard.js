@@ -4,11 +4,20 @@ import styled from "styled-components";
 const ProjectCardStyle = styled.div``;
 
 const ProjectCard = props => {
-	const { image } = props;
+	const { image, text, icons } = props;
 	return (
 		<ProjectCardStyle>
 			<img></img>
-			<p></p>
+			<p>{text}</p>
+			<div>
+				{icons.map(icon => {
+					return (
+						<>
+							<h4>Hi</h4>
+						</>
+					);
+				})}
+			</div>
 		</ProjectCardStyle>
 	);
 };

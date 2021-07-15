@@ -9,20 +9,20 @@ import SkillCard from "../../SkillCard";
 import iconComponent from "../../../assets/icons";
 
 import { RiMailFill } from "react-icons/ri";
+// import {
+// 	SiJavascript,
+// 	SiHeroku,
+// 	SiAudacity,
+// 	SiPostman,
+// 	SiPostgresql,
+// } from "react-icons/si";
 import {
-	SiJavascript,
-	SiHeroku,
-	SiAudacity,
-	SiPostman,
-	SiPostgresql,
-} from "react-icons/si";
-import {
-	FaHtml5,
-	FaCss3Alt,
-	FaReact,
-	FaPython,
-	FaNode,
-	FaFigma,
+	// FaHtml5,
+	// FaCss3Alt,
+	// FaReact,
+	// FaPython,
+	// FaNode,
+	// FaFigma,
 	FaLinkedin,
 	FaGithub,
 	FaTwitterSquare,
@@ -146,13 +146,9 @@ const MichaelPortfolioStyles = styled.div`
 		flex-wrap: wrap;
 		justify-content: space-between;
 		align-items: center;
-		/* border: 1px dotted green; */
-		/* padding: 1rem; */
 	}
 	.icon {
-		/* width: 30%; */
 		font-size: 6rem;
-		/* border: 1px dotted rebeccapurple; */
 	}
 
 	// PROJECTS
@@ -188,16 +184,16 @@ function MichaelPortfolio() {
 	const skillIcons = [
 		"HTML5",
 		"CSS3",
-		// "Javascript",
+		"Javascript",
 		"React",
 		"NodeJS",
 		"Python",
 		"GitHub",
-		// "Heroku",
-		// "Postgresql",
-		// "Postman",
+		"Heroku",
+		"Postgresql",
+		"Postman",
 		"Figma",
-		// "Audacity",
+		"Audacity",
 	];
 
 	return (

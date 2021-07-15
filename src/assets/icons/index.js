@@ -13,6 +13,7 @@ import {
 	FaTwitterSquare,
 	FaInstagram,
 	FaFacebookSquare,
+	FaGlobe,
 } from "react-icons/fa";
 
 // HTML5:              FaHtml5
@@ -54,7 +55,7 @@ const iconComponent = {
 	Python: [<FaPython className="icon" />, "Python"],
 	GitHub: [<FaGithub className="icon" />, "GitHub"],
 	Heroku: [<SiHeroku className="icon" />, "Heroku"],
-	Postgresql: [<SiPostgresql className="icon" />, "PostgreSQL"],
+	Postgresql: [<SiPostgresql className="icon" />, "Postgres"],
 	Postman: [<SiPostman className="icon" />, "Postman"],
 	Figma: [<FaFigma className="icon" />, "Figma"],
 	Audacity: [<SiAudacity className="icon" />, "Audacity"],
@@ -63,6 +64,7 @@ const iconComponent = {
 	Instagram: [<FaInstagram className="icon" />, "Instagram"],
 	Facebook: [<FaFacebookSquare className="icon" />, "Facebook"],
 	Email: [<RiMailFill className="icon" />, "Email"],
+	Web: [<FaGlobe className="icon" />, "Website"],
 };
 
 export default iconComponent;
