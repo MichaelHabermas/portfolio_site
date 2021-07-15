@@ -9,24 +9,7 @@ import SkillCard from "../../SkillCard";
 import iconComponent from "../../../assets/icons";
 
 import { RiMailFill } from "react-icons/ri";
-// import {
-// 	SiJavascript,
-// 	SiHeroku,
-// 	SiAudacity,
-// 	SiPostman,
-// 	SiPostgresql,
-// } from "react-icons/si";
-import {
-	// FaHtml5,
-	// FaCss3Alt,
-	// FaReact,
-	// FaPython,
-	// FaNode,
-	// FaFigma,
-	FaLinkedin,
-	FaGithub,
-	FaTwitterSquare,
-} from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaTwitterSquare } from "react-icons/fa";
 
 // asset imports
 import landingBackgroundMobile from "../../../assets/michaelPage/michael_landing_background_mobile.svg";
@@ -49,17 +32,13 @@ const MichaelPortfolioStyles = styled.div`
 		/* border: 1px dotted rebeccapurple; */
 	}
 
-	/* for testing purposes */
-	color: red;
-	background-color: black;
-
 	h1,
 	h2 {
 		text-align: center;
 	}
 
 	h2 {
-		font-size: 5rem;
+		font-size: 6rem;
 		background-image: linear-gradient(
 			170deg,
 			#000000,
@@ -159,6 +138,7 @@ const MichaelPortfolioStyles = styled.div`
 		/* background-attachment: fixed; */
 		background-repeat: no-repeat;
 		background-size: cover;
+		padding: 3rem;
 	}
 
 	@media screen and (min-width: 480px) {
