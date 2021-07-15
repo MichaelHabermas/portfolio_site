@@ -32,7 +32,15 @@ const ProjectCard = props => {
 			<div className="project_card">
 				<img src={image} alt="project image"></img>
 				<p>{text}</p>
-				<div className="project_icons">{icons}</div>
+				<div className="project_icons">
+					{icons.map(icon => {
+						return (
+							<>
+								<h4>Hi</h4>
+							</>
+						);
+					})}
+				</div>
 			</div>
 		</ProjectCardStyle>
 	);

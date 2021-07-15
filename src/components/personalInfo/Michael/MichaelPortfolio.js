@@ -3,8 +3,11 @@ import styled from "styled-components";
 
 // component import
 import Nav from "../../personal_info_2/about_us_nav";
+import SkillCard from "../../SkillCard";
 
 // icon imports
+import iconComponent from "../../../assets/icons";
+
 import { RiMailFill } from "react-icons/ri";
 import { FaLinkedin, FaGithub, FaTwitterSquare } from "react-icons/fa";
 
@@ -29,17 +32,13 @@ const MichaelPortfolioStyles = styled.div`
 		/* border: 1px dotted rebeccapurple; */
 	}
 
-	/* for testing purposes */
-	color: red;
-	background-color: black;
-
 	h1,
 	h2 {
 		text-align: center;
 	}
 
 	h2 {
-		font-size: 5rem;
+		font-size: 6rem;
 		background-image: linear-gradient(
 			170deg,
 			#000000,
@@ -59,11 +58,16 @@ const MichaelPortfolioStyles = styled.div`
 		-webkit-text-fill-color: transparent;
 		-moz-text-fill-color: transparent;
 		font-family: "Lobster", cursive, sans-serif;
+		margin-bottom: 2rem;
 	}
 
 	.landing,
 	.skills,
 	.projects {
+	}
+	.sub_section {
+		width: 90%;
+		margin: 0 auto;
 	}
 
 	// LANDING PAGE SECTION
@@ -109,10 +113,24 @@ const MichaelPortfolioStyles = styled.div`
 	.arrow img {
 	}
 
+	// SKILLS
 	.skills {
 		background-color: white;
+		padding: 3rem;
 	}
 
+	.skill_icons {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.icon {
+		font-size: 6rem;
+	}
+
+	// PROJECTS
 	.projects {
 		background-image: url(${projectsBackgroundMobile});
 		background-position: center center;
@@ -120,11 +138,7 @@ const MichaelPortfolioStyles = styled.div`
 		/* background-attachment: fixed; */
 		background-repeat: no-repeat;
 		background-size: cover;
-	}
-
-	.sub_section {
-		width: 90%;
-		margin: 0 auto;
+		padding: 3rem;
 	}
 
 	@media screen and (min-width: 480px) {
@@ -146,6 +160,21 @@ const MichaelPortfolioStyles = styled.div`
 
 function MichaelPortfolio() {
 	let myRef = useRef();
+
+	const skillIcons = [
+		"HTML5",
+		"CSS3",
+		"Javascript",
+		"React",
+		"NodeJS",
+		"Python",
+		"GitHub",
+		"Heroku",
+		"Postgresql",
+		"Postman",
+		"Figma",
+		"Audacity",
+	];
 
 	return (
 		<MichaelPortfolioStyles>
@@ -179,10 +208,14 @@ function MichaelPortfolio() {
 				<div className="sub_section">
 					<h2>Skills</h2>
 					<div className="skill_icons">
-						<FaLinkedin className="icon" />
-						<FaGithub className="icon" />
-						<FaTwitterSquare className="icon" />
-						<RiMailFill className="icon" />
+						{skillIcons.map(icon => {
+							return (
+								<SkillCard
+									iconImg={iconComponent[icon][0]}
+									iconName={iconComponent[icon][1]}
+								/>
+							);
+						})}
 					</div>
 				</div>
 			</section>
