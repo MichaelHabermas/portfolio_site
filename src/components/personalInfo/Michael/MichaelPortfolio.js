@@ -38,12 +38,6 @@ const MichaelPortfolioStyles = styled.div`
 		text-align: center;
 	}
 
-	h1 {
-		font-size: 6rem;
-		width: 90%;
-		margin: 0 auto 3rem;
-	}
-
 	h2 {
 		font-size: 5rem;
 		background-image: linear-gradient(
@@ -72,6 +66,7 @@ const MichaelPortfolioStyles = styled.div`
 	.projects {
 	}
 
+	// LANDING PAGE SECTION
 	.landing {
 		background-image: url(${landingBackgroundMobile});
 		background-position: center center;
@@ -88,6 +83,12 @@ const MichaelPortfolioStyles = styled.div`
 		flex-direction: column;
 		height: 90vh;
 		justify-content: space-around;
+	}
+
+	h1 {
+		font-size: 6rem;
+		width: 90%;
+		margin: 0 auto 3rem;
 	}
 
 	.landing p,
