@@ -191,6 +191,7 @@ function MichaelPortfolio() {
 				<div className="sub_section">
 					<h2>Projects</h2>
 					<div className="project_cards">
+						{}
 						<div className="card">card</div>
 						<div className="card">card</div>
 					</div>
