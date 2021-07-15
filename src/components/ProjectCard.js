@@ -19,6 +19,7 @@ const ProjectCardStyle = styled.div`
 	}
 
 	p {
+		font-size: 3rem;
 	}
 
 	.project_icons {
