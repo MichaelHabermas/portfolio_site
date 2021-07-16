@@ -156,8 +156,9 @@ const MichaelPortfolioStyles = styled.div`
 		width: 100%;
 	}
 
-	.footerIcons .icon {
+	.footerIcon .icon {
 		font-size: 3rem;
+		color: white;
 	}
 
 	.cvContainer {
@@ -167,13 +168,14 @@ const MichaelPortfolioStyles = styled.div`
 	}
 
 	.cvFooterIcon {
-
+		color: white;
 	}
 
 	.cvFooterText {
 		transform: translateY(-30%);
 		font-size: 1.5rem;
 		font-weight: bold;
+		color: white;
 	}
 
 
@@ -214,11 +216,11 @@ function MichaelPortfolio() {
 	];
 
 	const contactInfo = [
-		"GitHub",
-		"LinkedIn",
-		"CV",
-		"Twitter",
-		"Email",
+		{name: "GitHub", link: "https://github.com/MichaelHabermas"},
+		{name: "LinkedIn", link: "https://www.linkedin.com/in/michael-habermas/"},
+		{name: "CV", link: ""},
+		{name: "Twitter", link: ""},
+		{name: "Email", link: ""}
 	]
 
 
@@ -278,22 +280,39 @@ function MichaelPortfolio() {
 			<footer>
 				<div className='footerMain'>
 					{contactInfo.map(icon => {
-						if(icon !== "CV") {
+						const { name, link } = icon
+						if(name !== "CV") {
 							return (
-								<div className='footerIcons'>
-									{iconComponent[icon][0]}
-								</div>
+								<a
+									href={`${link}`} //need to add the real cv link here
+									target="_blank"
+									rel="noreferrer"
+									className='footerIcon'
+								>
+									{iconComponent[name][0]}
+								</a>
 						)} else {
 								return (
 									<div className="cvContainer">
-										<div className='cvFooterIcon'>
-											{iconComponent[icon][0]}
-										</div>
-										<div className='cvFooterText'>
-											{iconComponent[icon][1]}
-										</div>
+										<a
+											href={`${link}`} //need to add the real cv link here
+											target="_blank"
+											rel="noreferrer"
+											className='cvFooterIcon'
+										>
+											{iconComponent[name][0]}
+										</a>
+										<a
+											href={`${link}`} //need to add the real cv link here
+											target="_blank"
+											rel="noreferrer"
+											className='cvFooterText'
+										>
+											{iconComponent[name][1]}
+										</a>
 									</div>
-							)}
+								)
+							}
 					})}
 				</div>
 			</footer>
