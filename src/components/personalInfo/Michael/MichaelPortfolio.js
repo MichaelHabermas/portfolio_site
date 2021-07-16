@@ -8,8 +8,8 @@ import SkillCard from "../../SkillCard";
 // icon imports
 import iconComponent from "../../../assets/icons";
 
-import { RiMailFill } from "react-icons/ri";
-import { FaLinkedin, FaGithub, FaTwitterSquare } from "react-icons/fa";
+// import { RiMailFill } from "react-icons/ri";
+// import { FaLinkedin, FaGithub, FaTwitterSquare } from "react-icons/fa";
 
 // asset imports
 import landingBackgroundMobile from "../../../assets/michaelPage/michael_landing_background_mobile.svg";
@@ -141,6 +141,43 @@ const MichaelPortfolioStyles = styled.div`
 		padding: 3rem;
 	}
 
+	//		FOOTER		 						FOOTER											FOOTER
+
+	footer {
+		display: flex;
+		background-color: purple;
+		height: 25vh;
+	}
+
+	.footerMain {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		width: 100%;
+	}
+
+	.footerIcons .icon {
+		font-size: 3rem;
+	}
+
+	.cvContainer {
+		display: flex;
+		flex-flow: column;
+		align-items: center;
+	}
+
+	.cvFooterIcon {
+
+	}
+
+	.cvFooterText {
+		transform: translateY(-30%);
+		font-size: 1.5rem;
+		font-weight: bold;
+	}
+
+
+
 	@media screen and (min-width: 480px) {
 		color: blue;
 	}
@@ -175,6 +212,15 @@ function MichaelPortfolio() {
 		"Figma",
 		"Audacity",
 	];
+
+	const contactInfo = [
+		"GitHub",
+		"LinkedIn",
+		"CV",
+		"Twitter",
+		"Email",
+	]
+
 
 	return (
 		<MichaelPortfolioStyles>
@@ -227,15 +273,30 @@ function MichaelPortfolio() {
 						<div className="card">card</div>
 						<div className="card">card</div>
 					</div>
-					<footer>
-						<FaLinkedin className="icon" />
-						<FaGithub className="icon" />
-						<button>Download My CV</button>
-						<FaTwitterSquare className="icon" />
-						<RiMailFill className="icon" />
-					</footer>
 				</div>
 			</section>
+			<footer>
+				<div className='footerMain'>
+					{contactInfo.map(icon => {
+						if(icon !== "CV") {
+							return (
+								<div className='footerIcons'>
+									{iconComponent[icon][0]}
+								</div>
+						)} else {
+								return (
+									<div className="cvContainer">
+										<div className='cvFooterIcon'>
+											{iconComponent[icon][0]}
+										</div>
+										<div className='cvFooterText'>
+											{iconComponent[icon][1]}
+										</div>
+									</div>
+							)}
+					})}
+				</div>
+			</footer>
 		</MichaelPortfolioStyles>
 	);
 }
