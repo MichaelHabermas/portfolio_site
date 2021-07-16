@@ -147,7 +147,12 @@ const MichaelPortfolioStyles = styled.div`
 
 	.project_cards {
 		display: flex;
+		flex-direction: row;
 		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		/* border: 1px solid red; */
 	}
 
 	@media screen and (min-width: 480px) {
@@ -155,6 +160,9 @@ const MichaelPortfolioStyles = styled.div`
 	}
 	@media screen and (min-width: 768px) {
 		color: red;
+		.project_card {
+			max-width: 48%;
+		}
 	}
 	@media screen and (min-width: 1024px) {
 		color: blue;
@@ -235,15 +243,16 @@ function MichaelPortfolio() {
 					<div className="project_cards">
 						{michaelsProjects.map(project => {
 							return (
-								<ProjectCard
-									image={project["image"]}
-									text={project["text"]}
-									// icons={project[icons]}
-								/>
+								<div className="project_card">
+									<ProjectCard
+										className="project_card"
+										image={project["image"]}
+										text={project["text"]}
+										icons={project["icons"]}
+									/>
+								</div>
 							);
 						})}
-						<div className="card">card</div>
-						<div className="card">card</div>
 					</div>
 					<footer>
 						<FaLinkedin className="icon" />

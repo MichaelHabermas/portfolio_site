@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const ProjectCardStyle = styled.div`
-	.project_card {
+	.project_div {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -27,6 +27,24 @@ const ProjectCardStyle = styled.div`
 	}
 
 	.project_icons {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	@media screen and (min-width: 480px) {
+		color: blue;
+	}
+	@media screen and (min-width: 768px) {
+		color: red;
+	}
+	@media screen and (min-width: 1024px) {
+		color: blue;
+	}
+	@media screen and (min-width: 1200px) {
+		color: red;
+	}
+	@media screen and (min-width: 1550px) {
+		color: blue;
 	}
 `;
 
@@ -34,17 +52,17 @@ const ProjectCard = props => {
 	const { image, text, icons } = props;
 	return (
 		<ProjectCardStyle>
-			<div className="project_card">
+			<div className="project_div">
 				<img src={image} alt="project_image"></img>
 				<p>{text}</p>
 				<div className="project_icons">
-					{/* {icons.map(icon => {
+					{icons.map(icon => {
 						return (
 							<div>
 								<h4>Hi</h4>
 							</div>
 						);
-					})} */}
+					})}
 				</div>
 			</div>
 		</ProjectCardStyle>
