@@ -3,23 +3,27 @@ import styled from "styled-components";
 
 const ProjectCardStyle = styled.div`
 	.project_card {
-		width: 90%;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		background-color: #c4c4c4;
-		opacity: 0.3;
+		background: rgba(196, 196, 196, 0.3);
 		border-radius: 20px;
 		box-shadow: 6px 6px 10px rgba(122, 122, 122, 0.5);
+		margin-bottom: 3rem;
 	}
 
 	img {
-		width: 90%;
+		width: 100%;
+		margin-bottom: 1rem;
 	}
 
 	p {
-		font-size: 3rem;
+		font-size: 1.5rem;
+		width: 90%;
+		margin: 0 auto;
+		color: #2e2828;
+		opacity: 1;
 	}
 
 	.project_icons {
@@ -31,16 +35,16 @@ const ProjectCard = props => {
 	return (
 		<ProjectCardStyle>
 			<div className="project_card">
-				<img src={image} alt="project image"></img>
+				<img src={image} alt="project_image"></img>
 				<p>{text}</p>
 				<div className="project_icons">
-					{icons.map(icon => {
+					{/* {icons.map(icon => {
 						return (
-							<>
+							<div>
 								<h4>Hi</h4>
-							</>
+							</div>
 						);
-					})}
+					})} */}
 				</div>
 			</div>
 		</ProjectCardStyle>

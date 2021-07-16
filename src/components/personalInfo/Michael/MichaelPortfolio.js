@@ -4,10 +4,11 @@ import styled from "styled-components";
 // component import
 import Nav from "../../personal_info_2/about_us_nav";
 import SkillCard from "../../SkillCard";
+import ProjectCard from "../../ProjectCard";
 
 // icon imports
 import iconComponent from "../../../assets/icons";
-
+//          wont need these eventually
 import { RiMailFill } from "react-icons/ri";
 import { FaLinkedin, FaGithub, FaTwitterSquare } from "react-icons/fa";
 
@@ -15,6 +16,9 @@ import { FaLinkedin, FaGithub, FaTwitterSquare } from "react-icons/fa";
 import landingBackgroundMobile from "../../../assets/michaelPage/michael_landing_background_mobile.svg";
 import projectsBackgroundMobile from "../../../assets/michaelPage/projects_background_mobile.png";
 import arrows from "../../../assets/michaelPage/arrows.svg";
+
+// project imports
+import { michaelsProjects } from "../../../assets/projects";
 
 // built for mobile first, media queries at the end
 const MichaelPortfolioStyles = styled.div`
@@ -141,6 +145,11 @@ const MichaelPortfolioStyles = styled.div`
 		padding: 3rem;
 	}
 
+	.project_cards {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
 	@media screen and (min-width: 480px) {
 		color: blue;
 	}
@@ -224,7 +233,15 @@ function MichaelPortfolio() {
 				<div className="sub_section">
 					<h2>Projects</h2>
 					<div className="project_cards">
-						{}
+						{michaelsProjects.map(project => {
+							return (
+								<ProjectCard
+									image={project["image"]}
+									text={project["text"]}
+									// icons={project[icons]}
+								/>
+							);
+						})}
 						<div className="card">card</div>
 						<div className="card">card</div>
 					</div>
