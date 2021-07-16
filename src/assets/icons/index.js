@@ -41,7 +41,7 @@ import {
 // Postman:                 SiPostman
 // PostgreSQL:              SiPostgresql
 
-import { RiMailFill } from "react-icons/ri";
+import { RiMailFill, RiDownloadCloud2Line } from "react-icons/ri";
 // email:               RiMailFill
 
 // to use icons after importing <iconName className="className" />;
@@ -65,6 +65,7 @@ const iconComponent = {
 	Facebook: [<FaFacebookSquare className="icon" />, "Facebook"],
 	Email: [<RiMailFill className="icon" />, "Email"],
 	Web: [<FaGlobe className="icon" />, "Website"],
+	CV: [<RiDownloadCloud2Line className="icon" />, "CV"]
 };
 
 export default iconComponent;

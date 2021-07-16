@@ -8,9 +8,6 @@ import ProjectCard from "../../ProjectCard";
 
 // icon imports
 import iconComponent from "../../../assets/icons";
-//          wont need these eventually
-import { RiMailFill } from "react-icons/ri";
-import { FaLinkedin, FaGithub, FaTwitterSquare } from "react-icons/fa";
 
 // asset imports
 import landingBackgroundMobile from "../../../assets/michaelPage/michael_landing_background_mobile.svg";
@@ -145,6 +142,46 @@ const MichaelPortfolioStyles = styled.div`
 		padding: 3rem;
 	}
 
+
+	//		FOOTER		 						FOOTER											FOOTER
+
+	footer {
+		display: flex;
+		background-color: purple;
+		height: 25vh;
+	}
+
+	.footerMain {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		width: 100%;
+	}
+
+	.footerIcon .icon {
+		font-size: 3rem;
+		color: white;
+	}
+
+	.cvContainer {
+		display: flex;
+		flex-flow: column;
+		align-items: center;
+	}
+
+	.cvFooterIcon {
+		color: white;
+	}
+
+	.cvFooterText {
+		transform: translateY(-30%);
+		font-size: 1.5rem;
+		font-weight: bold;
+		color: white;
+	}
+
+  // Projects
+
 	.project_cards {
 		display: flex;
 		flex-direction: row;
@@ -154,6 +191,7 @@ const MichaelPortfolioStyles = styled.div`
 		width: 100%;
 		/* border: 1px solid red; */
 	}
+
 
 	@media screen and (min-width: 480px) {
 		color: blue;
@@ -192,6 +230,15 @@ function MichaelPortfolio() {
 		"Figma",
 		"Audacity",
 	];
+
+	const contactInfo = [
+		{name: "GitHub", link: "https://github.com/MichaelHabermas"},
+		{name: "LinkedIn", link: "https://www.linkedin.com/in/michael-habermas/"},
+		{name: "CV", link: ""},
+		{name: "Twitter", link: ""},
+		{name: "Email", link: ""}
+	]
+
 
 	return (
 		<MichaelPortfolioStyles>
@@ -254,15 +301,47 @@ function MichaelPortfolio() {
 							);
 						})}
 					</div>
-					<footer>
-						<FaLinkedin className="icon" />
-						<FaGithub className="icon" />
-						<button>Download My CV</button>
-						<FaTwitterSquare className="icon" />
-						<RiMailFill className="icon" />
-					</footer>
 				</div>
 			</section>
+			<footer>
+				<div className='footerMain'>
+					{contactInfo.map(icon => {
+						const { name, link } = icon
+						if(name !== "CV") {
+							return (
+								<a
+									href={`${link}`} //need to add the real cv link here
+									target="_blank"
+									rel="noreferrer"
+									className='footerIcon'
+								>
+									{iconComponent[name][0]}
+								</a>
+						)} else {
+								return (
+									<div className="cvContainer">
+										<a
+											href={`${link}`} //need to add the real cv link here
+											target="_blank"
+											rel="noreferrer"
+											className='cvFooterIcon'
+										>
+											{iconComponent[name][0]}
+										</a>
+										<a
+											href={`${link}`} //need to add the real cv link here
+											target="_blank"
+											rel="noreferrer"
+											className='cvFooterText'
+										>
+											{iconComponent[name][1]}
+										</a>
+									</div>
+								)
+							}
+					})}
+				</div>
+			</footer>
 		</MichaelPortfolioStyles>
 	);
 }
