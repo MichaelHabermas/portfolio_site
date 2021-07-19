@@ -102,15 +102,9 @@ const MichaelPortfolioStyles = styled.div`
 		margin: 0 auto;
 	}
 
-	.landing p {
-		/* margin-bottom: 7rem; */
-	}
-
 	.arrows {
 		width: 100%;
 		text-align: center;
-	}
-	.arrow img {
 	}
 
 	// SKILLS PAGE SECTION											SKILLS
@@ -147,10 +141,6 @@ const MichaelPortfolioStyles = styled.div`
 		justify-content: space-between;
 		align-items: center;
 		width: 100%;
-	}
-
-	.project_card {
-		/* width: clamp(400px, 100%, 500px); */
 	}
 
 	//	FOOTER SECTION											         FOOTER
@@ -217,10 +207,6 @@ const MichaelPortfolioStyles = styled.div`
 		.skills,
 		.projects {
 		}
-		.sub_section {
-			width: 100%;
-			padding: 0;
-		}
 	}
 	@media screen and (min-width: 1024px) {
 		color: blue;
@@ -252,10 +238,6 @@ const MichaelPortfolioStyles = styled.div`
 		.landing,
 		.skills,
 		.projects {
-		}
-		.sub_section {
-			width: 100%;
-			padding: 0;
 		}
 	}
 	@media screen and (min-width: 1200px) {
