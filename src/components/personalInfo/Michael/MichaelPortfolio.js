@@ -258,6 +258,11 @@ const MichaelPortfolioStyles = styled.div`
 			font-size: 6rem;
 		}
 
+		.footerMain {
+			justify-content: space-around;
+			padding: 0 15%;
+		}
+
 	}
 	@media screen and (min-width: 1200px) {
 		color: red;
@@ -266,11 +271,23 @@ const MichaelPortfolioStyles = styled.div`
 			font-size: 8rem;
 		}
 
+		
+		.footerMain {
+			justify-content: space-around;
+			padding: 0 20%;
+		}
+	
+
 	}
 	@media screen and (min-width: 1550px) {
 		color: blue;
 		.project_card {
 			max-width: 32%;
+		}
+
+		.footerMain {
+			justify-content: space-around;
+			padding: 0 25%;
 		}
 	}
 `;
