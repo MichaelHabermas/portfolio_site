@@ -78,9 +78,9 @@ const MichaelPortfolioStyles = styled.div`
 		background-attachment: fixed;
 		background-repeat: no-repeat;
 		background-size: cover;
-		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
+		-webkit-background-size: cover;
 		height: 95vh;
 		color: white;
 	}
