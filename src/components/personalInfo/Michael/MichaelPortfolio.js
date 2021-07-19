@@ -158,7 +158,7 @@ const MichaelPortfolioStyles = styled.div`
 	}
 
 	.footerIcon .icon {
-		font-size: 3rem;
+		font-size: 4rem;
 		color: white;
 	}
 
@@ -199,9 +199,68 @@ const MichaelPortfolioStyles = styled.div`
 		.project_card {
 			max-width: 48%;
 		}
+
+		.landing p {
+			margin-top: 10%;
+			font-size: 2.5rem;
+		}
+
+		.landing p em {
+			font-size: 2.5rem;
+		}
+
+		.skill_icons {
+			flex-wrap: nowrap;
+		}
+
+		.icon {
+			font-size: 5rem;
+		}
+
+		.landing,
+		.skills,
+		.projects {
+		}
+		.sub_section {
+			width: 100%;
+			padding: 0;
+		}
+
 	}
 	@media screen and (min-width: 1024px) {
 		color: blue;
+
+		h1 {
+			margin-top: 5%;
+			font-size: 6.5rem;
+		}
+
+		.landing p {
+			margin-top: 8%;
+			font-size: 3rem;
+		}
+
+		.landing p em {
+			font-size: 3rem;
+		}
+		
+		.skill_icons {
+			flex-wrap: nowrap;
+		}
+
+		.icon {
+			font-size: 6rem;
+		}
+		
+		.landing,
+		.skills,
+		.projects {
+		}
+		.sub_section {
+			width: 100%;
+			padding: 0;
+		}
+
 	}
 	@media screen and (min-width: 1200px) {
 		color: red;
