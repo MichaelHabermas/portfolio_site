@@ -76,12 +76,11 @@ const MichaelPortfolioStyles = styled.div`
 		background-position: center center;
 		background-attachment: fixed;
 		background-repeat: no-repeat;
+		background-size: cover;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
-		background-size: cover;
-		background-size: 100% 100%;
-		height: 100vh;
+		height: 95vh;
 		color: white;
 	}
 
