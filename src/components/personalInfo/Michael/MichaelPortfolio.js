@@ -10,8 +10,8 @@ import ProjectCard from "../../ProjectCard";
 import iconComponent from "../../../assets/icons";
 
 // asset imports
-// import landingBackgroundMobile from "../../../assets/michaelPage/michael_landing_background_mobile.svg";
-import landingBackgroundMobile2 from "../../../assets/michaelPage/michael_landing_background_mobile2.svg";
+import landingBackgroundMobile from "../../../assets/michaelPage/michael_landing_background_mobile.svg";
+// import landingBackgroundMobile2 from "../../../assets/michaelPage/michael_landing_background_mobile2.svg";
 import projectsBackgroundMobile from "../../../assets/michaelPage/projects_background_mobile.png";
 import arrows from "../../../assets/michaelPage/arrows.svg";
 
