@@ -30,7 +30,6 @@ const MichaelPortfolioStyles = styled.div`
 		box-sizing: border-box;
 		list-style: none;
 		text-decoration: none;
-		/* border: 1px dotted rebeccapurple; */
 	}
 
 	h1,
@@ -71,7 +70,7 @@ const MichaelPortfolioStyles = styled.div`
 		margin: 0 auto;
 	}
 
-	// LANDING PAGE SECTION
+	// LANDING PAGE SECTION											LANDING
 	.landing {
 		background-image: url(${landingBackgroundMobile});
 		background-position: center center;
@@ -114,7 +113,7 @@ const MichaelPortfolioStyles = styled.div`
 	.arrow img {
 	}
 
-	// SKILLS
+	// SKILLS PAGE SECTION											SKILLS
 	.skills {
 		background-color: white;
 		padding: 3rem;
@@ -131,19 +130,26 @@ const MichaelPortfolioStyles = styled.div`
 		font-size: 6rem;
 	}
 
-	// PROJECTS
+	// PROJECTS PAGE SECTION											PROJECTS
 	.projects {
 		background-image: url(${projectsBackgroundMobile});
 		background-position: center center;
 		height: 100%;
-		/* background-attachment: fixed; */
 		background-repeat: no-repeat;
 		background-size: cover;
 		padding: 3rem;
 	}
 
-	//		FOOTER		 						FOOTER											FOOTER
+	.project_cards {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+	}
 
+	//		FOOTER SECTION											FOOTER
 	footer {
 		display: flex;
 		background-color: purple;
@@ -177,18 +183,6 @@ const MichaelPortfolioStyles = styled.div`
 		font-size: 1.5rem;
 		font-weight: bold;
 		color: white;
-	}
-
-	// Projects
-
-	.project_cards {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		align-items: center;
-		width: 100%;
-		/* border: 1px solid red; */
 	}
 
 	@media screen and (min-width: 480px) {
