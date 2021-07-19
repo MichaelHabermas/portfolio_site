@@ -75,7 +75,7 @@ const MichaelPortfolioStyles = styled.div`
 	.landing {
 		background-image: url(${landingBackgroundMobile2});
 		background-position: center center;
-		background-attachment: fixed;
+		/* background-attachment: fixed; */
 		background-repeat: no-repeat;
 		background-size: cover;
 		-moz-background-size: cover;
