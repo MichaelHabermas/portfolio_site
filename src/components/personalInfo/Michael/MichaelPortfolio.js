@@ -195,9 +195,6 @@ const MichaelPortfolioStyles = styled.div`
 	}
 	@media screen and (min-width: 768px) {
 		color: red;
-		.project_card {
-			max-width: 48%;
-		}
 
 		.landing p {
 			margin-top: 10%;
@@ -227,7 +224,9 @@ const MichaelPortfolioStyles = styled.div`
 	}
 	@media screen and (min-width: 1024px) {
 		color: blue;
-
+		.project_card {
+			max-width: 48%;
+		}
 		h1 {
 			margin-top: 5%;
 			font-size: 6.5rem;
@@ -386,7 +385,7 @@ function MichaelPortfolio() {
 										className="cvFooterIcon"
 									>
 										{iconComponent[iconName]["component"]}
-										<h5>CV</h5>
+										<h5 className="cvFooterText">CV</h5>
 									</a>
 								</div>
 							);
