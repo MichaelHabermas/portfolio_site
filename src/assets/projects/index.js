@@ -8,12 +8,12 @@ export const michaelsProjects = [
 		text: "Contributed to the design and implementation of a React app that gathers and shares family recipes. This app uses Redux to manage state, and makes axios calls to our concurrent team’s Node API.",
 		icons: [
 			{
-				icon: "Web",
+				iconName: "Web",
 				location: "https://water-my-plants-ft4.netlify.app/",
 				component: iconComponent["Web"]["component"],
 			},
 			{
-				icon: "GitHub",
+				iconName: "GitHub",
 				location: "https://github.com/ft-water-my-plants-4/FrontEnd",
 				component: iconComponent["GitHub"]["component"],
 			},
@@ -24,12 +24,12 @@ export const michaelsProjects = [
 		text: "Contributed to the design and implementation of a React app that gathers and shares family recipes. This app uses Redux to manage state, and makes axios calls to our concurrent team’s Node API.",
 		icons: [
 			{
-				icon: "Web",
+				iconName: "Web",
 				location: "https://water-my-plants-ft4.netlify.app/",
 				component: iconComponent["Web"]["component"],
 			},
 			{
-				icon: "GitHub",
+				iconName: "GitHub",
 				location: "https://github.com/ft-water-my-plants-4/FrontEnd",
 				component: iconComponent["GitHub"]["component"],
 			},
@@ -40,12 +40,12 @@ export const michaelsProjects = [
 		text: "Contributed to the design and implementation of a React app that gathers and shares family recipes. This app uses Redux to manage state, and makes axios calls to our concurrent team’s Node API.",
 		icons: [
 			{
-				icon: "Web",
+				iconName: "Web",
 				location: "https://water-my-plants-ft4.netlify.app/",
 				component: iconComponent["Web"]["component"],
 			},
 			{
-				icon: "GitHub",
+				iconName: "GitHub",
 				location: "https://github.com/ft-water-my-plants-4/FrontEnd",
 				component: iconComponent["GitHub"]["component"],
 			},
@@ -56,12 +56,12 @@ export const michaelsProjects = [
 		text: "Contributed to the design and implementation of a React app that gathers and shares family recipes. This app uses Redux to manage state, and makes axios calls to our concurrent team’s Node API.",
 		icons: [
 			{
-				icon: "Web",
+				iconName: "Web",
 				location: "https://water-my-plants-ft4.netlify.app/",
 				component: iconComponent["Web"]["component"],
 			},
 			{
-				icon: "GitHub",
+				iconName: "GitHub",
 				location: "https://github.com/ft-water-my-plants-4/FrontEnd",
 				component: iconComponent["GitHub"]["component"],
 			},
@@ -72,12 +72,12 @@ export const michaelsProjects = [
 		text: "Contributed to the design and implementation of a React app that gathers and shares family recipes. This app uses Redux to manage state, and makes axios calls to our concurrent team’s Node API.",
 		icons: [
 			{
-				icon: "Web",
+				iconName: "Web",
 				location: "https://water-my-plants-ft4.netlify.app/",
 				component: iconComponent["Web"]["component"],
 			},
 			{
-				icon: "GitHub",
+				iconName: "GitHub",
 				location: "https://github.com/ft-water-my-plants-4/FrontEnd",
 				component: iconComponent["GitHub"]["component"],
 			},
@@ -88,12 +88,12 @@ export const michaelsProjects = [
 		text: "Contributed to the design and implementation of a React app that gathers and shares family recipes. This app uses Redux to manage state, and makes axios calls to our concurrent team’s Node API.",
 		icons: [
 			{
-				icon: "Web",
+				iconName: "Web",
 				location: "https://water-my-plants-ft4.netlify.app/",
 				component: iconComponent["Web"]["component"],
 			},
 			{
-				icon: "GitHub",
+				iconName: "GitHub",
 				location: "https://github.com/ft-water-my-plants-4/FrontEnd",
 				component: iconComponent["GitHub"]["component"],
 			},
@@ -107,12 +107,12 @@ export const willsProjects = [
 		text: "Contributed to the design and implementation of a React app that gathers and shares family recipes. This app uses Redux to manage state, and makes axios calls to our concurrent team’s Node API.",
 		icons: [
 			{
-				icon: "Web",
+				iconName: "Web",
 				location: "https://water-my-plants-ft4.netlify.app/",
 				component: iconComponent["Web"]["component"],
 			},
 			{
-				icon: "GitHub",
+				iconName: "GitHub",
 				location: "https://github.com/ft-water-my-plants-4/FrontEnd",
 				component: iconComponent["GitHub"]["component"],
 			},
@@ -123,12 +123,12 @@ export const willsProjects = [
 		text: "Contributed to the design and implementation of a React app that gathers and shares family recipes. This app uses Redux to manage state, and makes axios calls to our concurrent team’s Node API.",
 		icons: [
 			{
-				icon: "Web",
+				iconName: "Web",
 				location: "https://water-my-plants-ft4.netlify.app/",
 				component: iconComponent["Web"]["component"],
 			},
 			{
-				icon: "GitHub",
+				iconName: "GitHub",
 				location: "https://github.com/ft-water-my-plants-4/FrontEnd",
 				component: iconComponent["GitHub"]["component"],
 			},
@@ -139,12 +139,12 @@ export const willsProjects = [
 		text: "Contributed to the design and implementation of a React app that gathers and shares family recipes. This app uses Redux to manage state, and makes axios calls to our concurrent team’s Node API.",
 		icons: [
 			{
-				icon: "Web",
+				iconName: "Web",
 				location: "https://water-my-plants-ft4.netlify.app/",
 				component: iconComponent["Web"]["component"],
 			},
 			{
-				icon: "GitHub",
+				iconName: "GitHub",
 				location: "https://github.com/ft-water-my-plants-4/FrontEnd",
 				component: iconComponent["GitHub"]["component"],
 			},
@@ -155,12 +155,12 @@ export const willsProjects = [
 		text: "Contributed to the design and implementation of a React app that gathers and shares family recipes. This app uses Redux to manage state, and makes axios calls to our concurrent team’s Node API.",
 		icons: [
 			{
-				icon: "Web",
+				iconName: "Web",
 				location: "https://water-my-plants-ft4.netlify.app/",
 				component: iconComponent["Web"]["component"],
 			},
 			{
-				icon: "GitHub",
+				iconName: "GitHub",
 				location: "https://github.com/ft-water-my-plants-4/FrontEnd",
 				component: iconComponent["GitHub"]["component"],
 			},
@@ -171,12 +171,12 @@ export const willsProjects = [
 		text: "Contributed to the design and implementation of a React app that gathers and shares family recipes. This app uses Redux to manage state, and makes axios calls to our concurrent team’s Node API.",
 		icons: [
 			{
-				icon: "Web",
+				iconName: "Web",
 				location: "https://water-my-plants-ft4.netlify.app/",
 				component: iconComponent["Web"]["component"],
 			},
 			{
-				icon: "GitHub",
+				iconName: "GitHub",
 				location: "https://github.com/ft-water-my-plants-4/FrontEnd",
 				component: iconComponent["GitHub"]["component"],
 			},
@@ -187,12 +187,12 @@ export const willsProjects = [
 		text: "Contributed to the design and implementation of a React app that gathers and shares family recipes. This app uses Redux to manage state, and makes axios calls to our concurrent team’s Node API.",
 		icons: [
 			{
-				icon: "Web",
+				iconName: "Web",
 				location: "https://water-my-plants-ft4.netlify.app/",
 				component: iconComponent["Web"]["component"],
 			},
 			{
-				icon: "GitHub",
+				iconName: "GitHub",
 				location: "https://github.com/ft-water-my-plants-4/FrontEnd",
 				component: iconComponent["GitHub"]["component"],
 			},

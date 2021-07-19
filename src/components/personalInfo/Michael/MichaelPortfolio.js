@@ -230,11 +230,14 @@ function MichaelPortfolio() {
 	];
 
 	const contactInfo = [
-		{ name: "GitHub", link: "https://github.com/MichaelHabermas" },
-		{ name: "LinkedIn", link: "https://www.linkedin.com/in/michael-habermas/" },
-		{ name: "CV", link: "" },
-		{ name: "Twitter", link: "" },
-		{ name: "Email", link: "" },
+		{ iconName: "GitHub", location: "https://github.com/MichaelHabermas" },
+		{
+			iconName: "LinkedIn",
+			location: "https://www.linkedin.com/in/michael-habermas/",
+		},
+		{ iconName: "CV", location: "" },
+		{ iconName: "Twitter", location: "" },
+		{ iconName: "Email", location: "" },
 	];
 
 	return (
@@ -303,36 +306,29 @@ function MichaelPortfolio() {
 			<footer>
 				<div className="footerMain">
 					{contactInfo.map(icon => {
-						const { name, link } = icon;
-						if (name !== "CV") {
+						const { iconName, location } = icon;
+						if (iconName !== "CV") {
 							return (
 								<a
-									href={`${link}`} //need to add the real cv link here
+									href={`${location}`} //need to add the real cv link here
 									target="_blank"
 									rel="noreferrer"
 									className="footerIcon"
 								>
-									{iconComponent[name][0]}
+									{iconComponent[iconName]["component"]}
 								</a>
 							);
 						} else {
 							return (
 								<div className="cvContainer">
 									<a
-										href={`${link}`} //need to add the real cv link here
+										href={`${location}`} //need to add the real cv link here
 										target="_blank"
 										rel="noreferrer"
 										className="cvFooterIcon"
 									>
-										{iconComponent[name][0]}
-									</a>
-									<a
-										href={`${link}`} //need to add the real cv link here
-										target="_blank"
-										rel="noreferrer"
-										className="cvFooterText"
-									>
-										{iconComponent[name][1]}
+										{iconComponent[iconName]["component"]}
+										<h5>CV</h5>
 									</a>
 								</div>
 							);
