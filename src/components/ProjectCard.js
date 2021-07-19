@@ -21,14 +21,15 @@ const ProjectCardStyle = styled.div`
 
 	img {
 		width: 100%;
-		margin-bottom: 1rem;
+		margin-bottom: 1.5rem;
 	}
 
 	p {
-		font-size: 1.5rem;
+		font-size: 2rem;
+		font-weight: 500;
 		width: 90%;
-		margin: 0 auto;
-		color: #2e2828;
+		margin: 0 auto 1rem;
+		color: #444444;
 		opacity: 1;
 	}
 

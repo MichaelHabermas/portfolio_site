@@ -30,7 +30,6 @@ const MichaelPortfolioStyles = styled.div`
 		box-sizing: border-box;
 		list-style: none;
 		text-decoration: none;
-		/* border: 1px dotted rebeccapurple; */
 	}
 
 	h1,
@@ -71,7 +70,7 @@ const MichaelPortfolioStyles = styled.div`
 		margin: 0 auto;
 	}
 
-	// LANDING PAGE SECTION
+	// LANDING PAGE SECTION											LANDING
 	.landing {
 		background-image: url(${landingBackgroundMobile});
 		background-position: center center;
@@ -103,18 +102,12 @@ const MichaelPortfolioStyles = styled.div`
 		margin: 0 auto;
 	}
 
-	.landing p {
-		/* margin-bottom: 7rem; */
-	}
-
 	.arrows {
 		width: 100%;
 		text-align: center;
 	}
-	.arrow img {
-	}
 
-	// SKILLS
+	// SKILLS PAGE SECTION											SKILLS
 	.skills {
 		background-color: white;
 		padding: 3rem;
@@ -131,19 +124,26 @@ const MichaelPortfolioStyles = styled.div`
 		font-size: 6rem;
 	}
 
-	// PROJECTS
+	// PROJECTS PAGE SECTION											PROJECTS
 	.projects {
 		background-image: url(${projectsBackgroundMobile});
 		background-position: center center;
-		height: 300vh;
-		/* background-attachment: fixed; */
+		height: 100%;
 		background-repeat: no-repeat;
 		background-size: cover;
 		padding: 3rem;
 	}
 
-	//		FOOTER		 						FOOTER											FOOTER
+	.project_cards {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+	}
 
+	//	FOOTER SECTION											         FOOTER
 	footer {
 		display: flex;
 		background-color: purple;
@@ -179,26 +179,12 @@ const MichaelPortfolioStyles = styled.div`
 		color: white;
 	}
 
-	// Projects
-
-	.project_cards {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		align-items: center;
-		width: 100%;
-		/* border: 1px solid red; */
-	}
-
+	//	MEDIA QUERIES										                MEDIA Q's
 	@media screen and (min-width: 480px) {
 		color: blue;
 	}
 	@media screen and (min-width: 768px) {
 		color: red;
-		.project_card {
-			max-width: 48%;
-		}
 
 		.landing p {
 			margin-top: 10%;
@@ -221,15 +207,12 @@ const MichaelPortfolioStyles = styled.div`
 		.skills,
 		.projects {
 		}
-		.sub_section {
-			width: 100%;
-			padding: 0;
-		}
-
 	}
 	@media screen and (min-width: 1024px) {
 		color: blue;
-
+		.project_card {
+			max-width: 48%;
+		}
 		h1 {
 			margin-top: 5%;
 			font-size: 6.5rem;
@@ -243,7 +226,7 @@ const MichaelPortfolioStyles = styled.div`
 		.landing p em {
 			font-size: 3rem;
 		}
-		
+
 		.skill_icons {
 			flex-wrap: nowrap;
 		}
@@ -251,22 +234,20 @@ const MichaelPortfolioStyles = styled.div`
 		.icon {
 			font-size: 6rem;
 		}
-		
+
 		.landing,
 		.skills,
 		.projects {
 		}
-		.sub_section {
-			width: 100%;
-			padding: 0;
-		}
-
 	}
 	@media screen and (min-width: 1200px) {
 		color: red;
 	}
 	@media screen and (min-width: 1550px) {
 		color: blue;
+		.project_card {
+			max-width: 32%;
+		}
 	}
 `;
 
@@ -351,7 +332,6 @@ function MichaelPortfolio() {
 							return (
 								<div className="project_card">
 									<ProjectCard
-										className="project_card"
 										image={project["image"]}
 										text={project["text"]}
 										icons={project["icons"]}
@@ -387,7 +367,7 @@ function MichaelPortfolio() {
 										className="cvFooterIcon"
 									>
 										{iconComponent[iconName]["component"]}
-										<h5>CV</h5>
+										<h5 className="cvFooterText">CV</h5>
 									</a>
 								</div>
 							);
