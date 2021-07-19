@@ -73,7 +73,7 @@ const MichaelPortfolioStyles = styled.div`
 
 	// LANDING PAGE SECTION											LANDING
 	.landing {
-		background-image: url(${landingBackgroundMobile2});
+		background-image: url(${landingBackgroundMobile});
 		background-position: center center;
 		/* background-attachment: fixed; */
 		background-repeat: no-repeat;
