@@ -142,7 +142,6 @@ const MichaelPortfolioStyles = styled.div`
 		padding: 3rem;
 	}
 
-
 	//		FOOTER		 						FOOTER											FOOTER
 
 	footer {
@@ -180,7 +179,7 @@ const MichaelPortfolioStyles = styled.div`
 		color: white;
 	}
 
-  // Projects
+	// Projects
 
 	.project_cards {
 		display: flex;
@@ -191,7 +190,6 @@ const MichaelPortfolioStyles = styled.div`
 		width: 100%;
 		/* border: 1px solid red; */
 	}
-
 
 	@media screen and (min-width: 480px) {
 		color: blue;
@@ -232,13 +230,12 @@ function MichaelPortfolio() {
 	];
 
 	const contactInfo = [
-		{name: "GitHub", link: "https://github.com/MichaelHabermas"},
-		{name: "LinkedIn", link: "https://www.linkedin.com/in/michael-habermas/"},
-		{name: "CV", link: ""},
-		{name: "Twitter", link: ""},
-		{name: "Email", link: ""}
-	]
-
+		{ name: "GitHub", link: "https://github.com/MichaelHabermas" },
+		{ name: "LinkedIn", link: "https://www.linkedin.com/in/michael-habermas/" },
+		{ name: "CV", link: "" },
+		{ name: "Twitter", link: "" },
+		{ name: "Email", link: "" },
+	];
 
 	return (
 		<MichaelPortfolioStyles>
@@ -275,8 +272,8 @@ function MichaelPortfolio() {
 						{skillIcons.map(icon => {
 							return (
 								<SkillCard
-									iconImg={iconComponent[icon][0]}
-									iconName={iconComponent[icon][1]}
+									component={iconComponent[icon]["component"]}
+									iconName={iconComponent[icon]["iconName"]}
 								/>
 							);
 						})}
@@ -304,41 +301,42 @@ function MichaelPortfolio() {
 				</div>
 			</section>
 			<footer>
-				<div className='footerMain'>
+				<div className="footerMain">
 					{contactInfo.map(icon => {
-						const { name, link } = icon
-						if(name !== "CV") {
+						const { name, link } = icon;
+						if (name !== "CV") {
 							return (
 								<a
 									href={`${link}`} //need to add the real cv link here
 									target="_blank"
 									rel="noreferrer"
-									className='footerIcon'
+									className="footerIcon"
 								>
 									{iconComponent[name][0]}
 								</a>
-						)} else {
-								return (
-									<div className="cvContainer">
-										<a
-											href={`${link}`} //need to add the real cv link here
-											target="_blank"
-											rel="noreferrer"
-											className='cvFooterIcon'
-										>
-											{iconComponent[name][0]}
-										</a>
-										<a
-											href={`${link}`} //need to add the real cv link here
-											target="_blank"
-											rel="noreferrer"
-											className='cvFooterText'
-										>
-											{iconComponent[name][1]}
-										</a>
-									</div>
-								)
-							}
+							);
+						} else {
+							return (
+								<div className="cvContainer">
+									<a
+										href={`${link}`} //need to add the real cv link here
+										target="_blank"
+										rel="noreferrer"
+										className="cvFooterIcon"
+									>
+										{iconComponent[name][0]}
+									</a>
+									<a
+										href={`${link}`} //need to add the real cv link here
+										target="_blank"
+										rel="noreferrer"
+										className="cvFooterText"
+									>
+										{iconComponent[name][1]}
+									</a>
+								</div>
+							);
+						}
 					})}
 				</div>
 			</footer>
