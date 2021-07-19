@@ -76,9 +76,12 @@ const MichaelPortfolioStyles = styled.div`
 		background-position: center center;
 		background-attachment: fixed;
 		background-repeat: no-repeat;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
 		background-size: cover;
+		/* background-size: 100% 100%; */
 		height: 100vh;
-
 		color: white;
 	}
 
@@ -204,7 +207,6 @@ const MichaelPortfolioStyles = styled.div`
 			font-size: 5rem;
 		}
 
-
 		.sub_section {
 			width: 100%;
 			padding: 0;
@@ -217,11 +219,10 @@ const MichaelPortfolioStyles = styled.div`
 		.cvFooterIcon .icon {
 			font-size: 7.5rem;
 		}
-	
+
 		.cvFooterText {
 			font-size: 2.2rem;
 		}
-
 	}
 	@media screen and (min-width: 1024px) {
 		color: blue;
@@ -241,7 +242,7 @@ const MichaelPortfolioStyles = styled.div`
 		.landing p em {
 			font-size: 3rem;
 		}
-	
+
 		.skill_icons .icon {
 			font-size: 6.5rem;
 		}
@@ -257,7 +258,6 @@ const MichaelPortfolioStyles = styled.div`
 		.icon {
 			font-size: 6rem;
 		}
-
 	}
 	@media screen and (min-width: 1200px) {
 		color: red;
@@ -265,7 +265,6 @@ const MichaelPortfolioStyles = styled.div`
 		.skills .icon {
 			font-size: 8rem;
 		}
-
 	}
 	@media screen and (min-width: 1550px) {
 		color: blue;
@@ -392,8 +391,7 @@ function MichaelPortfolio() {
 									>
 										{iconComponent[iconName]["component"]}
 
-										<h5 className='cvFooterText'>CV</h5>
-
+										<h5 className="cvFooterText">CV</h5>
 									</a>
 								</div>
 							);
