@@ -83,8 +83,8 @@ const MichaelPortfolioStyles = styled.div`
 		-webkit-background-size: cover;
 		height: 95vh;
 		color: white;
-		top: 0;
-		left: 0;
+		/* top: 0;
+		left: 0; */
 	}
 
 	.landing .sub_section {
