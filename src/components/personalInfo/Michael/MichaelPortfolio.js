@@ -149,7 +149,11 @@ const MichaelPortfolioStyles = styled.div`
 		width: 100%;
 	}
 
-	//		FOOTER SECTION											FOOTER
+	.project_card {
+		/* width: clamp(400px, 100%, 500px); */
+	}
+
+	//	FOOTER SECTION											         FOOTER
 	footer {
 		display: flex;
 		background-color: purple;
@@ -185,6 +189,7 @@ const MichaelPortfolioStyles = styled.div`
 		color: white;
 	}
 
+	//	MEDIA QUERIES										                MEDIA Q's
 	@media screen and (min-width: 480px) {
 		color: blue;
 	}
@@ -259,6 +264,9 @@ const MichaelPortfolioStyles = styled.div`
 	}
 	@media screen and (min-width: 1550px) {
 		color: blue;
+		.project_card {
+			max-width: 32%;
+		}
 	}
 `;
 
@@ -343,7 +351,6 @@ function MichaelPortfolio() {
 							return (
 								<div className="project_card">
 									<ProjectCard
-										className="project_card"
 										image={project["image"]}
 										text={project["text"]}
 										icons={project["icons"]}
