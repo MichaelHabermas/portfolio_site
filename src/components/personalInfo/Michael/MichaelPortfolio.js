@@ -80,6 +80,7 @@ const MichaelPortfolioStyles = styled.div`
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
+		background-size: auto 100%;
 		height: 95vh;
 		color: white;
 	}
