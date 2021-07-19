@@ -72,8 +72,6 @@ const Nav = props => {
 					<li>
 						<a
 							href="/"
-							target="_blank"
-							rel="noreferrer"
 							style={{ color: `${color}` }}
 						>
 							Home
