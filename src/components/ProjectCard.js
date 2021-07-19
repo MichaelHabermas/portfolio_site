@@ -1,6 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 
+// import components
+import SkillCard from "./SkillCard";
+
+// icon imports
+// import iconComponent from "../assets/icons/index";
+
 const ProjectCardStyle = styled.div`
 	.project_div {
 		display: flex;
@@ -56,11 +62,11 @@ const ProjectCard = props => {
 				<img src={image} alt="project_image"></img>
 				<p>{text}</p>
 				<div className="project_icons">
-					{icons.map(icon => {
+					{icons.map(iconX => {
 						return (
-							<div>
-								<h4>Hi</h4>
-							</div>
+							<a href={iconX["location"]} target="_blank" rel="noreferrer">
+								<SkillCard component={iconX["component"]} />
+							</a>
 						);
 					})}
 				</div>

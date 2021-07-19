@@ -45,11 +45,11 @@ const SkillCardStyle = styled.div`
 `;
 
 const SkillCard = props => {
-	const { iconImg, iconName } = props;
+	const { component, iconName } = props;
 	return (
 		<SkillCardStyle>
 			<div className="icon_card">
-				<div className="iconImg_card">{iconImg}</div>
+				<div className="iconImg_card">{component}</div>
 				<h5 className="iconTitle_card">{iconName}</h5>
 			</div>
 		</SkillCardStyle>
