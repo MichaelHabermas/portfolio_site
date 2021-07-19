@@ -135,7 +135,7 @@ const MichaelPortfolioStyles = styled.div`
 	.projects {
 		background-image: url(${projectsBackgroundMobile});
 		background-position: center center;
-		height: 300vh;
+		height: 100%;
 		/* background-attachment: fixed; */
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -225,7 +225,6 @@ const MichaelPortfolioStyles = styled.div`
 			width: 100%;
 			padding: 0;
 		}
-
 	}
 	@media screen and (min-width: 1024px) {
 		color: blue;
@@ -243,7 +242,7 @@ const MichaelPortfolioStyles = styled.div`
 		.landing p em {
 			font-size: 3rem;
 		}
-		
+
 		.skill_icons {
 			flex-wrap: nowrap;
 		}
@@ -251,7 +250,7 @@ const MichaelPortfolioStyles = styled.div`
 		.icon {
 			font-size: 6rem;
 		}
-		
+
 		.landing,
 		.skills,
 		.projects {
@@ -260,7 +259,6 @@ const MichaelPortfolioStyles = styled.div`
 			width: 100%;
 			padding: 0;
 		}
-
 	}
 	@media screen and (min-width: 1200px) {
 		color: red;
