@@ -10,7 +10,8 @@ import ProjectCard from "../../ProjectCard";
 import iconComponent from "../../../assets/icons";
 
 // asset imports
-import landingBackgroundMobile from "../../../assets/michaelPage/michael_landing_background_mobile.svg";
+// import landingBackgroundMobile from "../../../assets/michaelPage/michael_landing_background_mobile.svg";
+import landingBackgroundMobile2 from "../../../assets/michaelPage/michael_landing_background_mobile2.svg";
 import projectsBackgroundMobile from "../../../assets/michaelPage/projects_background_mobile.png";
 import arrows from "../../../assets/michaelPage/arrows.svg";
 
@@ -72,7 +73,7 @@ const MichaelPortfolioStyles = styled.div`
 
 	// LANDING PAGE SECTION											LANDING
 	.landing {
-		background-image: url(${landingBackgroundMobile});
+		background-image: url(${landingBackgroundMobile2});
 		background-position: center center;
 		background-attachment: fixed;
 		background-repeat: no-repeat;
