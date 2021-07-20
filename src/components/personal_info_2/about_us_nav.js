@@ -32,12 +32,12 @@ const NavBar = styled.div`
 	}
 
 	.navCV {
-		letter-spacing: .5rem;
+		letter-spacing: .3rem;
 	}
 
 	.nameLogo {
 		font-family: "Lobster", cursive, sans-serif;
-		font-size: 4rem;
+		font-size: 3rem;
 		line-height: 3rem;
 	}
 
