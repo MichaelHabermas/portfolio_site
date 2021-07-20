@@ -74,17 +74,26 @@ const MichaelPortfolioStyles = styled.div`
 	// LANDING PAGE SECTION											LANDING
 	.landing {
 		background-image: url(${landingBackgroundMobile});
-		/* background-position: center center; */
-		background-attachment: fixed;
+		background-position: center center;
 		background-repeat: no-repeat;
-		/* background-size: cover; */
-		/* -moz-background-size: cover;
+		background-size: cover;
+		-moz-background-size: cover;
 		-o-background-size: cover;
-		-webkit-background-size: cover; */
-		height: 100%;
+		-webkit-background-size: cover;
+		height: 95vh;
 		color: white;
-		top: 0;
-		left: 0;
+		background-attachment: fixed;
+		/* top: 0;
+		left: 0; */
+	}
+
+	@supports (-webkit-touch-callout: none) {
+		/* CSS specific to iOS devices */
+		background-attachment: None;
+	}
+
+	@supports not (-webkit-touch-callout: none) {
+		/* CSS for other than iOS devices */
 	}
 
 	.landing .sub_section {
