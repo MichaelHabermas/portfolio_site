@@ -82,16 +82,11 @@ const MichaelPortfolioStyles = styled.div`
 		-webkit-background-size: cover;
 		height: 95vh;
 		color: white;
+		/* this is so the background sizing works properly for iOS mobile Safari */
 		@supports not (-webkit-overflow-scrolling: touch) {
 			background-attachment: fixed;
 		}
 	}
-
-	/* @supports not (background-attachment: fixed) {
-		.landing {
-			background-attachment: fixed;
-		}
-	} */
 
 	.landing .sub_section {
 		display: flex;
