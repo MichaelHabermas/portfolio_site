@@ -343,6 +343,7 @@ function MichaelPortfolio() {
 								<SkillCard
 									component={iconComponent[icon]["component"]}
 									iconName={iconComponent[icon]["iconName"]}
+									key={Math.random()}
 								/>
 							);
 						})}
@@ -356,7 +357,7 @@ function MichaelPortfolio() {
 					<div className="project_cards">
 						{michaelsProjects.map(project => {
 							return (
-								<div className="project_card">
+								<div className="project_card" key={Math.random()}>
 									<ProjectCard
 										image={project["image"]}
 										text={project["text"]}
@@ -379,6 +380,7 @@ function MichaelPortfolio() {
 									target="_blank"
 									rel="noreferrer"
 									className="footerIcon"
+									key={Math.random()}
 								>
 									{iconComponent[iconName]["component"]}
 								</a>

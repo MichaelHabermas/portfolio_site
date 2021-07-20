@@ -65,7 +65,12 @@ const ProjectCard = props => {
 				<div className="project_icons">
 					{icons.map(iconX => {
 						return (
-							<a href={iconX["location"]} target="_blank" rel="noreferrer">
+							<a
+								href={iconX["location"]}
+								target="_blank"
+								rel="noreferrer"
+								key={Math.random()}
+							>
 								<SkillCard component={iconX["component"]} />
 							</a>
 						);
