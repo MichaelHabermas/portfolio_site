@@ -11,7 +11,10 @@ import iconComponent from "../../../assets/icons";
 
 // asset imports
 import landingBackgroundMobile from "../../../assets/michaelPage/michael_landing_background_mobile.svg";
-// import landingBackgroundMobile2 from "../../../assets/michaelPage/michael_landing_background_mobile2.svg";
+import landingBackgroundTablet from "../../../assets/michaelPage/michael_landing_background_tablet.svg";
+import landingBackgroundDesktop from "../../../assets/michaelPage/michael_landing_background_desktop.svg";
+import landingBackgroundDesktopWide from "../../../assets/michaelPage/michael_landing_background_desktop_wide.svg";
+import landingBackgroundExtraWide from "../../../assets/michaelPage/michael_landing_background_extra_wide.svg";
 import projectsBackgroundMobile from "../../../assets/michaelPage/projects_background_mobile.png";
 // import projectsBackgroundMobile from "../../../assets/michaelPage/background_adrian.png";
 import arrows from "../../../assets/michaelPage/arrows.svg";
@@ -98,7 +101,7 @@ const MichaelPortfolioStyles = styled.div`
 
 	h1 {
 		font-size: 6rem;
-		width: 90%;
+		/* width: 90%; */
 		margin: 0 auto 3rem;
 	}
 
@@ -192,10 +195,26 @@ const MichaelPortfolioStyles = styled.div`
 	//	MEDIA QUERIES										                MEDIA Q's
 	@media screen and (min-width: 480px) {
 		color: blue;
+		.landing {
+			background-image: url(${landingBackgroundTablet});
+		}
 	}
 	@media screen and (min-width: 768px) {
 		color: red;
 
+		.sub_section {
+			width: 80%;
+			padding: 0;
+		}
+		.landing {
+			background-image: url(${landingBackgroundDesktop});
+		}
+
+		h1 {
+			font-size: 7rem;
+			/* width: 90%; */
+			/* margin: 0 0 3rem 0; */
+		}
 		.landing p {
 			margin-top: 10%;
 			font-size: 2.5rem;
@@ -213,11 +232,6 @@ const MichaelPortfolioStyles = styled.div`
 			font-size: 5rem;
 		}
 
-		.sub_section {
-			width: 100%;
-			padding: 0;
-		}
-
 		.footerMain .icon {
 			font-size: 3.5rem;
 		}
@@ -232,17 +246,23 @@ const MichaelPortfolioStyles = styled.div`
 	}
 	@media screen and (min-width: 1024px) {
 		color: blue;
-		.project_card {
-			max-width: 48%;
+		.landing {
+			background-image: url(${landingBackgroundDesktopWide});
 		}
 		h1 {
-			margin-top: 5%;
-			font-size: 6.5rem;
+			font-size: 8rem;
+			text-align: left;
+			/* font-size: 6.5rem; */
+			/* width: 90%; */
+			/* margin: 0 0 3rem 0; */
 		}
 
 		.landing p {
+			margin: 0;
 			margin-top: 8%;
-			font-size: 3rem;
+			font-size: 2.5rem;
+			text-align: left;
+			width: 50%;
 		}
 
 		.landing p em {
@@ -265,6 +285,10 @@ const MichaelPortfolioStyles = styled.div`
 			font-size: 6rem;
 		}
 
+		.project_card {
+			max-width: 48%;
+		}
+
 		.footerMain {
 			justify-content: space-around;
 			padding: 0 15%;
@@ -285,6 +309,12 @@ const MichaelPortfolioStyles = styled.div`
 	}
 	@media screen and (min-width: 1200px) {
 		color: red;
+		.landing {
+			background-image: url(${landingBackgroundExtraWide});
+		}
+		h1 {
+			font-size: 9rem;
+		}
 
 		.skills .icon {
 			font-size: 8rem;

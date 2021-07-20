@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import cardFront from '../../assets/cardGameAssets/card_face_norm.png';
+import cardFront from "../../assets/cardGameAssets/card_face_norm.png";
 
 const random = () => {
 	return (-1 + Math.random() * 2).toFixed(2);
@@ -65,23 +65,20 @@ const Pile = styled.div`
 		}
 	}
 	// MEDIA QUERIES
-	@media only screen and (max-width: 425px) {
+	@media screen and (min-width: 480px) {
+		color: blue;
 	}
-	@media only screen and (min-width: 425px) and (max-width: 641px) {
-		/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+	@media screen and (min-width: 768px) {
+		color: red;
 	}
-	@media only screen and (min-width: 641px) and (max-width: 961px) {
-		/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+	@media screen and (min-width: 1024px) {
+		color: blue;
 	}
-	@media only screen and (min-width: 961px) and (max-width: 1100px) {
-		/* tablet, landscape iPad, lo-res laptops ands desktops */
+	@media screen and (min-width: 1200px) {
+		color: red;
 	}
-	@media only screen and (min-width: 1100px) and (max-width: 1281px) {
-		/* big landscape tablets, laptops, and desktops */
-	}
-	@media only screen and (min-width: 1281px) and (max-width: 1500px) {
-	}
-	@media only screen and (min-width: 1500px) {
+	@media screen and (min-width: 1550px) {
+		color: blue;
 	}
 `;
 
@@ -98,9 +95,7 @@ const PairedCards = props => {
 							<div
 								className="card"
 								style={{
-									transform: `rotate(${Math.floor(
-										Math.random() * 360
-									)}deg)`
+									transform: `rotate(${Math.floor(Math.random() * 360)}deg)`,
 								}}
 							>
 								{pair}
@@ -108,9 +103,7 @@ const PairedCards = props => {
 							<div
 								className="card rightCard"
 								style={{
-									transform: `rotate(${Math.floor(
-										Math.random() * 360
-									)}deg)`
+									transform: `rotate(${Math.floor(Math.random() * 360)}deg)`,
 								}}
 							>
 								{pair}
@@ -118,7 +111,7 @@ const PairedCards = props => {
 						</div>
 					);
 				}
-				if (lastPaired !== 'Q') {
+				if (lastPaired !== "Q") {
 					return (
 						<div key={Math.random()} className="newPair">
 							<div className="card">{pair}</div>
