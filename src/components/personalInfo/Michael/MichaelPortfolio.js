@@ -13,6 +13,7 @@ import iconComponent from "../../../assets/icons";
 import landingBackgroundMobile from "../../../assets/michaelPage/michael_landing_background_mobile.svg";
 // import landingBackgroundMobile2 from "../../../assets/michaelPage/michael_landing_background_mobile2.svg";
 import projectsBackgroundMobile from "../../../assets/michaelPage/projects_background_mobile.png";
+// import projectsBackgroundMobile from "../../../assets/michaelPage/background_adrian.png";
 import arrows from "../../../assets/michaelPage/arrows.svg";
 
 // project imports
@@ -153,7 +154,7 @@ const MichaelPortfolioStyles = styled.div`
 	footer {
 		display: flex;
 		background-color: purple;
-		height: 16vh;
+		height: 12vh;
 	}
 
 	.footerMain {
@@ -164,7 +165,7 @@ const MichaelPortfolioStyles = styled.div`
 	}
 
 	.footerIcon .icon {
-		font-size: 4rem;
+		font-size: 3.5rem;
 		color: white;
 	}
 
@@ -174,12 +175,14 @@ const MichaelPortfolioStyles = styled.div`
 		align-items: center;
 	}
 
-	.cvFooterIcon {
+	.cvFooterIcon .icon {
 		color: white;
+		font-size: 4.7rem;
+		transform: translateY(6%);
 	}
 
 	.cvFooterText {
-		transform: translateY(-30%);
+		transform: translateY(-16%);
 		text-align: center;
 		font-size: 1.5rem;
 		font-weight: bold;
@@ -216,15 +219,15 @@ const MichaelPortfolioStyles = styled.div`
 		}
 
 		.footerMain .icon {
-			font-size: 6rem;
+			font-size: 3.5rem;
 		}
 
 		.cvFooterIcon .icon {
-			font-size: 7.5rem;
+			font-size: 4rem;
 		}
 
 		.cvFooterText {
-			font-size: 2.2rem;
+			font-size: 1.8rem;
 		}
 	}
 	@media screen and (min-width: 1024px) {
@@ -262,10 +265,21 @@ const MichaelPortfolioStyles = styled.div`
 			font-size: 6rem;
 		}
 
-
 		.footerMain {
 			justify-content: space-around;
 			padding: 0 15%;
+		}
+
+		.footerMain .icon {
+			font-size: 4rem;
+		}
+
+		.cvFooterIcon .icon {
+			font-size: 4.5rem;
+		}
+
+		.cvFooterText {
+			font-size: 2rem;
 		}
 
 	}
