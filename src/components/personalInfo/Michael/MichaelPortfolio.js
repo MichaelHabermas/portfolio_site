@@ -85,13 +85,13 @@ const MichaelPortfolioStyles = styled.div`
 		/* background-attachment: fixed; */
 		/* top: 0;
 		left: 0; */
-		@supports (background-attachment: fixed) {
+		@supports not (-webkit-overflow-scrolling: touch){
 			background-attachment: fixed;
 			
 		}
 	}
 
-	@supports (background-attachment: fixed) {
+	@supports not (background-attachment: fixed) {
 		.landing {
 			background-attachment: fixed;
 		}
