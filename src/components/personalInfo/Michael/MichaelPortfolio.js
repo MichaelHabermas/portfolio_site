@@ -82,16 +82,16 @@ const MichaelPortfolioStyles = styled.div`
 		-webkit-background-size: cover;
 		height: 95vh;
 		color: white;
-		/* @supports not (-webkit-overflow-scrolling: touch){
-			background-attachment: fixed;
-		} */
-	}
-
-	@supports not (background-attachment: fixed) {
-		.landing {
+		@supports not (-webkit-overflow-scrolling: touch) {
 			background-attachment: fixed;
 		}
 	}
+
+	/* @supports not (background-attachment: fixed) {
+		.landing {
+			background-attachment: fixed;
+		}
+	} */
 
 	.landing .sub_section {
 		display: flex;
