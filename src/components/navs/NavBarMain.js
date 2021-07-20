@@ -145,7 +145,7 @@ const Nav = styled.div`
 			cursor: pointer;
 		}
 		.logo {
-			width: 5rem;
+			font-size: 5rem;
 		}
 		.link-text {
 			font-size: 0.8rem;

@@ -153,7 +153,7 @@ const MichaelPortfolioStyles = styled.div`
 	footer {
 		display: flex;
 		background-color: purple;
-		height: 25vh;
+		height: 16vh;
 	}
 
 	.footerMain {
@@ -261,6 +261,13 @@ const MichaelPortfolioStyles = styled.div`
 		.icon {
 			font-size: 6rem;
 		}
+
+
+		.footerMain {
+			justify-content: space-around;
+			padding: 0 15%;
+		}
+
 	}
 	@media screen and (min-width: 1200px) {
 		color: red;
@@ -268,11 +275,22 @@ const MichaelPortfolioStyles = styled.div`
 		.skills .icon {
 			font-size: 8rem;
 		}
+		
+		.footerMain {
+			justify-content: space-around;
+			padding: 0 20%;
+		}
+
 	}
 	@media screen and (min-width: 1550px) {
 		color: blue;
 		.project_card {
 			max-width: 32%;
+		}
+
+		.footerMain {
+			justify-content: space-around;
+			padding: 0 25%;
 		}
 	}
 `;

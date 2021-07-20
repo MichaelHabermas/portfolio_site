@@ -44,7 +44,7 @@ const HomeDiv = styled.div`
 	.main-title {
 		font-family: 'Stalemate', cursive;
 		color: white;
-		font-size: 8rem;
+		font-size: 10rem;
 		font-weight: 100;
 		line-height: 1;
 		z-index: 3;
@@ -66,6 +66,7 @@ const HomeDiv = styled.div`
 		animation: animate 6s linear infinite;
 		opacity: 0;
 		padding: 6%;
+		font-size: 4rem;
 	}
 
 	/* .lastspan {
@@ -109,8 +110,6 @@ const HomeDiv = styled.div`
 	} */
 
 	.nameLinks {
-		font-size: 5rem;
-		font-weight: 100;
 		line-height: 1;
 		z-index: 3;
 		position: absolute;
@@ -123,6 +122,11 @@ const HomeDiv = styled.div`
 		justify-content: space-between;
 		width: 67%;
 	}
+
+	.nameLinks div {
+		font-size: 5rem;
+	}
+
 	.nameLink {
 		font-family: 'Stalemate', cursive;
 		color: white;
@@ -137,14 +141,17 @@ const HomeDiv = styled.div`
 		background-image: url(${landingPageMobile});
 
 		.main-title {
-			font-size: 3rem;
+			font-size: 5rem;
+		}
+		.word span {
+			font-size: 5rem;
 		}
 		.nameLinks {
-			font-size: 3rem;
 			top: initial;
 			left: 45%;
 			bottom: 10%;
 		}
+
 		.nameLink2 {
 			transform: translate(0%, -150%);
 		}
@@ -152,11 +159,15 @@ const HomeDiv = styled.div`
 	@media only screen and (min-width: 426px) {
 		/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
 		/* background: url(${landingPageTablet}) no-repeat center center fixed; */
+
 		.main-title {
-			font-size: 4rem;
+			font-size: 5rem;
 		}
-		.nameLinks {
-			font-size: 3rem;
+		.word span {
+			font-size: 5rem;
+		}
+		.nameLinks div {
+			font-size: 6rem;
 		}
 		.nameLink2 {
 			transform: translate(0%, -150%);
@@ -168,7 +179,10 @@ const HomeDiv = styled.div`
 		.main-title {
 			font-size: 5rem;
 		}
-		.nameLinks {
+		.word span {
+			font-size: 5rem;
+		}
+		.nameLinks div {
 			font-size: 4rem;
 		}
 		.nameLink2 {
