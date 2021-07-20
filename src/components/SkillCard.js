@@ -17,6 +17,9 @@ const SkillCardStyle = styled.div`
 		color: black;
 	}
 
+	@media screen and (min-width: 480px) {
+		color: blue;
+	}
 	@media screen and (min-width: 768px) {
 		.icon_card {
 			width: 6.1rem;
@@ -25,10 +28,7 @@ const SkillCardStyle = styled.div`
 		.iconTitle_card {
 			font-size: 1.2rem;
 		}
-
-
 	}
-
 	@media screen and (min-width: 1024px) {
 		.icon_card {
 			width: 7.4rem;
@@ -37,11 +37,13 @@ const SkillCardStyle = styled.div`
 		.iconTitle_card {
 			font-size: 1.5rem;
 		}
-
-
 	}
-
-
+	@media screen and (min-width: 1200px) {
+		color: red;
+	}
+	@media screen and (min-width: 1550px) {
+		color: blue;
+	}
 `;
 
 const SkillCard = props => {
