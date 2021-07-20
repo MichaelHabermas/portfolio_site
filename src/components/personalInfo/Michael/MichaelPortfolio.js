@@ -82,13 +82,9 @@ const MichaelPortfolioStyles = styled.div`
 		-webkit-background-size: cover;
 		height: 95vh;
 		color: white;
-		/* background-attachment: fixed; */
-		/* top: 0;
-		left: 0; */
-		@supports not (-webkit-overflow-scrolling: touch){
+		/* @supports not (-webkit-overflow-scrolling: touch){
 			background-attachment: fixed;
-			
-		}
+		} */
 	}
 
 	@supports not (background-attachment: fixed) {
@@ -96,15 +92,6 @@ const MichaelPortfolioStyles = styled.div`
 			background-attachment: fixed;
 		}
 	}
-    
-	/* @supports (-webkit-touch-callout: none) { */
-		/* CSS specific to iOS devices */
-		/* background-attachment: None; */
-	}
-
-	/* @supports not (-webkit-touch-callout: none) { */
-		/* CSS for other than iOS devices */
-	/* } */
 
 	.landing .sub_section {
 		display: flex;
