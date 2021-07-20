@@ -147,7 +147,7 @@ const MichaelPortfolioStyles = styled.div`
 	footer {
 		display: flex;
 		background-color: purple;
-		height: 25vh;
+		height: 16vh;
 	}
 
 	.footerMain {
