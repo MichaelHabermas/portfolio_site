@@ -100,7 +100,7 @@ const MichaelPortfolioStyles = styled.div`
 
 	h1 {
 		font-size: 6rem;
-		width: 90%;
+		/* width: 90%; */
 		margin: 0 auto 3rem;
 	}
 
@@ -200,7 +200,7 @@ const MichaelPortfolioStyles = styled.div`
 		color: red;
 
 		.sub_section {
-			width: 90%;
+			width: 80%;
 			padding: 0;
 		}
 		.landing {
@@ -246,11 +246,8 @@ const MichaelPortfolioStyles = styled.div`
 		.landing {
 			background-image: url(${landingBackgroundDesktopWide});
 		}
-		.project_card {
-			max-width: 48%;
-		}
 		h1 {
-			margin-top: 5%;
+			font-size: 8rem;
 			text-align: left;
 			/* font-size: 6.5rem; */
 			/* width: 90%; */
@@ -258,8 +255,11 @@ const MichaelPortfolioStyles = styled.div`
 		}
 
 		.landing p {
+			margin: 0;
 			margin-top: 8%;
-			font-size: 3rem;
+			font-size: 2.5rem;
+			text-align: left;
+			width: 50%;
 		}
 
 		.landing p em {
@@ -281,11 +281,17 @@ const MichaelPortfolioStyles = styled.div`
 		.icon {
 			font-size: 6rem;
 		}
+		.project_card {
+			max-width: 48%;
+		}
 	}
 	@media screen and (min-width: 1200px) {
 		color: red;
 		.landing {
 			background-image: url(${landingBackgroundExtraWide});
+		}
+		h1 {
+			font-size: 9rem;
 		}
 
 		.skills .icon {
