@@ -74,17 +74,17 @@ const MichaelPortfolioStyles = styled.div`
 	// LANDING PAGE SECTION											LANDING
 	.landing {
 		background-image: url(${landingBackgroundMobile});
-		background-position: center center;
-		/* background-attachment: fixed; */
+		/* background-position: center center; */
+		background-attachment: fixed;
 		background-repeat: no-repeat;
-		background-size: cover;
-		-moz-background-size: cover;
+		/* background-size: cover; */
+		/* -moz-background-size: cover;
 		-o-background-size: cover;
-		-webkit-background-size: cover;
-		height: 95vh;
+		-webkit-background-size: cover; */
+		height: 100%;
 		color: white;
-		/* top: 0;
-		left: 0; */
+		top: 0;
+		left: 0;
 	}
 
 	.landing .sub_section {
