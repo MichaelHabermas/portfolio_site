@@ -209,8 +209,6 @@ const MichaelPortfolioStyles = styled.div`
 
 		h1 {
 			font-size: 7rem;
-			/* width: 90%; */
-			/* margin: 0 0 3rem 0; */
 		}
 		.landing p {
 			margin-top: 10%;
@@ -249,9 +247,6 @@ const MichaelPortfolioStyles = styled.div`
 		h1 {
 			font-size: 8rem;
 			text-align: left;
-			/* font-size: 6.5rem; */
-			/* width: 90%; */
-			/* margin: 0 0 3rem 0; */
 		}
 
 		.landing p {
@@ -289,7 +284,6 @@ const MichaelPortfolioStyles = styled.div`
 			justify-content: space-around;
 			padding: 0 15%;
 		}
-
 	}
 	@media screen and (min-width: 1200px) {
 		color: red;
@@ -303,12 +297,11 @@ const MichaelPortfolioStyles = styled.div`
 		.skills .icon {
 			font-size: 8rem;
 		}
-		
+
 		.footerMain {
 			justify-content: space-around;
 			padding: 0 20%;
 		}
-
 	}
 	@media screen and (min-width: 1550px) {
 		color: blue;

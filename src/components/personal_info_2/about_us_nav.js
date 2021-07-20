@@ -32,7 +32,7 @@ const NavBar = styled.div`
 	}
 
 	.navCV {
-		letter-spacing: .3rem;
+		letter-spacing: 0.3rem;
 	}
 
 	.nameLogo {
@@ -44,9 +44,8 @@ const NavBar = styled.div`
 	@media screen and (min-width: 480px) {
 	}
 	@media screen and (min-width: 768px) {
-
 		nav {
-			width: 85%;
+			width: 80%;
 		}
 
 		li {
@@ -57,10 +56,8 @@ const NavBar = styled.div`
 		li a {
 			font-size: 2.2rem;
 		}
-
 	}
 	@media screen and (min-width: 1024px) {
-
 		nav {
 			padding-top: 4%;
 		}
@@ -77,10 +74,8 @@ const NavBar = styled.div`
 		li a {
 			font-size: 2.7rem;
 		}
-
 	}
 	@media screen and (min-width: 1200px) {
-
 	}
 	@media screen and (min-width: 1550px) {
 	}
@@ -103,16 +98,13 @@ const Nav = props => {
 							target="_blank"
 							rel="noreferrer"
 							style={{ color: `${color}` }}
-							className='navCV'
+							className="navCV"
 						>
 							CV
 						</a>
 					</li>
 					<li>
-						<a
-							href="/"
-							style={{ color: `${color}` }}
-						>
+						<a href="/" style={{ color: `${color}` }}>
 							Home
 						</a>
 					</li>
