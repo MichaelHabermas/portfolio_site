@@ -82,19 +82,29 @@ const MichaelPortfolioStyles = styled.div`
 		-webkit-background-size: cover;
 		height: 95vh;
 		color: white;
-		background-attachment: fixed;
+		/* background-attachment: fixed; */
 		/* top: 0;
 		left: 0; */
+		@supports (background-attachment: fixed) {
+			background-attachment: fixed;
+			
+		}
 	}
 
-	@supports (-webkit-touch-callout: none) {
+	@supports (background-attachment: fixed) {
+		.landing {
+			background-attachment: fixed;
+		}
+	}
+    
+	/* @supports (-webkit-touch-callout: none) { */
 		/* CSS specific to iOS devices */
-		background-attachment: None;
+		/* background-attachment: None; */
 	}
 
-	@supports not (-webkit-touch-callout: none) {
+	/* @supports not (-webkit-touch-callout: none) { */
 		/* CSS for other than iOS devices */
-	}
+	/* } */
 
 	.landing .sub_section {
 		display: flex;
