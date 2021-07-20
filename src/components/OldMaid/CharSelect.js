@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import Characters from '../../assets/characters/Characters';
-import Character from '../Character';
+import React, { useState } from "react";
+import Characters from "../../assets/characters/Characters";
+import Character from "../Character";
 
 export default function CharSelect() {
 	const [currentChar, setCurrentChar] = useState();
@@ -22,9 +22,10 @@ export default function CharSelect() {
 						{Characters.map(character => {
 							return (
 								<Character
+									key={Math.random()}
 									character={{
 										image: character,
-										color: currentColor
+										color: currentColor,
 									}}
 									setCurrentChar={setCurrentChar}
 									currentColor={currentColor}
@@ -35,11 +36,7 @@ export default function CharSelect() {
 				</div>
 				<div className="colors">
 					<h2>Choose a color</h2>
-					<input
-						type="color"
-						value={currentColor}
-						onChange={handleChange}
-					/>
+					<input type="color" value={currentColor} onChange={handleChange} />
 				</div>
 			</div>
 		</React.Fragment>

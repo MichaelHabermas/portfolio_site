@@ -11,6 +11,7 @@ import iconComponent from "../../../assets/icons";
 
 // asset imports
 import landingBackgroundMobile from "../../../assets/michaelPage/michael_landing_background_mobile.svg";
+// import landingBackgroundMobile2 from "../../../assets/michaelPage/michael_landing_background_mobile2.svg";
 import projectsBackgroundMobile from "../../../assets/michaelPage/projects_background_mobile.png";
 import arrows from "../../../assets/michaelPage/arrows.svg";
 
@@ -74,12 +75,17 @@ const MichaelPortfolioStyles = styled.div`
 	.landing {
 		background-image: url(${landingBackgroundMobile});
 		background-position: center center;
-		background-attachment: fixed;
 		background-repeat: no-repeat;
 		background-size: cover;
-		height: 100vh;
-
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		-webkit-background-size: cover;
+		height: 95vh;
 		color: white;
+		/* this is so the background sizing works properly for iOS mobile Safari */
+		@supports not (-webkit-overflow-scrolling: touch) {
+			background-attachment: fixed;
+		}
 	}
 
 	.landing .sub_section {
@@ -204,7 +210,6 @@ const MichaelPortfolioStyles = styled.div`
 			font-size: 5rem;
 		}
 
-
 		.sub_section {
 			width: 100%;
 			padding: 0;
@@ -217,11 +222,10 @@ const MichaelPortfolioStyles = styled.div`
 		.cvFooterIcon .icon {
 			font-size: 7.5rem;
 		}
-	
+
 		.cvFooterText {
 			font-size: 2.2rem;
 		}
-
 	}
 	@media screen and (min-width: 1024px) {
 		color: blue;
@@ -241,7 +245,7 @@ const MichaelPortfolioStyles = styled.div`
 		.landing p em {
 			font-size: 3rem;
 		}
-	
+
 		.skill_icons .icon {
 			font-size: 6.5rem;
 		}
@@ -258,6 +262,7 @@ const MichaelPortfolioStyles = styled.div`
 			font-size: 6rem;
 		}
 
+
 		.footerMain {
 			justify-content: space-around;
 			padding: 0 15%;
@@ -270,13 +275,11 @@ const MichaelPortfolioStyles = styled.div`
 		.skills .icon {
 			font-size: 8rem;
 		}
-
 		
 		.footerMain {
 			justify-content: space-around;
 			padding: 0 20%;
 		}
-	
 
 	}
 	@media screen and (min-width: 1550px) {
@@ -358,6 +361,7 @@ function MichaelPortfolio() {
 								<SkillCard
 									component={iconComponent[icon]["component"]}
 									iconName={iconComponent[icon]["iconName"]}
+									key={Math.random()}
 								/>
 							);
 						})}
@@ -371,7 +375,7 @@ function MichaelPortfolio() {
 					<div className="project_cards">
 						{michaelsProjects.map(project => {
 							return (
-								<div className="project_card">
+								<div className="project_card" key={Math.random()}>
 									<ProjectCard
 										image={project["image"]}
 										text={project["text"]}
@@ -394,6 +398,7 @@ function MichaelPortfolio() {
 									target="_blank"
 									rel="noreferrer"
 									className="footerIcon"
+									key={Math.random()}
 								>
 									{iconComponent[iconName]["component"]}
 								</a>
@@ -409,8 +414,7 @@ function MichaelPortfolio() {
 									>
 										{iconComponent[iconName]["component"]}
 
-										<h5 className='cvFooterText'>CV</h5>
-
+										<h5 className="cvFooterText">CV</h5>
 									</a>
 								</div>
 							);
