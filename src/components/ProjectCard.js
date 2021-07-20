@@ -17,6 +17,7 @@ const ProjectCardStyle = styled.div`
 		border-radius: 20px;
 		box-shadow: 6px 6px 10px rgba(122, 122, 122, 0.5);
 		margin-bottom: 3rem;
+		transition: all .2s ease-in-out;
 	}
 
 	img {
@@ -36,6 +37,12 @@ const ProjectCardStyle = styled.div`
 	.project_icons {
 		display: flex;
 		flex-wrap: wrap;
+	}
+
+	.project_div:hover {
+		transform: scale(1.005);
+		// box-shadow: 3px 3px 11px 10px rgba(252, 255, 151, .6);
+		box-shadow: 3px 3px 11px 10px rgba(255, 250, 226, .6);
 	}
 
 	@media screen and (min-width: 480px) {
