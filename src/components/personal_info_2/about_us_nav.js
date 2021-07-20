@@ -24,10 +24,15 @@ const NavBar = styled.div`
 		justify-content: space-between;
 		align-items: center;
 		padding-top: 2rem;
+		color: #f0f2f1;
 	}
 
 	li {
 		margin-left: 3rem;
+	}
+
+	.navCV {
+		letter-spacing: .3rem;
 	}
 
 	.nameLogo {
@@ -39,10 +44,43 @@ const NavBar = styled.div`
 	@media screen and (min-width: 480px) {
 	}
 	@media screen and (min-width: 768px) {
+
+		nav {
+			width: 85%;
+		}
+
+		li {
+			margin-right: 2rem;
+			padding-right: 10%;
+		}
+
+		li a {
+			font-size: 2.2rem;
+		}
+
 	}
 	@media screen and (min-width: 1024px) {
+
+		nav {
+			padding-top: 4%;
+		}
+
+		.nameLogo {
+			font-size: 4.5rem;
+		}
+
+		li {
+			margin-right: 3rem;
+			padding-right: 13%;
+		}
+
+		li a {
+			font-size: 2.7rem;
+		}
+
 	}
 	@media screen and (min-width: 1200px) {
+
 	}
 	@media screen and (min-width: 1550px) {
 	}
@@ -65,6 +103,7 @@ const Nav = props => {
 							target="_blank"
 							rel="noreferrer"
 							style={{ color: `${color}` }}
+							className='navCV'
 						>
 							CV
 						</a>
