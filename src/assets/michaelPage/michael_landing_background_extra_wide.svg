@@ -151,8 +151,8 @@
 </g>
 <line id="Line 1" x1="527.205" y1="234.524" x2="528.469" y2="234.524" stroke="black" stroke-width="1.26428"/>
 <g id="planet">
-<ellipse id="Ellipse 22" cx="771.651" cy="1282.88" rx="3153.24" ry="887.519" transform="rotate(-11 771.651 1282.88)" fill="url(#paint146_radial)"/>
-<ellipse id="Ellipse 63" cx="921.076" cy="1403.76" rx="2341.1" ry="683.052" transform="rotate(-10 921.076 1403.76)" fill="url(#paint147_radial)" fill-opacity="0.3"/>
+<path id="Ellipse 22" d="M3862.95 686.212C3956.48 1167.37 2646.49 1826.8 936.997 2159.09C-772.492 2491.38 -2234.13 2370.7 -2327.65 1889.54C-2421.18 1408.39 -1111.19 748.957 598.304 416.666C2307.79 84.3752 3769.43 205.055 3862.95 686.212Z" fill="url(#paint146_radial)"/>
+<ellipse id="Ellipse 63" cx="794.146" cy="1434.2" rx="2341.1" ry="683.052" transform="rotate(-10 794.146 1434.2)" fill="url(#paint147_radial)" fill-opacity="0.3"/>
 </g>
 </g>
 <defs>
@@ -740,12 +740,12 @@
 <stop offset="0.43027" stop-color="white"/>
 <stop offset="1" stop-color="white" stop-opacity="0"/>
 </radialGradient>
-<radialGradient id="paint146_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(771.65 1282.88) rotate(-89.1138) scale(865.568 3075.25)">
+<radialGradient id="paint146_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(767.651 1287.88) rotate(-100.114) scale(865.568 3075.25)">
 <stop offset="0.611034" stop-color="#728BB0"/>
 <stop offset="0.693719" stop-color="#EAF7FD"/>
 <stop offset="1" stop-color="#286DAC" stop-opacity="0.03"/>
 </radialGradient>
-<radialGradient id="paint147_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(922.754 1205.57) rotate(-97.0172) scale(1276.55 3654.79)">
+<radialGradient id="paint147_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(795.824 1236.01) rotate(-97.0172) scale(1276.55 3654.79)">
 <stop stop-color="#6789B4"/>
 <stop offset="0.164976" stop-color="#ADC0DA"/>
 <stop offset="0.281245" stop-color="#7C98BC"/>
