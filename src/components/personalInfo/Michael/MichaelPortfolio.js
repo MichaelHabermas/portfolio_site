@@ -442,7 +442,7 @@ function MichaelPortfolio() {
 							);
 						} else {
 							return (
-								<div className="cvContainer">
+								<div className="cvContainer" key={Math.random()}>
 									<a
 										href={`${location}`} //need to add the real cv link here
 										target="_blank"
