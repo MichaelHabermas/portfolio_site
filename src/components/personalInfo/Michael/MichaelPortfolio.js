@@ -357,8 +357,8 @@ function MichaelPortfolio() {
 			location: "https://www.linkedin.com/in/michael-habermas/",
 		},
 		{ iconName: "CV", location: "" },
-		{ iconName: "Twitter", location: "" },
-		{ iconName: "Email", location: "" },
+		{ iconName: "Twitter", location: "https://twitter.com/habermoose" },
+		// { iconName: "Email", location: "" }, // add in a modal for this...?
 	];
 
 	return (
