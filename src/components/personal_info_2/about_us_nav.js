@@ -31,6 +31,14 @@ const NavBar = styled.div`
 		margin-left: 3rem;
 	}
 
+	a {
+		transition: all .3s ease-in-out;
+	}
+
+	a:hover {
+		text-shadow: 1px 1px 1px rgba(236, 179, 254, 1), 0 0 0.5em rgba(247, 254, 179, 1), 0 0 0.1em rgba(137, 254, 255, 1);
+	}
+
 	.navCV {
 		letter-spacing: 0.3rem;
 	}
