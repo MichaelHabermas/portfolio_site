@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import gameOverBackground from '../../assets/oldMaidAssets/game_over_background.png';
-import gameOverLogo from '../../assets/oldMaidAssets/game_over_logo.png';
-import playAgainBtn from '../../assets/oldMaidAssets/play_again_button.png';
-import gameOverBanner from '../../assets/oldMaidAssets/game_over_banner.png';
-import winLogo from '../../assets/oldMaidAssets/player_wins_logo.png';
-import loseText from '../../assets/oldMaidAssets/better_luck_logo.png';
+import gameOverBackground from '../../assets/OldMaidAssets/game_over_background.png';
+import gameOverLogo from '../../assets/OldMaidAssets/game_over_logo.png';
+import playAgainBtn from '../../assets/OldMaidAssets/play_again_button.png';
+import gameOverBanner from '../../assets/OldMaidAssets/game_over_banner.png';
+import winLogo from '../../assets/OldMaidAssets/player_wins_logo.png';
+import loseText from '../../assets/OldMaidAssets/better_luck_logo.png';
 
 const GameOverScreenStyles = styled.div`
 	height: 100%;

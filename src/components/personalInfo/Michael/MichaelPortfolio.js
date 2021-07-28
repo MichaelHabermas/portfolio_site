@@ -161,6 +161,10 @@ const MichaelPortfolioStyles = styled.div`
 		width: 100%;
 	}
 
+	.project_cards .icon:hover {
+		color: white;
+	}
+
 	//	FOOTER SECTION											         FOOTER
 	footer {
 		display: flex;
@@ -230,13 +234,38 @@ const MichaelPortfolioStyles = styled.div`
 			font-size: 2.5rem;
 		}
 
+
+		.skills {
+			width: 100%;
+		}
+
+		.sub_section {
+			width: 100%;
+		}
+		
+		// SKILLS						SKILLS							SKILLS
+
+		.skills {
+			background-color: white;
+			padding: 3rem;
+		}
+	
 		.skill_icons {
+			width: 100%;
 			flex-wrap: nowrap;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		.skill_icons .icon {
+			font-size: 4.3rem;
 		}
 
 		.icon {
 			font-size: 5rem;
 		}
+
+		// FOOTER						FOOTER							FOOTER 
 
 		.footerMain .icon {
 			font-size: 3.5rem;
@@ -272,25 +301,27 @@ const MichaelPortfolioStyles = styled.div`
 			font-size: 3rem;
 		}
 
-		.skill_icons .icon {
-			font-size: 6.5rem;
+		.sub_section {
+			width: 90%;
 		}
 
-		.skill_icons .iconTitle_card {
-			font-size: 1.9rem;
-		}
+		// SKILLS						SKILLS							SKILLS
 
 		.skill_icons {
-			flex-wrap: nowrap;
+			justify-content: space-evenly;
 		}
 
-		.icon {
-			font-size: 6rem;
+		.skill_icons .icon {
+			font-size: 5.3rem;
 		}
+
+		// PROJECTS						PROJECTS							PROJECTS 
 
 		.project_card {
 			max-width: 48%;
 		}
+
+		// FOOTER						FOOTER							FOOTER 
 
 		.footerMain {
 			justify-content: space-around;
@@ -324,9 +355,13 @@ const MichaelPortfolioStyles = styled.div`
 			width: 60%;
 		}
 
-		.skills .icon {
-			font-size: 8rem;
+		// SKILLS						SKILLS							SKILLS
+	
+		.skill_icons .icon {
+			font-size: 7rem;
 		}
+
+		// PROJECTS						PROJECTS							PROJECTS 
 
 		.footerMain {
 			justify-content: space-around;
