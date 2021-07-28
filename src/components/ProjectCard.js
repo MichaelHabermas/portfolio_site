@@ -18,10 +18,16 @@ const ProjectCardStyle = styled.div`
 		box-shadow: 6px 6px 10px rgba(122, 122, 122, 0.5);
 		margin-bottom: 3rem;
 		transition: all .2s ease-in-out;
+		padding: 3%;
+		height: auto;
+		max-height: 600px;
+		width: auto;
 	}
 
 	img {
-		width: 100%;
+		height: auto;
+		max-height: 250px;
+		width: auto;
 		margin-bottom: 1.5rem;
 	}
 
@@ -32,6 +38,9 @@ const ProjectCardStyle = styled.div`
 		margin: 0 auto 1rem;
 		color: #444444;
 		opacity: 1;
+		height: auto;
+		max-height: 250px;
+		width: auto;
 	}
 
 	.project_icons {
