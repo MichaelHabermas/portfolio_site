@@ -117,6 +117,14 @@ const MichaelPortfolioStyles = styled.div`
 		text-align: center;
 	}
 
+	.arrows img {
+		transition: all .3s ease-in-out;
+	}
+
+	.arrows img:hover {
+		transform: scale(1.1);
+	}
+
 	// SKILLS PAGE SECTION											SKILLS
 	.skills {
 		background-color: white;
@@ -307,7 +315,13 @@ const MichaelPortfolioStyles = styled.div`
 			background-image: url(${landingBackgroundExtraWide});
 		}
 		h1 {
-			font-size: 9rem;
+			font-size: 7.5rem;
+			margin-top: 3%;
+		}
+
+		.landing p {
+			margin-top: 5%;
+			width: 60%;
 		}
 
 		.skills .icon {

@@ -41,7 +41,6 @@ const ProjectCardStyle = styled.div`
 
 	.project_div:hover {
 		transform: scale(1.005);
-		// box-shadow: 3px 3px 11px 10px rgba(252, 255, 151, .6);
 		box-shadow: 3px 3px 11px 10px rgba(255, 250, 226, .6);
 	}
 
