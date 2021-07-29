@@ -13,7 +13,7 @@ const ProjectCardStyle = styled.div`
 		background: rgba(196, 196, 196, 0.3);
 		border-radius: 30px;
 		box-shadow: 6px 6px 10px rgba(122, 122, 122, 0.5);
-		margin-bottom: 1rem;
+		margin-bottom: 3rem;
 		transition: all 0.2s ease-in-out;
 	}
 
