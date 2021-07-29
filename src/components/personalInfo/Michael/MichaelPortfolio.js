@@ -336,7 +336,7 @@ const MichaelPortfolioStyles = styled.div`
 		}
 
 		.sub_section {
-			width: 90%;
+			width: 80%;
 		}
 
 		// SKILLS						SKILLS							SKILLS
