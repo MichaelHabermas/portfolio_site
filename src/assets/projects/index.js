@@ -1,10 +1,10 @@
-import recipeazyImg from "../michaelPage/p1_recipeazy.png";
-import waterPlantsImg from "../michaelPage/p2_water_plants.png";
-import adrianLandingImg from "../michaelPage/p3_adrian_page.png";
-import workoutImg from "../michaelPage/p4_workout.png";
-import speaqImg from "../michaelPage/p5_language.png";
-import oldmaidImg from "../michaelPage/p6_oldmaid.png";
-import conceptImgs from "../michaelPage/p7_geo_images.png";
+import recipeazyImg from "../michaelPage/recipeazy_landing.png";
+import waterPlantsImg from "../michaelPage/water_plants_landing.png";
+import adrianLandingImg from "../michaelPage/adrian_landing.png";
+import workoutImg from "../michaelPage/workout_landing.png";
+import speaqImg from "../michaelPage/speaq_screens.png";
+import oldmaidImg from "../michaelPage/old_maid_gameplay.png";
+import conceptImgs from "../michaelPage/concept_art_collection.png";
 
 import iconComponent from "../icons/index";
 
