@@ -158,7 +158,7 @@ const MichaelPortfolioStyles = styled.div`
 		height: 100%;
 		background-repeat: no-repeat;
 		background-size: cover;
-		padding: 3rem;
+		padding: 3rem 0;
 	}
 
 	.project_cards {
@@ -166,12 +166,11 @@ const MichaelPortfolioStyles = styled.div`
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		width: 100%;
+		width: 90%;
+		margin: 0 auto;
 	}
 
 	.project_card {
-		min-height: 450px;
-		max-width: 400px;
 		transition: all 0.2s ease-in-out;
 	}
 

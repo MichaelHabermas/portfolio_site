@@ -10,6 +10,23 @@ import iconComponent from "../icons/index";
 
 export const michaelsProjects = [
 	{
+		image: adrianLandingImg,
+		text: "Designed and built a portfolio website for an independant local digital Los Angeles Artist",
+		icons: [
+			{
+				iconName: "Web",
+				location:
+					"https://portfolio-site-peach.vercel.app/personal-info/adrian",
+				component: iconComponent["Web"]["component"],
+			},
+			{
+				iconName: "GitHub",
+				location: "https://github.com/MichaelHabermas/portfolio_site",
+				component: iconComponent["GitHub"]["component"],
+			},
+		],
+	},
+	{
 		image: recipeazyImg,
 		text: "Contributed to the design and implementation of a React app that gathers and shares family recipes. This app uses Redux to manage state, and makes axios calls to our concurrent team’s Node API.",
 		icons: [
@@ -41,23 +58,7 @@ export const michaelsProjects = [
 			},
 		],
 	},
-	{
-		image: adrianLandingImg,
-		text: "Designed and built a portfolio website for an independant local digital Los Angeles Artist",
-		icons: [
-			{
-				iconName: "Web",
-				location:
-					"https://portfolio-site-peach.vercel.app/personal-info/adrian",
-				component: iconComponent["Web"]["component"],
-			},
-			{
-				iconName: "GitHub",
-				location: "https://github.com/MichaelHabermas/portfolio_site",
-				component: iconComponent["GitHub"]["component"],
-			},
-		],
-	},
+
 	{
 		image: workoutImg,
 		text: "Built a Restful CRUD API for a fitness class reservation application using Node.js and Express as well as used JWT authentication for login security, while a concurrent team built out the design and features for front end using React/Redux.",
