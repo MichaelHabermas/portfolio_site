@@ -117,11 +117,15 @@ const MichaelPortfolioStyles = styled.div`
 		text-align: center;
 	}
 
-	.arrows img {
+	.arrows img,
+	.icon,
+	.cvContainer:hover {
 		transition: all 0.3s ease-in-out;
 	}
 
-	.arrows img:hover {
+	.arrows img:hover,
+	.icon:hover,
+	.cvContainer:hover {
 		transform: scale(1.1);
 	}
 
@@ -193,28 +197,16 @@ const MichaelPortfolioStyles = styled.div`
 		color: white;
 	}
 
-	.footerIcon .icon:hover {
-		color: orange;
-	}
-
 	.cvContainer {
 		display: flex;
 		flex-flow: column;
 		align-items: center;
 	}
 
-	.cvContainer:hover {
-		color: orange;
-	}
-
 	.cvFooterIcon .icon {
 		color: white;
 		font-size: 4.7rem;
 		transform: translateY(6%);
-	}
-
-	.cvFooterIcon .icon:hover {
-		color: orange;
 	}
 
 	.cvFooterText {
@@ -329,12 +321,9 @@ const MichaelPortfolioStyles = styled.div`
 			padding: 0 15%;
 		}
 
-		.footerMain .icon {
-			font-size: 4rem;
-		}
-
+		.footerIcon .icon,
 		.cvFooterIcon .icon {
-			font-size: 4.5rem;
+			font-size: 4rem;
 		}
 
 		.cvFooterText {
@@ -366,6 +355,11 @@ const MichaelPortfolioStyles = styled.div`
 		.footerMain {
 			justify-content: space-around;
 			padding: 0 20%;
+		}
+
+		.footerIcon .icon,
+		.cvFooterIcon .icon {
+			font-size: 4.5rem;
 		}
 	}
 	@media screen and (min-width: 1550px) {
