@@ -17,7 +17,9 @@ import landingBackgroundDesktopWide from "../../../assets/michaelPage/michael_la
 import landingBackgroundExtraWide from "../../../assets/michaelPage/michael_landing_background_extra_wide.svg";
 import projectsBackgroundMobile from "../../../assets/michaelPage/projects_background_mobile.png";
 // import projectsBackgroundMobile from "../../../assets/michaelPage/background_adrian.png";
-import moon from "../../../assets/michaelPage/moon.svg";
+// import moon from "../../../assets/michaelPage/moon.svg";
+import moon2 from "../../../assets/michaelPage/moon2.svg";
+import mer_face from "../../../assets/michaelPage/mer_face.svg";
 import arrows from "../../../assets/michaelPage/arrows.svg";
 import cvLink from "../../../assets/resumes/mhabermas_webdev_resume_8_2021.pdf";
 
@@ -113,7 +115,7 @@ const MichaelPortfolioStyles = styled.div`
 		margin: 0 auto;
 	}
 
-	.moon {
+	.moon_group {
 		display: none;
 	}
 
@@ -307,21 +309,35 @@ const MichaelPortfolioStyles = styled.div`
 			font-size: 2.5rem;
 		}
 
-		.moon {
+		.moon_group {
 			display: initial;
 			position: absolute;
-			top: 33%;
+			top: 20%;
 			right: 7%;
-			transform: scale(0.8) translate(0%, -50%);
+			transform: scale(0.8);
 			transition: all 0.8s ease;
 		}
+		.moon,
+		.mer_face {
+			position: absolute;
+			top: 0;
+			right: 0;
+			transition: all 0.8s ease;
+		}
+		.moon {
+			transform: translate(-5.5%, 5.5%);
+		}
+		.mer_face {
+			opacity: 0.5;
+		}
 
-		.moon:hover {
-			transform: scale(1.05) translate(-10%, -30%) rotate(300deg);
+		.moon_group:hover {
+			transform: scale(1.05);
 		}
 
 		.mer_face:hover {
-			transform: rotate(180deg);
+			transform: rotate(280deg);
+			opacity: 1;
 		}
 
 		// SKILLS						SKILLS							                                    SKILLS
@@ -382,11 +398,11 @@ const MichaelPortfolioStyles = styled.div`
 		}
 	}
 	@media screen and (min-width: 1550px) {
-		.moon {
-			transform: scale(1) translate(0%, -50%);
+		.moon_group {
+			transform: scale(1);
 		}
-		.moon:hover {
-			transform: scale(1.25) translate(-10%, -30%);
+		.moon_group:hover {
+			transform: scale(1.4);
 		}
 
 		.project_card {
@@ -435,7 +451,10 @@ function MichaelPortfolio() {
 				<Nav name="Michael Habermas" cvLink={`${cvLink}`} color="white" />
 
 				<div className="sub_section">
-					<img className="moon" src={moon} alt="mooney face" />
+					<div className="moon_group">
+						<img className="moon" src={moon2} alt="mooney face" />
+						<img className="mer_face" src={mer_face} alt="mooney faceface" />
+					</div>
 					{/* <svg class="moon">
 						<path />
 					</svg> */}
