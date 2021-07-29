@@ -8,7 +8,6 @@ const ProjectCardStyle = styled.div`
 	.project_div {
 		display: flex;
 		flex-direction: column;
-		/* justify-content: space-between; */
 		align-items: center;
 		background: rgba(196, 196, 196, 0.3);
 		border-radius: 30px;
@@ -30,13 +29,11 @@ const ProjectCardStyle = styled.div`
 	}
 
 	.project_icons {
-		/* margin-top: 2%;
-		padding-top: 3%; */
 		display: flex;
 	}
 
 	.project_icon {
-		/* transition: all 2s ease-in-out; */
+		font-size: 5rem;
 	}
 
 	.project_div:hover {
@@ -47,74 +44,28 @@ const ProjectCardStyle = styled.div`
 	@media screen and (min-width: 480px) {
 	}
 	@media screen and (min-width: 768px) {
-		.project_div {
-			/* min-height: 450px; */
-		}
-
-		img {
-			/* width: 100%; */
-			/* margin-bottom: 5%; */
-			/* max-width: 400px; */
-			/* max-height: 200px; */
-		}
-
 		p {
 			font-size: 1.6rem;
-			/* width: 90%; */
-			/* max-height: 110px; */
 		}
 	}
 	@media screen and (min-width: 1024px) {
-		.project_div {
-			/* max-height: 500px; */
-		}
-		img {
-			/* width: 100%; */
-			/* margin-bottom: 5%; */
-			/* max-width: 400px;
-			max-height: 220px; */
-		}
 		p {
 			font-size: 1.7rem;
 		}
 	}
 	@media screen and (min-width: 1200px) {
-		.project_div {
-			/* max-width: 450px; */
-		}
-		img {
-			/* width: 100%; */
-			/* margin-bottom: 5%; */
-			/* max-width: 430px;
-			max-height: 220px; */
-		}
 		p {
 			font-size: 1.7rem;
 		}
 	}
 	@media screen and (min-width: 1300px) {
-		.project_div {
-			/* max-width: 350px; */
-		}
-		img {
-			/* width: 100%; */
-			/* margin-bottom: 5%; */
-			/* max-width: 400px;
-			max-height: 170px; */
-		}
 		p {
 			font-size: 1.7rem;
 		}
 	}
 	@media screen and (min-width: 1400px) {
-		.project_div {
-			/* max-width: 400px; */
-		}
 	}
 	@media screen and (min-width: 1550px) {
-		.project_div {
-			/* max-width: 500px; */
-		}
 	}
 `;
 
