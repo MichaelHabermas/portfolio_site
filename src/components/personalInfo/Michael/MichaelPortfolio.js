@@ -17,6 +17,7 @@ import landingBackgroundDesktopWide from "../../../assets/michaelPage/michael_la
 import landingBackgroundExtraWide from "../../../assets/michaelPage/michael_landing_background_extra_wide.svg";
 import projectsBackgroundMobile from "../../../assets/michaelPage/projects_background_mobile.png";
 // import projectsBackgroundMobile from "../../../assets/michaelPage/background_adrian.png";
+import moon from "../../../assets/michaelPage/moon.svg";
 import arrows from "../../../assets/michaelPage/arrows.svg";
 import cvLink from "../../../assets/resumes/mhabermas_webdev_resume_8_2021.pdf";
 
@@ -110,6 +111,10 @@ const MichaelPortfolioStyles = styled.div`
 		font-size: 1.5rem;
 		width: 80%;
 		margin: 0 auto;
+	}
+
+	.moon {
+		display: none;
 	}
 
 	.arrows {
@@ -217,7 +222,7 @@ const MichaelPortfolioStyles = styled.div`
 		color: white;
 	}
 
-	//	MEDIA QUERIES										                MEDIA Q's
+	//	MEDIA QUERIES										                                         MEDIA Q's
 	@media screen and (min-width: 480px) {
 		.landing {
 			background-image: url(${landingBackgroundTablet});
@@ -278,6 +283,10 @@ const MichaelPortfolioStyles = styled.div`
 		}
 	}
 	@media screen and (min-width: 1024px) {
+		.sub_section {
+			width: 80%;
+		}
+
 		.landing {
 			background-image: url(${landingBackgroundDesktopWide});
 		}
@@ -298,24 +307,34 @@ const MichaelPortfolioStyles = styled.div`
 			font-size: 2.5rem;
 		}
 
-		.sub_section {
-			width: 80%;
+		.moon {
+			display: initial;
+			position: absolute;
+			top: 33%;
+			right: 7%;
+			transform: scale(0.8) translate(0%, -50%);
+			transition: all 0.8s ease;
 		}
 
-		// SKILLS						SKILLS							SKILLS
+		.moon:hover {
+			transform: scale(1.05) translate(-10%, -30%) rotate(300deg);
+		}
 
+		.mer_face:hover {
+			transform: rotate(180deg);
+		}
+
+		// SKILLS						SKILLS							                                    SKILLS
 		.skill_icons {
 			justify-content: space-between;
 		}
 
-		// PROJECTS						PROJECTS							PROJECTS
-
+		// PROJECTS						PROJECTS							                        PROJECTS
 		.project_card {
 			max-width: 48%;
 		}
 
-		// FOOTER						FOOTER							FOOTER
-
+		// FOOTER						FOOTER							                            FOOTER
 		.footerMain {
 			justify-content: space-around;
 			padding: 0 15%;
@@ -334,6 +353,7 @@ const MichaelPortfolioStyles = styled.div`
 		.landing {
 			background-image: url(${landingBackgroundExtraWide});
 		}
+
 		h1 {
 			font-size: 7.5rem;
 			margin-top: 3%;
@@ -345,7 +365,6 @@ const MichaelPortfolioStyles = styled.div`
 		}
 
 		// SKILLS						SKILLS							SKILLS
-
 		.skill_icons .icon {
 			font-size: 7rem;
 		}
@@ -363,6 +382,13 @@ const MichaelPortfolioStyles = styled.div`
 		}
 	}
 	@media screen and (min-width: 1550px) {
+		.moon {
+			transform: scale(1) translate(0%, -50%);
+		}
+		.moon:hover {
+			transform: scale(1.25) translate(-10%, -30%);
+		}
+
 		.project_card {
 			max-width: 32%;
 		}
@@ -407,7 +433,12 @@ function MichaelPortfolio() {
 		<MichaelPortfolioStyles>
 			<section className="landing">
 				<Nav name="Michael Habermas" cvLink={`${cvLink}`} color="white" />
+
 				<div className="sub_section">
+					<img className="moon" src={moon} alt="mooney face" />
+					{/* <svg class="moon">
+						<path />
+					</svg> */}
 					<div>
 						<h1>Hi, I'm Michael</h1>
 						<p>
