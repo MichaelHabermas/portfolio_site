@@ -296,6 +296,9 @@ const MichaelPortfolioStyles = styled.div`
 			font-size: 8rem;
 			text-align: left;
 		}
+		h2 {
+			font-size: 7rem;
+		}
 
 		.landing p {
 			margin: 0;
