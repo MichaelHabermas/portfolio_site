@@ -16,8 +16,6 @@ import landingBackgroundDesktop from "../../../assets/michaelPage/michael_landin
 import landingBackgroundDesktopWide from "../../../assets/michaelPage/michael_landing_background_desktop_wide.svg";
 import landingBackgroundExtraWide from "../../../assets/michaelPage/michael_landing_background_extra_wide.svg";
 import projectsBackgroundMobile from "../../../assets/michaelPage/projects_background_mobile.png";
-// import projectsBackgroundMobile from "../../../assets/michaelPage/background_adrian.png";
-// import moon from "../../../assets/michaelPage/moon.svg";
 import moon2 from "../../../assets/michaelPage/moon2.svg";
 import mer_face from "../../../assets/michaelPage/mer_face.svg";
 import arrows from "../../../assets/michaelPage/arrows.svg";

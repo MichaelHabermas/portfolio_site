@@ -32,11 +32,12 @@ const NavBar = styled.div`
 	}
 
 	a {
-		transition: all .3s ease-in-out;
+		transition: all 0.3s ease-in-out;
 	}
 
 	a:hover {
-		text-shadow: 1px 1px 1px rgba(236, 179, 254, 1), 0 0 0.5em rgba(247, 254, 179, 1), 0 0 0.1em rgba(137, 254, 255, 1);
+		text-shadow: 1px 1px 1px rgba(236, 179, 254, 1),
+			0 0 0.5em rgba(247, 254, 179, 1), 0 0 0.1em rgba(137, 254, 255, 1);
 	}
 
 	.navCV {
@@ -98,9 +99,6 @@ const Nav = props => {
 				<div className="nameLogo">{name}</div>
 				<ul>
 					<li>
-						{/* <Link to={cvLink} target="_blank" download>
-							CV
-						</Link> */}
 						<a
 							href={cvLink}
 							target="_blank"

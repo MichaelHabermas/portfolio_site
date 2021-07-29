@@ -4,9 +4,6 @@ import styled from "styled-components";
 // import components
 import SkillCard from "./SkillCard";
 
-// icon imports
-// import iconComponent from "../assets/icons/index";
-
 const ProjectCardStyle = styled.div`
 	.project_div {
 		display: flex;
@@ -17,8 +14,8 @@ const ProjectCardStyle = styled.div`
 		border-radius: 20px;
 		box-shadow: 6px 6px 10px rgba(122, 122, 122, 0.5);
 		margin-bottom: 3rem;
-		transition: all .2s ease-in-out;
-		padding: 3%;
+		transition: all 0.2s ease-in-out;
+		/* padding: 3%; */
 	}
 
 	img {
@@ -43,7 +40,7 @@ const ProjectCardStyle = styled.div`
 
 	.project_div:hover {
 		transform: scale(1.005);
-		box-shadow: 3px 3px 11px 10px rgba(255, 250, 226, .6);
+		box-shadow: 3px 3px 11px 10px rgba(255, 250, 226, 0.6);
 	}
 
 	@media screen and (min-width: 480px) {
@@ -54,14 +51,14 @@ const ProjectCardStyle = styled.div`
 		.project_div {
 			min-height: 450px;
 		}
-	
+
 		img {
 			width: 100%;
 			margin-bottom: 5%;
 			max-width: 400px;
 			max-height: 200px;
 		}
-	
+
 		p {
 			font-size: 1.6rem;
 			width: 90%;
@@ -69,7 +66,6 @@ const ProjectCardStyle = styled.div`
 		}
 	}
 	@media screen and (min-width: 1024px) {
-		color: blue;
 		.project_div {
 			max-height: 500px;
 		}
@@ -83,12 +79,9 @@ const ProjectCardStyle = styled.div`
 			font-size: 1.7rem;
 		}
 	}
-	}
 	@media screen and (min-width: 1200px) {
-		color: red;
 		.project_div {
 			max-width: 450px;
-		}
 		}
 		img {
 			width: 100%;
@@ -101,10 +94,8 @@ const ProjectCardStyle = styled.div`
 		}
 	}
 	@media screen and (min-width: 1300px) {
-		color: red;
 		.project_div {
 			max-width: 350px;
-		}
 		}
 		img {
 			width: 100%;
@@ -117,13 +108,11 @@ const ProjectCardStyle = styled.div`
 		}
 	}
 	@media screen and (min-width: 1400px) {
-		color: red;
 		.project_div {
 			max-width: 400px;
 		}
 	}
 	@media screen and (min-width: 1550px) {
-		color: blue;
 		.project_div {
 			max-width: 500px;
 		}
