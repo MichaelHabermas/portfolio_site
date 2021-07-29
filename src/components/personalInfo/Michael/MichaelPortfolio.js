@@ -227,14 +227,14 @@ const MichaelPortfolioStyles = styled.div`
 
 	//	MEDIA QUERIES										                MEDIA Q's
 	@media screen and (min-width: 480px) {
-		color: blue;
 		.landing {
 			background-image: url(${landingBackgroundTablet});
 		}
+		.landing p {
+			font-size: 2rem;
+		}
 	}
 	@media screen and (min-width: 768px) {
-		color: red;
-
 		.sub_section {
 			width: 80%;
 			padding: 0;
@@ -271,10 +271,6 @@ const MichaelPortfolioStyles = styled.div`
 			background-color: white;
 		}
 
-		/* .icon {
-			font-size: 5rem;
-		} */
-
 		// FOOTER						FOOTER							FOOTER
 
 		.footerMain .icon {
@@ -290,7 +286,6 @@ const MichaelPortfolioStyles = styled.div`
 		}
 	}
 	@media screen and (min-width: 1024px) {
-		color: blue;
 		.landing {
 			background-image: url(${landingBackgroundDesktopWide});
 		}
@@ -308,7 +303,7 @@ const MichaelPortfolioStyles = styled.div`
 		}
 
 		.landing p em {
-			font-size: 3rem;
+			font-size: 2.5rem;
 		}
 
 		.sub_section {
@@ -347,7 +342,6 @@ const MichaelPortfolioStyles = styled.div`
 		}
 	}
 	@media screen and (min-width: 1200px) {
-		color: red;
 		.landing {
 			background-image: url(${landingBackgroundExtraWide});
 		}
@@ -375,7 +369,6 @@ const MichaelPortfolioStyles = styled.div`
 		}
 	}
 	@media screen and (min-width: 1550px) {
-		color: blue;
 		.project_card {
 			max-width: 32%;
 		}
