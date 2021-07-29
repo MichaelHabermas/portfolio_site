@@ -1,11 +1,11 @@
-import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import React from "react";
+import { Switch, Route } from "react-router-dom";
 
-import '../../cssFiles/App.css';
+import "../../cssFiles/App.css";
 //components
-import MichaelAbout from './Michael/MichaelPortfolio';
-import WillAbout from './Will';
-import AdrianAbout from './Adrian';
+import MichaelAbout from "./Michael/MichaelPortfolio.js";
+import WillAbout from "./Will";
+import AdrianAbout from "./Adrian";
 
 function About() {
 	return (

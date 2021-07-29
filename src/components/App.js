@@ -1,10 +1,10 @@
-import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import React from "react";
+import { Switch, Route } from "react-router-dom";
 
-import '../cssFiles/App.css';
+import "../cssFiles/App.css";
 
-import MainRoute from './MainRoute';
-import PersonalInfo from '../components/personalInfo/index';
+import MainRoute from "./MainRoute";
+import PersonalInfo from "../components/personalInfo/index";
 
 function App() {
 	return (
