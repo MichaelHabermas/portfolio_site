@@ -8,7 +8,8 @@ const SkillCardStyle = styled.div`
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		padding: 1rem;
+		margin: 1rem 1rem 0 0;
+		color: blue;
 	}
 
 	.iconTitle_card {
@@ -18,31 +19,23 @@ const SkillCardStyle = styled.div`
 	}
 
 	@media screen and (min-width: 480px) {
-		color: blue;
 	}
 	@media screen and (min-width: 768px) {
 		.icon_card {
-			width: 6.1rem;
-		}
-
-		.iconTitle_card {
-			font-size: 1.2rem;
+			margin: 2rem 2rem 0 0;
 		}
 	}
 	@media screen and (min-width: 1024px) {
 		.icon_card {
-			width: 7.4rem;
-		}
-
-		.iconTitle_card {
-			font-size: 1.5rem;
+			margin: 2rem 2rem 0 0;
 		}
 	}
 	@media screen and (min-width: 1200px) {
-		color: red;
+		.icon_card {
+			margin: 2rem 1rem 0 0;
+		}
 	}
 	@media screen and (min-width: 1550px) {
-		color: blue;
 	}
 `;
 

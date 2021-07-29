@@ -102,7 +102,6 @@ const MichaelPortfolioStyles = styled.div`
 
 	h1 {
 		font-size: 6rem;
-		/* width: 90%; */
 		margin: 0 auto 3rem;
 	}
 
@@ -129,7 +128,7 @@ const MichaelPortfolioStyles = styled.div`
 	// SKILLS PAGE SECTION											SKILLS
 	.skills {
 		background-color: white;
-		padding: 3rem;
+		padding: 3rem 0;
 	}
 
 	.skill_icons {
@@ -226,10 +225,6 @@ const MichaelPortfolioStyles = styled.div`
 		color: white;
 	}
 
-	// .cvFooterText:hover {
-	// 	color: orange;
-	// }
-
 	//	MEDIA QUERIES										                MEDIA Q's
 	@media screen and (min-width: 480px) {
 		color: blue;
@@ -269,35 +264,16 @@ const MichaelPortfolioStyles = styled.div`
 			width: 100%;
 		}
 
-		.skills {
-			width: 100%;
-		}
-
-		.sub_section {
-			width: 100%;
-		}
-
 		// SKILLS						SKILLS							SKILLS
 
 		.skills {
-			background-color: white;
-			padding: 3rem;
-		}
-
-		.skill_icons {
 			width: 100%;
-			flex-wrap: nowrap;
-			justify-content: space-between;
-			align-items: center;
+			background-color: white;
 		}
 
-		.skill_icons .icon {
-			font-size: 4.3rem;
-		}
-
-		.icon {
+		/* .icon {
 			font-size: 5rem;
-		}
+		} */
 
 		// FOOTER						FOOTER							FOOTER
 
@@ -342,11 +318,7 @@ const MichaelPortfolioStyles = styled.div`
 		// SKILLS						SKILLS							SKILLS
 
 		.skill_icons {
-			justify-content: space-evenly;
-		}
-
-		.skill_icons .icon {
-			font-size: 5.3rem;
+			justify-content: space-between;
 		}
 
 		// PROJECTS						PROJECTS							PROJECTS
