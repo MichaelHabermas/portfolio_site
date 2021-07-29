@@ -15,7 +15,6 @@ const ProjectCardStyle = styled.div`
 		box-shadow: 6px 6px 10px rgba(122, 122, 122, 0.5);
 		margin-bottom: 3rem;
 		transition: all 0.2s ease-in-out;
-		/* padding: 3%; */
 	}
 
 	img {
@@ -28,14 +27,16 @@ const ProjectCardStyle = styled.div`
 		font-weight: 500;
 		width: 90%;
 		color: #444444;
-		opacity: 1;
 	}
 
 	.project_icons {
 		margin-top: 2%;
 		padding-top: 3%;
 		display: flex;
-		flex-wrap: wrap;
+	}
+
+	.project_icon {
+		/* transition: all 2s ease-in-out; */
 	}
 
 	.project_div:hover {
@@ -44,10 +45,8 @@ const ProjectCardStyle = styled.div`
 	}
 
 	@media screen and (min-width: 480px) {
-		color: blue;
 	}
 	@media screen and (min-width: 768px) {
-		color: red;
 		.project_div {
 			min-height: 450px;
 		}
@@ -55,8 +54,8 @@ const ProjectCardStyle = styled.div`
 		img {
 			width: 100%;
 			margin-bottom: 5%;
-			max-width: 400px;
-			max-height: 200px;
+			/* max-width: 400px; */
+			/* max-height: 200px; */
 		}
 
 		p {
@@ -67,13 +66,13 @@ const ProjectCardStyle = styled.div`
 	}
 	@media screen and (min-width: 1024px) {
 		.project_div {
-			max-height: 500px;
+			/* max-height: 500px; */
 		}
 		img {
 			width: 100%;
 			margin-bottom: 5%;
-			max-width: 400px;
-			max-height: 220px;
+			/* max-width: 400px;
+			max-height: 220px; */
 		}
 		p {
 			font-size: 1.7rem;
@@ -86,8 +85,8 @@ const ProjectCardStyle = styled.div`
 		img {
 			width: 100%;
 			margin-bottom: 5%;
-			max-width: 430px;
-			max-height: 220px;
+			/* max-width: 430px;
+			max-height: 220px; */
 		}
 		p {
 			font-size: 1.7rem;
@@ -100,8 +99,8 @@ const ProjectCardStyle = styled.div`
 		img {
 			width: 100%;
 			margin-bottom: 5%;
-			max-width: 400px;
-			max-height: 170px;
+			/* max-width: 400px;
+			max-height: 170px; */
 		}
 		p {
 			font-size: 1.7rem;
@@ -134,8 +133,12 @@ const ProjectCard = props => {
 								target="_blank"
 								rel="noreferrer"
 								key={Math.random()}
+								className="project_icon"
 							>
-								<SkillCard component={iconX["component"]} />
+								<SkillCard
+									className="project_icon"
+									component={iconX["component"]}
+								/>
 							</a>
 						);
 					})}
