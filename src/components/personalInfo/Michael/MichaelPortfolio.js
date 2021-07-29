@@ -154,14 +154,23 @@ const MichaelPortfolioStyles = styled.div`
 
 	.project_cards {
 		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: space-between;
+		flex-direction: column;
+		justify-content: center;
 		align-items: center;
 		width: 100%;
 	}
 
-	.project_cards .icon:hover {
+	.project_card {
+		min-height: 450px;
+		max-width: 400px;
+		transition: all .2s ease-in-out;
+	}
+
+	.project_card .icon{
+		font-size: 4rem;
+	}
+
+	.project_card .icon:hover {
 		color: white;
 	}
 
@@ -184,16 +193,28 @@ const MichaelPortfolioStyles = styled.div`
 		color: white;
 	}
 
+	.footerIcon .icon:hover {
+		color: orange;
+	}
+
 	.cvContainer {
 		display: flex;
 		flex-flow: column;
 		align-items: center;
 	}
 
+	.cvContainer:hover {
+		color: orange;
+	}
+
 	.cvFooterIcon .icon {
 		color: white;
 		font-size: 4.7rem;
 		transform: translateY(6%);
+	}
+
+	.cvFooterIcon .icon:hover {
+		color: orange;
 	}
 
 	.cvFooterText {
@@ -203,6 +224,10 @@ const MichaelPortfolioStyles = styled.div`
 		font-weight: bold;
 		color: white;
 	}
+
+	// .cvFooterText:hover {
+	// 	color: orange;
+	// }
 
 	//	MEDIA QUERIES										                MEDIA Q's
 	@media screen and (min-width: 480px) {
@@ -234,6 +259,14 @@ const MichaelPortfolioStyles = styled.div`
 			font-size: 2.5rem;
 		}
 
+		.project_cards {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			align-items: center;
+			width: 100%;
+		}
 
 		.skills {
 			width: 100%;

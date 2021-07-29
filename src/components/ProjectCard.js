@@ -11,7 +11,7 @@ const ProjectCardStyle = styled.div`
 	.project_div {
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
+		justify-content: space-between;
 		align-items: center;
 		background: rgba(196, 196, 196, 0.3);
 		border-radius: 20px;
@@ -19,31 +19,24 @@ const ProjectCardStyle = styled.div`
 		margin-bottom: 3rem;
 		transition: all .2s ease-in-out;
 		padding: 3%;
-		height: auto;
-		max-height: 600px;
-		width: auto;
 	}
 
 	img {
-		height: auto;
-		max-height: 250px;
-		width: auto;
+		width: 100%;
 		margin-bottom: 1.5rem;
 	}
 
 	p {
-		font-size: 2rem;
+		font-size: 1.5rem;
 		font-weight: 500;
 		width: 90%;
-		margin: 0 auto 1rem;
 		color: #444444;
 		opacity: 1;
-		height: auto;
-		max-height: 250px;
-		width: auto;
 	}
 
 	.project_icons {
+		margin-top: 2%;
+		padding-top: 3%;
 		display: flex;
 		flex-wrap: wrap;
 	}
@@ -58,15 +51,82 @@ const ProjectCardStyle = styled.div`
 	}
 	@media screen and (min-width: 768px) {
 		color: red;
+		.project_div {
+			min-height: 450px;
+		}
+	
+		img {
+			width: 100%;
+			margin-bottom: 5%;
+			max-width: 400px;
+			max-height: 200px;
+		}
+	
+		p {
+			font-size: 1.6rem;
+			width: 90%;
+			max-height: 110px;
+		}
 	}
 	@media screen and (min-width: 1024px) {
 		color: blue;
+		.project_div {
+			max-height: 500px;
+		}
+		img {
+			width: 100%;
+			margin-bottom: 5%;
+			max-width: 400px;
+			max-height: 220px;
+		}
+		p {
+			font-size: 1.7rem;
+		}
+	}
 	}
 	@media screen and (min-width: 1200px) {
 		color: red;
+		.project_div {
+			max-width: 450px;
+		}
+		}
+		img {
+			width: 100%;
+			margin-bottom: 5%;
+			max-width: 430px;
+			max-height: 220px;
+		}
+		p {
+			font-size: 1.7rem;
+		}
+	}
+	@media screen and (min-width: 1300px) {
+		color: red;
+		.project_div {
+			max-width: 350px;
+		}
+		}
+		img {
+			width: 100%;
+			margin-bottom: 5%;
+			max-width: 400px;
+			max-height: 170px;
+		}
+		p {
+			font-size: 1.7rem;
+		}
+	}
+	@media screen and (min-width: 1400px) {
+		color: red;
+		.project_div {
+			max-width: 400px;
+		}
 	}
 	@media screen and (min-width: 1550px) {
 		color: blue;
+		.project_div {
+			max-width: 500px;
+		}
 	}
 `;
 
