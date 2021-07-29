@@ -18,6 +18,7 @@ import landingBackgroundExtraWide from "../../../assets/michaelPage/michael_land
 import projectsBackgroundMobile from "../../../assets/michaelPage/projects_background_mobile.png";
 // import projectsBackgroundMobile from "../../../assets/michaelPage/background_adrian.png";
 import arrows from "../../../assets/michaelPage/arrows.svg";
+import mghCV from "../../../assets/resumes/mhabermas_webdev_resume_8_2021.pdf";
 
 // project imports
 import { michaelsProjects } from "../../../assets/projects";
@@ -118,7 +119,7 @@ const MichaelPortfolioStyles = styled.div`
 	}
 
 	.arrows img {
-		transition: all .3s ease-in-out;
+		transition: all 0.3s ease-in-out;
 	}
 
 	.arrows img:hover {
@@ -163,10 +164,10 @@ const MichaelPortfolioStyles = styled.div`
 	.project_card {
 		min-height: 450px;
 		max-width: 400px;
-		transition: all .2s ease-in-out;
+		transition: all 0.2s ease-in-out;
 	}
 
-	.project_card .icon{
+	.project_card .icon {
 		font-size: 4rem;
 	}
 
@@ -275,14 +276,14 @@ const MichaelPortfolioStyles = styled.div`
 		.sub_section {
 			width: 100%;
 		}
-		
+
 		// SKILLS						SKILLS							SKILLS
 
 		.skills {
 			background-color: white;
 			padding: 3rem;
 		}
-	
+
 		.skill_icons {
 			width: 100%;
 			flex-wrap: nowrap;
@@ -298,7 +299,7 @@ const MichaelPortfolioStyles = styled.div`
 			font-size: 5rem;
 		}
 
-		// FOOTER						FOOTER							FOOTER 
+		// FOOTER						FOOTER							FOOTER
 
 		.footerMain .icon {
 			font-size: 3.5rem;
@@ -348,13 +349,13 @@ const MichaelPortfolioStyles = styled.div`
 			font-size: 5.3rem;
 		}
 
-		// PROJECTS						PROJECTS							PROJECTS 
+		// PROJECTS						PROJECTS							PROJECTS
 
 		.project_card {
 			max-width: 48%;
 		}
 
-		// FOOTER						FOOTER							FOOTER 
+		// FOOTER						FOOTER							FOOTER
 
 		.footerMain {
 			justify-content: space-around;
@@ -389,12 +390,12 @@ const MichaelPortfolioStyles = styled.div`
 		}
 
 		// SKILLS						SKILLS							SKILLS
-	
+
 		.skill_icons .icon {
 			font-size: 7rem;
 		}
 
-		// PROJECTS						PROJECTS							PROJECTS 
+		// PROJECTS						PROJECTS							PROJECTS
 
 		.footerMain {
 			justify-content: space-around;
@@ -446,7 +447,7 @@ function MichaelPortfolio() {
 	return (
 		<MichaelPortfolioStyles>
 			<section className="landing">
-				<Nav name="Michael Habermas" cvLink="" color="white" />
+				<Nav name="Michael Habermas" cvLink={`${mghCV}`} color="white" />
 				<div className="sub_section">
 					<div>
 						<h1>Hi, I'm Michael</h1>
@@ -513,7 +514,7 @@ function MichaelPortfolio() {
 						if (iconName !== "CV") {
 							return (
 								<a
-									href={`${location}`} //need to add the real cv link here
+									href={`${location}`}
 									target="_blank"
 									rel="noreferrer"
 									className="footerIcon"
@@ -526,7 +527,7 @@ function MichaelPortfolio() {
 							return (
 								<div className="cvContainer" key={Math.random()}>
 									<a
-										href={`${location}`} //need to add the real cv link here
+										href={`${mghCV}`} //need to add the real cv link here
 										target="_blank"
 										rel="noreferrer"
 										className="cvFooterIcon"
