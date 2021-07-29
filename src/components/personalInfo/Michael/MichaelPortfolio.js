@@ -18,7 +18,7 @@ import landingBackgroundExtraWide from "../../../assets/michaelPage/michael_land
 import projectsBackgroundMobile from "../../../assets/michaelPage/projects_background_mobile.png";
 // import projectsBackgroundMobile from "../../../assets/michaelPage/background_adrian.png";
 import arrows from "../../../assets/michaelPage/arrows.svg";
-import mghCV from "../../../assets/resumes/mhabermas_webdev_resume_8_2021.pdf";
+import cvLink from "../../../assets/resumes/mhabermas_webdev_resume_8_2021.pdf";
 
 // project imports
 import { michaelsProjects } from "../../../assets/projects";
@@ -439,15 +439,15 @@ function MichaelPortfolio() {
 			iconName: "LinkedIn",
 			location: "https://www.linkedin.com/in/michael-habermas/",
 		},
-		{ iconName: "CV", location: "" },
+		{ iconName: "CV", location: `${cvLink}` },
 		{ iconName: "Twitter", location: "https://twitter.com/habermoose" },
-		// { iconName: "Email", location: "" }, // add in a modal for this...?
+		{ iconName: "Email", location: "mailto:michaelghabermas@gmail.com" }, // add in a modal for this...?
 	];
 
 	return (
 		<MichaelPortfolioStyles>
 			<section className="landing">
-				<Nav name="Michael Habermas" cvLink={`${mghCV}`} color="white" />
+				<Nav name="Michael Habermas" cvLink={`${cvLink}`} color="white" />
 				<div className="sub_section">
 					<div>
 						<h1>Hi, I'm Michael</h1>
@@ -527,7 +527,7 @@ function MichaelPortfolio() {
 							return (
 								<div className="cvContainer" key={Math.random()}>
 									<a
-										href={`${mghCV}`} //need to add the real cv link here
+										href={`${location}`} //need to add the real cv link here
 										target="_blank"
 										rel="noreferrer"
 										className="cvFooterIcon"
