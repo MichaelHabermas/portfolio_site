@@ -174,7 +174,7 @@ const MichaelPortfolioStyles = styled.div`
 		transition: all 0.2s ease-in-out;
 	}
 	.project_card p {
-		font-size: 1.5rem;
+		font-size: 2rem;
 		line-height: 1.5;
 	}
 
