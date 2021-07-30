@@ -105,8 +105,7 @@ const WillPortfolioStyles = styled.div`
 		margin: 0 auto 3rem;
 	}
 
-	.landing p,
-	.landing p em {
+	.landing p {
 		font-size: 1.5rem;
 		width: 80%;
 		margin: 0 auto;
@@ -253,12 +252,17 @@ const WillPortfolioStyles = styled.div`
 		h1 {
 			font-size: 7rem;
 		}
-		.landing p {
-			margin-top: 10%;
-			font-size: 2.5rem;
+
+		.landing .sub_section {
+			display: flex;
+			flex-direction: column;
+		}
+		.landing_p {
+			float: right;
 		}
 
-		.landing p em {
+		.landing p {
+			margin-top: 10%;
 			font-size: 2.5rem;
 		}
 
@@ -309,14 +313,10 @@ const WillPortfolioStyles = styled.div`
 
 		.landing p {
 			margin: 0;
-			margin-top: 8%;
+			/* margin-top: 8%; */
 			font-size: 2.5rem;
 			text-align: left;
 			width: 50%;
-		}
-
-		.landing p em {
-			font-size: 2.5rem;
 		}
 
 		.moon_group {
@@ -460,7 +460,7 @@ function WillPortfolio() {
 				<div className="sub_section">
 					<div>
 						<h1>Hi, I'm Will</h1>
-						<p>
+						<p className="landing_p">
 							A passionate Full Stack Web Dev having experience building Web
 							applications with JavaScript / React / Nodejs, working in Python,
 							plus some other cool libraries and frameworks.
