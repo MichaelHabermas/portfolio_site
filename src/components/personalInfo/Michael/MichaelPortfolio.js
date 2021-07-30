@@ -457,9 +457,6 @@ function MichaelPortfolio() {
 						<img className="moon" src={moon2} alt="mooney face" />
 						<img className="mer_face" src={mer_face} alt="mooney faceface" />
 					</div>
-					{/* <svg class="moon">
-						<path />
-					</svg> */}
 					<div>
 						<h1>Hi, I'm Michael</h1>
 						<p>
