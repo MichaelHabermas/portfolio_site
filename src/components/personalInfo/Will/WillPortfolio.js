@@ -10,7 +10,7 @@ import ProjectCard from "../../ProjectCard";
 import iconComponent from "../../../assets/icons";
 
 // asset imports
-import landingBackgroundMobile from "../../../assets/will_page/will_landing_background_mobile.svg";
+import landingBackgroundMobile from "../../../assets/will_page/will_landing_background_mobile2.svg";
 import landingBackgroundTablet from "../../../assets/will_page/will_landing_background_tablet.svg";
 import landingBackgroundDesktop from "../../../assets/will_page/will_landing_background_desktop.svg";
 import landingBackgroundDesktopWide from "../../../assets/will_page/will_landing_background_desktop_wide.svg";
