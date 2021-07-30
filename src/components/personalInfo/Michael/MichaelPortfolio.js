@@ -232,7 +232,7 @@ const MichaelPortfolioStyles = styled.div`
 			height: 130vh;
 		}
 		h1 {
-			padding-top: 2rem;
+			padding-top: 12rem;
 		}
 	}
 
