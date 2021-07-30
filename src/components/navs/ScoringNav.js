@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 const Nav = styled.div`
 	position: absolute;
@@ -24,23 +24,24 @@ const Nav = styled.div`
 		display: flex;
 		justify-content: space-around;
 		align-items: center;
-		font-family: 'Poppins', sans-serif;
+		font-family: "Poppins", sans-serif;
 		min-height: 8vh;
-		background: #f3b38d; /* fallback for old browsers */
+		background: #ffb4ae; /* fallback for old browsers */
 		background: -webkit-linear-gradient(
-			to bottom right,
-			#f3b38d,
-			#f3d48c
+			180deg,
+			#ffb4ae,
+			#a1ca45
 		); /* Chrome 10-25, Safari 5.1-6 */
-		background: linear-gradient(to bottom right, #f3b38d, #f3d48c);
+		background: linear-gradient(170deg, #ffb4ae, #a1ca45);
+		box-shadow: 6px 6px 5px rgba(122, 122, 122, 0.5);
 	}
 
 	.logo {
-		/* color: rgb(226, 226, 226); */
 		color: #ffffff;
 		text-transform: uppercase;
 		letter-spacing: 5px;
-		font-size: 20px;
+		font-size: 6rem;
+		font-family: "Bangers", cursive;
 	}
 
 	.nav-links {
