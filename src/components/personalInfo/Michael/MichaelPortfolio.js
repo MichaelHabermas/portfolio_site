@@ -37,7 +37,6 @@ const MichaelPortfolioStyles = styled.div`
 		box-sizing: border-box;
 		list-style: none;
 		text-decoration: none;
-		font-size: 1.5rem;
 	}
 
 	h1,
@@ -165,8 +164,6 @@ const MichaelPortfolioStyles = styled.div`
 	.project_cards {
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
-		align-items: center;
 		width: 90%;
 		margin: 0 auto;
 	}
@@ -258,7 +255,6 @@ const MichaelPortfolioStyles = styled.div`
 			flex-direction: row;
 			flex-wrap: wrap;
 			justify-content: space-around;
-			align-items: center;
 			width: 100%;
 		}
 
