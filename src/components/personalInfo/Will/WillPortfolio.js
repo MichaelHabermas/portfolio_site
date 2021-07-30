@@ -257,13 +257,11 @@ const WillPortfolioStyles = styled.div`
 			display: flex;
 			flex-direction: column;
 		}
-		.landing_p {
-			float: right;
-		}
 
 		.landing p {
 			margin-top: 10%;
 			font-size: 2.5rem;
+			width: 50%;
 		}
 
 		.project_cards {
@@ -311,12 +309,12 @@ const WillPortfolioStyles = styled.div`
 			font-size: 7rem;
 		}
 
-		.landing p {
+		.landing_p {
 			margin: 0;
-			/* margin-top: 8%; */
 			font-size: 2.5rem;
 			text-align: left;
 			width: 50%;
+			float: right;
 		}
 
 		.moon_group {
