@@ -166,13 +166,16 @@ const MichaelPortfolioStyles = styled.div`
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		/* align-items: center; */
 		width: 90%;
 		margin: 0 auto;
 	}
 
 	.project_card {
 		transition: all 0.2s ease-in-out;
+	}
+	.project_card p {
+		font-size: 1.5rem;
+		line-height: 1.5;
 	}
 
 	.project_card .icon {
@@ -257,7 +260,6 @@ const MichaelPortfolioStyles = styled.div`
 			flex-direction: row;
 			flex-wrap: wrap;
 			justify-content: space-around;
-			/* align-items: center; */
 			width: 100%;
 		}
 
