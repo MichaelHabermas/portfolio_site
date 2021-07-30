@@ -228,20 +228,4 @@ export const willsProjects = [
 			},
 		],
 	},
-	{
-		image: conceptImgs,
-		text: "A collection of art recreated in the conceptual style. Each individual piece composed completely in Figma",
-		icons: [
-			{
-				iconName: "Web",
-				location: "",
-				component: iconComponent["Web"]["component"],
-			},
-			{
-				iconName: "GitHub",
-				location: "",
-				component: iconComponent["GitHub"]["component"],
-			},
-		],
-	},
 ];
