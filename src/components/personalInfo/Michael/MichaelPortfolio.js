@@ -231,9 +231,6 @@ const MichaelPortfolioStyles = styled.div`
 		.landing {
 			height: 130vh;
 		}
-		h1 {
-			padding-top: 12rem;
-		}
 	}
 
 	@media screen and (min-width: 480px) {
