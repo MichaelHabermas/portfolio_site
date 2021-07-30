@@ -112,6 +112,7 @@ const MichaelPortfolioStyles = styled.div`
 		font-size: 1.5rem;
 		width: 80%;
 		margin: 0 auto;
+		line-height: 1.5;
 	}
 
 	.moon_group {
@@ -466,9 +467,6 @@ function MichaelPortfolio() {
 						<img className="moon" src={moon2} alt="mooney face" />
 						<img className="mer_face" src={mer_face} alt="mooney faceface" />
 					</div>
-					{/* <svg class="moon">
-						<path />
-					</svg> */}
 					<div>
 						<h1>Hi, I'm Michael</h1>
 						<p>
@@ -547,7 +545,7 @@ function MichaelPortfolio() {
 							return (
 								<div className="cvContainer" key={Math.random()}>
 									<a
-										href={`${location}`} //need to add the real cv link here
+										href={`${location}`}
 										target="_blank"
 										rel="noreferrer"
 										className="cvFooterIcon"
