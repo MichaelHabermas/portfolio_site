@@ -227,10 +227,11 @@ const MichaelPortfolioStyles = styled.div`
 
 	//	MEDIA QUERIES										                                         MEDIA Q's
 
+	// this is attempt to fix the iphone landscape issues. NEEDS WORK
 	@media all and (orientation: landscape) {
-		.landing {
+		/* .landing {
 			height: 130vh;
-		}
+		} */
 	}
 
 	@media screen and (min-width: 480px) {
