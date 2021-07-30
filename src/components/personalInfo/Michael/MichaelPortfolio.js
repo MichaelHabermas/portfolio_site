@@ -230,6 +230,7 @@ const MichaelPortfolioStyles = styled.div`
 	@media all and (orientation: landscape) {
 		.landing {
 			height: 130vh;
+			background-image: url(${landingBackgroundTablet});
 		}
 	}
 
