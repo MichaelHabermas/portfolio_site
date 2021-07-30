@@ -28,7 +28,7 @@ export const michaelsProjects = [
 	},
 	{
 		image: recipeazyImg,
-		text: "Contributed to the design and implementation of a React app that gathers and shares family recipes. This app uses Redux to manage state, and makes axios calls to our concurrent team’s Node API.",
+		text: "Contributed to the design and implementation of a front-end web app that gathers and shares family recipes. Utilizes HTML, CSS, JS, React, Redux, and axios to communicate with our concurrent team’s Node API.",
 		icons: [
 			{
 				iconName: "Web",
@@ -44,7 +44,7 @@ export const michaelsProjects = [
 	},
 	{
 		image: waterPlantsImg,
-		text: "Implemented a Redux state management system to our team’s React application. The app helped its users organize their time and efforts towards keeping their plants healthy and watered.",
+		text: "A web app that helped its users organize their time and efforts towards keeping their plants healthy and watered. Implemented a Redux state management system to our team’s React application.",
 		icons: [
 			{
 				iconName: "Web",
@@ -61,7 +61,7 @@ export const michaelsProjects = [
 
 	{
 		image: workoutImg,
-		text: "Built a Restful CRUD API for a fitness class reservation application using Node.js and Express as well as used JWT authentication for login security, while a concurrent team built out the design and features for front end using React/Redux.",
+		text: "Built a Restful CRUD API for a fitness class reservation application for a concurrent team's built front end design.  Utilized Node.js and Express as well as used JWT authentication for login security.",
 		icons: [
 			{
 				iconName: "Web",
@@ -77,7 +77,7 @@ export const michaelsProjects = [
 	},
 	{
 		image: speaqImg,
-		text: "A current super-secret project that’s in the works. Aspires to bring a new approach to the foreign language learning world. Don’t tell anyone....",
+		text: "A current SUPER-secret project that’s in the works. Aspires to bring a new approach to the foreign language learning world. Application currently utilizes AWS Polly, Unity, Figma, Test Fairy. Don’t tell anyone....",
 		icons: [
 			{
 				iconName: "Web",
@@ -93,7 +93,7 @@ export const michaelsProjects = [
 	},
 	{
 		image: oldmaidImg,
-		text: "Collaborated on the conception, design, and implementation of the classic card game, Old Maid. Contributions include some asset design and layout as well as functionality.",
+		text: "Collaborated on the conception, design, and implementation of the classic card game, Old Maid. Contributions include some asset design and layout as well as functionality. Built using React, Redux, and Figma.",
 		icons: [
 			{
 				iconName: "Web",

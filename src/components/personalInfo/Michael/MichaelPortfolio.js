@@ -226,6 +226,13 @@ const MichaelPortfolioStyles = styled.div`
 	}
 
 	//	MEDIA QUERIES										                                         MEDIA Q's
+
+	@media all and (orientation: landscape) {
+		.landing {
+			height: 130vh;
+		}
+	}
+
 	@media screen and (min-width: 480px) {
 		.landing {
 			background-image: url(${landingBackgroundTablet});
