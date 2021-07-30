@@ -61,7 +61,7 @@ export const michaelsProjects = [
 
 	{
 		image: workoutImg,
-		text: "Built a Restful CRUD API for a fitness class reservation application for a concurrent team's built front end design.  Utilized Node.js and Express as well as used JWT authentication for login security.",
+		text: "Built a Restful CRUD API for a fitness class reservation application for a concurrent team's built front end design.  Utilized Node.js, Express, Github, knex, PostgreSQL, JWTs.",
 		icons: [
 			{
 				iconName: "Web",
