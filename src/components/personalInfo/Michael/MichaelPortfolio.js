@@ -37,6 +37,7 @@ const MichaelPortfolioStyles = styled.div`
 		box-sizing: border-box;
 		list-style: none;
 		text-decoration: none;
+		font-size: 1.5rem;
 	}
 
 	h1,
@@ -164,6 +165,8 @@ const MichaelPortfolioStyles = styled.div`
 	.project_cards {
 		display: flex;
 		flex-direction: column;
+		justify-content: center;
+		/* align-items: center; */
 		width: 90%;
 		margin: 0 auto;
 	}
@@ -174,7 +177,6 @@ const MichaelPortfolioStyles = styled.div`
 
 	.project_card .icon {
 		font-size: 6rem;
-		margin: 0;
 	}
 
 	.project_card .icon:hover {
@@ -255,6 +257,7 @@ const MichaelPortfolioStyles = styled.div`
 			flex-direction: row;
 			flex-wrap: wrap;
 			justify-content: space-around;
+			/* align-items: center; */
 			width: 100%;
 		}
 
@@ -453,6 +456,9 @@ function MichaelPortfolio() {
 						<img className="moon" src={moon2} alt="mooney face" />
 						<img className="mer_face" src={mer_face} alt="mooney faceface" />
 					</div>
+					{/* <svg class="moon">
+						<path />
+					</svg> */}
 					<div>
 						<h1>Hi, I'm Michael</h1>
 						<p>
