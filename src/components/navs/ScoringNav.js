@@ -46,8 +46,8 @@ const Nav = styled.div`
 
 	.nav-links {
 		display: flex;
+		width: 40%;
 		justify-content: space-around;
-		width: 30%;
 		align-items: center;
 	}
 
