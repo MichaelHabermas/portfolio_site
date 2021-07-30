@@ -4,7 +4,7 @@ import { Switch, Route } from "react-router-dom";
 import "../../cssFiles/App.css";
 //components
 import MichaelAbout from "./Michael/MichaelPortfolio.js";
-import WillAbout from "./Will";
+import WillAbout from "./Will/WillPortfolio.js";
 import AdrianAbout from "./Adrian";
 
 function About() {
