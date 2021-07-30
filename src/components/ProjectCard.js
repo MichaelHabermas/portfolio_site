@@ -25,15 +25,17 @@ const ProjectCardStyle = styled.div`
 		font-size: 1.5rem;
 		font-weight: 500;
 		width: 90%;
+		/* min-height: 5ch; */
+		margin-bottom: 2rem;
 		color: #444444;
 	}
 
 	.project_icons {
+		margin-right: 0;
+		width: 50%;
 		display: flex;
-	}
-
-	.project_icon {
-		font-size: 5rem;
+		justify-content: space-around;
+		margin-bottom: 2rem;
 	}
 
 	.project_div:hover {
@@ -84,12 +86,8 @@ const ProjectCard = props => {
 								target="_blank"
 								rel="noreferrer"
 								key={Math.random()}
-								className="project_icon"
 							>
-								<SkillCard
-									className="project_icon"
-									component={iconX["component"]}
-								/>
+								<SkillCard component={iconX["component"]} />
 							</a>
 						);
 					})}

@@ -8,7 +8,7 @@ const SkillCardStyle = styled.div`
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		margin: 1rem 1rem 0 0;
+		margin: 0 2rem 1.5rem;
 		color: blue;
 	}
 
@@ -22,17 +22,17 @@ const SkillCardStyle = styled.div`
 	}
 	@media screen and (min-width: 768px) {
 		.icon_card {
-			margin: 2rem 2rem 0 0;
+			/* margin: 2rem; */
 		}
 	}
 	@media screen and (min-width: 1024px) {
 		.icon_card {
-			margin: 2rem 2rem 0 0;
+			/* margin: 2rem; */
 		}
 	}
 	@media screen and (min-width: 1200px) {
 		.icon_card {
-			margin: 2rem 1rem 0 0;
+			/* margin: 2rem; */
 		}
 	}
 	@media screen and (min-width: 1550px) {

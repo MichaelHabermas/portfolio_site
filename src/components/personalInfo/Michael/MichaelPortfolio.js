@@ -125,7 +125,7 @@ const MichaelPortfolioStyles = styled.div`
 	.arrows img,
 	.icon,
 	.cvContainer:hover {
-		transition: all 0.3s ease-in-out;
+		transition: all 0.2s ease-in-out;
 	}
 
 	.arrows img:hover,
@@ -175,7 +175,8 @@ const MichaelPortfolioStyles = styled.div`
 	}
 
 	.project_card .icon {
-		font-size: 4rem;
+		font-size: 6rem;
+		margin: 0;
 	}
 
 	.project_card .icon:hover {
