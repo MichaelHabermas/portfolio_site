@@ -37,6 +37,7 @@ const MichaelPortfolioStyles = styled.div`
 		box-sizing: border-box;
 		list-style: none;
 		text-decoration: none;
+		font-size: 1.5rem;
 	}
 
 	h1,

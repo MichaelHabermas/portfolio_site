@@ -11,7 +11,7 @@ import iconComponent from "../icons/index";
 export const michaelsProjects = [
 	{
 		image: adrianLandingImg,
-		text: "Designed and built a portfolio website for an independant local digital Los Angeles Artist",
+		text: "Designed and built a portfolio website for an independent Los Angeles digital artist. Assisted in the creating the presentational elements to properly highlight the artist's works. Utilizes HTML, CSS, React and Figma.",
 		icons: [
 			{
 				iconName: "Web",

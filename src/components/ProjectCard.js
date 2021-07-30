@@ -25,7 +25,6 @@ const ProjectCardStyle = styled.div`
 		font-size: 1.5rem;
 		font-weight: 500;
 		width: 90%;
-		/* min-height: 5ch; */
 		margin-bottom: 2rem;
 		color: #444444;
 	}
@@ -35,7 +34,6 @@ const ProjectCardStyle = styled.div`
 		width: 50%;
 		display: flex;
 		justify-content: space-around;
-		margin-bottom: 2rem;
 	}
 
 	.project_div:hover {
