@@ -1,24 +1,24 @@
-import React, { useState } from 'react';
-import { Route, useHistory } from 'react-router-dom';
-import styled from 'styled-components';
-import { connect } from 'react-redux';
+import React, { useState } from "react";
+import { Route, useHistory } from "react-router-dom";
+import styled from "styled-components";
+import { connect } from "react-redux";
 
 //components
-import ScoringNav from '../navs/ScoringNav.js';
-import StartScreen from './StartScreen';
-import GameOverScreen from './GameOverScreen';
-import Player from '../Player.js';
-import Character from '../Character.js';
-import CharSelect from './CharSelect';
+import ScoringNav from "../navs/ScoringNav.js";
+import StartScreen from "./StartScreen";
+import GameOverScreen from "./GameOverScreen";
+import Player from "../Player.js";
+import Character from "../Character.js";
+import CharSelect from "./CharSelect";
 
 //assets
 // game screen assets
-import cardBack from '../../assets/cardGameAssets/card_face_selected.png';
-import cardFront from '../../assets/cardGameAssets/card_face_norm.png';
-import CowTilt from '../../assets/oldMaidAssets/cow_tilt.png';
-import tree1 from '../../assets/oldMaidAssets/tree_a.png';
-import tree2 from '../../assets/oldMaidAssets/tree_b.png';
-import PairedCards from './pairAnimation.js';
+import cardBack from "../../assets/cardGameAssets/card_face_selected.png";
+import cardFront from "../../assets/cardGameAssets/card_face_norm.png";
+import CowTilt from "../../assets/oldMaidAssets/cow_tilt.png";
+import tree1 from "../../assets/oldMaidAssets/tree_a.png";
+import tree2 from "../../assets/oldMaidAssets/tree_b.png";
+import PairedCards from "./pairAnimation.js";
 
 //actions
 import {
@@ -26,8 +26,8 @@ import {
 	resetScore,
 	increaseUserWinScore,
 	increaseComputerWinScore,
-	settleTurn
-} from '../../actions/oldmaidActions';
+	settleTurn,
+} from "../../actions/oldmaidActions";
 
 // styling
 const OldMaidBody = styled.div`
@@ -104,11 +104,11 @@ const OldMaidBody = styled.div`
 		padding: 1rem 0;
 		width: 60px;
 		height: 80px;
-		font-size: 2rem;
+		font-size: 5rem;
 		text-align: center;
-		color: white;
-		margin: 0.1rem;
-		text-shadow: 1px 1px 0 black;
+		margin: 1rem 0 0 0;
+		color: #f89001;
+		font-family: "Bangers", cursive;
 	}
 
 	.opponentCard {
@@ -160,7 +160,7 @@ const OldMaidGame = props => {
 	const { oldmaid, dispatch } = props;
 	const { push } = useHistory();
 	const [paired, setPaired] = useState([]);
-	const [lastPaired, setLastPaired] = useState('');
+	const [lastPaired, setLastPaired] = useState("");
 
 	// handles each player taking their turn
 	const takePlayerTurn = (chooser, choosee) => {
@@ -172,33 +172,23 @@ const OldMaidGame = props => {
 
 		setLastPaired(chosenCard);
 
-		if (chosenCard[0] === 'Q') {
-			newChooseeHand = [...choosee.filter(item => item[0] !== 'Q')];
-			newChooserHand = [...chooser, 'Q'];
+		if (chosenCard[0] === "Q") {
+			newChooseeHand = [...choosee.filter(item => item[0] !== "Q")];
+			newChooserHand = [...chooser, "Q"];
 		} else {
 			setPaired([...paired, chosenCard]);
-			newChooseeHand = [
-				...choosee.filter(item => item[0] !== chosenCard[0])
-			];
-			newChooserHand = [
-				...chooser.filter(item => item[0] !== chosenCard[0])
-			];
+			newChooseeHand = [...choosee.filter(item => item[0] !== chosenCard[0])];
+			newChooserHand = [...chooser.filter(item => item[0] !== chosenCard[0])];
 		}
 
 		const newState = {
 			hands: {
-				playerHand: oldmaid.playerTurn
-					? newChooserHand
-					: newChooseeHand,
-				opponentHand: oldmaid.playerTurn
-					? newChooseeHand
-					: newChooserHand
+				playerHand: oldmaid.playerTurn ? newChooserHand : newChooseeHand,
+				opponentHand: oldmaid.playerTurn ? newChooseeHand : newChooserHand,
 			},
 			playerTurn: !oldmaid.playerTurn,
 			gameOver:
-				newChooserHand.length < 1 || newChooseeHand.length < 1
-					? true
-					: false
+				newChooserHand.length < 1 || newChooseeHand.length < 1 ? true : false,
 		};
 
 		dispatch(settleTurn(newState));
@@ -208,7 +198,7 @@ const OldMaidGame = props => {
 		dispatch(newGame());
 		setPaired([]);
 		// push('/old-maid/character-select');
-		push('/old-maid/gamescreen');
+		push("/old-maid/gamescreen");
 	};
 
 	const isUserWinning = () => {
@@ -222,7 +212,7 @@ const OldMaidGame = props => {
 	const handleGameOver = () => {
 		handleScoreUpdate();
 		setTimeout(() => {
-			push('/old-maid/gameoverscreen');
+			push("/old-maid/gameoverscreen");
 		}, 1100);
 	};
 
@@ -254,10 +244,7 @@ const OldMaidGame = props => {
 
 					<Route path="/old-maid/gamescreen">
 						<div className="centered">
-							<PairedCards
-								lastPaired={lastPaired}
-								paired={paired}
-							/>
+							<PairedCards lastPaired={lastPaired} paired={paired} />
 						</div>
 
 						<img className="tree tree1" src={tree1} alt="tree" />
@@ -270,16 +257,14 @@ const OldMaidGame = props => {
 								className="hand opponentHand"
 								onClick={() => {
 									oldmaid.playerTurn
-										? console.log('not my turn')
+										? console.log("not my turn")
 										: takePlayerTurn(
 												oldmaid.hands.opponentHand,
 												oldmaid.hands.playerHand
 										  );
 								}}
 							>
-								<Character
-									character={oldmaid.playerCharacter.computer}
-								/>
+								<Character character={oldmaid.playerCharacter.computer} />
 								<Player
 									playerHand={oldmaid.hands.opponentHand}
 									isUser={false}
@@ -294,7 +279,7 @@ const OldMaidGame = props => {
 												oldmaid.hands.playerHand,
 												oldmaid.hands.opponentHand
 										  )
-										: console.log('not my turn');
+										: console.log("not my turn");
 								}}
 							>
 								<Player
@@ -302,9 +287,7 @@ const OldMaidGame = props => {
 									isUser={true}
 									classNames="card playerCard"
 								/>
-								<Character
-									character={oldmaid.playerCharacter.user}
-								/>
+								<Character character={oldmaid.playerCharacter.user} />
 							</div>
 						</div>
 					</Route>
@@ -324,7 +307,7 @@ const OldMaidGame = props => {
 const mapStateToProps = state => {
 	return {
 		oldmaid: state.oldmaid,
-		gameOver: state.oldmaid.gameOver
+		gameOver: state.oldmaid.gameOver,
 	};
 };
 

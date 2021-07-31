@@ -32,7 +32,7 @@ const Nav = styled.div`
 			#ffb4ae,
 			#a1ca45
 		); /* Chrome 10-25, Safari 5.1-6 */
-		background: linear-gradient(170deg, #ffb4ae, #a1ca45);
+		background: linear-gradient(180deg, #ffb4ae, #a1ca45);
 		box-shadow: 6px 6px 5px rgba(122, 122, 122, 0.5);
 	}
 
