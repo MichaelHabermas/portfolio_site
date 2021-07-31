@@ -107,8 +107,8 @@ const OldMaidBody = styled.div`
 		font-size: 5rem;
 		text-align: center;
 		margin: 1rem 0 0 0;
-		color: #f89001;
 		font-family: "Bangers", cursive;
+		color: #f89001;
 	}
 
 	.opponentCard {
