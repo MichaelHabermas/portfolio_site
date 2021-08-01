@@ -15,7 +15,6 @@ import CharSelect from "./CharSelect";
 // game screen assets
 import cardBack from "../../assets/cardGameAssets/card_face_selected.png";
 import cardFront from "../../assets/cardGameAssets/card_face_norm.png";
-import CowTilt from "../../assets/oldMaidAssets/cow_tilt.png";
 import tree1 from "../../assets/oldMaidAssets/tree_a.png";
 import tree2 from "../../assets/oldMaidAssets/tree_b.png";
 import tree3 from "../../assets/oldMaidAssets/tree_w_cow.png";
