@@ -1,11 +1,11 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import React from "react";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-import landingPageWide from '../assets/homePage/landing_page_widescreen.png';
-import landingPageDesktop from '../assets/homePage/landing_page_desktop.png';
-import landingPageTablet from '../assets/homePage/landing_page_tablet.png';
-import landingPageMobile from '../assets/homePage/landing_page_mobile.png';
+import landingPageWide from "../assets/homePage/landing_page_widescreen.png";
+import landingPageDesktop from "../assets/homePage/landing_page_desktop.png";
+import landingPageTablet from "../assets/homePage/landing_page_tablet.png";
+import landingPageMobile from "../assets/homePage/landing_page_mobile.png";
 
 const HomeDiv = styled.div`
 	background-image: url(${landingPageMobile});
@@ -26,7 +26,7 @@ const HomeDiv = styled.div`
 		margin: 0;
 		padding: 0;
 		box-sizing: border-box;
-		font-family: 'Poppins', sans-serif;
+		font-family: "Poppins", sans-serif;
 		/* z-index: -1; */
 	}
 
@@ -42,7 +42,7 @@ const HomeDiv = styled.div`
 	}
 
 	.main-title {
-		font-family: 'Stalemate', cursive;
+		font-family: "Stalemate", cursive;
 		color: white;
 		font-size: 10rem;
 		font-weight: 100;
@@ -59,14 +59,14 @@ const HomeDiv = styled.div`
 		display: inline-block;
 	}
 	.word span {
-		font-family: 'Stalemate', cursive;
+		font-family: "Stalemate", cursive;
 		position: absolute;
 		top: 0;
 		overflow: hidden;
 		animation: animate 6s linear infinite;
 		opacity: 0;
 		padding: 6%;
-		font-size: 4rem;
+		font-size: 10rem;
 	}
 
 	/* .lastspan {
@@ -105,10 +105,6 @@ const HomeDiv = styled.div`
 	.word span:nth-child(3) {
 		animation-delay: 4s;
 	}
-	/* .word span:nth-child(4) {
-		animation-delay: 6s;
-	} */
-
 	.nameLinks {
 		line-height: 1;
 		z-index: 3;
@@ -128,7 +124,7 @@ const HomeDiv = styled.div`
 	}
 
 	.nameLink {
-		font-family: 'Stalemate', cursive;
+		font-family: "Stalemate", cursive;
 		color: white;
 	}
 
@@ -140,9 +136,7 @@ const HomeDiv = styled.div`
 	@media only screen and (max-width: 480px) {
 		background-image: url(${landingPageMobile});
 
-		.main-title {
-			font-size: 5rem;
-		}
+		.main-title,
 		.word span {
 			font-size: 5rem;
 		}
@@ -160,9 +154,7 @@ const HomeDiv = styled.div`
 		/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
 		/* background: url(${landingPageTablet}) no-repeat center center fixed; */
 
-		.main-title {
-			font-size: 5rem;
-		}
+		.main-title,
 		.word span {
 			font-size: 5rem;
 		}
@@ -176,9 +168,7 @@ const HomeDiv = styled.div`
 	@media only screen and (min-width: 641px) {
 		/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
 		background: url(${landingPageDesktop}) no-repeat center center fixed;
-		.main-title {
-			font-size: 5rem;
-		}
+		.main-title,
 		.word span {
 			font-size: 5rem;
 		}
@@ -192,7 +182,8 @@ const HomeDiv = styled.div`
 	@media only screen and (min-width: 961px) {
 		/* tablet, landscape iPad, lo-res laptops ands desktops */
 		background: url(${landingPageDesktop}) no-repeat center center fixed;
-		.main-title {
+		.main-title,
+		.word span {
 			font-size: 6rem;
 		}
 		.nameLinks {
@@ -206,7 +197,8 @@ const HomeDiv = styled.div`
 	@media only screen and (min-width: 1025px) {
 		/* big landscape tablets, laptops, and desktops */
 		background: url(${landingPageDesktop}) no-repeat center center fixed;
-		.main-title {
+		.main-title,
+		.word span {
 			font-size: 6rem;
 		}
 		.nameLinks {
@@ -216,7 +208,8 @@ const HomeDiv = styled.div`
 	}
 	@media only screen and (min-width: 1281px) {
 		background: url(${landingPageWide}) no-repeat center center fixed;
-		.main-title {
+		.main-title,
+		.word span {
 			font-size: 8rem;
 		}
 		.nameLinks {
@@ -224,23 +217,21 @@ const HomeDiv = styled.div`
 		}
 	}
 
-	@media only screen and (max-width: 425px) {
+	//	MEDIA QUERIES										                                         MEDIA Q's
+
+	// this is attempt to fix the iphone landscape issues. NEEDS WORK
+	@media all and (orientation: landscape) {
 	}
-	@media only screen and (min-width: 425px) and (max-width: 641px) {
-		/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+
+	@media screen and (min-width: 480px) {
 	}
-	@media only screen and (min-width: 641px) and (max-width: 961px) {
-		/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+	@media screen and (min-width: 768px) {
 	}
-	@media only screen and (min-width: 961px) and (max-width: 1100px) {
-		/* tablet, landscape iPad, lo-res laptops ands desktops */
+	@media screen and (min-width: 1024px) {
 	}
-	@media only screen and (min-width: 1100px) and (max-width: 1281px) {
-		/* big landscape tablets, laptops, and desktops */
+	@media screen and (min-width: 1200px) {
 	}
-	@media only screen and (min-width: 1281px) and (max-width: 1500px) {
-	}
-	@media only screen and (min-width: 1500px) {
+	@media screen and (min-width: 1550px) {
 	}
 `;
 
