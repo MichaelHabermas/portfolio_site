@@ -18,6 +18,7 @@ import cardFront from "../../assets/cardGameAssets/card_face_norm.png";
 import CowTilt from "../../assets/oldMaidAssets/cow_tilt.png";
 import tree1 from "../../assets/oldMaidAssets/tree_a.png";
 import tree2 from "../../assets/oldMaidAssets/tree_b.png";
+import tree3 from "../../assets/oldMaidAssets/tree_w_cow.png";
 import PairedCards from "./pairAnimation.js";
 
 //actions
@@ -50,18 +51,12 @@ const OldMaidBody = styled.div`
 	}
 	.tree2 {
 		top: 50%;
-		right: 5%;
-		transform: translate(-50%, -50%);
-	}
-	.CowTilt {
-		position: absolute;
-		top: 60%;
-		right: 11%;
-		transform: translate(-50%, -50%);
+		right: 2%;
+		transform: translate(0%, -50%);
 	}
 	.tree3 {
 		top: 80%;
-		left: 25%;
+		left: 20%;
 		transform: translate(-50%, -50%);
 	}
 
@@ -135,24 +130,21 @@ const OldMaidBody = styled.div`
 		display: none;
 	}
 
-	// MEDIA QUERIES
-	@media only screen and (max-width: 425px) {
+	//	MEDIA QUERIES										                                         MEDIA Q's
+
+	// this is attempt to fix the iphone landscape issues. NEEDS WORK
+	@media all and (orientation: landscape) {
 	}
-	@media only screen and (min-width: 425px) and (max-width: 641px) {
-		/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+
+	@media screen and (min-width: 480px) {
 	}
-	@media only screen and (min-width: 641px) and (max-width: 961px) {
-		/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+	@media screen and (min-width: 768px) {
 	}
-	@media only screen and (min-width: 961px) and (max-width: 1100px) {
-		/* tablet, landscape iPad, lo-res laptops ands desktops */
+	@media screen and (min-width: 1024px) {
 	}
-	@media only screen and (min-width: 1100px) and (max-width: 1281px) {
-		/* big landscape tablets, laptops, and desktops */
+	@media screen and (min-width: 1200px) {
 	}
-	@media only screen and (min-width: 1281px) and (max-width: 1500px) {
-	}
-	@media only screen and (min-width: 1500px) {
+	@media screen and (min-width: 1550px) {
 	}
 `;
 
@@ -248,8 +240,7 @@ const OldMaidGame = props => {
 						</div>
 
 						<img className="tree tree1" src={tree1} alt="tree" />
-						<img className="CowTilt" src={CowTilt} alt="cow" />
-						<img className="tree tree2" src={tree2} alt="tree" />
+						<img className="tree tree2" src={tree3} alt="tree" />
 						<img className="tree tree3" src={tree2} alt="tree" />
 
 						<div className="cards">
