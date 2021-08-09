@@ -52,7 +52,7 @@ const HomeDiv = styled.div`
 		top: 30%;
 		left: 50%;
 		transform: translate(-100%, -50%);
-		padding-top: 1.5%;
+		padding-top: 0.5%;
 	}
 
 	.word {
@@ -68,10 +68,6 @@ const HomeDiv = styled.div`
 		padding: 6%;
 		font-size: 10rem;
 	}
-
-	/* .lastspan {
-		width: 200%;
-	} */
 
 	@keyframes animate {
 		0% {
@@ -120,7 +116,7 @@ const HomeDiv = styled.div`
 	}
 
 	.nameLinks div {
-		font-size: 5rem;
+		font-size: 6rem;
 	}
 
 	.nameLink {
@@ -168,6 +164,11 @@ const HomeDiv = styled.div`
 	@media only screen and (min-width: 641px) {
 		/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
 		background: url(${landingPageDesktop}) no-repeat center center fixed;
+
+		.main-title {
+			padding-top: 0.7%;
+		}
+
 		.main-title,
 		.word span {
 			font-size: 5rem;
