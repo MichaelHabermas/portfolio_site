@@ -19,7 +19,7 @@ import projectsBackgroundMobile from "../../../assets/michaelPage/projects_backg
 import moon2 from "../../../assets/michaelPage/moon2.svg";
 import mer_face from "../../../assets/michaelPage/mer_face.svg";
 import arrows from "../../../assets/michaelPage/arrows.svg";
-import cvLink from "../../../assets/resumes/mhabermas_webdev_resume_8_2021.pdf";
+import cvLink from "../../../assets/resumes/M_Habermas_resume.pdf";
 
 // project imports
 import { michaelsProjects } from "../../../assets/projects";
