@@ -15,9 +15,9 @@ import CharSelect from "./CharSelect";
 // game screen assets
 import cardBack from "../../assets/cardGameAssets/card_face_selected.png";
 import cardFront from "../../assets/cardGameAssets/card_face_norm.png";
-import tree1 from "../../assets/oldMaidAssets/tree_a.png";
-import tree2 from "../../assets/oldMaidAssets/tree_b.png";
-import tree3 from "../../assets/oldMaidAssets/tree_w_cow.png";
+import tree1 from "../../assets/OldMaidAssets/tree_a.png";
+import tree2 from "../../assets/OldMaidAssets/tree_b.png";
+import tree3 from "../../assets/OldMaidAssets/tree_w_cow.png";
 import PairedCards from "./pairAnimation.js";
 
 //actions

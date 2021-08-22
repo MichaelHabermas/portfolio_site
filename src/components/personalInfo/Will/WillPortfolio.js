@@ -17,7 +17,7 @@ import landingBackgroundDesktopWide from "../../../assets/will_page/will_landing
 import landingBackgroundExtraWide from "../../../assets/will_page/will_landing_background_extra_wide.svg";
 import projectsBackgroundMobile from "../../../assets/michaelPage/projects_background_mobile.png";
 import arrows from "../../../assets/will_page/arrows_will.svg";
-import cvLink from "../../../assets/resumes/mhabermas_webdev_resume_8_2021.pdf";
+import cvLink from "../../../assets/resumes/william_moon_resume.pdf";
 
 // project imports
 import { willsProjects } from "../../../assets/projects";
@@ -459,7 +459,7 @@ function WillPortfolio() {
 					<div>
 						<h1>Hi, I'm Will</h1>
 						<p className="landing_p">
-							A passionate Full Stack Web Dev having experience building Web
+							A passionate software engineer having experience building Web
 							applications with JavaScript / React / Nodejs, working in Python,
 							plus some other cool libraries and frameworks.
 						</p>

@@ -238,7 +238,10 @@ const Nav = styled.div`
 			width: 40%;
 		}
 		.link-text {
-			font-size: 1.3rem;
+			font-size: 1.4rem;
+		}
+		.dropdown-content {
+			font-size: 1.5rem;
 		}
 	}
 	/* ANIMATIONS  */
