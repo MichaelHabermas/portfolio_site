@@ -284,12 +284,12 @@ const AboutUs = () => {
 					</Link>
 					<div className="description">
 						<p>
-							This portfolio site is a collaborative work through
-							the effort of Will Moon, Adrian Van Der Valk, and
-							Michael Habermas. Click on the links below to learn
-							more more about each individual. A special thanks
-							goes out to Vera P. and Devin M. for their
-							specialized contributions.
+							Will is a former bartender with a knack for solving
+							problems. Always interested in puzzles and games he
+							was directed towards software development where he 
+							experienced something new. He found passion in coding
+							and has always worked best with a team. He strives to
+							be the best he can and bring out the best in others.
 						</p>
 					</div>
 				</div>
