@@ -11,6 +11,7 @@ import techShop from "../will_page/tech_shop.png";
 import potluck01 from "../will_page/potluck_01.png";
 import potluck02 from "../will_page/potluck_02.png";
 import flame from "../will_page/flame.png";
+import chava from "../will_page/chava_project.png";
 
 import iconComponent from "../icons/index";
 
@@ -135,8 +136,8 @@ export const michaelsProjects = [
 
 export const willsProjects = [
 	{
-		image: adrianLandingImg,
-		text: "Designed and built a portfolio website for an independent Los Angeles digital artist. Assisted in the creating the presentational elements to properly highlight the artist's works. Utilizes HTML, CSS, React and Figma.",
+		image: chava,
+		text: "Designed a portfolio website for an independent San Francisco digital artist Utilizes HTML, CSS, React and Figma.",
 		icons: [
 			{
 				iconName: "Web",
@@ -153,7 +154,7 @@ export const willsProjects = [
 	},
 	{
 		image: oldmaidImg,
-		text: "Collaborated on the conception, design, and implementation of the classic card game, Old Maid. Contributions include some asset design and layout as well as functionality. Built using React, Redux, and Figma.",
+		text: "Collaborated on the conception, design, and implementation of the classic card game, Old Maid. Built using React, Redux, and Figma.",
 		icons: [
 			{
 				iconName: "Web",
@@ -220,7 +221,7 @@ export const willsProjects = [
 	},
 	{
 		image: flame,
-		text: "A project I am collaborating on with my friends to create a new concept on how people perceive things.",
+		text: "A project I am collaborating on with a group of developers to create a new concept on how people perceive things.",
 		icons: [],
 	},
 ];
