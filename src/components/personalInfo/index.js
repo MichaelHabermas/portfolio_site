@@ -6,6 +6,7 @@ import "../../cssFiles/App.css";
 import MichaelAbout from "./Michael/MichaelPortfolio.js";
 import WillAbout from "./Will/WillPortfolio.js";
 import AdrianAbout from "./Adrian";
+import AndrewAbout from "./Andrew/AndrewPortfolio.js";
 
 function About() {
 	return (
@@ -19,6 +20,9 @@ function About() {
 				</Route>
 				<Route path="/personal-info/adrian">
 					<AdrianAbout />
+				</Route>
+				<Route path="/personal-info/andrew">
+					<AndrewAbout />
 				</Route>
 			</Switch>
 		</div>
