@@ -467,7 +467,7 @@ function WillPortfolio() {
 						<p className="landing_p">
 							A Software Engineer with a passion for coding. Having built web
 							applications, I have experience with JavaScript, React, NodeJS,
-							Python plus a few other libraries and frameworks.
+							Python, and a few other libraries and frameworks.
 						</p>
 					</div>
 					<div
