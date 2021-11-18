@@ -17,7 +17,7 @@ import landingBackgroundDesktopWide from "../../../assets/will_page/will_landing
 import landingBackgroundExtraWide from "../../../assets/will_page/will_landing_background_extra_wide.svg";
 import projectsBackgroundMobile from "../../../assets/michaelPage/projects_background_mobile.png";
 import arrows from "../../../assets/will_page/arrows_will.svg";
-import cvLink from "../../../assets/resumes/mhabermas_webdev_resume_8_2021.pdf";
+import cvLink from "../../../assets/resumes/william_moon_resume.pdf";
 
 // project imports
 import { willsProjects } from "../../../assets/projects";
@@ -110,11 +110,12 @@ const WillPortfolioStyles = styled.div`
 		width: 80%;
 		margin: 0 auto;
 		line-height: 1.5;
+		font-weight: bold;
 	}
 
-	.moon_group {
-		display: none;
-	}
+	// .moon_group {
+	// 	display: none;
+	// }
 
 	.arrows {
 		width: 100%;
@@ -167,10 +168,15 @@ const WillPortfolioStyles = styled.div`
 		width: 90%;
 		margin: 0 auto;
 	}
-
+	
 	.project_card {
 		transition: all 0.2s ease-in-out;
 	}
+
+	.project_card img {
+		border-radius: 30px;
+	}
+
 	.project_card p {
 		font-size: 2rem;
 		line-height: 1.5;
@@ -317,36 +323,36 @@ const WillPortfolioStyles = styled.div`
 			float: right;
 		}
 
-		.moon_group {
-			display: initial;
-			position: absolute;
-			top: 20%;
-			right: 7%;
-			transform: scale(0.8);
-			transition: all 0.8s ease;
-		}
-		.moon,
-		.mer_face {
-			position: absolute;
-			top: 0;
-			right: 0;
-			transition: all 0.8s ease;
-		}
-		.moon {
-			transform: translate(-5.5%, 5.5%);
-		}
-		.mer_face {
-			opacity: 0.5;
-		}
+		// .moon_group {
+		// 	display: initial;
+		// 	position: absolute;
+		// 	top: 20%;
+		// 	right: 7%;
+		// 	transform: scale(0.8);
+		// 	transition: all 0.8s ease;
+		// }
+		// .moon,
+		// .mer_face {
+		// 	position: absolute;
+		// 	top: 0;
+		// 	right: 0;
+		// 	transition: all 0.8s ease;
+		// }
+		// .moon {
+		// 	transform: translate(-5.5%, 5.5%);
+		// }
+		// .mer_face {
+		// 	opacity: 0.5;
+		// }
 
-		.moon_group:hover {
-			transform: scale(1.05);
-		}
+		// .moon_group:hover {
+		// 	transform: scale(1.05);
+		// }
 
-		.mer_face:hover {
-			transform: rotate(280deg);
-			opacity: 1;
-		}
+		// .mer_face:hover {
+		// 	transform: rotate(280deg);
+		// 	opacity: 1;
+		// }
 
 		// SKILLS						SKILLS							                                    SKILLS
 		.skill_icons {
@@ -448,7 +454,7 @@ function WillPortfolio() {
 		},
 		{ iconName: "CV", location: `${cvLink}` },
 		{ iconName: "Twitter", location: "" },
-		{ iconName: "Email", location: "mailto:wmoon0113@gmail.com" }, // add in a modal for this...?
+		{ iconName: "Email", location: "mailto:wmoon0113@gmail.com" }, 
 	];
 
 	return (
@@ -459,9 +465,9 @@ function WillPortfolio() {
 					<div>
 						<h1>Hi, I'm Will</h1>
 						<p className="landing_p">
-							A passionate Full Stack Web Dev having experience building Web
-							applications with JavaScript / React / Nodejs, working in Python,
-							plus some other cool libraries and frameworks.
+							A Software Engineer with a passion for coding. Having built web
+							applications, I have experience with JavaScript, React, NodeJS,
+							Python, and a few other libraries and frameworks.
 						</p>
 					</div>
 					<div
